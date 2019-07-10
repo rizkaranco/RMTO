@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountCreditBehaviourIsNotCorrect" xml:space="preserve">
+    <value>رفتار حساب {0} معمولا بستانکار می باشد</value>
+  </data>
+  <data name="AccountDeptBehaviourIsNotCorrect" xml:space="preserve">
+    <value>رفتار حساب {0} معمولا بدهکار می باشد</value>
+  </data>
+  <data name="AccountIsNotLastLevel" xml:space="preserve">
+    <value>حساب {0} ، دارای زیرحساب می باشد</value>
+  </data>
+  <data name="ChequeIsAlreadyPayed" xml:space="preserve">
+    <value>چک به شماره {0} قبلا پرداخت شده است</value>
+  </data>
+  <data name="ChequeIsExistsInSystem" xml:space="preserve">
+    <value>چک به شماره {0} در سیستم موجود می باشد</value>
+  </data>
+  <data name="ChequeIsInState" xml:space="preserve">
+    <value>چک {0} در وضعیت {1} می باشد</value>
+  </data>
+  <data name="ChequeIsNotExist" xml:space="preserve">
+    <value>چک به شماره {0} در سیستم موجود نمی باشد</value>
+  </data>
+  <data name="ChequeIsPaymentDocument" xml:space="preserve">
+    <value>چک به شماره {0} جزء اسناد پرداختنی می باشد</value>
+  </data>
+  <data name="ChildAccountCanNotBeNULL" xml:space="preserve">
+    <value>مقدار {0} نمی تواند خالی باشد</value>
+  </data>
+  <data name="CreditorIsGratherThanParent" xml:space="preserve">
+    <value>سقف بستانکاری نباید بزرگتر از {0} باشد</value>
+  </data>
+  <data name="CreditorIsLessThanChild" xml:space="preserve">
+    <value>سقف بستانکاری نباید کوچکتر از {0} باشد</value>
+  </data>
+  <data name="CreditOverflow" xml:space="preserve">
+    <value>سقف بستانکاری حساب {0}  ،{1} {2} سرریز شده است</value>
+  </data>
+  <data name="DataIsEmpty" xml:space="preserve">
+    <value>{0}، خالی است</value>
+  </data>
+  <data name="DataIsNotEmpty" xml:space="preserve">
+    <value>{0}، باید خالی باشد</value>
+  </data>
+  <data name="DataNotValid" xml:space="preserve">
+    <value>{0}، نامعتبر می باشد</value>
+  </data>
+  <data name="DeptorIsGratherThanParent" xml:space="preserve">
+    <value>سقف بدهکاری نباید بزرگتر از {0} باشد</value>
+  </data>
+  <data name="DeptorIsLessThanChild" xml:space="preserve">
+    <value>سقف بدهکاری نباید کوچکتر از {0} باشد</value>
+  </data>
+  <data name="DeptOverflow" xml:space="preserve">
+    <value>سقف بدهکاری حساب {0}  ،{1} {2} سرریز شده است</value>
+  </data>
+  <data name="FiscalYearShouldBeDefault" xml:space="preserve">
+    <value>سال مالی فوق باید سال مالی فعال باشد</value>
+  </data>
+  <data name="GoodExistance" xml:space="preserve">
+    <value>از کالای {0} به تعداد {1} واحد موجود می باشد</value>
+  </data>
+  <data name="GoodIsNotInActor" xml:space="preserve">
+    <value>از کالای {0} به تعداد {1} واحد نزد مشتری موجود می باشد</value>
+  </data>
+  <data name="GoodSerialAlreadyExist" xml:space="preserve">
+    <value>سریال {0} از قبل موجود می باشد</value>
+  </data>
+  <data name="GoodSerialExistance" xml:space="preserve">
+    <value>از سریال مورد نظر {0} واحد موجود می باشد</value>
+  </data>
+  <data name="IncorectFieldCount" xml:space="preserve">
+    <value>تعداد فیلدها نامعتبر است</value>
+  </data>
+  <data name="IncorrectDataType" xml:space="preserve">
+    <value>نوع داده {0} اشتباه است</value>
+  </data>
+  <data name="LogicOperationEqualError" xml:space="preserve">
+    <value>{0} برابر {1} نمی باشد</value>
+  </data>
+  <data name="LogicOperationGratherOrEqualError" xml:space="preserve">
+    <value>{0} بزرگتر یا مساوی {1} نمی باشد</value>
+  </data>
+  <data name="LogicOperationGratherThanError" xml:space="preserve">
+    <value>{0} بزرگتر از {1} نمی باشد</value>
+  </data>
+  <data name="LogicOperationLessOrEqualError" xml:space="preserve">
+    <value>{0} کوچکتر یا مساوی {1} نمی باشد</value>
+  </data>
+  <data name="LogicOperationLessThanError" xml:space="preserve">
+    <value>{0} کوچکتر از {1} نمی باشد</value>
+  </data>
+  <data name="LogicOperationNotEqualError" xml:space="preserve">
+    <value>{0} مخالف از {1} نمی باشد</value>
+  </data>
+  <data name="ParentAccountShouldBeNULL" xml:space="preserve">
+    <value>مقدار {0} باید خالی باشد</value>
+  </data>
+  <data name="RelationError" xml:space="preserve">
+    <value>{0} ، موجود نمی باشد</value>
+  </data>
+  <data name="SerialIsNotInActor" xml:space="preserve">
+    <value>از سریال {0} به تعداد {1} واحد نزد مشتری موجود می باشد</value>
+  </data>
+  <data name="Unkown" xml:space="preserve">
+    <value>نامشخص</value>
+  </data>
+  <data name="ValueAlreadyExists" xml:space="preserve">
+    <value>{0}، از قبل موجود می باشد</value>
+  </data>
+  <data name="ValueMaxLen" xml:space="preserve">
+    <value>{0}، نباید بیشتر از {1} کاراکتر باشد</value>
+  </data>
+  <data name="ValueShouldNotGreater" xml:space="preserve">
+    <value>{0}، نباید بزرگتر از &lt;{1}&gt; باشد</value>
+  </data>
+  <data name="ValueShouldNotLess" xml:space="preserve">
+    <value>{0}، نباید کوچکتر از &lt;{1}&gt; باشد</value>
+  </data>
+  <data name="AccountDeptRemainderBehaviour" xml:space="preserve">
+    <value>حساب {0} معمولا بدهکار می باشد</value>
+  </data>
+  <data name="AccountCreditRemainderBehaviour" xml:space="preserve">
+    <value>حساب {0} معمولا بستانکار می باشد</value>
+  </data>
+  <data name="ChequeIsRepeatitive" xml:space="preserve">
+    <value>شماره چک تکراری می باشد</value>
+  </data>
+  <data name="DocumentPriceGreaterThanActorCredit" xml:space="preserve">
+    <value>جمع سند از اعتبار طرف حساب بیشتر است</value>
+  </data>
+  <data name="GoodExistanceGreaterThanMaximumRequirement" xml:space="preserve">
+    <value>موجودی کالای {0}، از حداکثر موجودی بیشتر است</value>
+  </data>
+  <data name="GoodExistanceLessThanMinimumRequirement" xml:space="preserve">
+    <value>موجودی کالای {0}، از حداقل موجودی کمتر است</value>
+  </data>
+  <data name="TransactionDocumentSumGreaterThanArticleSum" xml:space="preserve">
+    <value>جمع تسویه اسناد بیشتر از جمع مبلغ آرتیکل ها می باشد</value>
+  </data>
+  <data name="ChequeIsMyChequeAndExistInSystem" xml:space="preserve">
+    <value>چک {0} سفید و در سیستم موجود می باشد</value>
+  </data>
+  <data name="ValueIsNotEquelWithPriceNorm" xml:space="preserve">
+    <value>مبلغ وارد شده   {0}    كمتر از نرخ عرف ‍‌‍‌  {1}   است</value>
+  </data>
+  <data name="DateRangeErrorEntered" xml:space="preserve">
+    <value>تاریخ شروع نباید مابین تاریخ شروع و پایان باشد</value>
+  </data>
+  <data name="ValueMinLen" xml:space="preserve">
+    <value>{0}، نباید کمتر از {1} کاراکتر باشد</value>
+  </data>
+</root>

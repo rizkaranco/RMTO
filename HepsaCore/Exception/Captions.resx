@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountComparision" xml:space="preserve">
+    <value>مقایسه حسابهای {0} و {1}</value>
+  </data>
+  <data name="AccountDocumentReportName" xml:space="preserve">
+    <value>دفتر {0}</value>
+  </data>
+  <data name="AddChildCategory" xml:space="preserve">
+    <value>افزودن زیر شاخه</value>
+  </data>
+  <data name="AddParentCategory" xml:space="preserve">
+    <value>افزودن شاخه</value>
+  </data>
+  <data name="AllAccount" xml:space="preserve">
+    <value>حساب مقابل</value>
+  </data>
+  <data name="Conclucive" xml:space="preserve">
+    <value>قطعی کردن سند</value>
+  </data>
+  <data name="CostCenterReportName" xml:space="preserve">
+    <value>دفتر مرکز هزینه</value>
+  </data>
+  <data name="Creditor" xml:space="preserve">
+    <value>بس</value>
+  </data>
+  <data name="DeleteCategory" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="DeleteExtraFieldFile" xml:space="preserve">
+    <value>حذف فایل</value>
+  </data>
+  <data name="Deptor" xml:space="preserve">
+    <value>ید</value>
+  </data>
+  <data name="DocumentTypeConvert" xml:space="preserve">
+    <value>تبدیل به {0}</value>
+  </data>
+  <data name="DocumentWithType" xml:space="preserve">
+    <value>{0} شماره {1}</value>
+  </data>
+  <data name="EditCategory" xml:space="preserve">
+    <value>ویرایش</value>
+  </data>
+  <data name="EndsWith" xml:space="preserve">
+    <value>ختم به</value>
+  </data>
+  <data name="Equal" xml:space="preserve">
+    <value>برابر با</value>
+  </data>
+  <data name="FirstLevelDefaultName" xml:space="preserve">
+    <value>کل</value>
+  </data>
+  <data name="GeneratedFromDocument" xml:space="preserve">
+    <value>تولید شده از {0} شماره {1}</value>
+  </data>
+  <data name="GreaterOrEqual" xml:space="preserve">
+    <value>بزرگتر يا مساوي</value>
+  </data>
+  <data name="GreaterThan" xml:space="preserve">
+    <value>بزرگتر از</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>راهنما</value>
+  </data>
+  <data name="Includes" xml:space="preserve">
+    <value>شامل</value>
+  </data>
+  <data name="JournalReportName" xml:space="preserve">
+    <value>دفتر حساب</value>
+  </data>
+  <data name="LessOrEqual" xml:space="preserve">
+    <value>كوچكتر يا مساوي</value>
+  </data>
+  <data name="LessThan" xml:space="preserve">
+    <value>كوچكتر از</value>
+  </data>
+  <data name="NewCodingValueCaption" xml:space="preserve">
+    <value>افزودن زیر شاخه به {0}</value>
+  </data>
+  <data name="NotEqual" xml:space="preserve">
+    <value>نا برابر با</value>
+  </data>
+  <data name="NotInclude" xml:space="preserve">
+    <value>غير شامل</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>پرداخت</value>
+  </data>
+  <data name="PaymentDescription" xml:space="preserve">
+    <value>بابت سند پرداخت به شماره {0}</value>
+  </data>
+  <data name="PersianMonth" xml:space="preserve">
+    <value>فروردین|اردیبهشت|خرداد|تیر|مرداد|شهریور|مهر|آبان|آذر|دی|بهمن|اسفند</value>
+  </data>
+  <data name="RationTo" xml:space="preserve">
+    <value>ضریب تبدیل به {0}</value>
+  </data>
+  <data name="RatioToMainCountUnit" xml:space="preserve">
+    <value>ضریب تبدیل به واحد اصلی</value>
+  </data>
+  <data name="Receipt" xml:space="preserve">
+    <value>دریافت</value>
+  </data>
+  <data name="ReceiptDescription" xml:space="preserve">
+    <value>بابت سند دریافت به شماره {0}</value>
+  </data>
+  <data name="Remainder" xml:space="preserve">
+    <value>مانده</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>ثبت</value>
+  </data>
+  <data name="SaveAndClose" xml:space="preserve">
+    <value>ثبت و خروج</value>
+  </data>
+  <data name="SaveAndContinue" xml:space="preserve">
+    <value>ثبت و بعدی</value>
+  </data>
+  <data name="SaveExtraFieldFile" xml:space="preserve">
+    <value>بازیابی فایل</value>
+  </data>
+  <data name="StartsWith" xml:space="preserve">
+    <value>شروع با</value>
+  </data>
+  <data name="SumCredit" xml:space="preserve">
+    <value>جمع بستانکار</value>
+  </data>
+  <data name="SumDept" xml:space="preserve">
+    <value>جمع بدهکار</value>
+  </data>
+  <data name="TrialBalanceAccountCaption" xml:space="preserve">
+    <value>تراز آزمایشی زیرحساب های حساب منتخب</value>
+  </data>
+  <data name="TrialBalanceAccountLevelCaption" xml:space="preserve">
+    <value>تراز آزمایشی در سطح {0}</value>
+  </data>
+  <data name="UnConclucive" xml:space="preserve">
+    <value>غیر قطعی کردن سند</value>
+  </data>
+  <data name="UploadExtraFieldFile" xml:space="preserve">
+    <value>انتخاب فایل</value>
+  </data>
+  <data name="Coding" xml:space="preserve">
+    <value>کدینگ</value>
+  </data>
+  <data name="CodingFormat" xml:space="preserve">
+    <value>فرمت کدینگ</value>
+  </data>
+  <data name="ConnectionInformation" xml:space="preserve">
+    <value>اطلاعات تماس</value>
+  </data>
+  <data name="DataSource" xml:space="preserve">
+    <value>منبع داده</value>
+  </data>
+  <data name="DataSourceDetailTitle" xml:space="preserve">
+    <value>عنوان جزء منبع داده</value>
+  </data>
+  <data name="DataSourceTitle" xml:space="preserve">
+    <value>عنوان منبع داده</value>
+  </data>
+  <data name="DataTypeCode" xml:space="preserve">
+    <value>کد نوع داده</value>
+  </data>
+  <data name="DataTypeTitle" xml:space="preserve">
+    <value>عنوان نوع داده</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>توضیح</value>
+  </data>
+  <data name="ExtaFieldTableID" xml:space="preserve">
+    <value>شناسه جدول-فیلد اضافه</value>
+  </data>
+  <data name="ExtraField" xml:space="preserve">
+    <value>عنوان خاصیت</value>
+  </data>
+  <data name="ExtraFieldDataType" xml:space="preserve">
+    <value>نوع خاصیت</value>
+  </data>
+  <data name="ExtraFieldInformation" xml:space="preserve">
+    <value>اطلاعات شناور</value>
+  </data>
+  <data name="ExtraFieldTemplate" xml:space="preserve">
+    <value>الگوی خاصیت</value>
+  </data>
+  <data name="Field" xml:space="preserve">
+    <value>فیلد</value>
+  </data>
+  <data name="FieldPattern" xml:space="preserve">
+    <value>الگوی فیلد</value>
+  </data>
+  <data name="FieldTemplateTitle" xml:space="preserve">
+    <value>عنوان الگوی فیلد</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>گروه</value>
+  </data>
+  <data name="GroupTable" xml:space="preserve">
+    <value>جدول گروه</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>آیتم</value>
+  </data>
+  <data name="Parent" xml:space="preserve">
+    <value>والد</value>
+  </data>
+  <data name="Table" xml:space="preserve">
+    <value>جدول</value>
+  </data>
+  <data name="Tie" xml:space="preserve">
+    <value>گره</value>
+  </data>
+  <data name="TieName" xml:space="preserve">
+    <value>نام گره</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>عنوان</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>کاربر</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>مقدار</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>جستجو</value>
+  </data>
+</root>

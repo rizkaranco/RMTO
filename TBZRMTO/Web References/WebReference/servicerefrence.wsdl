@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetNumberPlate2">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="images" type="tns:ArrayOfBase64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBase64Binary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="base64Binary" nillable="true" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetNumberPlate2Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNumberPlate2Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlateNumber">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="images" type="tns:ArrayOfBase64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlateNumberResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlateNumberResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetNumberPlate2SoapIn">
+    <wsdl:part name="parameters" element="tns:GetNumberPlate2" />
+  </wsdl:message>
+  <wsdl:message name="GetNumberPlate2SoapOut">
+    <wsdl:part name="parameters" element="tns:GetNumberPlate2Response" />
+  </wsdl:message>
+  <wsdl:message name="GetPlateNumberSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlateNumber" />
+  </wsdl:message>
+  <wsdl:message name="GetPlateNumberSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlateNumberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceRefrenceSoap">
+    <wsdl:operation name="GetNumberPlate2">
+      <wsdl:input message="tns:GetNumberPlate2SoapIn" />
+      <wsdl:output message="tns:GetNumberPlate2SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlateNumber">
+      <wsdl:input message="tns:GetPlateNumberSoapIn" />
+      <wsdl:output message="tns:GetPlateNumberSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceRefrenceSoap" type="tns:ServiceRefrenceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNumberPlate2">
+      <soap:operation soapAction="http://tempuri.org/GetNumberPlate2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlateNumber">
+      <soap:operation soapAction="http://tempuri.org/GetPlateNumber" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceRefrenceSoap12" type="tns:ServiceRefrenceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNumberPlate2">
+      <soap12:operation soapAction="http://tempuri.org/GetNumberPlate2" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlateNumber">
+      <soap12:operation soapAction="http://tempuri.org/GetPlateNumber" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceRefrence">
+    <wsdl:port name="ServiceRefrenceSoap" binding="tns:ServiceRefrenceSoap">
+      <soap:address location="http://172.20.229.206/servicerefrence.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceRefrenceSoap12" binding="tns:ServiceRefrenceSoap12">
+      <soap12:address location="http://172.20.229.206/servicerefrence.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,3314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57F49356-6FB9-47CF-A170-B2A8612CF02C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HPS</RootNamespace>
+    <AssemblyName>TBZRMTO</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>sazman2.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>D2FA04A9CF6ECCB9C6C531F653DD9886C77ADAB5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>TBZRMTO_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v16.1.Core, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v16.1, Version=16.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FarsiLibrary.Resources, Version=2.0.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\FarsiLibrary.Resources.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarsiLibrary.Utils, Version=2.0.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\FarsiLibrary.Utils.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FarsiLibrary.Win, Version=2.0.0.0, Culture=neutral, PublicKeyToken=def7c46cace23f8f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\FarsiLibrary.Win.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HamrahanSystem.TextBox, Version=2.0.3090.23950, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\backup\TBZRMTO97-05-02\TBZRMTO\TBZRMTO\bin\x86\Debug\HamrahanSystem.TextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\Janus.Windows.UI.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="MarqueeControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>G:\program\Pre\dll\MarqueeControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Report.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Design.WebViewer, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Report.Design.WebViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WebDesign, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Report.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Win, Version=2016.3.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>E:\Program\Pre\DLLs\stimul2016\Stimulsoft.Report.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Comments\LadBillCancelComment_T\BLLLadBillCancelComment_T.cs" />
+    <Compile Include="BLL\Comments\LadBillCancelComment_T\BLLLadBillCancelComment_TFactory.cs" />
+    <Compile Include="BLL\Comments\LadBillCancelComment_T\BLLLadBillCancelComment_TKeys.cs" />
+    <Compile Include="BLL\Common\BackUpBLL.cs" />
+    <Compile Include="BLL\Common\FiscalYear_T\BLLYear_T.cs" />
+    <Compile Include="BLL\Common\FiscalYear_T\BLLYear_TFactory.cs" />
+    <Compile Include="BLL\Common\FiscalYear_T\BLLYear_TKeys.cs" />
+    <Compile Include="BLL\Common\OfflineSecondPartSoftware_T\BLLOfflineSecondPartSoftware_T.cs" />
+    <Compile Include="BLL\Common\OfflineSecondPartSoftware_T\BLLOfflineSecondPartSoftware_TFactory.cs" />
+    <Compile Include="BLL\Common\OfflineSecondPartSoftware_T\BLLOfflineSecondPartSoftware_TKeys.cs" />
+    <Compile Include="BLL\Common\OnlineUsersWhenConnectionOrNot_T\BLLOnlineUsersWhenConnectionOrNot_T.cs" />
+    <Compile Include="BLL\Common\OnlineUsersWhenConnectionOrNot_T\BLLOnlineUsersWhenConnectionOrNot_TFactory.cs" />
+    <Compile Include="BLL\Common\OnlineUsersWhenConnectionOrNot_T\BLLOnlineUsersWhenConnectionOrNot_TKeys.cs" />
+    <Compile Include="BLL\Common\OnlineUser_T\BLLOnlineUser_T.cs" />
+    <Compile Include="BLL\Common\OnlineUser_T\BLLOnlineUser_TFactory.cs" />
+    <Compile Include="BLL\Common\OnlineUser_T\BLLOnlineUser_TKeys.cs" />
+    <Compile Include="BLL\Common\PermissionGroup_T\BLLPermissionGroup_T.cs" />
+    <Compile Include="BLL\Common\PermissionGroup_T\BLLPermissionGroup_TFactory.cs" />
+    <Compile Include="BLL\Common\PermissionGroup_T\BLLPermissionGroup_TKeys.cs" />
+    <Compile Include="BLL\Common\RemoteProccessControl.cs" />
+    <Compile Include="BLL\Common\Settings_T\BLLSetting_T.cs" />
+    <Compile Include="BLL\Common\Settings_T\BLLSetting_TFactory.cs" />
+    <Compile Include="BLL\Common\Settings_T\BLLSetting_TKeys.cs" />
+    <Compile Include="BLL\Common\Version_T\BLLVersion_T.cs" />
+    <Compile Include="BLL\Common\Version_T\BLLVersion_TFactory.cs" />
+    <Compile Include="BLL\Common\Version_T\BLLVersion_TKeys.cs" />
+    <Compile Include="BLL\Infraction\Infraction\BLLInfraction_T.cs" />
+    <Compile Include="BLL\Infraction\Infraction\BLLInfraction_TFactory.cs" />
+    <Compile Include="BLL\Infraction\Infraction\BLLInfraction_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Boundry_T\BLLBoundry_T.cs" />
+    <Compile Include="BLL\MainInformation\Boundry_T\BLLBoundry_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Boundry_T\BLLBoundry_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Class_T\BLLClass_T.cs" />
+    <Compile Include="BLL\MainInformation\Class_T\BLLClass_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Class_T\BLLClass_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\CompanyMobile_T\BLLCompanyMobile_T.cs" />
+    <Compile Include="BLL\MainInformation\CompanyMobile_T\BLLCompanyMobile_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\CompanyMobile_T\BLLCompanyMobile_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\DestinationAddress_T\BLLDestinationAddress_T.cs" />
+    <Compile Include="BLL\MainInformation\DestinationAddress_T\BLLDestinationAddress_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\DestinationAddress_T\BLLDestinationAddress_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\MessageRecipient_T\BLLMessageRecipient_T.cs" />
+    <Compile Include="BLL\MainInformation\MessageRecipient_T\BLLMessageRecipient_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\MessageRecipient_T\BLLMessageRecipient_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\News_T\BLLNews_T.cs" />
+    <Compile Include="BLL\MainInformation\News_T\BLLNews_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\News_T\BLLNews_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Province_T\BLLProvince_T.cs" />
+    <Compile Include="BLL\MainInformation\Province_T\BLLProvince_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Province_T\BLLProvince_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\VerifiedCars_T\BLLVerifiedCars_T.cs" />
+    <Compile Include="BLL\MainInformation\VerifiedCars_T\BLLVerifiedCars_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\VerifiedCars_T\BLLVerifiedCars_TKeys.cs" />
+    <Compile Include="BLL\Reports\LadBillReportBLL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Common\Traffic\AnnouncementTime_T\BLLAnnouncementTime_T.cs" />
+    <Compile Include="BLL\Common\Traffic\AnnouncementTime_T\BLLAnnouncementTime_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\AnnouncementTime_T\BLLAnnouncementTime_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\BillMessage_T\BLLBillMessage_T.cs" />
+    <Compile Include="BLL\MainInformation\BillMessage_T\BLLBillMessage_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\BillMessage_T\BLLBillMessage_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Bill_T\BLLBill_T.cs" />
+    <Compile Include="BLL\MainInformation\Bill_T\BLLBill_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Bill_T\BLLBill_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Boxing_T\BLLBoxing_T.cs" />
+    <Compile Include="BLL\MainInformation\Boxing_T\BLLBoxing_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Boxing_T\BLLBoxing_TKeys.cs" />
+    <Compile Include="BLL\BusinessFactoryBase.cs" />
+    <Compile Include="BLL\BusinessObjectBase.cs" />
+    <Compile Include="BLL\MainInformation\ChargePrice_T\BLLChargePrice_T.cs" />
+    <Compile Include="BLL\MainInformation\ChargePrice_T\BLLChargePrice_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\ChargePrice_T\BLLChargePrice_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\City_T\BLLCity_T.cs" />
+    <Compile Include="BLL\MainInformation\City_T\BLLCity_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\City_T\BLLCity_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Color_T\BLLColor_T.cs" />
+    <Compile Include="BLL\MainInformation\Color_T\BLLColor_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Color_T\BLLColor_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\CardCheckingLog_T\BLLCardCheckingLog_T.cs" />
+    <Compile Include="BLL\Common\Traffic\CardCheckingLog_T\BLLCardCheckingLog_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\CardCheckingLog_T\BLLCardCheckingLog_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\CarSystem_T\BLLCarSystem_T.cs" />
+    <Compile Include="BLL\Common\Traffic\CarSystem_T\BLLCarSystem_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\CarSystem_T\BLLCarSystem_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\Car_T\BLLCar_T.cs" />
+    <Compile Include="BLL\Common\Traffic\Car_T\BLLCar_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\Car_T\BLLCar_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\CompanyGroup_T\BLLCompanyGroup_T.cs" />
+    <Compile Include="BLL\Common\Traffic\CompanyGroup_T\BLLCompanyGroup_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\CompanyGroup_T\BLLCompanyGroup_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\CompanyLadBill_T\BLLCompanyLadBill_T.cs" />
+    <Compile Include="BLL\Common\Traffic\CompanyLadBill_T\BLLCompanyLadBill_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\CompanyLadBill_T\BLLCompanyLadBill_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\Company_T\BLLCompany_T.cs" />
+    <Compile Include="BLL\Common\Traffic\Company_T\BLLCompany_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\Company_T\BLLCompany_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Computer_T\BLLComputer_T.cs" />
+    <Compile Include="BLL\MainInformation\Computer_T\BLLComputer_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Computer_T\BLLComputer_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Country_T\BLLCountry_T.cs" />
+    <Compile Include="BLL\MainInformation\Country_T\BLLCountry_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Country_T\BLLCountry_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Good_T\BLLGood_T.cs" />
+    <Compile Include="BLL\MainInformation\Good_T\BLLGood_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Good_T\BLLGood_TKeys.cs" />
+    <Compile Include="BLL\Infraction\InfractionSurveyGroup_T\BLLInfractionSurveyGroup_T.cs" />
+    <Compile Include="BLL\Infraction\InfractionSurveyGroup_T\BLLInfractionSurveyGroup_TFactory.cs" />
+    <Compile Include="BLL\Infraction\InfractionSurveyGroup_T\BLLInfractionSurveyGroup_TKeys.cs" />
+    <Compile Include="BLL\Infraction\InfractionSurveyUsers_T\BLLInfractionSurveyUsers_T.cs" />
+    <Compile Include="BLL\Infraction\InfractionSurveyUsers_T\BLLInfractionSurveyUsers_TFactory.cs" />
+    <Compile Include="BLL\Infraction\InfractionSurveyUsers_T\BLLInfractionSurveyUsers_TKeys.cs" />
+    <Compile Include="BLL\Infraction\InfractionType_T\BLLInfractionType_T.cs" />
+    <Compile Include="BLL\Infraction\InfractionType_T\BLLInfractionType_TFactory.cs" />
+    <Compile Include="BLL\Infraction\InfractionType_T\BLLInfractionType_TKeys.cs" />
+    <Compile Include="BLL\Infraction\InfractionGroup_T\BLLInfractionGroup_T.cs" />
+    <Compile Include="BLL\Infraction\InfractionGroup_T\BLLInfractionGroup_TFactory.cs" />
+    <Compile Include="BLL\Infraction\InfractionGroup_T\BLLInfractionGroup_TKeys.cs" />
+    <Compile Include="BLL\Comments\LadeCancelComment_T\BLLLadeCancelComment_T.cs" />
+    <Compile Include="BLL\Comments\LadeCancelComment_T\BLLLadeCancelComment_TFactory.cs" />
+    <Compile Include="BLL\Comments\LadeCancelComment_T\BLLLadeCancelComment_TKeys.cs" />
+    <Compile Include="BLL\Comments\LadeComment_T\BLLLadeComment_T.cs" />
+    <Compile Include="BLL\Comments\LadeComment_T\BLLLadeComment_TFactory.cs" />
+    <Compile Include="BLL\Comments\LadeComment_T\BLLLadeComment_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\DriverSpecification_T\BLLDriverSpecification_T.cs" />
+    <Compile Include="BLL\Common\Traffic\DriverSpecification_T\BLLDriverSpecification_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\DriverSpecification_T\BLLDriverSpecification_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\Driver_T\BLLDriver_T.cs" />
+    <Compile Include="BLL\Common\Traffic\Driver_T\BLLDriver_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\Driver_T\BLLDriver_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\InCameraPictures_T\BLLInCameraPictures_T.cs" />
+    <Compile Include="BLL\Common\Traffic\InCameraPictures_T\BLLInCameraPictures_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\InCameraPictures_T\BLLInCameraPictures_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\InOutPictures_T\BLLInOutPictures_T.cs" />
+    <Compile Include="BLL\Common\Traffic\InOutPictures_T\BLLInOutPictures_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\InOutPictures_T\BLLInOutPictures_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\InOut_T\BLLInOut_T.cs" />
+    <Compile Include="BLL\Common\Traffic\InOut_T\BLLInOut_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\InOut_T\BLLInOut_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\ITS_T\BLLITS_T.cs" />
+    <Compile Include="BLL\Common\Traffic\ITS_T\BLLITS_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\ITS_T\BLLITS_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCreditCancelComment_T\BLLLadBillCreditCancelComment_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCreditCancelComment_T\BLLLadBillCreditCancelComment_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCreditCancelComment_T\BLLLadBillCreditCancelComment_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCreditCancel_T\BLLLadBillCreditCancel_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCreditCancel_T\BLLLadBillCreditCancel_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCreditCancel_T\BLLLadBillCreditCancel_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCredit_T\BLLLadBillCredit_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCredit_T\BLLLadBillCredit_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadBillCredit_T\BLLLadBillCredit_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentCacelRequest_T\BLLLadeAssignmentCacelRequest_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentCacelRequest_T\BLLLadeAssignmentCacelRequest_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentCacelRequest_T\BLLLadeAssignmentCacelRequest_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentCancelRequestComment_T\BLLLadeAssignmentCancelRequestComment_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentCancelRequestComment_T\BLLLadeAssignmentCancelRequestComment_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentCancelRequestComment_T\BLLLadeAssignmentCancelRequestComment_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentComment_T\BLLLadeAssignmentComment_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentComment_T\BLLLadeAssignmentComment_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignmentComment_T\BLLLadeAssignmentComment_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignment_T\BLLLadeAssignment_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignment_T\BLLLadeAssignment_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeAssignment_T\BLLLadeAssignment_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeCancelAssignment_T\BLLLadeCancelAssignment_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeCancelAssignment_T\BLLLadeCancelAssignment_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LadeCancelAssignment_T\BLLLadeCancelAssignment_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LaderPivotGroup_T\BLLLaderPivotGroup_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LaderPivotGroup_T\BLLLaderPivotGroup_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LaderPivotGroup_T\BLLLaderPivotGroup_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\Message_T\BLLMessage_T.cs" />
+    <Compile Include="BLL\MainInformation\Message_T\BLLMessage_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\Message_T\BLLMessage_TKeys.cs" />
+    <Compile Include="BLL\Common\Permission_T\BLLPermission_T.cs" />
+    <Compile Include="BLL\Common\Permission_T\BLLPermission_TFactory.cs" />
+    <Compile Include="BLL\Common\Permission_T\BLLPermission_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\PlateCity_T\BLLPlateCity_T.cs" />
+    <Compile Include="BLL\MainInformation\PlateCity_T\BLLPlateCity_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\PlateCity_T\BLLPlateCity_TKeys.cs" />
+    <Compile Include="BLL\MainInformation\PortPlaces_T\BLLPortPlaces_T.cs" />
+    <Compile Include="BLL\MainInformation\PortPlaces_T\BLLPortPlaces_TFactory.cs" />
+    <Compile Include="BLL\MainInformation\PortPlaces_T\BLLPortPlaces_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\LaderType_T\BLLLaderType_T.cs" />
+    <Compile Include="BLL\Common\Traffic\LaderType_T\BLLLaderType_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\LaderType_T\BLLLaderType_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\MultiLaderType_T\BLLMultiLaderType_T.cs" />
+    <Compile Include="BLL\Common\Traffic\MultiLaderType_T\BLLMultiLaderType_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\MultiLaderType_T\BLLMultiLaderType_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\OutCameraPictures_T\BLLOutCameraPictures_T.cs" />
+    <Compile Include="BLL\Common\Traffic\OutCameraPictures_T\BLLOutCameraPictures_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\OutCameraPictures_T\BLLOutCameraPictures_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\PlateNumber_T\BLLPlateNumber_T.cs" />
+    <Compile Include="BLL\Common\Traffic\PlateNumber_T\BLLPlateNumber_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\PlateNumber_T\BLLPlateNumber_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\SensorsStatus_T\BLLSensorsStatus_T.cs" />
+    <Compile Include="BLL\Common\Traffic\SensorsStatus_T\BLLSensorsStatus_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\SensorsStatus_T\BLLSensorsStatus_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\SmsInfo\BLLSmsInfo_T.cs" />
+    <Compile Include="BLL\Common\Traffic\SmsInfo\BLLSmsInfo_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\SmsInfo\BLLSmsInfo_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\TrafficPictures_T\BLLTrafficPictures_T.cs" />
+    <Compile Include="BLL\Common\Traffic\TrafficPictures_T\BLLTrafficPictures_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\TrafficPictures_T\BLLTrafficPictures_TKeys.cs" />
+    <Compile Include="Common\CameraConnection.cs" />
+    <Compile Include="Common\Controller\NumericTextBox.cs" />
+    <Compile Include="Common\FrequentlyUsedData.cs" />
+    <Compile Include="Common\OnlineInformation.cs" />
+    <Compile Include="Common\PlateReaderApi.cs" />
+    <Compile Include="DAL\Comments\LadBillCancelComment_T\DALLadBillCancelComment_T.cs" />
+    <Compile Include="DAL\Common\BackUpDAL.cs" />
+    <Compile Include="DAL\Common\FiscalYear_T\DALFiscalYear_T.cs" />
+    <Compile Include="DAL\Common\OfflineSecondPartSoftware_T\DALOfflineSecondPartSoftware_T.cs" />
+    <Compile Include="DAL\Common\OnlineUsersWhenConnectionOrNot_T\DALOnlineUsersWhenConnectionOrNot_T.cs" />
+    <Compile Include="DAL\Common\OnlineUser_T\DALOnlineUser_T.cs" />
+    <Compile Include="DAL\Common\PermissionGroup_T\DALPermissionGroup_T.cs" />
+    <Compile Include="DAL\Common\Settings_T\DALSetting_T.cs" />
+    <Compile Include="DAL\Common\Version_T\DALVersion_T.cs" />
+    <Compile Include="DAL\MainInformation\Boundry_T\DALBoundry_T.cs" />
+    <Compile Include="DAL\MainInformation\Class_T\DALClass_T.cs" />
+    <Compile Include="DAL\MainInformation\CompanyMobile_T\DALCompanyMobile_T.cs" />
+    <Compile Include="DAL\MainInformation\DestinationAddress_T\DALDestinationAddress_T.cs" />
+    <Compile Include="DAL\MainInformation\VerifiedCars_T\DALVerifiedCars_T.cs" />
+    <Compile Include="DAL\Traffic\CardCheckingLog_T\DALCardCheckingLog_T.cs" />
+    <Compile Include="DAL\Traffic\CarSystem_T\DALCarSystem_T.cs" />
+    <Compile Include="DAL\Traffic\CompanyGroup_T\DALCompanyGroup_T.cs" />
+    <Compile Include="DAL\Traffic\DriverSpecification_T\DALDriverSpecification_T.cs" />
+    <Compile Include="DAL\Traffic\Driver_T\DALDriver_T.cs" />
+    <Compile Include="DAL\Traffic\InCameraPictures_T\DALInCameraPictures_T.cs" />
+    <Compile Include="DAL\Traffic\InOutPictures_T\DALInOutPictures_T.cs" />
+    <Compile Include="DAL\Traffic\InOut_T\DALInOut_T.cs" />
+    <Compile Include="DAL\Traffic\ITS_T\DALITS_T.cs" />
+    <Compile Include="DAL\Traffic\LadBillCreditCancelComment_T\DALLadBillCreditCancelComment_T.cs" />
+    <Compile Include="DAL\Traffic\LadBillCreditCancel_T\DALLadBillCreditCancel_T.cs" />
+    <Compile Include="DAL\Traffic\LadeAssignmentCacelRequest_T\DALLadeAssignmentCacelRequest_T.cs" />
+    <Compile Include="DAL\Traffic\LadeAssignmentCancelRequestComment_T\DALLadeAssignmentCancelRequestComment_T.cs" />
+    <Compile Include="DAL\Traffic\LaderType_T\DALLaderType_T.cs" />
+    <Compile Include="BLL\Common\Traffic\PriceNorm_T\BLLPriceNorm_T.cs" />
+    <Compile Include="BLL\Common\Traffic\PriceNorm_T\BLLPriceNorm_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\PriceNorm_T\BLLPriceNorm_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\Saloon_T\BLLSaloon_T.cs" />
+    <Compile Include="BLL\Common\Traffic\Saloon_T\BLLSaloon_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\Saloon_T\BLLSaloon_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\Services_T\BLLServices_T.cs" />
+    <Compile Include="BLL\Common\Traffic\Services_T\BLLServices_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\Services_T\BLLServices_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\StopFee_T\BLLStopFee_T.cs" />
+    <Compile Include="BLL\Common\Traffic\StopFee_T\BLLStopFee_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\StopFee_T\BLLStopFee_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\TrafficType_T\BLLTrafficType_T.cs" />
+    <Compile Include="BLL\Common\Traffic\TrafficType_T\BLLTrafficType_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\TrafficType_T\BLLTrafficType_TKeys.cs" />
+    <Compile Include="BLL\Comments\TurnCancelComment_T\BLLTurnCancelComment_T.cs" />
+    <Compile Include="BLL\Comments\TurnCancelComment_T\BLLTurnCancelComment_TFactory.cs" />
+    <Compile Include="BLL\Comments\TurnCancelComment_T\BLLTurnCancelComment_TKeys.cs" />
+    <Compile Include="BLL\Common\UserGroup_BLL\BLLUserGroup_T.cs" />
+    <Compile Include="BLL\Common\UserGroup_BLL\BLLUserGroup_TFactory.cs" />
+    <Compile Include="BLL\Common\UserGroup_BLL\BLLUserGroup_TKeys.cs" />
+    <Compile Include="BLL\Common\User_T\BLLUser_T.cs" />
+    <Compile Include="BLL\Common\User_T\BLLUser_TFactory.cs" />
+    <Compile Include="BLL\Common\User_T\BLLUser_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\Traffic_T\BLLTraffic_T.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Common\Traffic\Traffic_T\BLLTraffic_TFactory.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Common\Traffic\Traffic_T\BLLTraffic_TKeys.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BLL\Common\Traffic\TurnManagement_T\BLLTurnManagement_T.cs" />
+    <Compile Include="BLL\Common\Traffic\TurnManagement_T\BLLTurnManagement_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\TurnManagement_T\BLLTurnManagement_TKeys.cs" />
+    <Compile Include="BLL\Common\Traffic\UsedLadBill_T\BLLUsedLadBill_T.cs" />
+    <Compile Include="BLL\Common\Traffic\UsedLadBill_T\BLLUsedLadBill_TFactory.cs" />
+    <Compile Include="BLL\Common\Traffic\UsedLadBill_T\BLLUsedLadBill_TKeys.cs" />
+    <Compile Include="Common\CurrentUser.cs" />
+    <Compile Include="DAL\Infraction\Infraction\DALInfraction_T.cs" />
+    <Compile Include="DAL\MainInformation\MessageRecipient_T\DALMessageRecipient_T.cs" />
+    <Compile Include="DAL\MainInformation\News_T\DALNews_T.cs" />
+    <Compile Include="DAL\MainInformation\Province_T\DALProvince_T.cs" />
+    <Compile Include="DAL\Traffic\AnnouncementTime_T\DALAnnouncementTime_T.cs" />
+    <Compile Include="DAL\MainInformation\BillMessage_T\DALBillMessage_T.cs" />
+    <Compile Include="DAL\MainInformation\Bill_T\DALBill_T.cs" />
+    <Compile Include="DAL\MainInformation\Boxing_T\DALBoxing_T.cs" />
+    <Compile Include="DAL\MainInformation\ChargePrice_T\DALChargePrice_T.cs" />
+    <Compile Include="DAL\MainInformation\City_T\DALCity_T.cs" />
+    <Compile Include="DAL\MainInformation\Color_T\DALColor_T.cs" />
+    <Compile Include="DAL\Traffic\Car_T\DALCar_T.cs" />
+    <Compile Include="DAL\Traffic\CompanyLadBill_T\DALCompanyLadBill_T.cs" />
+    <Compile Include="DAL\Traffic\Company_T\DALCompany_T.cs" />
+    <Compile Include="DAL\MainInformation\Computer_T\DALComputer_T.cs" />
+    <Compile Include="DAL\MainInformation\Country_T\DALCountry_T.cs" />
+    <Compile Include="DAL\DataLayeBase.cs" />
+    <Compile Include="DAL\MainInformation\Good_T\DALGood_T.cs" />
+    <Compile Include="DAL\Infraction\InfractionSurveyGroup_T\DALInfractionSurveyGroup_T.cs" />
+    <Compile Include="DAL\Infraction\InfractionSurveyUsers_T\DALInfractionSurveyUsers_T.cs" />
+    <Compile Include="DAL\Infraction\InfractionType_T\DALInfractionType_T.cs" />
+    <Compile Include="DAL\Infraction\InfractionGroup_T\DALInfractionGroup_T.cs" />
+    <Compile Include="DAL\Comments\LadeCancelComment_T\DALLadeCancelComment_T.cs" />
+    <Compile Include="DAL\Comments\LadeComment_T\DALLadeComment_T.cs" />
+    <Compile Include="DAL\Traffic\LadBillCredit_T\DALLadBillCredit_T.cs" />
+    <Compile Include="DAL\Traffic\LadeAssignmentComment_T\DALLadeAssignmentComment_T.cs" />
+    <Compile Include="DAL\Traffic\LadeAssignment_T\DALLadeAssignment_T.cs" />
+    <Compile Include="DAL\Traffic\LadeCancelAssignment_T\DALLadeCancelAssignment_T.cs" />
+    <Compile Include="DAL\Traffic\LaderPivotGroup_T\DALLaderPivotGroup_T.cs" />
+    <Compile Include="DAL\MainInformation\Message_T\DALMessage_T.cs" />
+    <Compile Include="DAL\Common\Permission_T\DALPermission_T.cs" />
+    <Compile Include="DAL\MainInformation\PlateCity_T\DALPlateCity_T.cs" />
+    <Compile Include="DAL\MainInformation\PortPlaces_T\DALPortPlaces_T.cs" />
+    <Compile Include="DAL\Traffic\MultiLaderType_T\DALMultiLaderType_T.cs" />
+    <Compile Include="DAL\Traffic\OutCameraPictures_T\DALOutCameraPictures_T.cs" />
+    <Compile Include="DAL\Traffic\PlateNumber_T\DALPlateNumber_T.cs" />
+    <Compile Include="DAL\Traffic\PriceNorm_T\DALPriceNorm_T.cs" />
+    <Compile Include="DAL\Traffic\Saloon_T\DALSaloon_T.cs" />
+    <Compile Include="DAL\Traffic\SensorsStatus_T\DALSensorsStatus_T.cs" />
+    <Compile Include="DAL\Traffic\Services_T\DALServices_T.cs" />
+    <Compile Include="DAL\Traffic\SmsInfo_T\DALSmsInfo_T.cs" />
+    <Compile Include="DAL\Traffic\StopFee_T\DALStopFee_T.cs" />
+    <Compile Include="DAL\Traffic\TrafficPictures_T\DALTrafficPictures_T.cs" />
+    <Compile Include="DAL\Traffic\TrafficType_T\DALTrafficType_T.cs" />
+    <Compile Include="DAL\Comments\TurnCancelComment_T\DALTurnCancelComment_T.cs" />
+    <Compile Include="DAL\Common\UserGroup_T\DALUserGroup_T.cs" />
+    <Compile Include="DAL\Common\User_T\DALUser_T.cs" />
+    <Compile Include="DAL\Traffic\Traffic_T\DALTraffic_T.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DAL\Traffic\TurnManagement_T\DALTurnManagement_T.cs" />
+    <Compile Include="DAL\Traffic\UsedLadBill_T\DALUsedLadBill_T.cs" />
+    <Compile Include="Exceptions\ExceptionCs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExceptionCs.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Exceptions\Exceptions.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadBillCancelComment\LadBillCancelCommentEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadBillCancelComment\LadBillCancelCommentEntityForm.Designer.cs">
+      <DependentUpon>LadBillCancelCommentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadBillCancelComment\LadBillCancelCommentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadBillCancelComment\LadBillCancelCommentListForm.Designer.cs">
+      <DependentUpon>LadBillCancelCommentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\BackUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\BackUpForm.Designer.cs">
+      <DependentUpon>BackUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\ExportDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\ExportDataForm.designer.cs">
+      <DependentUpon>ExportDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\LoadingMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\LoadingMessage.Designer.cs">
+      <DependentUpon>LoadingMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Log\LogEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Log\LogEntityForm.Designer.cs">
+      <DependentUpon>LogEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Log\LogListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Log\LogListForm.Designer.cs">
+      <DependentUpon>LogListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Setting_T\SettingEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Setting_T\SettingEntityForm.designer.cs">
+      <DependentUpon>SettingEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Setting_T\SettingListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\Setting_T\SettingListForm.designer.cs">
+      <DependentUpon>SettingListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\SQLConnectionManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\SQLConnectionManager.Designer.cs">
+      <DependentUpon>SQLConnectionManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\Infraction\InfractionEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\Infraction\InfractionEntityForm.Designer.cs">
+      <DependentUpon>InfractionEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\Infraction\InfractionListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\Infraction\InfractionListForm.Designer.cs">
+      <DependentUpon>InfractionListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boundry\BoundryEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boundry\BoundryEntityForm.Designer.cs">
+      <DependentUpon>BoundryEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boundry\BoundryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boundry\BoundryListForm.Designer.cs">
+      <DependentUpon>BoundryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boxing\BoxingEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boxing\BoxingEntityForm.Designer.cs">
+      <DependentUpon>BoxingEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boxing\BoxingListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Boxing\BoxingListForm.Designer.cs">
+      <DependentUpon>BoxingListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\City\CityEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\City\CityEntityForm.Designer.cs">
+      <DependentUpon>CityEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\City\CityListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\City\CityListForm.Designer.cs">
+      <DependentUpon>CityListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Class\ClassEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Class\ClassEntityForm.Designer.cs">
+      <DependentUpon>ClassEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Class\ClassListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Class\ClassListForm.Designer.cs">
+      <DependentUpon>ClassListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\CompanyMobile_T\CompanyMobileEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\CompanyMobile_T\CompanyMobileEntityForm.designer.cs">
+      <DependentUpon>CompanyMobileEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\CompanyMobile_T\CompanyMobileListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\CompanyMobile_T\CompanyMobileListForm.designer.cs">
+      <DependentUpon>CompanyMobileListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Computer\ComputerManyEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Computer\ComputerManyEntityForm.Designer.cs">
+      <DependentUpon>ComputerManyEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\DestinationAddress\DestinationAddressEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\DestinationAddress\DestinationAddressEntityForm.Designer.cs">
+      <DependentUpon>DestinationAddressEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\DestinationAddress\DestinationAddressListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\DestinationAddress\DestinationAddressListForm.Designer.cs">
+      <DependentUpon>DestinationAddressListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Good\GoodEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Good\GoodEntityForm.Designer.cs">
+      <DependentUpon>GoodEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Good\GoodListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Good\GoodListForm.Designer.cs">
+      <DependentUpon>GoodListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\MessageRecipient\MessageRecipientEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\MessageRecipient\MessageRecipientEntityForm.Designer.cs">
+      <DependentUpon>MessageRecipientEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\MessageRecipient\MessageRecipientListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\MessageRecipient\MessageRecipientListForm.Designer.cs">
+      <DependentUpon>MessageRecipientListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\News\NewsEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\News\NewsEntityForm.Designer.cs">
+      <DependentUpon>NewsEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\News\NewsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\News\NewsListForm.Designer.cs">
+      <DependentUpon>NewsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Province\ProvinceEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Province\ProvinceEntityForm.Designer.cs">
+      <DependentUpon>ProvinceEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Province\ProvinceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Province\ProvinceListForm.Designer.cs">
+      <DependentUpon>ProvinceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\VerifiedCars_T\VerifiedCarsEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\VerifiedCars_T\VerifiedCarsEntityForm.Designer.cs">
+      <DependentUpon>VerifiedCarsEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\VerifiedCars_T\VerifiedCarsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\VerifiedCars_T\VerifiedCarsListForm.Designer.cs">
+      <DependentUpon>VerifiedCarsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\LogintoSmsSystemForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\LogintoSmsSystemForm.Designer.cs">
+      <DependentUpon>LogintoSmsSystemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SendNewsToDiriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SendNewsToDiriversForm.Designer.cs">
+      <DependentUpon>SendNewsToDiriversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SendTextToDiriversForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SendTextToDiriversForm.Designer.cs">
+      <DependentUpon>SendTextToDiriversForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SetSMSUserNameAndPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SetSMSUserNameAndPassForm.Designer.cs">
+      <DependentUpon>SetSMSUserNameAndPassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SMSLogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\SMS\SMSLogForm.Designer.cs">
+      <DependentUpon>SMSLogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyGroup_T\CompanyGroupEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyGroup_T\CompanyGroupEntityForm.Designer.cs">
+      <DependentUpon>CompanyGroupEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyGroup_T\CompanyGroupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyGroup_T\CompanyGroupListForm.Designer.cs">
+      <DependentUpon>CompanyGroupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyLadBill\CompanyLadBillEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyLadBill\CompanyLadBillEntityForm.Designer.cs">
+      <DependentUpon>CompanyLadBillEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyLadBill\CompanyLadBillListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CompanyLadBill\CompanyLadBillListForm.Designer.cs">
+      <DependentUpon>CompanyLadBillListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentInforming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentInforming.Designer.cs">
+      <DependentUpon>LadeAssignmentInforming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentInformingListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentInformingListForm.Designer.cs">
+      <DependentUpon>LadeAssignmentInformingListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\ShowFormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\ShowFormSetting.Designer.cs">
+      <DependentUpon>ShowFormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\BoxingSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\BoxingSearch.Designer.cs">
+      <DependentUpon>BoxingSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CarSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CarSearch.Designer.cs">
+      <DependentUpon>CarSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CarSearchForTraffic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CarSearchForTraffic.Designer.cs">
+      <DependentUpon>CarSearchForTraffic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CarStatusInLadBillCreditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CarStatusInLadBillCreditForm.Designer.cs">
+      <DependentUpon>CarStatusInLadBillCreditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderType\ChooseSaloonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderType\ChooseSaloonForm.Designer.cs">
+      <DependentUpon>ChooseSaloonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CitySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CitySearch.Designer.cs">
+      <DependentUpon>CitySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CompanySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\CompanySearch.Designer.cs">
+      <DependentUpon>CompanySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\LadeCommentSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\LadeCommentSearchForm.Designer.cs">
+      <DependentUpon>LadeCommentSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\LaderTypeMultiChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\LaderTypeMultiChoose.Designer.cs">
+      <DependentUpon>LaderTypeMultiChoose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\DriverSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\DriverSearch.Designer.cs">
+      <DependentUpon>DriverSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\DriverSearchForTraffic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\DriverSearchForTraffic.Designer.cs">
+      <DependentUpon>DriverSearchForTraffic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\GoodSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\GoodSearch.Designer.cs">
+      <DependentUpon>GoodSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\LaderType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\LaderType.Designer.cs">
+      <DependentUpon>LaderType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\PlateCitySearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\SearchForm\PlateCitySearch.Designer.cs">
+      <DependentUpon>PlateCitySearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CarSystem\CarSystemEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CarSystem\CarSystemEntityForm.Designer.cs">
+      <DependentUpon>CarSystemEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CarSystem\CarSystemListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\CarSystem\CarSystemListForm.Designer.cs">
+      <DependentUpon>CarSystemListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Car\CarEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Car\CarEntityForm.Designer.cs">
+      <DependentUpon>CarEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Car\CarListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Car\CarListForm.Designer.cs">
+      <DependentUpon>CarListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyGroup\InfractionSurveyGroupEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyGroup\InfractionSurveyGroupEntityForm.Designer.cs">
+      <DependentUpon>InfractionSurveyGroupEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyGroup\InfractionSurveyGroupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyGroup\InfractionSurveyGroupListForm.Designer.cs">
+      <DependentUpon>InfractionSurveyGroupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyUsers\InfractionSurveyUsersEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyUsers\InfractionSurveyUsersEntityForm.Designer.cs">
+      <DependentUpon>InfractionSurveyUsersEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyUsers\InfractionSurveyUsersListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionSurveyUsers\InfractionSurveyUsersListForm.Designer.cs">
+      <DependentUpon>InfractionSurveyUsersListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionGroup\InfractionGroupEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionGroup\InfractionGroupEntityForm.Designer.cs">
+      <DependentUpon>InfractionGroupEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionGroup\InfractionGroupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionGroup\InfractionGroupListForm.Designer.cs">
+      <DependentUpon>InfractionGroupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\DriverSpecification\DriverSpecificationEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\DriverSpecification\DriverSpecificationEntityForm.Designer.cs">
+      <DependentUpon>DriverSpecificationEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Driver\DriverEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Driver\DriverEntityForm.Designer.cs">
+      <DependentUpon>DriverEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Driver\DriverListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Driver\DriverListForm.designer.cs">
+      <DependentUpon>DriverListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadBillCredit\CancelLadBillCreditCommentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadBillCredit\CancelLadBillCreditCommentForm.Designer.cs">
+      <DependentUpon>CancelLadBillCreditCommentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadBillCredit\CancelLadBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadBillCredit\CancelLadBillForm.Designer.cs">
+      <DependentUpon>CancelLadBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadBillCredit\LadBillCreditListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadBillCredit\LadBillCreditListForm.Designer.cs">
+      <DependentUpon>LadBillCreditListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignmentCacelRequest\LadeAssignmentCacelRequestEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignmentCacelRequest\LadeAssignmentCacelRequestEntityForm.Designer.cs">
+      <DependentUpon>LadeAssignmentCacelRequestEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignmentCacelRequest\LadeAssignmentCacelRequestListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignmentCacelRequest\LadeAssignmentCacelRequestListForm.Designer.cs">
+      <DependentUpon>LadeAssignmentCacelRequestListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentAcceptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentAcceptForm.Designer.cs">
+      <DependentUpon>LadeAssignmentAcceptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentEntityForm.Designer.cs">
+      <DependentUpon>LadeAssignmentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentListForm.Designer.cs">
+      <DependentUpon>LadeAssignmentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentRepeaterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentRepeaterForm.designer.cs">
+      <DependentUpon>LadeAssignmentRepeaterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentWithoutAcceptedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentWithoutAcceptedForm.Designer.cs">
+      <DependentUpon>LadeAssignmentWithoutAcceptedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeCancelAssignment\LadeCancelAssignmentEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LadeCancelAssignment\LadeCancelAssignmentEntityForm.Designer.cs">
+      <DependentUpon>LadeCancelAssignmentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderPivotGroup\LaderPivotGroupEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderPivotGroup\LaderPivotGroupEntityForm.Designer.cs">
+      <DependentUpon>LaderPivotGroupEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderPivotGroup\LaderPivotGroupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderPivotGroup\LaderPivotGroupListForm.Designer.cs">
+      <DependentUpon>LaderPivotGroupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\BillMessage\BillMessageEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\BillMessage\BillMessageEntityForm.Designer.cs">
+      <DependentUpon>BillMessageEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\BillMessage\BillMessageListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\BillMessage\BillMessageListForm.Designer.cs">
+      <DependentUpon>BillMessageListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\ChargePrice\ChargePriceEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\ChargePrice\ChargePriceEntityForm.Designer.cs">
+      <DependentUpon>ChargePriceEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\ChargePrice\ChargePriceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\ChargePrice\ChargePriceListForm.Designer.cs">
+      <DependentUpon>ChargePriceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Message\MessageEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Message\MessageEntityForm.Designer.cs">
+      <DependentUpon>MessageEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Message\MessageListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Message\MessageListForm.Designer.cs">
+      <DependentUpon>MessageListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\AnnouncementTime\AnnouncementTimeEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\AnnouncementTime\AnnouncementTimeEntityForm.Designer.cs">
+      <DependentUpon>AnnouncementTimeEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\AnnouncementTime\AnnouncementTimeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\AnnouncementTime\AnnouncementTimeListForm.Designer.cs">
+      <DependentUpon>AnnouncementTimeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Bill\BillEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Bill\BillEntityForm.Designer.cs">
+      <DependentUpon>BillEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Bill\BillListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Bill\BillListForm.Designer.cs">
+      <DependentUpon>BillListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Color\ColorEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Color\ColorEntityForm.Designer.cs">
+      <DependentUpon>ColorEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Color\ColorListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Color\ColorListForm.Designer.cs">
+      <DependentUpon>ColorListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Company\CompanyEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Company\CompanyEntityForm.Designer.cs">
+      <DependentUpon>CompanyEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Company\CompanyListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Company\CompanyListForm.Designer.cs">
+      <DependentUpon>CompanyListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Computer\ComputerEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Computer\ComputerEntityForm.Designer.cs">
+      <DependentUpon>ComputerEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Computer\ComputerListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Computer\ComputerListForm.Designer.cs">
+      <DependentUpon>ComputerListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Country\CountryEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Country\CountryEntityForm.Designer.cs">
+      <DependentUpon>CountryEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Country\CountryListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\Country\CountryListForm.Designer.cs">
+      <DependentUpon>CountryListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionType\InfractionTypeEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionType\InfractionTypeEntityForm.Designer.cs">
+      <DependentUpon>InfractionTypeEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionType\InfractionTypeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Infraction\InfractionType\InfractionTypeListForm.Designer.cs">
+      <DependentUpon>InfractionTypeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeCancelComment\LadeCancelCommentEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeCancelComment\LadeCancelCommentEntityForm.Designer.cs">
+      <DependentUpon>LadeCancelCommentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeCancelComment\LadeCancelCommentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeCancelComment\LadeCancelCommentListForm.Designer.cs">
+      <DependentUpon>LadeCancelCommentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeComment\LadeCommentEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeComment\LadeCommentEntityForm.Designer.cs">
+      <DependentUpon>LadeCommentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeComment\LadeCommentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\LadeComment\LadeCommentListForm.Designer.cs">
+      <DependentUpon>LadeCommentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PlateCity\PlateCityEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PlateCity\PlateCityEntityForm.Designer.cs">
+      <DependentUpon>PlateCityEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PlateCity\PlateCityListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PlateCity\PlateCityListForm.Designer.cs">
+      <DependentUpon>PlateCityListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PortPlaces\PortPlacesEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PortPlaces\PortPlacesEntityForm.Designer.cs">
+      <DependentUpon>PortPlacesEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PortPlaces\PortPlacesListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\MainInformation\PortPlaces\PortPlacesListForm.Designer.cs">
+      <DependentUpon>PortPlacesListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderType\LaderTypeEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderType\LaderTypeEntityForm.Designer.cs">
+      <DependentUpon>LaderTypeEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderType\LaderTypeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\LaderType\LaderTypeListForm.Designer.cs">
+      <DependentUpon>LaderTypeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\PriceNorm\PriceNormListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\PriceNorm\PriceNormListForm.Designer.cs">
+      <DependentUpon>PriceNormListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Saloon\SaloonEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Saloon\SaloonEntityForm.Designer.cs">
+      <DependentUpon>SaloonEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Saloon\SaloonListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Saloon\SaloonListForm.Designer.cs">
+      <DependentUpon>SaloonListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Services\ServicesEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Services\ServicesEntityForm.Designer.cs">
+      <DependentUpon>ServicesEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Services\ServicesListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Services\ServicesListForm.Designer.cs">
+      <DependentUpon>ServicesListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\StopFee\StopFeeEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\StopFee\StopFeeEntityForm.Designer.cs">
+      <DependentUpon>StopFeeEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\StopFee\StopFeeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\StopFee\StopFeeListForm.Designer.cs">
+      <DependentUpon>StopFeeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TrafficType\TrafficTypeEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TrafficType\TrafficTypeEntityForm.Designer.cs">
+      <DependentUpon>TrafficTypeEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TrafficType\TrafficTypeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TrafficType\TrafficTypeListForm.Designer.cs">
+      <DependentUpon>TrafficTypeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\TurnCancelComment\TurnCancelCommentEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\TurnCancelComment\TurnCancelCommentEntityForm.Designer.cs">
+      <DependentUpon>TurnCancelCommentEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\TurnCancelComment\TurnCancelCommentListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Comments\TurnCancelComment\TurnCancelCommentListForm.Designer.cs">
+      <DependentUpon>TurnCancelCommentListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\User\UserEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\User\UserEntityForm.Designer.cs">
+      <DependentUpon>UserEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\User\UserListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\User\UserListForm.Designer.cs">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\UserGroup\UserGroupEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\UserGroup\UserGroupEntityForm.Designer.cs">
+      <DependentUpon>UserGroupEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\UserGroup\UserGroupListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Common\UserGroup\UserGroupListForm.Designer.cs">
+      <DependentUpon>UserGroupListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\AllCarTrafficsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\AllCarTrafficsForm.Designer.cs">
+      <DependentUpon>AllCarTrafficsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\ALLDriverTrafficsFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\ALLDriverTrafficsFrom.Designer.cs">
+      <DependentUpon>ALLDriverTrafficsFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\AllOutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\AllOutForm.Designer.cs">
+      <DependentUpon>AllOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\PriceShowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\PriceShowForm.Designer.cs">
+      <DependentUpon>PriceShowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\CancelExpiredTurnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\CancelExpiredTurnForm.Designer.cs">
+      <DependentUpon>CancelExpiredTurnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\ImportToDataBase.cs" />
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\InDateCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\InDateCheckForm.Designer.cs">
+      <DependentUpon>InDateCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TurnAcceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TurnAcceptionForm.Designer.cs">
+      <DependentUpon>TurnAcceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TrafficWithoutTurnAllowadedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TrafficWithoutTurnAllowadedForm.Designer.cs">
+      <DependentUpon>TrafficWithoutTurnAllowadedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInfoByDateReportForm.Designer.cs">
+      <DependentUpon>AllInfoByDateReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\CanceledTurnsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\CanceledTurnsReportForm.Designer.cs">
+      <DependentUpon>CanceledTurnsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\ActiveTurnsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\ActiveTurnsReportForm.Designer.cs">
+      <DependentUpon>ActiveTurnsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\CarLadeBillReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\CarLadeBillReportForm.Designer.cs">
+      <DependentUpon>CarLadeBillReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\CarLadBillAndCancelAndTurnReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\CarLadBillAndCancelAndTurnReportForm.Designer.cs">
+      <DependentUpon>CarLadBillAndCancelAndTurnReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\GroupTrafficReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\GroupTrafficReportForm.Designer.cs">
+      <DependentUpon>GroupTrafficReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\OnlineCardCheckingReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\OnlineCardCheckingReportForm.Designer.cs">
+      <DependentUpon>OnlineCardCheckingReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\PortPlaceCountReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\PortPlaceCountReportForm.Designer.cs">
+      <DependentUpon>PortPlaceCountReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\ServicesCountPriceReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\ServicesCountPriceReportForm.Designer.cs">
+      <DependentUpon>ServicesCountPriceReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\StimulReportViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\StimulReportViewerForm.Designer.cs">
+      <DependentUpon>StimulReportViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\StimulViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\StimulViewer.Designer.cs">
+      <DependentUpon>StimulViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\StimulViewerForAllUseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\StimulViewerForAllUseForm.Designer.cs">
+      <DependentUpon>StimulViewerForAllUseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficCountInReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficCountInReport.Designer.cs">
+      <DependentUpon>TrafficCountInReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPicturesFullScreanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPicturesFullScreanForm.Designer.cs">
+      <DependentUpon>TrafficPicturesFullScreanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\ServiceStatusReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\ServiceStatusReportForm.Designer.cs">
+      <DependentUpon>ServiceStatusReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\ITSInformationReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\ITSInformationReportForm.Designer.cs">
+      <DependentUpon>ITSInformationReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\ReturnedTurnsReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\ReturnedTurnsReportForm.Designer.cs">
+      <DependentUpon>ReturnedTurnsReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPicturesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPicturesForm.Designer.cs">
+      <DependentUpon>TrafficPicturesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPicturesNotInTraffic_T.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPicturesNotInTraffic_T.Designer.cs">
+      <DependentUpon>TrafficPicturesNotInTraffic_T.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\LadBillCreditReporForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\LadBillCreditReporForm.Designer.cs">
+      <DependentUpon>LadBillCreditReporForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AcceptedTurnWithoutLadBillCreditReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AcceptedTurnWithoutLadBillCreditReportForm.Designer.cs">
+      <DependentUpon>AcceptedTurnWithoutLadBillCreditReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AgeAvgReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AgeAvgReportForm.Designer.cs">
+      <DependentUpon>AgeAvgReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInReportForm.Designer.cs">
+      <DependentUpon>AllInReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInServiceTypeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInServiceTypeReportForm.Designer.cs">
+      <DependentUpon>AllInServiceTypeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllLadBillReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AllLadBillReport.Designer.cs">
+      <DependentUpon>AllLadBillReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllOutServiceTypeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AllOutServiceTypeReportForm.Designer.cs">
+      <DependentUpon>AllOutServiceTypeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllOutTrafficReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AllOutTrafficReportForm.Designer.cs">
+      <DependentUpon>AllOutTrafficReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\AllTrafficForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\AllTrafficForm.Designer.cs">
+      <DependentUpon>AllTrafficForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\ForeignCarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\ForeignCarsForm.Designer.cs">
+      <DependentUpon>ForeignCarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\IranianCarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\IranianCarsForm.Designer.cs">
+      <DependentUpon>IranianCarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\LastCarTraffic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\LastCarTraffic.Designer.cs">
+      <DependentUpon>LastCarTraffic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\LastDriverTraffic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\LastDriverTraffic.Designer.cs">
+      <DependentUpon>LastDriverTraffic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\OtherCarsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\OtherCarsForm.Designer.cs">
+      <DependentUpon>OtherCarsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\TrafficOutEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\Traffic\TrafficOutEntityForm.designer.cs">
+      <DependentUpon>TrafficOutEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TurnManagementEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TurnManagementEntityForm.Designer.cs">
+      <DependentUpon>TurnManagementEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TurnManagementListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\TurnManagement\TurnManagementListForm.Designer.cs">
+      <DependentUpon>TurnManagementListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\UsedLadBill\UsedLadBillEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\UsedLadBill\UsedLadBillEntityForm.Designer.cs">
+      <DependentUpon>UsedLadBillEntityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\UsedLadBill\UsedLadBillListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Traffic\UsedLadBill\UsedLadBillListForm.Designer.cs">
+      <DependentUpon>UsedLadBillListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Forms\TurnAcceptedAreaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TurnAcceptedAreaForm.Designer.cs">
+      <DependentUpon>TurnAcceptedAreaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TypeandLastInReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TypeandLastInReportForm.Designer.cs">
+      <DependentUpon>TypeandLastInReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\UseLadBillVSLadeCountReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\UseLadBillVSLadeCountReportForm.designer.cs">
+      <DependentUpon>UseLadBillVSLadeCountReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TruckUsedLadBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TruckUsedLadBill.Designer.cs">
+      <DependentUpon>TruckUsedLadBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\ViewerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\ViewerForm.Designer.cs">
+      <DependentUpon>ViewerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\CheckOnlineRefrence\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ir.rmto.smartcard\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference2\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\WebReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Exceptions\ExceptionCs.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExceptionCs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\LadBillCancelComment\LadBillCancelCommentEntityForm.resx">
+      <DependentUpon>LadBillCancelCommentEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\LadBillCancelComment\LadBillCancelCommentListForm.resx">
+      <DependentUpon>LadBillCancelCommentListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\BackUpForm.resx">
+      <DependentUpon>BackUpForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\ExportDataForm.resx">
+      <DependentUpon>ExportDataForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\LoadingMessage.resx">
+      <DependentUpon>LoadingMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\Log\LogEntityForm.resx">
+      <DependentUpon>LogEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\Log\LogListForm.resx">
+      <DependentUpon>LogListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\Setting_T\SettingEntityForm.resx">
+      <DependentUpon>SettingEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\Setting_T\SettingListForm.resx">
+      <DependentUpon>SettingListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\SQLConnectionManager.resx">
+      <DependentUpon>SQLConnectionManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\Infraction\InfractionEntityForm.resx">
+      <DependentUpon>InfractionEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\Infraction\InfractionListForm.resx">
+      <DependentUpon>InfractionListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Boundry\BoundryEntityForm.resx">
+      <DependentUpon>BoundryEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Boundry\BoundryListForm.resx">
+      <DependentUpon>BoundryListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Boxing\BoxingEntityForm.resx">
+      <DependentUpon>BoxingEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Boxing\BoxingListForm.resx">
+      <DependentUpon>BoxingListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\City\CityEntityForm.resx">
+      <DependentUpon>CityEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\City\CityListForm.resx">
+      <DependentUpon>CityListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Class\ClassEntityForm.resx">
+      <DependentUpon>ClassEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Class\ClassListForm.resx">
+      <DependentUpon>ClassListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\CompanyMobile_T\CompanyMobileEntityForm.resx">
+      <DependentUpon>CompanyMobileEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\CompanyMobile_T\CompanyMobileListForm.resx">
+      <DependentUpon>CompanyMobileListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Computer\ComputerManyEntityForm.resx">
+      <DependentUpon>ComputerManyEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\DestinationAddress\DestinationAddressEntityForm.resx">
+      <DependentUpon>DestinationAddressEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\DestinationAddress\DestinationAddressListForm.resx">
+      <DependentUpon>DestinationAddressListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Good\GoodEntityForm.resx">
+      <DependentUpon>GoodEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Good\GoodListForm.resx">
+      <DependentUpon>GoodListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\MessageRecipient\MessageRecipientEntityForm.resx">
+      <DependentUpon>MessageRecipientEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\MessageRecipient\MessageRecipientListForm.resx">
+      <DependentUpon>MessageRecipientListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\News\NewsEntityForm.resx">
+      <DependentUpon>NewsEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\News\NewsListForm.resx">
+      <DependentUpon>NewsListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Province\ProvinceEntityForm.resx">
+      <DependentUpon>ProvinceEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Province\ProvinceListForm.resx">
+      <DependentUpon>ProvinceListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\VerifiedCars_T\VerifiedCarsEntityForm.resx">
+      <DependentUpon>VerifiedCarsEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\VerifiedCars_T\VerifiedCarsListForm.resx">
+      <DependentUpon>VerifiedCarsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\SMS\LogintoSmsSystemForm.resx">
+      <DependentUpon>LogintoSmsSystemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\SMS\SendNewsToDiriversForm.resx">
+      <DependentUpon>SendNewsToDiriversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\SMS\SendTextToDiriversForm.resx">
+      <DependentUpon>SendTextToDiriversForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\SMS\SetSMSUserNameAndPassForm.resx">
+      <DependentUpon>SetSMSUserNameAndPassForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\SMS\SMSLogForm.resx">
+      <DependentUpon>SMSLogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\CompanyGroup_T\CompanyGroupEntityForm.resx">
+      <DependentUpon>CompanyGroupEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\CompanyGroup_T\CompanyGroupListForm.resx">
+      <DependentUpon>CompanyGroupListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\CompanyLadBill\CompanyLadBillEntityForm.resx">
+      <DependentUpon>CompanyLadBillEntityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\CompanyLadBill\CompanyLadBillListForm.resx">
+      <DependentUpon>CompanyLadBillListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentInforming.resx">
+      <DependentUpon>LadeAssignmentInforming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentInformingListForm.resx">
+      <DependentUpon>LadeAssignmentInformingListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\ShowFormSetting.resx">
+      <DependentUpon>ShowFormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\BoxingSearch.resx">
+      <DependentUpon>BoxingSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\CarSearch.resx">
+      <DependentUpon>CarSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\CarSearchForTraffic.resx">
+      <DependentUpon>CarSearchForTraffic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\CarStatusInLadBillCreditForm.resx">
+      <DependentUpon>CarStatusInLadBillCreditForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LaderType\ChooseSaloonForm.resx">
+      <DependentUpon>ChooseSaloonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\CitySearch.resx">
+      <DependentUpon>CitySearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\CompanySearch.resx">
+      <DependentUpon>CompanySearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\LadeCommentSearchForm.resx">
+      <DependentUpon>LadeCommentSearchForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\LaderTypeMultiChoose.resx">
+      <DependentUpon>LaderTypeMultiChoose.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\DriverSearch.resx">
+      <DependentUpon>DriverSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\DriverSearchForTraffic.resx">
+      <DependentUpon>DriverSearchForTraffic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\GoodSearch.resx">
+      <DependentUpon>GoodSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\LaderType.resx">
+      <DependentUpon>LaderType.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\SearchForm\PlateCitySearch.resx">
+      <DependentUpon>PlateCitySearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\CarSystem\CarSystemEntityForm.resx">
+      <DependentUpon>CarSystemEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\CarSystem\CarSystemListForm.resx">
+      <DependentUpon>CarSystemListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Car\CarEntityForm.resx">
+      <DependentUpon>CarEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Car\CarListForm.resx">
+      <DependentUpon>CarListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionSurveyGroup\InfractionSurveyGroupEntityForm.resx">
+      <DependentUpon>InfractionSurveyGroupEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionSurveyGroup\InfractionSurveyGroupListForm.resx">
+      <DependentUpon>InfractionSurveyGroupListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionSurveyUsers\InfractionSurveyUsersEntityForm.resx">
+      <DependentUpon>InfractionSurveyUsersEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionSurveyUsers\InfractionSurveyUsersListForm.resx">
+      <DependentUpon>InfractionSurveyUsersListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionGroup\InfractionGroupEntityForm.resx">
+      <DependentUpon>InfractionGroupEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionGroup\InfractionGroupListForm.resx">
+      <DependentUpon>InfractionGroupListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\DriverSpecification\DriverSpecificationEntityForm.resx">
+      <DependentUpon>DriverSpecificationEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Driver\DriverEntityForm.resx">
+      <DependentUpon>DriverEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Driver\DriverListForm.resx">
+      <DependentUpon>DriverListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadBillCredit\CancelLadBillCreditCommentForm.resx">
+      <DependentUpon>CancelLadBillCreditCommentForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadBillCredit\CancelLadBillForm.resx">
+      <DependentUpon>CancelLadBillForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadBillCredit\LadBillCreditListForm.resx">
+      <DependentUpon>LadBillCreditListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignmentCacelRequest\LadeAssignmentCacelRequestEntityForm.resx">
+      <DependentUpon>LadeAssignmentCacelRequestEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignmentCacelRequest\LadeAssignmentCacelRequestListForm.resx">
+      <DependentUpon>LadeAssignmentCacelRequestListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentAcceptForm.resx">
+      <DependentUpon>LadeAssignmentAcceptForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentEntityForm.resx">
+      <DependentUpon>LadeAssignmentEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentListForm.resx">
+      <DependentUpon>LadeAssignmentListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentRepeaterForm.resx">
+      <DependentUpon>LadeAssignmentRepeaterForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeAssignment\LadeAssignmentWithoutAcceptedForm.resx">
+      <DependentUpon>LadeAssignmentWithoutAcceptedForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LadeCancelAssignment\LadeCancelAssignmentEntityForm.resx">
+      <DependentUpon>LadeCancelAssignmentEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LaderPivotGroup\LaderPivotGroupEntityForm.resx">
+      <DependentUpon>LaderPivotGroupEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LaderPivotGroup\LaderPivotGroupListForm.resx">
+      <DependentUpon>LaderPivotGroupListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\BillMessage\BillMessageEntityForm.resx">
+      <DependentUpon>BillMessageEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\BillMessage\BillMessageListForm.resx">
+      <DependentUpon>BillMessageListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\ChargePrice\ChargePriceEntityForm.resx">
+      <DependentUpon>ChargePriceEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\ChargePrice\ChargePriceListForm.resx">
+      <DependentUpon>ChargePriceListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Message\MessageEntityForm.resx">
+      <DependentUpon>MessageEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Message\MessageListForm.resx">
+      <DependentUpon>MessageListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\AnnouncementTime\AnnouncementTimeEntityForm.resx">
+      <DependentUpon>AnnouncementTimeEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\AnnouncementTime\AnnouncementTimeListForm.resx">
+      <DependentUpon>AnnouncementTimeListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Bill\BillEntityForm.resx">
+      <DependentUpon>BillEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Bill\BillListForm.resx">
+      <DependentUpon>BillListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Color\ColorEntityForm.resx">
+      <DependentUpon>ColorEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Color\ColorListForm.resx">
+      <DependentUpon>ColorListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Company\CompanyEntityForm.resx">
+      <DependentUpon>CompanyEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Company\CompanyListForm.resx">
+      <DependentUpon>CompanyListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Computer\ComputerEntityForm.resx">
+      <DependentUpon>ComputerEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Computer\ComputerListForm.resx">
+      <DependentUpon>ComputerListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Country\CountryEntityForm.resx">
+      <DependentUpon>CountryEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\Country\CountryListForm.resx">
+      <DependentUpon>CountryListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionType\InfractionTypeEntityForm.resx">
+      <DependentUpon>InfractionTypeEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Infraction\InfractionType\InfractionTypeListForm.resx">
+      <DependentUpon>InfractionTypeListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\LadeCancelComment\LadeCancelCommentEntityForm.resx">
+      <DependentUpon>LadeCancelCommentEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\LadeCancelComment\LadeCancelCommentListForm.resx">
+      <DependentUpon>LadeCancelCommentListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\LadeComment\LadeCommentEntityForm.resx">
+      <DependentUpon>LadeCommentEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\LadeComment\LadeCommentListForm.resx">
+      <DependentUpon>LadeCommentListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\PlateCity\PlateCityEntityForm.resx">
+      <DependentUpon>PlateCityEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\PlateCity\PlateCityListForm.resx">
+      <DependentUpon>PlateCityListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\PortPlaces\PortPlacesEntityForm.resx">
+      <DependentUpon>PortPlacesEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\MainInformation\PortPlaces\PortPlacesListForm.resx">
+      <DependentUpon>PortPlacesListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LaderType\LaderTypeEntityForm.resx">
+      <DependentUpon>LaderTypeEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\LaderType\LaderTypeListForm.resx">
+      <DependentUpon>LaderTypeListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\PriceNorm\PriceNormListForm.resx">
+      <DependentUpon>PriceNormListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Saloon\SaloonEntityForm.resx">
+      <DependentUpon>SaloonEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Saloon\SaloonListForm.resx">
+      <DependentUpon>SaloonListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Services\ServicesEntityForm.resx">
+      <DependentUpon>ServicesEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Services\ServicesListForm.resx">
+      <DependentUpon>ServicesListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\StopFee\StopFeeEntityForm.resx">
+      <DependentUpon>StopFeeEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\StopFee\StopFeeListForm.resx">
+      <DependentUpon>StopFeeListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TrafficType\TrafficTypeEntityForm.resx">
+      <DependentUpon>TrafficTypeEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TrafficType\TrafficTypeListForm.resx">
+      <DependentUpon>TrafficTypeListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\TurnCancelComment\TurnCancelCommentEntityForm.resx">
+      <DependentUpon>TurnCancelCommentEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Comments\TurnCancelComment\TurnCancelCommentListForm.resx">
+      <DependentUpon>TurnCancelCommentListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\User\UserEntityForm.resx">
+      <DependentUpon>UserEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\User\UserListForm.resx">
+      <DependentUpon>UserListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\UserGroup\UserGroupEntityForm.resx">
+      <DependentUpon>UserGroupEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Common\UserGroup\UserGroupListForm.resx">
+      <DependentUpon>UserGroupListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\AllCarTrafficsForm.resx">
+      <DependentUpon>AllCarTrafficsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\ALLDriverTrafficsFrom.resx">
+      <DependentUpon>ALLDriverTrafficsFrom.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\AllOutForm.resx">
+      <DependentUpon>AllOutForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\PriceShowForm.resx">
+      <DependentUpon>PriceShowForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TurnManagement\CancelExpiredTurnForm.resx">
+      <DependentUpon>CancelExpiredTurnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TurnManagement\InDateCheckForm.resx">
+      <DependentUpon>InDateCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TurnManagement\TurnAcceptionForm.resx">
+      <DependentUpon>TurnAcceptionForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TurnManagement\TrafficWithoutTurnAllowadedForm.resx">
+      <DependentUpon>TrafficWithoutTurnAllowadedForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateForm.resx">
+      <DependentUpon>AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AllInfoByDateReportForm.resx">
+      <DependentUpon>AllInfoByDateReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\CanceledTurnsReportForm.resx">
+      <DependentUpon>CanceledTurnsReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\ActiveTurnsReportForm.resx">
+      <DependentUpon>ActiveTurnsReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\CarLadeBillReportForm.resx">
+      <DependentUpon>CarLadeBillReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\CarLadBillAndCancelAndTurnReportForm.resx">
+      <DependentUpon>CarLadBillAndCancelAndTurnReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\GroupTrafficReportForm.resx">
+      <DependentUpon>GroupTrafficReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\OnlineCardCheckingReportForm.resx">
+      <DependentUpon>OnlineCardCheckingReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\PortPlaceCountReportForm.resx">
+      <DependentUpon>PortPlaceCountReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\ServicesCountPriceReportForm.resx">
+      <DependentUpon>ServicesCountPriceReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\StimulReportViewerForm.resx">
+      <DependentUpon>StimulReportViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\StimulViewer.resx">
+      <DependentUpon>StimulViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\StimulViewerForAllUseForm.resx">
+      <DependentUpon>StimulViewerForAllUseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TrafficCountInReport.resx">
+      <DependentUpon>TrafficCountInReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TrafficPicturesFullScreanForm.resx">
+      <DependentUpon>TrafficPicturesFullScreanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\ServiceStatusReportForm.resx">
+      <DependentUpon>ServiceStatusReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\ITSInformationReportForm.resx">
+      <DependentUpon>ITSInformationReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\ReturnedTurnsReportForm.resx">
+      <DependentUpon>ReturnedTurnsReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TrafficPicturesForm.resx">
+      <DependentUpon>TrafficPicturesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TrafficPicturesNotInTraffic_T.resx">
+      <DependentUpon>TrafficPicturesNotInTraffic_T.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\LadBillCreditReporForm.resx">
+      <DependentUpon>LadBillCreditReporForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AcceptedTurnWithoutLadBillCreditReportForm.resx">
+      <DependentUpon>AcceptedTurnWithoutLadBillCreditReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AgeAvgReportForm.resx">
+      <DependentUpon>AgeAvgReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AllInReportForm.resx">
+      <DependentUpon>AllInReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AllInServiceTypeReportForm.resx">
+      <DependentUpon>AllInServiceTypeReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AllLadBillReport.resx">
+      <DependentUpon>AllLadBillReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AllOutServiceTypeReportForm.resx">
+      <DependentUpon>AllOutServiceTypeReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AllOutTrafficReportForm.resx">
+      <DependentUpon>AllOutTrafficReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\AllTrafficForm.resx">
+      <DependentUpon>AllTrafficForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\ForeignCarsForm.resx">
+      <DependentUpon>ForeignCarsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\IranianCarsForm.resx">
+      <DependentUpon>IranianCarsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\LastCarTraffic.resx">
+      <DependentUpon>LastCarTraffic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\LastDriverTraffic.resx">
+      <DependentUpon>LastDriverTraffic.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\OtherCarsForm.resx">
+      <DependentUpon>OtherCarsForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\Traffic\TrafficOutEntityForm.resx">
+      <DependentUpon>TrafficOutEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TurnManagement\TurnManagementEntityForm.resx">
+      <DependentUpon>TurnManagementEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\TurnManagement\TurnManagementListForm.resx">
+      <DependentUpon>TurnManagementListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\UsedLadBill\UsedLadBillEntityForm.resx">
+      <DependentUpon>UsedLadBillEntityForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresentationLayer\Traffic\UsedLadBill\UsedLadBillListForm.resx">
+      <DependentUpon>UsedLadBillListForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\Forms\CarAllTrafficForm.resx">
+      <DependentUpon>CarAllTrafficForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\CompanyAllLadeAssignmentReportForm.resx">
+      <DependentUpon>CompanyAllLadeAssignmentReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\CompanyLadeAssignmentDetailReportForm.resx">
+      <DependentUpon>CompanyLadeAssignmentDetailReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\CompanyRemainderLadeReportForm.resx">
+      <DependentUpon>CompanyRemainderLadeReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\LastTurnNumberAndRemaindCountByLaderTypeForm.resx">
+      <DependentUpon>LastTurnNumberAndRemaindCountByLaderTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\InNotOutTrafficReportForm.resx">
+      <DependentUpon>InNotOutTrafficReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\InServiceTypeWithPivoteReportForm.resx">
+      <DependentUpon>InServiceTypeWithPivoteReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\InTrafficReportForm.resx">
+      <DependentUpon>InTrafficReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\LadBillReportForm.resx">
+      <DependentUpon>LadBillReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\AllInTrafficWithPriceReportForm.resx">
+      <DependentUpon>AllInTrafficWithPriceReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\LaderTypeTurnReportForm.resx">
+      <DependentUpon>LaderTypeTurnReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\LederTypeCountReportForm.resx">
+      <DependentUpon>LederTypeCountReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\OutTrafficReportForm.resx">
+      <DependentUpon>OutTrafficReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TrafficPictures.resx">
+      <DependentUpon>TrafficPictures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TurnAcceptedAreaForm.resx">
+      <DependentUpon>TurnAcceptedAreaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TurnAcceptedReportForm.resx">
+      <DependentUpon>TurnAcceptedReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TypeandLastInReportForm.resx">
+      <DependentUpon>TypeandLastInReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\UseLadBillVSLadeCountReportForm.resx">
+      <DependentUpon>UseLadBillVSLadeCountReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\UsersLadeDetailReportForm.resx">
+      <DependentUpon>UsersLadeDetailReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\UsersPriceReportForm.resx">
+      <DependentUpon>UsersPriceReportForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\ViewerForm.resx">
+      <DependentUpon>ViewerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Forms\TruckUsedLadBill.resx">
+      <DependentUpon>TruckUsedLadBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="validators\RegularExpressionPattern.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegularExpressionPattern.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="bin\x86\Debug\TBZRMTO.rar" />
+    <None Include="bin\x86\Debug\TBZRMTO.vshost.exe.config" />
+    <None Include="bin\x86\Debug\TBZRMTO96-01-31.rar" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Reports\Forms\CarAllTrafficForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\CarAllTrafficForm.Designer.cs">
+      <DependentUpon>CarAllTrafficForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\CompanyAllLadeAssignmentReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\CompanyAllLadeAssignmentReportForm.Designer.cs">
+      <DependentUpon>CompanyAllLadeAssignmentReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\CompanyLadeAssignmentDetailReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\CompanyLadeAssignmentDetailReportForm.Designer.cs">
+      <DependentUpon>CompanyLadeAssignmentDetailReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\CompanyRemainderLadeReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\CompanyRemainderLadeReportForm.Designer.cs">
+      <DependentUpon>CompanyRemainderLadeReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\LastTurnNumberAndRemaindCountByLaderTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\LastTurnNumberAndRemaindCountByLaderTypeForm.Designer.cs">
+      <DependentUpon>LastTurnNumberAndRemaindCountByLaderTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\InNotOutTrafficReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\InNotOutTrafficReportForm.Designer.cs">
+      <DependentUpon>InNotOutTrafficReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\InServiceTypeWithPivoteReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\InServiceTypeWithPivoteReportForm.Designer.cs">
+      <DependentUpon>InServiceTypeWithPivoteReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\InTrafficReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\InTrafficReportForm.Designer.cs">
+      <DependentUpon>InTrafficReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\LadBillReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\LadBillReportForm.Designer.cs">
+      <DependentUpon>LadBillReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInTrafficWithPriceReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInTrafficWithPriceReportForm.Designer.cs">
+      <DependentUpon>AllInTrafficWithPriceReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\LaderTypeTurnReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\LaderTypeTurnReportForm.Designer.cs">
+      <DependentUpon>LaderTypeTurnReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\LederTypeCountReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\LederTypeCountReportForm.Designer.cs">
+      <DependentUpon>LederTypeCountReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\OutTrafficReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\OutTrafficReportForm.Designer.cs">
+      <DependentUpon>OutTrafficReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\RecievedSMSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\RecievedSMSForm.Designer.cs">
+      <DependentUpon>RecievedSMSForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPictures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TrafficPictures.Designer.cs">
+      <DependentUpon>TrafficPictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\TurnAcceptedReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\TurnAcceptedReportForm.Designer.cs">
+      <DependentUpon>TurnAcceptedReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\UsersLadeDetailReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\UsersLadeDetailReportForm.Designer.cs">
+      <DependentUpon>UsersLadeDetailReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\UsersPriceReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\UsersPriceReportForm.Designer.cs">
+      <DependentUpon>UsersPriceReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="validators\BillMessageDateValidationRule.cs" />
+    <Compile Include="validators\DuplicateTurnNumberInUpdateRule.cs" />
+    <Compile Include="validators\InsertDriverDuplicateNumberRule.cs" />
+    <Compile Include="validators\UpdateDriverDuplicateNumberRule.cs" />
+    <Compile Include="validators\DriverInfractionRule.cs" />
+    <Compile Include="validators\DuplicateInfractionRule.cs" />
+    <Compile Include="validators\LadeAssignmentCancelRule.cs" />
+    <Compile Include="validators\PriceNormRule.cs" />
+    <Compile Include="validators\RegularExpressionPattern.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegularExpressionPattern.resx</DependentUpon>
+    </Compile>
+    <None Include="TBZRMTO_TemporaryKey.pfx" />
+    <None Include="Web References\CheckOnlineRefrence\OnlineInformationChecking.wsdl" />
+    <None Include="Web References\CheckOnlineRefrence\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ir.rmto.smartcard\PKG_RMTO_WS.wsdl" />
+    <None Include="Web References\ir.rmto.smartcard\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference2\OnlineInformationChecking.wsdl" />
+    <None Include="Web References\WebReference2\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference3\OnlineInformationChecking.wsdl" />
+    <None Include="Web References\WebReference3\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\WebReference\servicerefrence.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountJournal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounts_Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeFiscalYearAndSystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClipboardEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfirmVoucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CostCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Document_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteArticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteArticles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteUserPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeselectAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document_Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document_Unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExtraField.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExtraFieldTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiscalYear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiscalYear_Change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormalAccount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenSigma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HamrahanSystemLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InverseSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoreInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NetworkSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewArticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewArticleDropDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedSigma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RootAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UndoFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AnnouncementTime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BasicInformation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarRequirement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CountUnit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Driver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Good.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infraction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Infractions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LadBill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LadeComment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lader.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PriceNorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Services.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SurveyInfractionGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SurveyInfractionUser1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SurveyInfractionUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tasks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Traffic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TurnCancelComment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TurnManagement.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back3 .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxAXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="AXVLC">
+      <Guid>{DF2BBE39-40A8-433B-A279-073F48DA94B6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bac1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RMTOLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RMTOLogo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\Common\Traffic\Traffic_T\ConvertToTrueNumber.cs" />
+    <Compile Include="Common\EncryptUserPass.cs" />
+    <Compile Include="Reports\Forms\AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Forms\AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateForm.Designer.cs">
+      <DependentUpon>AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Forms\AllInfoByDateReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <None Include="Web References\WebReference3\OnlineInformationChecking.disco" />
+    <None Include="Web References\WebReference2\OnlineInformationChecking.disco" />
+    <None Include="Web References\CheckOnlineRefrence\OnlineInformationChecking.disco" />
+    <None Include="Web References\WebReference\servicerefrence.disco" />
+    <None Include="Resources\in.png" />
+    <None Include="Resources\papelero.png" />
+    <None Include="Resources\AllRecords.png" />
+    <None Include="Resources\table_sql_check.png" />
+    <None Include="Resources\AllInformation.png" />
+    <None Include="Resources\Manager.png" />
+    <None Include="Resources\about.png" />
+    <None Include="Resources\AllIn.png" />
+    <None Include="Resources\1102.png" />
+    <None Include="Resources\book_blue_find.png" />
+    <None Include="Resources\DeselectAllItems.png" />
+    <None Include="Resources\DeselectSingleItem.png" />
+    <None Include="Resources\duplicates_delete.png" />
+    <None Include="Resources\Network Settings.png" />
+    <None Include="Resources\save as.png" />
+    <None Include="Resources\SelectAllItems.png" />
+    <None Include="Resources\SelectSingleItem.png" />
+    <None Include="Resources\UnConfirmVoucher.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\Print-icon.png" />
+    <None Include="Resources\Print-icon1.png" />
+    <None Include="Resources\selection_all.png" />
+    <None Include="Resources\ladeCancelRequest.png" />
+    <None Include="Resources\list.png" />
+    <None Include="Resources\ProductionYear.png" />
+    <None Include="Resources\showWithDate.png" />
+    <None Include="Resources\today.png" />
+    <None Include="Resources\mail2_send.png" />
+    <None Include="Resources\InverseSelectDown.png" />
+    <None Include="Resources\RemainedTurnWithDate.jpg" />
+    <None Include="Resources\RemainedTurnWithDate1.jpg" />
+    <None Include="Resources\Refresh20.png" />
+    <None Include="Resources\Refresh16.png" />
+    <Content Include="bin\x86\Debug\FarsiLibrary.Resources.dll" />
+    <Content Include="bin\x86\Debug\FarsiLibrary.Utils.dll" />
+    <Content Include="bin\x86\Debug\FarsiLibrary.Win.dll" />
+    <Content Include="bin\x86\Debug\gxdotnet8.dll" />
+    <Content Include="bin\x86\Debug\HamrahanSystem.TextBox.dll" />
+    <Content Include="bin\x86\Debug\Janus.Data.v3.dll" />
+    <Content Include="bin\x86\Debug\Janus.Windows.ButtonBar.v3.dll" />
+    <Content Include="bin\x86\Debug\Janus.Windows.Common.v3.dll" />
+    <Content Include="bin\x86\Debug\Janus.Windows.GridEX.v3.dll" />
+    <Content Include="bin\x86\Debug\Janus.Windows.UI.v3.dll" />
+    <Content Include="bin\x86\Debug\MarqueeControl.dll" />
+    <Content Include="bin\x86\Debug\Microsoft.Office.Interop.Access.dll" />
+    <Content Include="bin\x86\Debug\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="bin\x86\Debug\Microsoft.ReportViewer.Common.dll" />
+    <Content Include="bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="bin\x86\Debug\Microsoft.VisualBasic.dll" />
+    <Content Include="bin\x86\Debug\Office.dll" />
+    <Content Include="bin\x86\Debug\PresentationCore.dll" />
+    <Content Include="bin\x86\Debug\PresentationFramework.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Base.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Controls.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Controls.Win.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Database.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Design.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Editor.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Report.Design.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Report.dll" />
+    <Content Include="bin\x86\Debug\Stimulsoft.Report.Win.dll" />
+    <Content Include="bin\x86\Debug\System.Management.dll" />
+    <Content Include="bin\x86\Debug\System.Web.dll" />
+    <Content Include="bin\x86\Debug\System.Web.Extensions.dll" />
+    <Content Include="bin\x86\Debug\TBZRMTO.vshost.exe" />
+    <None Include="Resources\Default.png" />
+    <None Include="Resources\control.png" />
+    <None Include="Resources\Search-Images-icon.png" />
+    <Content Include="bin\x86\Debug\UIAutomationProvider.dll" />
+    <Content Include="bin\x86\Debug\WindowsBase.dll" />
+    <Content Include="bin\x86\Debug\WindowsFormsIntegration.dll" />
+    <None Include="Resources\parking.jpg" />
+    <None Include="Resources\iranianTraffic.jpg" />
+    <None Include="Resources\truckTraffic.jpg" />
+    <None Include="Resources\otherTraffic.png" />
+    <None Include="Resources\truckTraffic.png" />
+    <None Include="Resources\company.jpg" />
+    <None Include="Resources\ladeBillCredit.png" />
+    <None Include="Resources\ladeBillCrediCancelt.png" />
+    <None Include="Resources\ladeassignment.jpg" />
+    <None Include="Resources\ShowLadeAssignment.jpg" />
+    <Content Include="sazman2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="bin\x86\Release\" />
+    <Folder Include="Common\CardReader\" />
+    <Folder Include="Reports\ReportDoc\" />
+    <Folder Include="Web References\WebReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://172.24.129.5/OnlineInformationChecking.asmx">
+      <UrlBehavior>Static</UrlBehavior>
+      <RelPath>Web References\CheckOnlineRefrence\</RelPath>
+      <UpdateFromURL>http://172.24.129.5/OnlineInformationChecking.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TBZRMTO_CheckOnlineRefrence_ServiceRefrence</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://172.20.229.206/servicerefrence.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference\</RelPath>
+      <UpdateFromURL>http://172.20.229.206/servicerefrence.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TBZRMTO_WebReference_ServiceRefrence</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.103:802/OnlineInformationChecking.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference3\</RelPath>
+      <UpdateFromURL>http://192.168.1.103:802/OnlineInformationChecking.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TBZRMTO_WebReference3_OnlineInformationChecking</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://192.168.1.103/OnlineInformationChecking.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\WebReference2\</RelPath>
+      <UpdateFromURL>http://192.168.1.103/OnlineInformationChecking.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TBZRMTO_WebReference2_OnlineInformationChecking</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://smartcard.rmto.ir:9090/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ir.rmto.smartcard\</RelPath>
+      <UpdateFromURL>http://smartcard.rmto.ir:9090/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>TBZRMTO_ir_rmto_smartcard_PKG_RMTO_WSService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HepsaCore\HepsaCore.vbproj">
+      <Project>{754C584D-492C-41E8-884C-58F4F80BFC0B}</Project>
+      <Name>HepsaCore</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

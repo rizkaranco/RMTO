@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="LadeAssignmentToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="RefreshButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOuSURBVEhLzZV/TJR1HMc/z3N3kByHx8FTx+EdHNTdya+7
+        45RDQRTwkB8BEjDzJlnZkmxYylngbIfipLJhJivntKVLcUVlP0QN2woTZ5kl1CTJrCOysdGWy7Kt9u57
+        53dr5R1E8kev7dnzfD6f7/Ped8/38/489P9kFZ2jfKrj0dSTsEMannfUAkWjeIJSSc/TU4dhu+SrGchG
+        0WkrdNuj/6AyeoyXbgIHWSiDiimF3IYtsWPV/U64TmUg5wMzzF06yJpkg6xu56v/JVbKCfeEvWx6KfFq
+        +fFM3P1xDtz9uaj9NBsVn8xC4ck0OI8nI61bD+MhCcr2cFAldbA3p10XCIWGZkQ0h51Y3JuFptHF8Fwu
+        xyPflWLlpYW4ZzAP1eecKDltQ17vTDh6kmB5Kw76rhhoOiMRtlMOWkEXuFIQ0ik9yhv1ywMXC1B/yYX6
+        b4pw34V8uHoy4Og0wrInHpmvGFFwMjWw+/QjBiQfug3aV9W4pV0BaqD9FEMqrnYDQtQm5Uj1gBM1/dlw
+        HEyCZpOyjxaxQ8wgJ2VRlH+R9KTKN+d9E6xHE3DH23HQHlBD3iyOsDUFAZWQ2Mg9+0gSbF2JEFYL3ezI
+        ZvLK31BtVg5b302A6R0t1NsiQOW0laUV16vjYacWw4sxoFJaxjNBUW2OGNbvj4XYKHwWahPBmU2NVEWP
+        8igkQiN9SXfSah5OCpHf/0kY3UUP8ufQ6Jirncwxk6KUygxbNaNxT03/nmdCIad1NMA+2UYeT0AkSfK1
+        wutLP8xBy5VaWJ6/dZhXboS1trhWGJTvloE1ShPPjkMxPZS17/ar235djraf3XhirBrmF+J9vPoXNpov
+        NAhv+jtJ06mErE0EO0cTrwbBSomR68PPrPzchWeu1aHtylK0/FiL5tFKxD+n/YnMtIEJ7ohsVryn8aqv
+        mQ5qYT4cD/0bMVDtmuYfE89ypSAsoo2zDiRjzUgZHv+hEutHq5hwFdZdrkCDr4S5eiGWD+XBP0WLP7Ii
+        t9cCe48x4IXpHUq/F/wzaByKyCN1SL+t+KoQq9h4ePjb4sBV/7UL9w8VYNn5eahl7i49k4n8vlQ4jhmh
+        2xkN0cP+CTaay1UmIJbiFGuE7sJj6bh3aAHqzufB/UUulgzMQYrX+LvUrvJFt4aflXuE1yiN+cBOCfzN
+        SVJGNdIW9VhJnx0VZx2BXfvnD69OETPYTG+g3ea9Oiw4lYLYp1Wh2/SmSKW5Mo9wUbFBnMho/x2v1yu2
+        Hm5dwsNJQPQn3WVf6SApU/MAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="LadeAssignmentGridView_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="LAChoose_bit"&gt;&lt;AllowDrag&gt;False&lt;/AllowDrag&gt;&lt;Caption&gt;انتخاب&lt;/Caption&gt;&lt;BoundMode&gt;UnboundFetch&lt;/BoundMode&gt;&lt;ColumnType&gt;CheckBox&lt;/ColumnType&gt;&lt;EditType&gt;CheckBox&lt;/EditType&gt;&lt;Key&gt;LAChoose_bit&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;50&lt;/Width&gt;&lt;ActAsSelector&gt;True&lt;/ActAsSelector&gt;&lt;UseHeaderSelector&gt;False&lt;/UseHeaderSelector&gt;&lt;/Column0&gt;&lt;Column1 ID="LaderType_nvc"&gt;&lt;Caption&gt;نوع بارگیر&lt;/Caption&gt;&lt;DataMember&gt;LaderType_nvc&lt;/DataMember&gt;&lt;Key&gt;LaderType_nvc&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;110&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="CompanyID_intCompany_nvc"&gt;&lt;Caption&gt;شرکت&lt;/Caption&gt;&lt;DataMember&gt;CompanyID_intCompany_nvc&lt;/DataMember&gt;&lt;Key&gt;CompanyID_intCompany_nvc&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;90&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="GoodID_intGood_nvc"&gt;&lt;Caption&gt;کالا&lt;/Caption&gt;&lt;DataMember&gt;GoodID_intGood_nvc&lt;/DataMember&gt;&lt;Key&gt;GoodID_intGood_nvc&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;105&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="CityID_intCity_nvc"&gt;&lt;Caption&gt;شهر مقصد&lt;/Caption&gt;&lt;DataMember&gt;CityID_intCity_nvc&lt;/DataMember&gt;&lt;Key&gt;CityID_intCity_nvc&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;110&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="Address_nvc"&gt;&lt;Caption&gt;آدرس مقصد&lt;/Caption&gt;&lt;DataMember&gt;Address_nvc&lt;/DataMember&gt;&lt;Key&gt;Address_nvc&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;101&lt;/Width&gt;&lt;/Column5&gt;&lt;Column6 ID="CarCount_int"&gt;&lt;Caption&gt;تعداد&lt;/Caption&gt;&lt;DataMember&gt;CarCount_int&lt;/DataMember&gt;&lt;Key&gt;CarCount_int&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;42&lt;/Width&gt;&lt;/Column6&gt;&lt;Column7 ID="PortPlaceID_intPortPlaces_nvc"&gt;&lt;Caption&gt;محل بارگیری&lt;/Caption&gt;&lt;DataMember&gt;PortPlaceID_intPortPlaces_nvc&lt;/DataMember&gt;&lt;Key&gt;PortPlaceID_intPortPlaces_nvc&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;/Column7&gt;&lt;Column8 ID="MinWeight_dec"&gt;&lt;Caption&gt;از وزن&lt;/Caption&gt;&lt;DataMember&gt;MinWeight_dec&lt;/DataMember&gt;&lt;Key&gt;MinWeight_dec&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Width&gt;60&lt;/Width&gt;&lt;/Column8&gt;&lt;Column9 ID="MaxWeight_dec"&gt;&lt;Caption&gt;تا وزن&lt;/Caption&gt;&lt;DataMember&gt;MaxWeight_dec&lt;/DataMember&gt;&lt;Key&gt;MaxWeight_dec&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;59&lt;/Width&gt;&lt;/Column9&gt;&lt;Column10 ID="PortageFee_dec"&gt;&lt;Caption&gt;نرخ حمل (ريال)&lt;/Caption&gt;&lt;DataMember&gt;PortageFee_dec&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;PortageFee_dec&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;90&lt;/Width&gt;&lt;/Column10&gt;&lt;Column11 ID="Comment_nvc"&gt;&lt;Caption&gt;توضیحات&lt;/Caption&gt;&lt;DataMember&gt;Comment_nvc&lt;/DataMember&gt;&lt;Key&gt;Comment_nvc&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;300&lt;/Width&gt;&lt;/Column11&gt;&lt;Column12 ID="BoxingID_intBoxingType_nvc"&gt;&lt;Caption&gt;نوع بسته بندی&lt;/Caption&gt;&lt;DataMember&gt;BoxingID_intBoxingType_nvc&lt;/DataMember&gt;&lt;Key&gt;BoxingID_intBoxingType_nvc&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column12&gt;&lt;Column13 ID="Date_nvc"&gt;&lt;Caption&gt;تاریخ ثبت&lt;/Caption&gt;&lt;DataMember&gt;Date_nvc&lt;/DataMember&gt;&lt;Key&gt;Date_nvc&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;95&lt;/Width&gt;&lt;/Column13&gt;&lt;Column14 ID="LadeAssignmentID_bint"&gt;&lt;Caption&gt;شماره بار&lt;/Caption&gt;&lt;DataMember&gt;LadeAssignmentID_bint&lt;/DataMember&gt;&lt;Key&gt;LadeAssignmentID_bint&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;90&lt;/Width&gt;&lt;/Column14&gt;&lt;Column15 ID="Accepted_bit"&gt;&lt;Caption&gt;تأیید&lt;/Caption&gt;&lt;DataMember&gt;Accepted_bit&lt;/DataMember&gt;&lt;Key&gt;Accepted_bit&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column15&gt;&lt;Column16 ID="RemainedCar"&gt;&lt;Caption&gt;ت.مانده&lt;/Caption&gt;&lt;DataMember&gt;RemainedCar&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;Key&gt;RemainedCar&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;/Column16&gt;&lt;Column17 ID="Time_nvc"&gt;&lt;Caption&gt;ساعت ثبت&lt;/Caption&gt;&lt;DataMember&gt;Time_nvc&lt;/DataMember&gt;&lt;Key&gt;Time_nvc&lt;/Key&gt;&lt;Position&gt;17&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;80&lt;/Width&gt;&lt;/Column17&gt;&lt;Column18 ID="AcceptUserName_nvc"&gt;&lt;Caption&gt;کاربر تایید کننده&lt;/Caption&gt;&lt;DataMember&gt;AcceptUserName_nvc&lt;/DataMember&gt;&lt;Key&gt;AcceptUserName_nvc&lt;/Key&gt;&lt;Position&gt;18&lt;/Position&gt;&lt;/Column18&gt;&lt;Column19 ID="AcceptDate_vc"&gt;&lt;Caption&gt;تاریخ تایید&lt;/Caption&gt;&lt;DataMember&gt;AcceptDate_vc&lt;/DataMember&gt;&lt;Key&gt;AcceptDate_vc&lt;/Key&gt;&lt;Position&gt;19&lt;/Position&gt;&lt;/Column19&gt;&lt;Column20 ID="AcceptTime_vc"&gt;&lt;Caption&gt;زمان تایید&lt;/Caption&gt;&lt;DataMember&gt;AcceptTime_vc&lt;/DataMember&gt;&lt;Key&gt;AcceptTime_vc&lt;/Key&gt;&lt;Position&gt;20&lt;/Position&gt;&lt;/Column20&gt;&lt;Column21 ID="EditUserName_nvc"&gt;&lt;Caption&gt;کاربر اصلاح&lt;/Caption&gt;&lt;DataMember&gt;EditUserName_nvc&lt;/DataMember&gt;&lt;Key&gt;EditUserName_nvc&lt;/Key&gt;&lt;Position&gt;21&lt;/Position&gt;&lt;/Column21&gt;&lt;Column22 ID="EditDate_vc"&gt;&lt;Caption&gt;تاریخ اصلاح&lt;/Caption&gt;&lt;DataMember&gt;EditDate_vc&lt;/DataMember&gt;&lt;Key&gt;EditDate_vc&lt;/Key&gt;&lt;Position&gt;22&lt;/Position&gt;&lt;/Column22&gt;&lt;Column23 ID="EditTime_vc"&gt;&lt;Caption&gt;زمان اصلاح&lt;/Caption&gt;&lt;DataMember&gt;EditTime_vc&lt;/DataMember&gt;&lt;Key&gt;EditTime_vc&lt;/Key&gt;&lt;Position&gt;23&lt;/Position&gt;&lt;/Column23&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;4&lt;/ColIndex&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;GroupCondition /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+</root>

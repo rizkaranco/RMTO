@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="DeleteButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJzSURBVDhPrZNdSFNhGMfXFxUV0Tfqcbp1alZT9+X30WNr
+        ZtMmJDvaxPKzLRSazFII1IsM6kYKulPIPu6TrgKpwMDAMMqLKINuatNkq7XcztfO+Xesm06jbvKFhwde
+        nvf3PO/749VoVmvBa90g243NoquoChrNmj+5ssdxQK42B2R38eaUnrAqh0vJPrat7gvfejKUrLGd+b2I
+        dZXrks2O2eSgD5LdeAcOq1YFSZYfamRdFRGh5yzEKxcgeE8FxWpr5cokbC2ll9zlD8SRfojXehHtOJ6Q
+        KnLuqQAiZXCzJ8wRvr0eQl8HhKs9EM45g3KpLpBkKl+I1wMQh/0Q+jsRbVIAFDmuAoCm18tF2X7OWRzm
+        fY0QAq1YuOyVl1tqvi8qWRjsgtDbBqG1DlIJOSrb8zNS30GBJAt1DFddGA55amXey4DvbgLf5QHf6Uas
+        no5LJfoxpdmmv4pbmYSzEAOxg2SctRnBlprAFueDNRuQsGkn4nQu8U/r0WM2fcySNRM0EHIiKw2sPgM/
+        sy4drCXr4zf6iMqOCrZA52dHynImuGNWcJQJvL0AYqMdgrMEXJkJnN2GaJUluETl0ClTfDqaa1h0mGb5
+        84oFXz3E7gbEPHT8Qx4xucRQYcF/+td+F4OvDfbQPLmvTQV5Y9QOLg+0Q7p5SYmLWB7qxJwhffRdrlb/
+        OnO3P9TiDMu3+iCNBMDf6MVb6vC0CvAqL2/Lc6NuPDLUkfisxFT2nrF5kty4UgSGWTe1c6v7vc8VSdwf
+        xlxVwbMZYldByjVm9qdnTpLE3UcZe29PE4TK81PFzsMd2wKPzYaXT9K2WzGkWbtaf/D/OT8A7YI0NHoh
+        gpoAAAAASUVORK5CYII=
+</value>
+  </data>
+  <metadata name="UsedLadBillToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="RefreshButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOaSURBVEhLzVV9TJR1HP8+z91BchweB6fH4R0c1N3J291x
+        wqEgCXi8BkjAzBtkpUvUYSFngdMdipPKhqlMWaNWLcQVlb2IGrYVBs4yS6hJ4ltHaGOjLRe+bLqPv+O/
+        iofH0LZ+2/PX7/Py3ff7+3wfov/lWUNnKIMq/7PaIvaohxceMUNWyx+nWNI9cCP9LrW3bCAF2Sct0O4K
+        vkMF9ML9m9jJTAmUSzHk0m8PHSvtd8B5IgGpX5lg6tRCUicZZPe2f2dkoVR/t9+7xrcixwuPJeKJb1Ph
+        6k9D+fcpKPpuHrJ64+A4Fo24Lh0MB9WQN/uDiqmFmcyY2khFcwLq/Y4v6UlG3egSuK8W4rlf87Hq0mI8
+        OZiO0jMO5J20Ir1nLuzdUTB/EgZdZwhUHYHwa5WCVtA5YYN4ig/yBF1feSETVZecqLqcjafPZcDZnQB7
+        hwHmN8KR+J4Bmb2xE9XHH9Yj+uBsaN5X4qFmGaia2imEFEIGXNBW+UjpgANl/SmwH4iCaqu8j3LYEBPI
+        QckU5COqX1J4539phOVIBB75NAya/UpI6/kRhsmcujVWciUdjoK1MxLcOq6LjWzuZATFNvmw5fMIGD/T
+        QLkzAFRIOxhOJj5gGzXo3wwB5VPFVGDFtoBhXXso+FruB6EiJucnUS2V0PNilXC19DM9RuvEcJPd8wIk
+        P3qcnhUV1LJUO8guivsLIJ8K9DtUo2Evz7wiQpTSBhpgLdtybwaBpJau5z5c9nUqGq6Vw7x31rAgkT1t
+        fj03KG2TgKxUJ26QS6uT33l4fOeN5Wj604XNY6Uw7Qv3/oNopUe5au5j30tSdcghaeJBSWQUNrBQZOBG
+        /1OrfnTi1ZuVaLq2DA2/l6N+tBjhuzV/kIk2McE9gfWyL1Qe5U3jAQ1Mh8Kh+ygEitdn+NbEa8LiObRl
+        3v5o1IwU4MXfirFxtIQJl2DD1SJUe/NYqhdj+VA6fFs09xsL0nrMsHUbJrIws0Xuy4JvB01xssk9q0V9
+        a8X5LKxh62HtL7kTX9VFJ54ZykTF2YUoZ+nOP5WIjL5Y2I8aoG0NBu9m/wQrLRDvuw8RSmGyGq4r62g8
+        nhpahMqz6XD9lIalA/MRs9twW92s8AY3+p+WurkPKI7lwEYR9yb8d1QBlam3K8fy+mwoOm2fqNq3f6Yn
+        JsSaw3Z6NbWZ3tZi0YkYhL6iEH6m9+UcSwskbu6CbBMvFrTp23g8Hr7xUOPS6SjcBQCOX/0K9bmuAAAA
+        AElFTkSuQmCC
+</value>
+  </data>
+  <data name="LadBillWithTrafficGridView_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="LadeAssignmentID_bint"&gt;&lt;Caption&gt;شناسه اطلاع رسانی بار&lt;/Caption&gt;&lt;DataMember&gt;LadeAssignmentID_bint&lt;/DataMember&gt;&lt;Key&gt;LadeAssignmentID_bint&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;SelectableCells&gt;All&lt;/SelectableCells&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column0&gt;&lt;Column1 ID="Date_nvc"&gt;&lt;Caption&gt;تاریخ&lt;/Caption&gt;&lt;DataMember&gt;Date_nvc&lt;/DataMember&gt;&lt;Key&gt;Date_nvc&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="Time_nvc"&gt;&lt;Caption&gt;ساعت&lt;/Caption&gt;&lt;DataMember&gt;Time_nvc&lt;/DataMember&gt;&lt;Key&gt;Time_nvc&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column2&gt;&lt;Column3 ID="LadBillCreditID_int"&gt;&lt;Caption&gt;ش.مجوز&lt;/Caption&gt;&lt;DataMember&gt;LadBillCreditID_int&lt;/DataMember&gt;&lt;Key&gt;LadBillCreditID_int&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column3&gt;&lt;Column4 ID="AcceptedTurnNumber_bint"&gt;&lt;Caption&gt;ش.نوبت&lt;/Caption&gt;&lt;DataMember&gt;AcceptedTurnNumber_bint&lt;/DataMember&gt;&lt;Key&gt;AcceptedTurnNumber_bint&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column4&gt;&lt;Column5 ID="LaderTypeID_intLaderType_nvc"&gt;&lt;Caption&gt;نوع بارگیر&lt;/Caption&gt;&lt;DataMember&gt;LaderTypeID_intLaderType_nvc&lt;/DataMember&gt;&lt;Key&gt;LaderTypeID_intLaderType_nvc&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column5&gt;&lt;Column6 ID="NumberPlate"&gt;&lt;Caption&gt;شماره پلاک&lt;/Caption&gt;&lt;DataMember&gt;NumberPlate&lt;/DataMember&gt;&lt;Key&gt;NumberPlate&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column6&gt;&lt;Column7 ID="CarCardNumber_nvc"&gt;&lt;Caption&gt;ش.ک.کامیون&lt;/Caption&gt;&lt;DataMember&gt;CarCardNumber_nvc&lt;/DataMember&gt;&lt;Key&gt;CarCardNumber_nvc&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;WordWrap&gt;True&lt;/WordWrap&gt;&lt;/Column7&gt;&lt;Column8 ID="DriverName"&gt;&lt;Caption&gt;نام راننده&lt;/Caption&gt;&lt;DataMember&gt;DriverName&lt;/DataMember&gt;&lt;Key&gt;DriverName&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;WordWrap&gt;True&lt;/WordWrap&gt;&lt;/Column8&gt;&lt;Column9 ID="DriverCardNumber_nvc"&gt;&lt;Caption&gt;ش.ک.راننده&lt;/Caption&gt;&lt;DataMember&gt;DriverCardNumber_nvc&lt;/DataMember&gt;&lt;Key&gt;DriverCardNumber_nvc&lt;/Key&gt;&lt;Position&gt;9&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column9&gt;&lt;Column10 ID="CompanyID_intCompany_nvc"&gt;&lt;Caption&gt;شرکت&lt;/Caption&gt;&lt;DataMember&gt;CompanyID_intCompany_nvc&lt;/DataMember&gt;&lt;Key&gt;CompanyID_intCompany_nvc&lt;/Key&gt;&lt;Position&gt;10&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column10&gt;&lt;Column11 ID="GoodID_intGood_nvc"&gt;&lt;Caption&gt;کالا&lt;/Caption&gt;&lt;DataMember&gt;GoodID_intGood_nvc&lt;/DataMember&gt;&lt;Key&gt;GoodID_intGood_nvc&lt;/Key&gt;&lt;Position&gt;11&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column11&gt;&lt;Column12 ID="PortPlaceID_intPortPlaces_nvc"&gt;&lt;Caption&gt;محل بارگیری&lt;/Caption&gt;&lt;DataMember&gt;PortPlaceID_intPortPlaces_nvc&lt;/DataMember&gt;&lt;Key&gt;PortPlaceID_intPortPlaces_nvc&lt;/Key&gt;&lt;Position&gt;12&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column12&gt;&lt;Column13 ID="AnnouncementTimeID_intAnnouncementTime_nvc"&gt;&lt;Caption&gt;زمان اطلاع رسانی&lt;/Caption&gt;&lt;DataMember&gt;AnnouncementTimeID_intAnnouncementTime_nvc&lt;/DataMember&gt;&lt;Key&gt;AnnouncementTimeID_intAnnouncementTime_nvc&lt;/Key&gt;&lt;Position&gt;13&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;105&lt;/Width&gt;&lt;WordWrap&gt;True&lt;/WordWrap&gt;&lt;/Column13&gt;&lt;Column14 ID="CityID_intCity_nvc"&gt;&lt;Caption&gt;شهر مقصد&lt;/Caption&gt;&lt;DataMember&gt;CityID_intCity_nvc&lt;/DataMember&gt;&lt;Key&gt;CityID_intCity_nvc&lt;/Key&gt;&lt;Position&gt;14&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column14&gt;&lt;Column15 ID="Comment_nvc"&gt;&lt;Caption&gt;توضیحات&lt;/Caption&gt;&lt;DataMember&gt;Comment_nvc&lt;/DataMember&gt;&lt;Key&gt;Comment_nvc&lt;/Key&gt;&lt;Position&gt;15&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column15&gt;&lt;Column16 ID="UserName_nvc"&gt;&lt;Caption&gt;کاربر&lt;/Caption&gt;&lt;DataMember&gt;UserName_nvc&lt;/DataMember&gt;&lt;Key&gt;UserName_nvc&lt;/Key&gt;&lt;Position&gt;16&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;70&lt;/Width&gt;&lt;/Column16&gt;&lt;Column17 ID="PortageFee_dec"&gt;&lt;Caption&gt;نرخ حمل (ريال)&lt;/Caption&gt;&lt;DataMember&gt;PortageFee_dec&lt;/DataMember&gt;&lt;EditType&gt;NoEdit&lt;/EditType&gt;&lt;FormatString&gt;N0&lt;/FormatString&gt;&lt;Key&gt;PortageFee_dec&lt;/Key&gt;&lt;Position&gt;17&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;110&lt;/Width&gt;&lt;/Column17&gt;&lt;Column18 ID="CityID_int"&gt;&lt;Caption&gt;شناسه شهر مقصد&lt;/Caption&gt;&lt;DataMember&gt;CityID_int&lt;/DataMember&gt;&lt;Key&gt;CityID_int&lt;/Key&gt;&lt;Position&gt;18&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column18&gt;&lt;Column19 ID="GoodID_int"&gt;&lt;Caption&gt;شناسه کالا&lt;/Caption&gt;&lt;DataMember&gt;GoodID_int&lt;/DataMember&gt;&lt;Key&gt;GoodID_int&lt;/Key&gt;&lt;Position&gt;19&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column19&gt;&lt;Column20 ID="PortPlaceID_int"&gt;&lt;Caption&gt;شناسه محل بارگیری&lt;/Caption&gt;&lt;DataMember&gt;PortPlaceID_int&lt;/DataMember&gt;&lt;Key&gt;PortPlaceID_int&lt;/Key&gt;&lt;Position&gt;20&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column20&gt;&lt;Column21 ID="LaderTypeID_int"&gt;&lt;Caption&gt;شناسه نوع بارگیر&lt;/Caption&gt;&lt;DataMember&gt;LaderTypeID_int&lt;/DataMember&gt;&lt;Key&gt;LaderTypeID_int&lt;/Key&gt;&lt;Position&gt;21&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column21&gt;&lt;Column22 ID="CarCount_int"&gt;&lt;Caption&gt;تعداد بارگیر مورد نیاز&lt;/Caption&gt;&lt;DataMember&gt;CarCount_int&lt;/DataMember&gt;&lt;Key&gt;CarCount_int&lt;/Key&gt;&lt;Position&gt;22&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;Width&gt;120&lt;/Width&gt;&lt;/Column22&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;10&lt;/ColIndex&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;GroupCondition /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="CompanyLadBillToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>170, 17</value>
+  </metadata>
+  <data name="RefreshCmpanyLadBillButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOXSURBVEhLzVVrTFNnGH7PaQuTUiyFbqXYQsG1lVtbKhQF
+        UcAilwEyIM5GdOoyUYNOqQrGBRQj3oJzEm9xi5opZmObu4g6XLLhxHhX0MjEaxnTkLBE423Jlmdf+afj
+        cBxuyb7k/Pqey5v3/Z73EP0vzzy6RGlU+p/VFrZF3T3uiBmyCv44RZPuXzfSb1Z7ijuSkHnKAu3mwD8p
+        l5a+vImdzBRHWRRFLv2a4L6idgecJ+OQ/KMJpiYtJJWSTnZv+2dGFkr2dft8Ytwd/ijvWDzeOpMMV3sK
+        Si4kIf/caGSciIHjWCRimnUwHFRDXu8LKqAGZjJscCMVjfCr8jk+uTURlb2T4b6bh4W/5GDOrYmY3pmK
+        oksOZJ+yIrV1FOwtETB/HQJdUxBUjf7w2S4FzaZrwgaxFBtQHfD4nRvpKLvlRNntTMy8lgZnSxzsjQaY
+        PwpF/KcGpJ+I7q8+9rAekQdfg+YzJV6pl4HKaR8FkULIgAtYJe8p6nCguD0J9gMRUK2St9EkNsQ4clAi
+        BXiJ6rUKz5gfjLAcCcPr34RAs18JaRXfwzDpg7fGSq6EwxGwNoWDW8A1s5GNGoigWC3vtnwXBuO3Gig3
+        +YHyaAPDycQHbKMa/cdBoByaNhhYsdqvW7cvGHwFd1GoiIH5CVRBhfSeWCVcBf1Mb9ACMdxA97wAyYfe
+        pHdFBbUs1Q6yi+KeAeRQrn6Dqjdk3fBfRYhSWkIdrGUrX8zAn9TSxdwXU39KRs2DEpi3vtotSGRPm1/M
+        dUp3SUBWqhQ3yKK5iXtHPtr0ZAbqHrrwfl8RTNtCPX8jWmk8V8595X1JqkY5JHU8KIGMwgYWCvdf7nt2
+        zmUnNj4tRd2Dqaj5rQRVvQUI/VBzn0y0gglu8a+Sfa+qVT41HtDAdCgUui+DoNg5zLsmPhAWn0QrR++P
+        xKKeXCy7V4DlvYVMuBBL7uaj3JPNUj0RM7pS4d2iWactSGk1w9Zi6M/C8Aa5NwveHTTIySS3rkH9++zr
+        GZjH1sP8O1n9X9lNJ2Z1pWPa1XEoYenOORuPtLZo2I8aoN0eCN7N/glWGivedy8imEJki7jmjKOxeLtr
+        AkqvpsJ1JQVTOsYgaofhD3W9whNY63te6uY+pxiWAxuFvZjw86hcKlavUfZlt9mQf97eX7V3/wxNTIg1
+        gu30ctpl2qPFhJNRCF6vEH6mL+UcTWMlbu6GbAUvFrSh21RXV/O1h2qnDEXhLydyYA8SEvS4AAAAAElF
+        TkSuQmCC
+</value>
+  </data>
+  <data name="CompanyLadBillGridView_DesignTimeLayout.LayoutString" xml:space="preserve">
+    <value>&lt;GridEXLayoutData&gt;&lt;RootTable&gt;&lt;Columns Collection="true" ElementName="Column"&gt;&lt;Column0 ID="CompanyLadBillID_bint"&gt;&lt;Caption&gt;CompanyLadBillID_bint&lt;/Caption&gt;&lt;DataMember&gt;CompanyLadBillID_bint&lt;/DataMember&gt;&lt;Key&gt;CompanyLadBillID_bint&lt;/Key&gt;&lt;Position&gt;0&lt;/Position&gt;&lt;Visible&gt;False&lt;/Visible&gt;&lt;/Column0&gt;&lt;Column1 ID="CompanyID_intCompany_nvc"&gt;&lt;Caption&gt;شرکت&lt;/Caption&gt;&lt;DataMember&gt;CompanyID_intCompany_nvc&lt;/DataMember&gt;&lt;Key&gt;CompanyID_intCompany_nvc&lt;/Key&gt;&lt;Position&gt;1&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;Width&gt;257&lt;/Width&gt;&lt;/Column1&gt;&lt;Column2 ID="CompanyCode_nvc"&gt;&lt;Caption&gt;کد شرکت&lt;/Caption&gt;&lt;DataMember&gt;CompanyCode_nvc&lt;/DataMember&gt;&lt;Key&gt;CompanyCode_nvc&lt;/Key&gt;&lt;Position&gt;2&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column2&gt;&lt;Column3 ID="Date_nvc"&gt;&lt;Caption&gt;تاریخ تحویل&lt;/Caption&gt;&lt;DataMember&gt;Date_nvc&lt;/DataMember&gt;&lt;Key&gt;Date_nvc&lt;/Key&gt;&lt;Position&gt;3&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column3&gt;&lt;Column4 ID="Serial_nvc"&gt;&lt;Caption&gt;سریال&lt;/Caption&gt;&lt;DataMember&gt;Serial_nvc&lt;/DataMember&gt;&lt;Key&gt;Serial_nvc&lt;/Key&gt;&lt;Position&gt;4&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column4&gt;&lt;Column5 ID="StartNumber_int"&gt;&lt;Caption&gt;از شماره&lt;/Caption&gt;&lt;DataMember&gt;StartNumber_int&lt;/DataMember&gt;&lt;Key&gt;StartNumber_int&lt;/Key&gt;&lt;Position&gt;5&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column5&gt;&lt;Column6 ID="EndNumber_int"&gt;&lt;Caption&gt;تا شماره&lt;/Caption&gt;&lt;DataMember&gt;EndNumber_int&lt;/DataMember&gt;&lt;Key&gt;EndNumber_int&lt;/Key&gt;&lt;Position&gt;6&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column6&gt;&lt;Column7 ID="AssignmentNumber_nvc"&gt;&lt;Caption&gt;شماره حواله&lt;/Caption&gt;&lt;DataMember&gt;AssignmentNumber_nvc&lt;/DataMember&gt;&lt;Key&gt;AssignmentNumber_nvc&lt;/Key&gt;&lt;Position&gt;7&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column7&gt;&lt;Column8 ID="DeliveryUserCode_nvc"&gt;&lt;Caption&gt;کد تحویل دهنده&lt;/Caption&gt;&lt;DataMember&gt;DeliveryUserCode_nvc&lt;/DataMember&gt;&lt;Key&gt;DeliveryUserCode_nvc&lt;/Key&gt;&lt;Position&gt;8&lt;/Position&gt;&lt;SelectableCells&gt;TotalRowCells&lt;/SelectableCells&gt;&lt;/Column8&gt;&lt;/Columns&gt;&lt;SortKeys Collection="true" ElementName="SortKey"&gt;&lt;SortKey0 ID="SortKey0"&gt;&lt;ColIndex&gt;3&lt;/ColIndex&gt;&lt;/SortKey0&gt;&lt;/SortKeys&gt;&lt;GroupCondition /&gt;&lt;/RootTable&gt;&lt;/GridEXLayoutData&gt;</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+</root>

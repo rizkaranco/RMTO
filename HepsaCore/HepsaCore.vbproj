@@ -1,0 +1,770 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{754C584D-492C-41E8-884C-58F4F80BFC0B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Hepsa.Core</RootNamespace>
+    <AssemblyName>HepsaCore</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HepsaCore.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HepsaCore.xml</DocumentationFile>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <DocumentationFile>HepsaCore.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\HepsaCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>_MYFORMS=True</DefineConstants>
+    <DocumentationFile>HepsaCore.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\HepsaCore.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.vb</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HamrahanSystem.TextBox, Version=2.0.3090.23950, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\HepsaTotal\HamrahanAccountingSystem\bin\Debug\HamrahanSystem.TextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Data.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\HepsaTotal\HamrahanAccountingSystem\bin\Debug\Janus.Data.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.ButtonBar.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\HepsaTotal\HamrahanAccountingSystem\bin\Debug\Janus.Windows.ButtonBar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.Common.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\HepsaTotal\HamrahanAccountingSystem\bin\Debug\Janus.Windows.Common.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\HepsaTotal\HamrahanAccountingSystem\bin\Debug\Janus.Windows.GridEX.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\HepsaTotal\HamrahanAccountingSystem\bin\Debug\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BLL\BusinessFactoryBase.vb" />
+    <Compile Include="BLL\BusinessObjectBase.vb" />
+    <Compile Include="BLL\Common\Action_T\BLLAction_T.vb" />
+    <Compile Include="BLL\Common\Action_T\BLLAction_TFactory.vb" />
+    <Compile Include="BLL\Common\Action_T\BLLAction_TKeys.vb" />
+    <Compile Include="BLL\Common\CategoryMember_T\BLLCategoryMember_T.vb" />
+    <Compile Include="BLL\Common\CategoryMember_T\BLLCategoryMember_TFactory.vb" />
+    <Compile Include="BLL\Common\CategoryMember_T\BLLCategoryMember_TKeys.vb" />
+    <Compile Include="BLL\Common\CategoryTable_T\BLLCategoryTable_T.vb" />
+    <Compile Include="BLL\Common\CategoryTable_T\BLLCategoryTable_TFactory.vb" />
+    <Compile Include="BLL\Common\CategoryTable_T\BLLCategoryTable_TKeys.vb" />
+    <Compile Include="BLL\Common\CategoryTree_T\BLLCategoryTree_T.vb" />
+    <Compile Include="BLL\Common\CategoryTree_T\BLLCategoryTree_TFactory.vb" />
+    <Compile Include="BLL\Common\CategoryTree_T\BLLCategoryTree_TKeys.vb" />
+    <Compile Include="BLL\Common\Category_T\BLLCategory_T.vb" />
+    <Compile Include="BLL\Common\Category_T\BLLCategory_TFactory.vb" />
+    <Compile Include="BLL\Common\Category_T\BLLCategory_TKeys.vb" />
+    <Compile Include="BLL\Common\DataSourceItem_T\BLLDataSourceItem_T.vb" />
+    <Compile Include="BLL\Common\DataSourceItem_T\BLLDataSourceItem_TFactory.vb" />
+    <Compile Include="BLL\Common\DataSourceItem_T\BLLDataSourceItem_TKeys.vb" />
+    <Compile Include="BLL\Common\DataSource_T\BLLDataSource_T.vb" />
+    <Compile Include="BLL\Common\DataSource_T\BLLDataSource_TFactory.vb" />
+    <Compile Include="BLL\Common\DataSource_T\BLLDataSource_TKeys.vb" />
+    <Compile Include="BLL\Common\ExtraFieldDataType_T\BLLExtraFieldDataType_T.vb" />
+    <Compile Include="BLL\Common\ExtraFieldDataType_T\BLLExtraFieldDataType_TFactory.vb" />
+    <Compile Include="BLL\Common\ExtraFieldDataType_T\BLLExtraFieldDataType_TKeys.vb" />
+    <Compile Include="BLL\Common\ExtraFieldTemplateTable_T\BLLExtraFieldTemplateTable_T.vb" />
+    <Compile Include="BLL\Common\ExtraFieldTemplateTable_T\BLLExtraFieldTemplateTable_TFactory.vb" />
+    <Compile Include="BLL\Common\ExtraFieldTemplateTable_T\BLLExtraFieldTemplateTable_TKeys.vb" />
+    <Compile Include="BLL\Common\ExtraFieldTemplate_T\BLLExtraFieldTemplate_T.vb" />
+    <Compile Include="BLL\Common\ExtraFieldTemplate_T\BLLExtraFieldTemplate_TFactory.vb" />
+    <Compile Include="BLL\Common\ExtraFieldTemplate_T\BLLExtraFieldTemplate_TKeys.vb" />
+    <Compile Include="BLL\Common\ExtraFieldValue_T\BLLExtraFieldValue_T.vb" />
+    <Compile Include="BLL\Common\ExtraFieldValue_T\BLLExtraFieldValue_TFactory.vb" />
+    <Compile Include="BLL\Common\ExtraFieldValue_T\BLLExtraFieldValue_TKeys.vb" />
+    <Compile Include="BLL\Common\ExtraField_T\BLLExtraField_T.vb" />
+    <Compile Include="BLL\Common\ExtraField_T\BLLExtraField_TFactory.vb" />
+    <Compile Include="BLL\Common\ExtraField_T\BLLExtraField_TKeys.vb" />
+    <Compile Include="BLL\Common\Form_T\BLLForm_T.vb" />
+    <Compile Include="BLL\Common\Form_T\BLLForm_TFactory.vb" />
+    <Compile Include="BLL\Common\Form_T\BLLForm_TKeys.vb" />
+    <Compile Include="BLL\Common\Log_T\BLLLog_T.vb" />
+    <Compile Include="BLL\Common\Log_T\BLLLog_TFactory.vb" />
+    <Compile Include="BLL\Common\Log_T\BLLLog_TKeys.vb" />
+    <Compile Include="BLL\Common\PermissionGroup_T\BLLPermissionGroup_T.vb" />
+    <Compile Include="BLL\Common\PermissionGroup_T\BLLPermissionGroup_TFactory.vb" />
+    <Compile Include="BLL\Common\PermissionGroup_T\BLLPermissionGroup_TKeys.vb" />
+    <Compile Include="BLL\Common\Permission_T\BLLPermission_T.vb" />
+    <Compile Include="BLL\Common\Permission_T\BLLPermission_TFactory.vb" />
+    <Compile Include="BLL\Common\Permission_T\BLLPermission_TKeys.vb" />
+    <Compile Include="BLL\Common\System_T\BLLSystem_T.vb" />
+    <Compile Include="BLL\Common\System_T\BLLSystem_TFactory.vb" />
+    <Compile Include="BLL\Common\System_T\BLLSystem_TKeys.vb" />
+    <Compile Include="BLL\Common\User_T\BLLUserLogin_T.vb" />
+    <Compile Include="BLL\Common\User_T\BLLUser_T.vb" />
+    <Compile Include="BLL\Common\User_T\BLLUser_TFactory.vb" />
+    <Compile Include="BLL\Common\User_T\BLLUser_TKeys.vb" />
+    <Compile Include="Common\ApplicationInfo.vb" />
+    <Compile Include="Common\ClipBoard.vb" />
+    <Compile Include="Common\CMessageBox.vb" />
+    <Compile Include="Common\ConnectionString.vb" />
+    <Compile Include="Common\CurrentUser.vb" />
+    <Compile Include="Common\DateTime.vb" />
+    <Compile Include="Common\MessageBox.vb" />
+    <Compile Include="Common\PersentationController.vb" />
+    <Compile Include="Common\Security.vb" />
+    <Compile Include="DAL\Common\Action_T\DALAction_T.vb" />
+    <Compile Include="DAL\Common\CategoryMember_T\DALCategoryMember_T.vb" />
+    <Compile Include="DAL\Common\CategoryTable_T\DALCategoryTable_T.vb" />
+    <Compile Include="DAL\Common\CategoryTree_T\DALCategoryTree_T.vb" />
+    <Compile Include="DAL\Common\Category_T\DALCategory_T.vb" />
+    <Compile Include="DAL\Common\DataSourceItem_T\DALDataSourceItem_T.vb" />
+    <Compile Include="DAL\Common\DataSource_T\DALDataSource_T.vb" />
+    <Compile Include="DAL\Common\ExtraFieldDataType_T\DALExtraFieldDataType_T.vb" />
+    <Compile Include="DAL\Common\ExtraFieldTemplateTable_T\DALExtraFieldTemplateTable_T.vb" />
+    <Compile Include="DAL\Common\ExtraFieldTemplate_T\DALExtraFieldTemplate_T.vb" />
+    <Compile Include="DAL\Common\ExtraFieldValue_T\DALExtraFieldValue_T.vb" />
+    <Compile Include="DAL\Common\ExtraField_T\DALExtraField_T.vb" />
+    <Compile Include="DAL\Common\Form_T\DALForm_T.vb" />
+    <Compile Include="DAL\Common\Log_T\DALLog_T.vb" />
+    <Compile Include="DAL\Common\PermissionGroup_T\DALPermissionGroup_T.vb" />
+    <Compile Include="DAL\Common\Permission_T\DALPermission_T.vb" />
+    <Compile Include="DAL\Common\System_T\DALSystem_T.vb" />
+    <Compile Include="DAL\Common\User_T\DALUser_T.vb" />
+    <Compile Include="DAL\DataLayerBase.vb" />
+    <Compile Include="Exception\Captions.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Captions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Exception\Exception.vb" />
+    <Compile Include="Exception\Exceptions.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exceptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseEntityForm1.Designer.vb">
+      <DependentUpon>BaseEntityForm1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseEntityForm1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseEntityForm2.Designer.vb">
+      <DependentUpon>BaseEntityForm2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseEntityForm2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseEntityParentForm.Designer.vb">
+      <DependentUpon>BaseEntityParentForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseEntityParentForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseForm.Designer.vb">
+      <DependentUpon>BaseForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseListForm.Designer.vb">
+      <DependentUpon>BaseListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\BaseForm\BaseListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Common\LoginEntityForm.designer.vb">
+      <DependentUpon>LoginEntityForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Common\LoginEntityForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Common\SQLServerConnectionSetting.Designer.vb">
+      <DependentUpon>SQLServerConnectionSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Common\SQLServerConnectionSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ComponentForm\LoadForm.Designer.vb">
+      <DependentUpon>LoadForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ComponentForm\LoadForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ComponentForm\SearchTreeViewForm.Designer.vb">
+      <DependentUpon>SearchTreeViewForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ComponentForm\SearchTreeViewForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\ComponentForm\WebExplorerForm.Designer.vb">
+      <DependentUpon>WebExplorerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PL\ComponentForm\WebExplorerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Validation\BaseRule.vb" />
+    <Compile Include="Validation\BrokenRule.vb" />
+    <Compile Include="Validation\BrokenRulesList.vb" />
+    <Compile Include="Validation\built in Validators\DateRule.vb" />
+    <Compile Include="Validation\built in Validators\LogicalOperationRule.vb" />
+    <Compile Include="Validation\built in Validators\NotNullRule.vb" />
+    <Compile Include="Validation\built in Validators\NumericRule.vb" />
+    <Compile Include="Validation\built in Validators\RegularExpressionRule.vb" />
+    <Compile Include="Validation\built in Validators\RelationRule.vb" />
+    <Compile Include="Validation\built in Validators\StringMaxLengthRule.vb" />
+    <Compile Include="Validation\built in Validators\StringMinLengthRule.vb" />
+    <Compile Include="Validation\built in Validators\TimeRule.vb" />
+    <Compile Include="Validation\built in Validators\UniqueRule.vb" />
+    <Compile Include="Validation\CommonRules\TodayDateRule.vb" />
+    <Compile Include="Validation\InvalidBusinessObjectException.vb" />
+    <Compile Include="Validation\RegularExpressionPattern1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegularExpressionPattern.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\ValidationMessage1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationMessage.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\ValidationRules.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Exception\Captions.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Captions.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exception\Exceptions.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Exceptions.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\BaseForm\BaseEntityForm1.resx">
+      <DependentUpon>BaseEntityForm1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\BaseForm\BaseEntityForm2.resx">
+      <DependentUpon>BaseEntityForm2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\BaseForm\BaseEntityParentForm.resx">
+      <DependentUpon>BaseEntityParentForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\BaseForm\BaseForm.resx">
+      <DependentUpon>BaseForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\BaseForm\BaseListForm.resx">
+      <DependentUpon>BaseListForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Common\LoginEntityForm.resx">
+      <DependentUpon>LoginEntityForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Common\SQLServerConnectionSetting.resx">
+      <DependentUpon>SQLServerConnectionSetting.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ComponentForm\LoadForm.resx">
+      <DependentUpon>LoadForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ComponentForm\SearchTreeViewForm.resx">
+      <DependentUpon>SearchTreeViewForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\ComponentForm\WebExplorerForm.resx">
+      <DependentUpon>WebExplorerForm.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validation\RegularExpressionPattern.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegularExpressionPattern1.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Validation\ValidationMessage.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessage1.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BLL\bin\Debug\HepsaCore.dll.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1102.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AccountJournal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Accounts_Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\attachment_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Browse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Category.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChangeFiscalYearAndSystem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChildAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClearFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ClipboardEmpty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Comment.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Company.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ConfirmVoucher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Contacts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CostCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DataSource.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete_Document_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteArticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteArticles.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteUserPicture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeselectAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document_Lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Document_Unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dollar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExtraField.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ExtraFieldTemplate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiscalYear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FiscalYear_Change.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormalAccount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GreenSigma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HamrahanSystemLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\InverseSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\link.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ListMenu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\messagebox_warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoreInfo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NetworkSettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New_Window.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewArticle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewArticleDropDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Project.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedSigma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RootAdd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search-Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SelectAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UndoFilter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BLL\bin\Release\" />
+    <Folder Include="PL\HepsaCore\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BLL\bin\Debug\HamrahanSystem.TextBox.dll" />
+    <Content Include="BLL\bin\Debug\HepsaCore.dll" />
+    <Content Include="BLL\bin\Debug\HepsaCore.pdb" />
+    <Content Include="BLL\bin\Debug\HepsaCore.xml" />
+    <Content Include="BLL\bin\Debug\Janus.Data.v3.dll" />
+    <Content Include="BLL\bin\Debug\Janus.Windows.ButtonBar.v3.dll" />
+    <Content Include="BLL\bin\Debug\Janus.Windows.Common.v3.dll" />
+    <Content Include="BLL\bin\Debug\Janus.Windows.GridEX.v3.dll" />
+    <Content Include="BLL\bin\Debug\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="BLL\bin\Debug\Microsoft.Vbe.Interop.dll" />
+    <Content Include="BLL\bin\Debug\office.dll" />
+    <Content Include="BLL\bin\Debug\System.Windows.Forms.DataVisualization.dll" />
+    <Content Include="BLL\bin\x86\Debug\HamrahanSystem.TextBox.dll" />
+    <Content Include="BLL\bin\x86\Debug\Janus.Data.v3.dll" />
+    <Content Include="BLL\bin\x86\Debug\Janus.Windows.ButtonBar.v3.dll" />
+    <Content Include="BLL\bin\x86\Debug\Janus.Windows.Common.v3.dll" />
+    <Content Include="BLL\bin\x86\Debug\Janus.Windows.GridEX.v3.dll" />
+    <Content Include="BLL\bin\x86\Debug\Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="BLL\bin\x86\Debug\office.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

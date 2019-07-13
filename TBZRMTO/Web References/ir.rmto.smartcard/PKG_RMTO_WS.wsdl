@@ -57,7 +57,7 @@
   <service name="PKG_RMTO_WSService">
     <documentation>Oracle Web Service</documentation>
     <port name="PKG_RMTO_WSPort" binding="tns:PKG_RMTO_WSBinding">
-      <soap:address location="http://smartcard.rmto.ir:9090/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS" />
+      <soap:address location="http://172.30.5.151:9090/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS" />
     </port>
   </service>
 </definitions>

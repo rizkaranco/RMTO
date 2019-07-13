@@ -23,7 +23,7 @@ namespace HPS.ir.rmto.smartcard {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="PKG_RMTO_WSBinding", Namespace="http://xmlns.oracle.com/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS")]
@@ -146,11 +146,11 @@ namespace HPS.ir.rmto.smartcard {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void RMTO_WEB_SERVICESCompletedEventHandler(object sender, RMTO_WEB_SERVICESCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.6.1590.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class RMTO_WEB_SERVICESCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {

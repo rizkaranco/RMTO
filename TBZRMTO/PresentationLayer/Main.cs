@@ -1458,6 +1458,11 @@ namespace HPS
             HPS.Present.VerifiedCars.VerifiedCarsListForm frm = new Present.VerifiedCars.VerifiedCarsListForm();
             Hepsa.Core.Common.PersentationController.ShowForm(this.ContentPane, frm, this, false, true);
         }
+
+        private void InTrafficMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

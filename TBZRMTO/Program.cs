@@ -23,34 +23,35 @@ namespace HPS.TBZRMTO
         //{
         //    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fa-IR");
 
-            //    if (mutex.WaitOne(TimeSpan.Zero, true))
-            //    {
-            //        Application.EnableVisualStyles();
-            //        Application.SetCompatibleTextRenderingDefault(false);
-            //        Application.Run(get());
-            //        mutex.ReleaseMutex();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("only one instance at a time");
-            //    }
-            //}
-            //private static Form get()
-            //{
-            //    if (new Login().ShowDialog() != DialogResult.OK)
-            //    {
-            //        Application.Exit();
-            //        return null;
-            //    }
-            //    else
-            //    {
-            //        Hepsa.Core.Common.ApplicationInfo.MainForm = new Main();
-            //        return new Main();
-            //    }
-            //}
+        //    if (mutex.WaitOne(TimeSpan.Zero, true))
+        //    {
+        //        Application.EnableVisualStyles();
+        //        Application.SetCompatibleTextRenderingDefault(false);
+        //        Application.Run(get());
+        //        mutex.ReleaseMutex();
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("only one instance at a time");
+        //    }
+        //}
+        //private static Form get()
+        //{
+        //    if (new Login().ShowDialog() != DialogResult.OK)
+        //    {
+        //        Application.Exit();
+        //        return null;
+        //    }
+        //    else
+        //    {
+        //        Hepsa.Core.Common.ApplicationInfo.MainForm = new Main();
+        //        return new Main();
+        //    }
+        //}
         [STAThread]
         static void Main()
         {
+
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("fa-IR");
             //Thread.CurrentThread.CurrentCulture = Thread.CurrentThread.CurrentUICulture;
 

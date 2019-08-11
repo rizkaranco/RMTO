@@ -21,8 +21,8 @@ namespace HPS.Present.TrafficOut
         string condition = string.Empty;
         private HPS.BLL.TrafficBLL.BLLTraffic_T _TrafficEntity;
         DataTable VerificationCarTable;
-        DataTable TrafficInDatatable ;
-        DataTable TurnManagementTable ;
+        DataTable TrafficInDatatable;
+        DataTable TurnManagementTable;
         DataTable TrafficStatusDataTable;
         private bool fill_bit = true;
         bool CancelTurn_bit = false;
@@ -65,15 +65,12 @@ namespace HPS.Present.TrafficOut
         DataRow[] drin = null;
         protected override void Insert()
         {
-           
             try
             {
                 if (this._TrafficEntity == null)
                 {
                     throw new HPS.Exceptions.TrafficNotFound();
                 }
-
-
 
                 TrafficStatusDataTable = new DataTable();
                 TrafficFactory.GetLastStatus(_TrafficEntity.NumberPlate_nvc, _TrafficEntity.SerialPlate_nvc, _TrafficEntity.CarCardNumber_nvc, TrafficStatusDataTable);
@@ -243,7 +240,7 @@ namespace HPS.Present.TrafficOut
                 #endregion
 
                 string conditionTemporaryout = string.Empty;
-         
+
                 //conditionTemporaryout = string.Format("T.TrafficTypeID_int=1 AND T.TrafficNumber_bint={0} ", _TrafficEntity.TrafficNumber_bint);
                 //DataTable TempDataTable = new DataTable();
                 //TrafficFactory.GetConditionLastTraffic(conditionTemporaryout, ref TempDataTable);
@@ -273,13 +270,13 @@ namespace HPS.Present.TrafficOut
 
                 SettingPictureKey.SettingID_int = 1031;
                 SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
-                if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1"  && _TrafficEntity.TrafficTypeID_int!=2)
+                if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
                 {
                     if (string.IsNullOrEmpty(NumberPlate_nvcTextBoxCamera.Text))
                     {
                         throw new ApplicationException("شماره پلاک توسط دوربین خوانده نشده است");
                     }
-                   
+
                 }
 
                 SettingPictureKey.SettingID_int = 1032;
@@ -322,7 +319,7 @@ namespace HPS.Present.TrafficOut
                             throw new ApplicationException("عملیات گرفتن عکس رخ نداده است");
                         }
                     }
-                   
+
 
                     if (CancelTurn_bit)
                     {
@@ -360,7 +357,7 @@ namespace HPS.Present.TrafficOut
 
         public void ClearForm()
         {
-           
+
             try
             {
                 this._TrafficEntity = null;
@@ -432,7 +429,7 @@ namespace HPS.Present.TrafficOut
                 TrafficStatusDataTable = new DataTable();
                 TrafficFactory.GetLastStatus(_TrafficEntity.NumberPlate_nvc, _TrafficEntity.SerialPlate_nvc, _TrafficEntity.CarCardNumber_nvc, TrafficStatusDataTable);
 
-               
+
                 if ((Int32)_TrafficEntity.ServiceID_int == 2)
                 {
                     if (TrafficStatusDataTable != null && TrafficStatusDataTable.Rows.Count > 0)
@@ -445,14 +442,14 @@ namespace HPS.Present.TrafficOut
                         //bool? HasTurn_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["HasTurn_bit"], TypeCode.Boolean);
                         //bool? TurnReturn_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TurnReturn_bit"], TypeCode.Boolean);
                         //bool? TurnCanceled_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TurnCanceled_bit"], TypeCode.Boolean);
-                        HasLadBillCredit_bit=(bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["HasLadBillCredit_bit"], TypeCode.Boolean);
+                        HasLadBillCredit_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["HasLadBillCredit_bit"], TypeCode.Boolean);
                         LadBillCreditCancel_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["LadBillCreditCancel_bit"], TypeCode.Boolean);
                         LadBillCreditTurn_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["LadBillCreditTurn_bit"], TypeCode.Boolean);
                         //bool? TurnAccepted_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TurnAccepted_bit"], TypeCode.Boolean);
                         //Int64? AcceptedTurnNumber_bint = (Int64?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["AcceptedTurnNumber_bint"], TypeCode.Int64);
                     }
                 }
-                
+
 
                 if (this._TrafficEntity.LaderTypeID_int.HasValue)
                 {
@@ -545,7 +542,7 @@ namespace HPS.Present.TrafficOut
                 TrafficInDatatable = new DataTable();
                 HPS.BLL.TurnManagementBLL.BLLTurnManagement_TFactory TurnManagementFactory = new HPS.BLL.TurnManagementBLL.BLLTurnManagement_TFactory();
                 TurnManagementTable = new DataTable();
-                TurnManagementFactory.GetAllByCondition(string.Format(" TurnManagement_T.TrafficID_bint={0} order by TurnManagementID_int desc", _TrafficEntity.TrafficID_bint),ref TurnManagementTable);
+                TurnManagementFactory.GetAllByCondition(string.Format(" TurnManagement_T.TrafficID_bint={0} order by TurnManagementID_int desc", _TrafficEntity.TrafficID_bint), ref TurnManagementTable);
                 TrafficFactory.GetAllByCondition(Condition, ref TrafficInDatatable);
                 HPS.BLL.SettingsBLL.BLLSetting_TFactory settingsFactory = new HPS.BLL.SettingsBLL.BLLSetting_TFactory();
                 HPS.BLL.SettingsBLL.BLLSetting_TKeys SettingKey = new HPS.BLL.SettingsBLL.BLLSetting_TKeys();
@@ -580,10 +577,10 @@ namespace HPS.Present.TrafficOut
                     if (Convert.ToBoolean(_TrafficEntity.TurnAccepted_bit) == true)
                     {
                         HPS.BLL.SettingsBLL.BLLSetting_T SettingEntity = new HPS.BLL.SettingsBLL.BLLSetting_T();
+                        //SettingID_int 1002 => مدت اعتبار نوبت جهت اخذ مبلغ بعد از تایید نوبت
                         SettingKey.SettingID_int = 1002;
                         SettingEntity = settingsFactory.GetBy(SettingKey);
                         ExtraHour -= Convert.ToDouble(SettingEntity.Value_nvc);
-
                         ///محاسبه مازاد بر اساس قیمت قبلی از ورود تا شروع قیمت جدید
                         days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
 
@@ -604,7 +601,7 @@ namespace HPS.Present.TrafficOut
                                 }
                             }
                             else
-                                Price += 0;
+                                Price += 0; 
                         }
                         else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && (int)TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] == 57)
                         {
@@ -638,7 +635,7 @@ namespace HPS.Present.TrafficOut
 
 
                             ExtraHour = ts.TotalHours - Convert.ToDouble(SettingEntity.Value_nvc);
-                            if (ExtraHour >= 0)
+                            if (ExtraHour > 0)
                             {
                                 days = Convert.ToInt32((ExtraHour / Convert.ToInt32(newStopFeeTable.Rows[0]["ExtraHour_int"])));
 
@@ -646,9 +643,9 @@ namespace HPS.Present.TrafficOut
                                 {
                                     if (LadBillCreditCancel_bit.HasValue && LadBillCreditCancel_bit == true)
                                     {
-                                        //ExtraHour = ts.TotalHours;
-                                        //ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
-                                        //days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
+                                        ExtraHour = ts.TotalHours;
+                                        ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                        days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
                                         Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec.Value"]));
                                     }
                                     else
@@ -662,6 +659,10 @@ namespace HPS.Present.TrafficOut
                                 }
                                 else
                                 {
+                                    ExtraHour = ts.TotalHours;
+                                    ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                    days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
+
                                     Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec.Value"]));
                                 }
                             }
@@ -683,6 +684,10 @@ namespace HPS.Present.TrafficOut
                                 {
                                     if (LadBillCreditCancel_bit.HasValue && LadBillCreditCancel_bit == true)
                                     {
+                                        ExtraHour = ts.TotalHours;
+                                        ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                        days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
+
                                         Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec.Value"]));
                                     }
                                     else
@@ -696,6 +701,10 @@ namespace HPS.Present.TrafficOut
                                 }
                                 else
                                 {
+                                    ExtraHour = ts.TotalHours;
+                                    ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                    days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
+
                                     Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec.Value"]));
                                 }
 
@@ -750,7 +759,11 @@ namespace HPS.Present.TrafficOut
                             if (LadBillCreditCancel_bit.HasValue && LadBillCreditCancel_bit == true)
                             {
                                 ExtraHour = ts.TotalHours;
-                                ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                // جلوگیری از منفی شدن ساعت اضافه و روز
+                                if (ExtraHour > 0)
+                                {
+                                    ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                }
                                 days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
 
                                 Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(oldStopFeeEntity.TurnNotLadBillExtraHourFee_dec.Value));
@@ -924,7 +937,7 @@ namespace HPS.Present.TrafficOut
 
         private void LoadTraffic()
         {
-           
+
             DataTable CarTrafficDatatable = new DataTable();
             string TrafficCondition = "";
         }
@@ -938,7 +951,7 @@ namespace HPS.Present.TrafficOut
                 {
                     return;
                 }
-               
+
                 List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllBy(HPS.BLL.TrafficBLL.BLLTraffic_T.Traffic_TField.TrafficID_bint, (Int64)this.TrafficGridView.CurrentRow.Cells["TrafficID_bint"].Value);
                 if (TrafficList == null || TrafficList.Count == 0 || TrafficList[TrafficList.Count - 1].Out_bit == true)
                     throw new HPS.Exceptions.TrafficNotFound();
@@ -1066,7 +1079,7 @@ namespace HPS.Present.TrafficOut
             {
                 throw new ApplicationException(NumericValidator.Description);
             }
-           
+
             DataTable CarTrafficDatatable = new DataTable();
             if (!string.IsNullOrEmpty(TrafficNumberTextBox.Text))
             {
@@ -1218,7 +1231,7 @@ namespace HPS.Present.TrafficOut
                 {
                     return;
                 }
-               
+
                 List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllBy(HPS.BLL.TrafficBLL.BLLTraffic_T.Traffic_TField.TrafficID_bint, (Int64)this.TrafficGridView.CurrentRow.Cells["TrafficID_bint"].Value);
                 if (TrafficList == null || TrafficList.Count == 0 || TrafficList[TrafficList.Count - 1].Out_bit == true)
                     throw new HPS.Exceptions.TrafficNotFound();

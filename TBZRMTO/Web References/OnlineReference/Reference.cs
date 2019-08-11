@@ -13,83 +13,69 @@
 // 
 #pragma warning disable 1591
 
-namespace HPS.ir.rmto.smartcard
-{
+namespace HPS.OnlineReference {
     using System;
     using System.Web.Services;
     using System.Diagnostics;
     using System.Web.Services.Protocols;
     using System.Xml.Serialization;
     using System.ComponentModel;
-    using HPS.OnlineReference;
-
-
+    
+    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Web.Services.WebServiceBindingAttribute(Name = "PKG_RMTO_WSBinding", Namespace = "http://xmlns.oracle.com/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS")]
-    public partial class PKG_RMTO_WSService : System.Web.Services.Protocols.SoapHttpClientProtocol
-    {
-
+    [System.Web.Services.WebServiceBindingAttribute(Name="PKG_RMTO_WSBinding", Namespace="http://xmlns.oracle.com/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS")]
+    public partial class PKG_RMTO_WSService : System.Web.Services.Protocols.SoapHttpClientProtocol {
+        
         private System.Threading.SendOrPostCallback RMTO_WEB_SERVICESOperationCompleted;
-
+        
         private bool useDefaultCredentialsSetExplicitly;
-
+        
         /// <remarks/>
-        public PKG_RMTO_WSService()
-        {
-            this.Url = global::HPS.Properties.Settings.Default.TBZRMTO_ir_rmto_smartcard_PKG_RMTO_WSService;
-            if ((this.IsLocalFileSystemWebService(this.Url) == true))
-            {
+        public PKG_RMTO_WSService() {
+            this.Url = global::HPS.Properties.Settings.Default.TBZRMTO_OnlineReference_PKG_RMTO_WSService;
+            if ((this.IsLocalFileSystemWebService(this.Url) == true)) {
                 this.UseDefaultCredentials = true;
                 this.useDefaultCredentialsSetExplicitly = false;
             }
-            else
-            {
+            else {
                 this.useDefaultCredentialsSetExplicitly = true;
             }
         }
-
-        public new string Url
-        {
-            get
-            {
+        
+        public new string Url {
+            get {
                 return base.Url;
             }
-            set
-            {
-                if ((((this.IsLocalFileSystemWebService(base.Url) == true)
-                            && (this.useDefaultCredentialsSetExplicitly == false))
-                            && (this.IsLocalFileSystemWebService(value) == false)))
-                {
+            set {
+                if ((((this.IsLocalFileSystemWebService(base.Url) == true) 
+                            && (this.useDefaultCredentialsSetExplicitly == false)) 
+                            && (this.IsLocalFileSystemWebService(value) == false))) {
                     base.UseDefaultCredentials = false;
                 }
                 base.Url = value;
             }
         }
-
-        public new bool UseDefaultCredentials
-        {
-            get
-            {
+        
+        public new bool UseDefaultCredentials {
+            get {
                 return base.UseDefaultCredentials;
             }
-            set
-            {
+            set {
                 base.UseDefaultCredentials = value;
                 this.useDefaultCredentialsSetExplicitly = true;
             }
         }
-
+        
         /// <remarks/>
         public event RMTO_WEB_SERVICESCompletedEventHandler RMTO_WEB_SERVICESCompleted;
-
+        
         /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("RMTO_WEB_SERVICES", RequestElementName = "SVARCHAR2-RMTO_WEB_SERVICESInput", RequestNamespace = "http://xmlns.oracle.com/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS", ResponseElementName = "RMTO_WEB_SERVICESOutput", ResponseNamespace = "http://xmlns.oracle.com/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS", Use = System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle = System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("RMTO_WEB_SERVICES", RequestElementName="SVARCHAR2-RMTO_WEB_SERVICESInput", RequestNamespace="http://xmlns.oracle.com/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS", ResponseElementName="RMTO_WEB_SERVICESOutput", ResponseNamespace="http://xmlns.oracle.com/orawsv/TR_PUBLIC_WS/PKG_RMTO_WS", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("RETURN")]
-        public string RMTO_WEB_SERVICES([System.Xml.Serialization.XmlElementAttribute("IN_USERNAME-VARCHAR2-IN")] string IN_USERNAMEVARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_SERVICEID-NUMBER-IN")] double IN_SERVICEIDNUMBERIN, [System.Xml.Serialization.XmlElementAttribute("IN_PASSWORD-VARCHAR2-IN")] string IN_PASSWORDVARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_9-VARCHAR2-IN")] string IN_PARAM_9VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_8-VARCHAR2-IN")] string IN_PARAM_8VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_7-VARCHAR2-IN")] string IN_PARAM_7VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_6-VARCHAR2-IN")] string IN_PARAM_6VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_5-VARCHAR2-IN")] string IN_PARAM_5VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_4-VARCHAR2-IN")] string IN_PARAM_4VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_3-VARCHAR2-IN")] string IN_PARAM_3VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_2-VARCHAR2-IN")] string IN_PARAM_2VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_10-VARCHAR2-IN")] string IN_PARAM_10VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_1-VARCHAR2-IN")] string IN_PARAM_1VARCHAR2IN)
-        {
+        public string RMTO_WEB_SERVICES([System.Xml.Serialization.XmlElementAttribute("IN_USERNAME-VARCHAR2-IN")] string IN_USERNAMEVARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_SERVICEID-NUMBER-IN")] double IN_SERVICEIDNUMBERIN, [System.Xml.Serialization.XmlElementAttribute("IN_PASSWORD-VARCHAR2-IN")] string IN_PASSWORDVARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_9-VARCHAR2-IN")] string IN_PARAM_9VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_8-VARCHAR2-IN")] string IN_PARAM_8VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_7-VARCHAR2-IN")] string IN_PARAM_7VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_6-VARCHAR2-IN")] string IN_PARAM_6VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_5-VARCHAR2-IN")] string IN_PARAM_5VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_4-VARCHAR2-IN")] string IN_PARAM_4VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_3-VARCHAR2-IN")] string IN_PARAM_3VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_2-VARCHAR2-IN")] string IN_PARAM_2VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_10-VARCHAR2-IN")] string IN_PARAM_10VARCHAR2IN, [System.Xml.Serialization.XmlElementAttribute("IN_PARAM_1-VARCHAR2-IN")] string IN_PARAM_1VARCHAR2IN) {
             object[] results = this.Invoke("RMTO_WEB_SERVICES", new object[] {
                         IN_USERNAMEVARCHAR2IN,
                         IN_SERVICEIDNUMBERIN,
@@ -106,18 +92,15 @@ namespace HPS.ir.rmto.smartcard
                         IN_PARAM_1VARCHAR2IN});
             return ((string)(results[0]));
         }
-
+        
         /// <remarks/>
-        public void RMTO_WEB_SERVICESAsync(string IN_USERNAMEVARCHAR2IN, double IN_SERVICEIDNUMBERIN, string IN_PASSWORDVARCHAR2IN, string IN_PARAM_9VARCHAR2IN, string IN_PARAM_8VARCHAR2IN, string IN_PARAM_7VARCHAR2IN, string IN_PARAM_6VARCHAR2IN, string IN_PARAM_5VARCHAR2IN, string IN_PARAM_4VARCHAR2IN, string IN_PARAM_3VARCHAR2IN, string IN_PARAM_2VARCHAR2IN, string IN_PARAM_10VARCHAR2IN, string IN_PARAM_1VARCHAR2IN)
-        {
+        public void RMTO_WEB_SERVICESAsync(string IN_USERNAMEVARCHAR2IN, double IN_SERVICEIDNUMBERIN, string IN_PASSWORDVARCHAR2IN, string IN_PARAM_9VARCHAR2IN, string IN_PARAM_8VARCHAR2IN, string IN_PARAM_7VARCHAR2IN, string IN_PARAM_6VARCHAR2IN, string IN_PARAM_5VARCHAR2IN, string IN_PARAM_4VARCHAR2IN, string IN_PARAM_3VARCHAR2IN, string IN_PARAM_2VARCHAR2IN, string IN_PARAM_10VARCHAR2IN, string IN_PARAM_1VARCHAR2IN) {
             this.RMTO_WEB_SERVICESAsync(IN_USERNAMEVARCHAR2IN, IN_SERVICEIDNUMBERIN, IN_PASSWORDVARCHAR2IN, IN_PARAM_9VARCHAR2IN, IN_PARAM_8VARCHAR2IN, IN_PARAM_7VARCHAR2IN, IN_PARAM_6VARCHAR2IN, IN_PARAM_5VARCHAR2IN, IN_PARAM_4VARCHAR2IN, IN_PARAM_3VARCHAR2IN, IN_PARAM_2VARCHAR2IN, IN_PARAM_10VARCHAR2IN, IN_PARAM_1VARCHAR2IN, null);
         }
-
+        
         /// <remarks/>
-        public void RMTO_WEB_SERVICESAsync(string IN_USERNAMEVARCHAR2IN, double IN_SERVICEIDNUMBERIN, string IN_PASSWORDVARCHAR2IN, string IN_PARAM_9VARCHAR2IN, string IN_PARAM_8VARCHAR2IN, string IN_PARAM_7VARCHAR2IN, string IN_PARAM_6VARCHAR2IN, string IN_PARAM_5VARCHAR2IN, string IN_PARAM_4VARCHAR2IN, string IN_PARAM_3VARCHAR2IN, string IN_PARAM_2VARCHAR2IN, string IN_PARAM_10VARCHAR2IN, string IN_PARAM_1VARCHAR2IN, object userState)
-        {
-            if ((this.RMTO_WEB_SERVICESOperationCompleted == null))
-            {
+        public void RMTO_WEB_SERVICESAsync(string IN_USERNAMEVARCHAR2IN, double IN_SERVICEIDNUMBERIN, string IN_PASSWORDVARCHAR2IN, string IN_PARAM_9VARCHAR2IN, string IN_PARAM_8VARCHAR2IN, string IN_PARAM_7VARCHAR2IN, string IN_PARAM_6VARCHAR2IN, string IN_PARAM_5VARCHAR2IN, string IN_PARAM_4VARCHAR2IN, string IN_PARAM_3VARCHAR2IN, string IN_PARAM_2VARCHAR2IN, string IN_PARAM_10VARCHAR2IN, string IN_PARAM_1VARCHAR2IN, object userState) {
+            if ((this.RMTO_WEB_SERVICESOperationCompleted == null)) {
                 this.RMTO_WEB_SERVICESOperationCompleted = new System.Threading.SendOrPostCallback(this.OnRMTO_WEB_SERVICESOperationCompleted);
             }
             this.InvokeAsync("RMTO_WEB_SERVICES", new object[] {
@@ -135,64 +118,53 @@ namespace HPS.ir.rmto.smartcard
                         IN_PARAM_10VARCHAR2IN,
                         IN_PARAM_1VARCHAR2IN}, this.RMTO_WEB_SERVICESOperationCompleted, userState);
         }
-
-        private void OnRMTO_WEB_SERVICESOperationCompleted(object arg)
-        {
-            if ((this.RMTO_WEB_SERVICESCompleted != null))
-            {
+        
+        private void OnRMTO_WEB_SERVICESOperationCompleted(object arg) {
+            if ((this.RMTO_WEB_SERVICESCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.RMTO_WEB_SERVICESCompleted(this, new RMTO_WEB_SERVICESCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
-
+        
         /// <remarks/>
-        public new void CancelAsync(object userState)
-        {
+        public new void CancelAsync(object userState) {
             base.CancelAsync(userState);
         }
-
-        private bool IsLocalFileSystemWebService(string url)
-        {
-            if (((url == null)
-                        || (url == string.Empty)))
-            {
+        
+        private bool IsLocalFileSystemWebService(string url) {
+            if (((url == null) 
+                        || (url == string.Empty))) {
                 return false;
             }
             System.Uri wsUri = new System.Uri(url);
-            if (((wsUri.Port >= 1024)
-                        && (string.Compare(wsUri.Host, "localHost", System.StringComparison.OrdinalIgnoreCase) == 0)))
-            {
+            if (((wsUri.Port >= 1024) 
+                        && (string.Compare(wsUri.Host, "localHost", System.StringComparison.OrdinalIgnoreCase) == 0))) {
                 return true;
             }
             return false;
         }
-
     }
-
+    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     public delegate void RMTO_WEB_SERVICESCompletedEventHandler(object sender, RMTO_WEB_SERVICESCompletedEventArgs e);
-
+    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.3190.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class RMTO_WEB_SERVICESCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
-    {
-
+    public partial class RMTO_WEB_SERVICESCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
         private object[] results;
-
-        internal RMTO_WEB_SERVICESCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-                base(exception, cancelled, userState)
-        {
+        
+        internal RMTO_WEB_SERVICESCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
             this.results = results;
         }
-
+        
         /// <remarks/>
-        public string Result
-        {
-            get
-            {
+        public string Result {
+            get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
             }

@@ -7,19 +7,54 @@ using System.Threading.Tasks;
 
 namespace HPS.Common
 {
+    class OnlineService
+    {
+        bool HasInternet()
+        {
+            System.Net.IPAddress[] ipv4Addresses = Array.FindAll(
+                System.Net.Dns.GetHostEntry(string.Empty).AddressList,
+                a => a.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork);
+            foreach (var item in ipv4Addresses)
+            {
+                if (item.ToString().StartsWith("192.168"))
+                {
+                    return true;
+                }
+            }
+
+            return false;
+
+        }
+        public Func<string, double, string, string, string, string, string, string, string, string, string, string, string, string> RMTO_WEB_SERVICES
+        {
+            get
+            {
+                if (HasInternet())
+                {
+                    return new OnlineReference.PKG_RMTO_WSService().RMTO_WEB_SERVICES;
+
+                }
+                else
+                {
+                    return new PKG_RMTO_WSService().RMTO_WEB_SERVICES;
+                }
+            }
+        }
+
+    }
     class OnlineInformation
     {
-        PKG_RMTO_WSService myService = new PKG_RMTO_WSService();
+        OnlineService localReference = new OnlineService();
 
         public object[] GetCarInformation(string carCardNumber)
         {
             var returnList = new List<object>();
             //authentication();
-            myService = new PKG_RMTO_WSService();
+            //localReference = new PKG_RMTO_WSService();
             //// Get Car Information
             try
             {
-                string Carinfo = myService.RMTO_WEB_SERVICES("RZK_RMTO", 4, "3098791", "", "", "", "", "", "", "", "", "", carCardNumber);
+                string Carinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 4, "3098791", "", "", "", "", "", "", "", "", "", carCardNumber);
                 string[] Carinfosplited = Carinfo.Split(';');
                 var carList = new List<object>();
                 //0-is_active_code
@@ -56,16 +91,16 @@ namespace HPS.Common
             {
                 returnList = new List<object>();
                 returnList.Add("-2");
-                return returnList.ToArray() ;
+                return returnList.ToArray();
             }
         }
         public object[] GetCarInformation(string plq01, string plq02, string plq03, string serial_plq)
         {
             var returnList = new List<object>();
             //authentication();
-            myService = new PKG_RMTO_WSService();
+            localReference = new OnlineService();
             //// Get Car Information
-            string Carinfo = myService.RMTO_WEB_SERVICES("RZK_RMTO", 50, "3098791", "", "", "", "", "", "", serial_plq, plq03, plq02, plq01);
+            string Carinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 50, "3098791", "", "", "", "", "", "", serial_plq, plq03, plq02, plq01);
             string[] Carinfosplited = Carinfo.Split(';');
             var carList = new List<object>();
             //0-is_active_code
@@ -106,7 +141,7 @@ namespace HPS.Common
             //authentication();
             try
             {
-                string driverinfo = myService.RMTO_WEB_SERVICES("RZK_RMTO", 41, "3098791", "", "", "", "", "", "", "", "", "", driverCardNumber);
+                string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 41, "3098791", "", "", "", "", "", "", "", "", "", driverCardNumber);
                 string[] driverinfosplited = driverinfo.Split(';');
                 if (driverinfosplited[0] == "-1")
                 {
@@ -154,7 +189,7 @@ namespace HPS.Common
         {
             var returnList = new List<object>();
             //authentication();
-            string driverinfo = myService.RMTO_WEB_SERVICES("RZK_RMTO", 41, "3098791", "", "", "", "", "", "", "", "", "", driverCardNumber);
+            string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 41, "3098791", "", "", "", "", "", "", "", "", "", driverCardNumber);
             string[] driverinfosplited = driverinfo.Split(';');
             var driverList = new List<object>();
             //0-name
@@ -183,9 +218,9 @@ namespace HPS.Common
             driverList.Add(driverinfosplited[0].Substring(driverinfosplited[0].ToString().IndexOf(':') + 1, driverinfosplited[0].ToString().Length - driverinfosplited[0].ToString().IndexOf(':') - 1));
 
             returnList.Add(driverList);
-            myService = new PKG_RMTO_WSService();
+            localReference = new OnlineService();
             //// Get Car Information
-            string Carinfo = myService.RMTO_WEB_SERVICES("RZK_RMTO", 4, "3098791", "", "", "", "", "", "", "", "", "", carCardNumber);
+            string Carinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 4, "3098791", "", "", "", "", "", "", "", "", "", carCardNumber);
             string[] Carinfosplited = Carinfo.Split(';');
             var carList = new List<object>();
             //0-is_active_code

@@ -1203,7 +1203,7 @@ namespace HPS.Present.Traffic
                 {
                     TrafficFactory.BeginProc();
                     TrafficFactory.Insert(TrafficEntity);
-
+                    //SettingID_int = 1012 => خواندن پلاک در هنگام ورود
                     SettingKey.SettingID_int = 1012;
                     SettingEntity = SettingFactory.GetBy(SettingKey);
 

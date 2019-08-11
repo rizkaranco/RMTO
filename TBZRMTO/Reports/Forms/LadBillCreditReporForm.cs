@@ -123,6 +123,12 @@ namespace HPS.Reports.Forms
                 {
                     condition += " AND Traffic_T.DriverCardNumber_nvc = " + DriverCardNumber_nvcTextBox.Text;
                 }
+                if (!string.IsNullOrEmpty(Days_intTextBox.Text))
+                {
+                    // تعداد روز هایی که راندگان در صف مانده اند
+                    // روز های انتظار
+                    condition += " AND datediff(day,dbo.ShamsiToMiladi(Traffic_T.Date_nvc),dbo.ShamsiToMiladi(LadBillCredit_T.Date_nvc)) <= " + Days_intTextBox.Text;
+                }
                 if (!string.IsNullOrEmpty(OrderColumns_nvc))
                 {
                     condition += " ORDER BY " + OrderColumns_nvc;
@@ -285,6 +291,9 @@ namespace HPS.Reports.Forms
             }
         }
 
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
 
+        }
     }
 }

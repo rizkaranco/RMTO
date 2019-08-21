@@ -591,7 +591,10 @@ namespace HPS.Present.TrafficOut
                                 if (LadBillCreditCancel_bit.HasValue && LadBillCreditCancel_bit == true)
                                 {
                                     ExtraHour = ts.TotalHours;
+                                    if(ExtraHour > 0)
+                                    {
                                     ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                    }
                                     days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
                                     Price += Math.Floor(((decimal)(days)) * oldStopFeeEntity.TurnNotLadBillExtraHourFee_dec.Value);
                                 }

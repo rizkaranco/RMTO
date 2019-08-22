@@ -469,7 +469,7 @@ namespace HPS.Present.TrafficOut
                 {
                     this.PlateNo_nvcTextBox.Text = this._TrafficEntity.NumberPlate_nvc;
                 }
-                else
+                //else
                 {
                     this.PlateNo_nvcTextBox.Text = string.Format("{0} -{1}{2}", this._TrafficEntity.NumberPlate_nvc, this._TrafficEntity.PlateType_nvc, this._TrafficEntity.SerialPlate_nvc);
                 }
@@ -485,8 +485,8 @@ namespace HPS.Present.TrafficOut
                     LaderTypeKey.LaderTypeID_int = _TrafficEntity.LaderTypeID_int;
                     laderTypeEntity = LaderTypeFactory.GetBy(LaderTypeKey);
                     string Today = stopFeeFactory.ServerJalaliDate;
-                    //stopFeeCondition = string.Format(" StartDate_nvc>'{0}' AND StopFee_T.TrafficTypeID_int={1} AND StopFee_T.ServicesID_int={2} AND StopFee_T.LaderPivotGroupID_int={3}", oldStopFeeEntity.EndDate_nvc, _TrafficEntity.TrafficTypeID_int, _TrafficEntity.ServiceID_int, laderTypeEntity.LaderPivotGroupID_int);
-                    stopFeeCondition = string.Format(" '{0}' <= EndDate_nvc  AND StopFee_T.TrafficTypeID_int={1} AND StopFee_T.ServicesID_int={2} AND StopFee_T.LaderPivotGroupID_int={3}", Today, _TrafficEntity.TrafficTypeID_int, _TrafficEntity.ServiceID_int, laderTypeEntity.LaderPivotGroupID_int);
+                    stopFeeCondition = string.Format(" StartDate_nvc>'{0}' AND StartDate_nvc <= '{1}' AND StopFee_T.TrafficTypeID_int={2} AND StopFee_T.ServicesID_int={3} AND StopFee_T.LaderPivotGroupID_int={4}", oldStopFeeEntity.EndDate_nvc,Today, _TrafficEntity.TrafficTypeID_int, _TrafficEntity.ServiceID_int, laderTypeEntity.LaderPivotGroupID_int);
+                    //stopFeeCondition = string.Format("  StartDate_nvc > '{0}' AND StopFee_T.TrafficTypeID_int={1} AND StopFee_T.ServicesID_int={2} AND StopFee_T.LaderPivotGroupID_int={3}", oldStopFeeEntity.EndDate_nvc, _TrafficEntity.TrafficTypeID_int, _TrafficEntity.ServiceID_int, laderTypeEntity.LaderPivotGroupID_int);
                 }
                 else
                 {
@@ -574,7 +574,7 @@ namespace HPS.Present.TrafficOut
                     //string stopFeeEndDate_nvc = stopFeeMiladiEndDate_nvc.MyDate.ToString("yyyy/MM/dd");
                     stopFeeMiladiEndDate_nvc = new Hepsa.Core.Common.MyDateTime(oldStopFeeEntity.EndDate_nvc);
                     stopFeeEndDate_nvc = stopFeeMiladiEndDate_nvc.MyDate.ToString("yyyy/MM/dd");
-                    ts = DateTime.Parse(OutDate).Subtract(DateTime.Parse(InDate));
+                    ts = DateTime.Parse(stopFeeEndDate_nvc).Subtract(DateTime.Parse(InDate));
                     double ExtraHour = ts.TotalHours;
                     if (Convert.ToBoolean(_TrafficEntity.TurnAccepted_bit) == true)
                     {
@@ -602,8 +602,8 @@ namespace HPS.Present.TrafficOut
                                     Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(_TrafficEntity.ExtraHourFee_dec));
                                 }
                             }
-                            //else   :| شاهکار
-                            //    Price += 0; 
+                            else
+                                Price += 0;
                         }
                         else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && (int)TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] == 57)
                         {
@@ -611,6 +611,8 @@ namespace HPS.Present.TrafficOut
                             {
                                 Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(_TrafficEntity.ExtraHourFee_dec));
                             }
+                            else
+                                Price += 0;
                         }
                         else
                         {
@@ -623,7 +625,8 @@ namespace HPS.Present.TrafficOut
 
                         Hepsa.Core.Common.MyDateTime stopFeeMiladiStartDate_nvc = new Hepsa.Core.Common.MyDateTime(newStopFeeTable.Rows[0]["StartDate_nvc"].ToString());
                         string newStopFeeStartDate_nvc = stopFeeMiladiStartDate_nvc.MyDate.ToString("yyyy/MM/dd");
-                        TimeSpan ExtraTS = DateTime.Parse(OutDate).Subtract(DateTime.Parse(InDate));
+                        TimeSpan ExtraTS = DateTime.Parse(newStopFeeStartDate_nvc).Subtract(DateTime.Parse(InDate));
+                        // Change to NewStopfee.Startdate taaaaa Today
                         double ExtraExtraHour = ExtraTS.TotalHours;
                         if (ExtraExtraHour < Convert.ToDouble(SettingEntity.Value_nvc))
                         {
@@ -646,7 +649,7 @@ namespace HPS.Present.TrafficOut
                                         ExtraHour = ts.TotalHours;
                                         ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
                                         days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
-                                        Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec"]));
+                                        Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec.Value"]));
                                     }
                                     else
                                     {
@@ -685,10 +688,11 @@ namespace HPS.Present.TrafficOut
                                     if (LadBillCreditCancel_bit.HasValue && LadBillCreditCancel_bit == true)
                                     {
                                         ExtraHour = ts.TotalHours;
-                                        ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
+                                        // این زمان یکبار در مرحله قبل کم شده است نباید مجددا حذف شود.
+                                        //ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
                                         days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
 
-                                        Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec.Value"]));
+                                        Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec"]));
                                     }
                                     else
                                     {
@@ -705,7 +709,7 @@ namespace HPS.Present.TrafficOut
                                     ExtraHour -= Convert.ToDouble(oldStopFeeEntity.TurnNotLadBillExtraHour_int.Value);
                                     days = (int)(ExtraHour / Convert.ToInt32(_TrafficEntity.ExtraHour_int));
 
-                                    Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec.Value"]));
+                                    Price += Math.Floor(((decimal)(days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["TurnNotLadBillExtraHourFee_dec"]));
                                 }
 
                             }
@@ -756,6 +760,8 @@ namespace HPS.Present.TrafficOut
                         //{ 
                         if (HasLadBillCredit_bit.HasValue && HasLadBillCredit_bit == true)
                         {
+                            // اگر مجوز بارگیری لغو شده است
+                            // پس باید با تعرفه پارکینگ حساب شود
                             if (LadBillCreditCancel_bit.HasValue && LadBillCreditCancel_bit == true)
                             {
                                 ExtraHour = ts.TotalHours;

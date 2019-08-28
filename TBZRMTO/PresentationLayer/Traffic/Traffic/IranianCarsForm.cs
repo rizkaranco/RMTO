@@ -2693,9 +2693,11 @@ namespace HPS.Present.Traffic
             PriceWithTax_decNumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec, TypeCode.String));
             PriceTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.PriceTax_dec, TypeCode.String));
             if (string.IsNullOrEmpty(TrafficEntity.PriceTax_dec.ToString()))
-            { PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec, TypeCode.String)); }
+            {
+                PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec, TypeCode.String)); }
             else
-            { PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec - TrafficEntity.PriceTax_dec, TypeCode.String)); }
+            {
+                PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec - TrafficEntity.PriceTax_dec, TypeCode.String)); }
 
             if (!(TrafficEntity.LadeReturn_bit == null))
             {

@@ -75,7 +75,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("0e0bbecf-fc46-4dc9-825b-282c32768ca5"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(200, 557), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("0e0bbecf-fc46-4dc9-825b-282c32768ca5"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(200, 687), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("0e0bbecf-fc46-4dc9-825b-282c32768ca5"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -83,8 +83,9 @@
             // 
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
+            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(200, 557);
+            this.uiPanel0.Size = new System.Drawing.Size(200, 687);
             this.uiPanel0.TabIndex = 4;
             // 
             // uiPanel0Container
@@ -107,16 +108,18 @@
             this.uiPanel0Container.Controls.Add(this.ToDatefaDatePicker);
             this.uiPanel0Container.Controls.Add(this.TimeGroupBox);
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
+            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(194, 533);
+            this.uiPanel0Container.Size = new System.Drawing.Size(194, 663);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // DefaulCheckBox
             // 
             this.DefaulCheckBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.DefaulCheckBox.Location = new System.Drawing.Point(141, 89);
+            this.DefaulCheckBox.Location = new System.Drawing.Point(188, 110);
+            this.DefaulCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DefaulCheckBox.Name = "DefaulCheckBox";
-            this.DefaulCheckBox.Size = new System.Drawing.Size(21, 23);
+            this.DefaulCheckBox.Size = new System.Drawing.Size(28, 28);
             this.DefaulCheckBox.TabIndex = 2;
             this.DefaulCheckBox.ToolTipText = "ساعات بین 00:00:00 و 23:59:59";
             this.DefaulCheckBox.CheckedChanged += new System.EventHandler(this.DefaulCheckBox_CheckedChanged);
@@ -126,10 +129,11 @@
             ServicescheckedComboBox_DesignTimeLayout.LayoutString = resources.GetString("ServicescheckedComboBox_DesignTimeLayout.LayoutString");
             this.ServicescheckedComboBox.DesignTimeLayout = ServicescheckedComboBox_DesignTimeLayout;
             this.ServicescheckedComboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ServicescheckedComboBox.Location = new System.Drawing.Point(22, 377);
+            this.ServicescheckedComboBox.Location = new System.Drawing.Point(29, 464);
+            this.ServicescheckedComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ServicescheckedComboBox.Name = "ServicescheckedComboBox";
             this.ServicescheckedComboBox.SaveSettings = false;
-            this.ServicescheckedComboBox.Size = new System.Drawing.Size(149, 22);
+            this.ServicescheckedComboBox.Size = new System.Drawing.Size(199, 26);
             this.ServicescheckedComboBox.TabIndex = 7;
             this.ServicescheckedComboBox.ValuesDataMember = null;
             this.ServicescheckedComboBox.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003;
@@ -139,10 +143,11 @@
             LaderTypecheckedComboBox_DesignTimeLayout.LayoutString = resources.GetString("LaderTypecheckedComboBox_DesignTimeLayout.LayoutString");
             this.LaderTypecheckedComboBox.DesignTimeLayout = LaderTypecheckedComboBox_DesignTimeLayout;
             this.LaderTypecheckedComboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LaderTypecheckedComboBox.Location = new System.Drawing.Point(22, 423);
+            this.LaderTypecheckedComboBox.Location = new System.Drawing.Point(29, 521);
+            this.LaderTypecheckedComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LaderTypecheckedComboBox.Name = "LaderTypecheckedComboBox";
             this.LaderTypecheckedComboBox.SaveSettings = false;
-            this.LaderTypecheckedComboBox.Size = new System.Drawing.Size(149, 22);
+            this.LaderTypecheckedComboBox.Size = new System.Drawing.Size(199, 26);
             this.LaderTypecheckedComboBox.TabIndex = 8;
             this.LaderTypecheckedComboBox.ValuesDataMember = null;
             this.LaderTypecheckedComboBox.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2003;
@@ -150,20 +155,20 @@
             // FromTrafficNumbertxt
             // 
             this.FromTrafficNumbertxt.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.FromTrafficNumbertxt.Location = new System.Drawing.Point(22, 279);
-            this.FromTrafficNumbertxt.Margin = new System.Windows.Forms.Padding(5);
+            this.FromTrafficNumbertxt.Location = new System.Drawing.Point(29, 343);
+            this.FromTrafficNumbertxt.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.FromTrafficNumbertxt.Name = "FromTrafficNumbertxt";
-            this.FromTrafficNumbertxt.Size = new System.Drawing.Size(149, 22);
+            this.FromTrafficNumbertxt.Size = new System.Drawing.Size(197, 26);
             this.FromTrafficNumbertxt.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(91, 260);
-            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label5.Location = new System.Drawing.Point(121, 320);
+            this.label5.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(78, 14);
+            this.label5.Size = new System.Drawing.Size(95, 18);
             this.label5.TabIndex = 110;
             this.label5.Text = "از قبض شماره";
             // 
@@ -171,31 +176,31 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(91, 306);
-            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label6.Location = new System.Drawing.Point(121, 377);
+            this.label6.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 14);
+            this.label6.Size = new System.Drawing.Size(94, 18);
             this.label6.TabIndex = 111;
             this.label6.Text = "تا قبض شماره";
             // 
             // ToTrafficNumbertxt
             // 
             this.ToTrafficNumbertxt.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.ToTrafficNumbertxt.Location = new System.Drawing.Point(22, 323);
-            this.ToTrafficNumbertxt.Margin = new System.Windows.Forms.Padding(5);
+            this.ToTrafficNumbertxt.Location = new System.Drawing.Point(29, 398);
+            this.ToTrafficNumbertxt.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.ToTrafficNumbertxt.Name = "ToTrafficNumbertxt";
-            this.ToTrafficNumbertxt.Size = new System.Drawing.Size(149, 22);
+            this.ToTrafficNumbertxt.Size = new System.Drawing.Size(197, 26);
             this.ToTrafficNumbertxt.TabIndex = 6;
             // 
             // OutTrafficradioButton
             // 
             this.OutTrafficradioButton.AutoSize = true;
             this.OutTrafficradioButton.Checked = true;
-            this.OutTrafficradioButton.Location = new System.Drawing.Point(101, 235);
-            this.OutTrafficradioButton.Margin = new System.Windows.Forms.Padding(5);
+            this.OutTrafficradioButton.Location = new System.Drawing.Point(135, 289);
+            this.OutTrafficradioButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.OutTrafficradioButton.Name = "OutTrafficradioButton";
             this.OutTrafficradioButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.OutTrafficradioButton.Size = new System.Drawing.Size(51, 17);
+            this.OutTrafficradioButton.Size = new System.Drawing.Size(58, 21);
             this.OutTrafficradioButton.TabIndex = 4;
             this.OutTrafficradioButton.TabStop = true;
             this.OutTrafficradioButton.Text = "خروج";
@@ -205,11 +210,11 @@
             // 
             this.InTrafficradioButton.AutoSize = true;
             this.InTrafficradioButton.Checked = true;
-            this.InTrafficradioButton.Location = new System.Drawing.Point(105, 209);
-            this.InTrafficradioButton.Margin = new System.Windows.Forms.Padding(5);
+            this.InTrafficradioButton.Location = new System.Drawing.Point(140, 257);
+            this.InTrafficradioButton.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.InTrafficradioButton.Name = "InTrafficradioButton";
             this.InTrafficradioButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.InTrafficradioButton.Size = new System.Drawing.Size(47, 17);
+            this.InTrafficradioButton.Size = new System.Drawing.Size(53, 21);
             this.InTrafficradioButton.TabIndex = 3;
             this.InTrafficradioButton.TabStop = true;
             this.InTrafficradioButton.Text = "ورود";
@@ -218,10 +223,10 @@
             // uiButton1
             // 
             this.uiButton1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.uiButton1.Location = new System.Drawing.Point(50, 464);
-            this.uiButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.uiButton1.Location = new System.Drawing.Point(67, 571);
+            this.uiButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Size = new System.Drawing.Size(108, 29);
+            this.uiButton1.Size = new System.Drawing.Size(144, 36);
             this.uiButton1.TabIndex = 9;
             this.uiButton1.Text = "نمایش";
             this.uiButton1.VisualStyle = Janus.Windows.UI.VisualStyle.Office2007;
@@ -231,10 +236,10 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label8.Location = new System.Drawing.Point(113, 360);
-            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label8.Location = new System.Drawing.Point(151, 443);
+            this.label8.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 14);
+            this.label8.Size = new System.Drawing.Size(70, 18);
             this.label8.TabIndex = 99;
             this.label8.Text = "مراجعه به";
             // 
@@ -242,10 +247,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(121, 51);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(161, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 14);
+            this.label2.Size = new System.Drawing.Size(59, 18);
             this.label2.TabIndex = 103;
             this.label2.Text = "تا تاریخ :";
             // 
@@ -253,11 +257,11 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.Location = new System.Drawing.Point(110, 406);
-            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label7.Location = new System.Drawing.Point(147, 500);
+            this.label7.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label7.Size = new System.Drawing.Size(56, 14);
+            this.label7.Size = new System.Drawing.Size(69, 18);
             this.label7.TabIndex = 96;
             this.label7.Text = " نوع بارگیر";
             // 
@@ -265,10 +269,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(121, 5);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(161, 6);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 14);
+            this.label1.Size = new System.Drawing.Size(60, 18);
             this.label1.TabIndex = 102;
             this.label1.Text = "از تاریخ :";
             // 
@@ -276,18 +279,18 @@
             // 
             this.FromDatefaDatePicker.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FromDatefaDatePicker.IsDefault = true;
-            this.FromDatefaDatePicker.Location = new System.Drawing.Point(22, 22);
+            this.FromDatefaDatePicker.Location = new System.Drawing.Point(29, 27);
             this.FromDatefaDatePicker.Name = "FromDatefaDatePicker";
-            this.FromDatefaDatePicker.Size = new System.Drawing.Size(149, 20);
+            this.FromDatefaDatePicker.Size = new System.Drawing.Size(199, 25);
             this.FromDatefaDatePicker.TabIndex = 0;
             this.FromDatefaDatePicker.Theme = FarsiLibrary.Win.Enums.ThemeTypes.Office2007;
             // 
             // ToDatefaDatePicker
             // 
             this.ToDatefaDatePicker.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.ToDatefaDatePicker.Location = new System.Drawing.Point(22, 68);
+            this.ToDatefaDatePicker.Location = new System.Drawing.Point(29, 84);
             this.ToDatefaDatePicker.Name = "ToDatefaDatePicker";
-            this.ToDatefaDatePicker.Size = new System.Drawing.Size(149, 20);
+            this.ToDatefaDatePicker.Size = new System.Drawing.Size(199, 25);
             this.ToDatefaDatePicker.TabIndex = 1;
             this.ToDatefaDatePicker.Theme = FarsiLibrary.Win.Enums.ThemeTypes.Office2007;
             // 
@@ -299,30 +302,33 @@
             this.TimeGroupBox.Controls.Add(this.ToTimeTextBox);
             this.TimeGroupBox.Controls.Add(this.label4);
             this.TimeGroupBox.Enabled = false;
-            this.TimeGroupBox.Location = new System.Drawing.Point(34, 95);
+            this.TimeGroupBox.Location = new System.Drawing.Point(45, 117);
+            this.TimeGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TimeGroupBox.Name = "TimeGroupBox";
-            this.TimeGroupBox.Size = new System.Drawing.Size(124, 110);
+            this.TimeGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeGroupBox.Size = new System.Drawing.Size(165, 135);
             this.TimeGroupBox.TabIndex = 104;
             this.TimeGroupBox.TabStop = false;
             // 
             // FromTimeTextBox
             // 
             this.FromTimeTextBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.FromTimeTextBox.Location = new System.Drawing.Point(3, 20);
+            this.FromTimeTextBox.Location = new System.Drawing.Point(4, 25);
+            this.FromTimeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.FromTimeTextBox.Mask = "00:00:00";
             this.FromTimeTextBox.Name = "FromTimeTextBox";
             this.FromTimeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.FromTimeTextBox.Size = new System.Drawing.Size(60, 22);
+            this.FromTimeTextBox.Size = new System.Drawing.Size(79, 26);
             this.FromTimeTextBox.TabIndex = 0;
             this.FromTimeTextBox.Text = "000000";
             // 
             // RefreshHourbutton
             // 
             this.RefreshHourbutton.Image = global::HPS.Properties.Resources.Refresh16;
-            this.RefreshHourbutton.Location = new System.Drawing.Point(3, 80);
-            this.RefreshHourbutton.Margin = new System.Windows.Forms.Padding(2);
+            this.RefreshHourbutton.Location = new System.Drawing.Point(4, 98);
+            this.RefreshHourbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RefreshHourbutton.Name = "RefreshHourbutton";
-            this.RefreshHourbutton.Size = new System.Drawing.Size(24, 24);
+            this.RefreshHourbutton.Size = new System.Drawing.Size(32, 30);
             this.RefreshHourbutton.TabIndex = 2;
             this.RefreshHourbutton.UseVisualStyleBackColor = true;
             this.RefreshHourbutton.Click += new System.EventHandler(this.RefreshHourbutton_Click);
@@ -331,21 +337,21 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(61, 25);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(81, 31);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 14);
+            this.label3.Size = new System.Drawing.Size(74, 18);
             this.label3.TabIndex = 65;
             this.label3.Text = "از ساعت :";
             // 
             // ToTimeTextBox
             // 
             this.ToTimeTextBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.ToTimeTextBox.Location = new System.Drawing.Point(3, 53);
+            this.ToTimeTextBox.Location = new System.Drawing.Point(4, 65);
+            this.ToTimeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ToTimeTextBox.Mask = "00:00:00";
             this.ToTimeTextBox.Name = "ToTimeTextBox";
             this.ToTimeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ToTimeTextBox.Size = new System.Drawing.Size(60, 22);
+            this.ToTimeTextBox.Size = new System.Drawing.Size(79, 26);
             this.ToTimeTextBox.TabIndex = 1;
             this.ToTimeTextBox.Text = "235959";
             // 
@@ -353,10 +359,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(61, 57);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(81, 70);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 14);
+            this.label4.Size = new System.Drawing.Size(73, 18);
             this.label4.TabIndex = 66;
             this.label4.Text = "تا ساعت :";
             // 
@@ -374,7 +379,8 @@
         "Stimulsoft.Base.Dll",
         "Stimulsoft.Report.Dll"};
             this.GroupTrafficstiReport.ReportAlias = "Report";
-            this.GroupTrafficstiReport.ReportGuid = "30d01402fe2349aa9636e5d3e72b0278";
+            this.GroupTrafficstiReport.ReportGuid = "eb05292f0d824b279d1e15c61ed25a28";
+            this.GroupTrafficstiReport.ReportImage = null;
             this.GroupTrafficstiReport.ReportName = "Report";
             this.GroupTrafficstiReport.ReportSource = resources.GetString("GroupTrafficstiReport.ReportSource");
             this.GroupTrafficstiReport.ReportUnit = Stimulsoft.Report.StiReportUnitType.Inches;
@@ -386,6 +392,7 @@
             this.stiViewerControl1.AllowDrop = true;
             this.stiViewerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.stiViewerControl1.Location = new System.Drawing.Point(203, 3);
+            this.stiViewerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.stiViewerControl1.Name = "stiViewerControl1";
             this.stiViewerControl1.PageViewMode = Stimulsoft.Report.Viewer.StiPageViewMode.Continuous;
             this.stiViewerControl1.Report = null;
@@ -405,16 +412,17 @@
             this.stiViewerControl1.ShowSendEMail = false;
             this.stiViewerControl1.ShowSendEMailDocumentFile = false;
             this.stiViewerControl1.ShowZoom = true;
-            this.stiViewerControl1.Size = new System.Drawing.Size(752, 557);
+            this.stiViewerControl1.Size = new System.Drawing.Size(1071, 687);
             this.stiViewerControl1.TabIndex = 6;
             // 
             // GroupTrafficReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 563);
+            this.ClientSize = new System.Drawing.Size(1277, 693);
             this.Controls.Add(this.stiViewerControl1);
             this.Controls.Add(this.uiPanel0);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "GroupTrafficReportForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

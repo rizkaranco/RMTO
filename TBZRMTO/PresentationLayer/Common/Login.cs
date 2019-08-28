@@ -344,8 +344,9 @@ namespace HPS.Present.Login
         {
             if (YearComboBox.SelectedValue!=null)
             {
-            Hepsa.Core.Common.ConnectionString.DataBase = ((DataRowView)YearComboBox.SelectedItem).Row["Database_nvc"].ToString();
-            
+                Hepsa.Core.Common.ConnectionString.DataBase = ((DataRowView)YearComboBox.SelectedItem).Row["Database_nvc"].ToString();
+                //Hepsa.Core.Common.ConnectionString.DataBase = "TBZRMTODB97";
+
                 Properties.Settings.Default.FiscalYearID = YearComboBox.SelectedValue.ToString();
             }
         }

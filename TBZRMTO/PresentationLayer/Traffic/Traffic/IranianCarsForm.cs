@@ -30,8 +30,7 @@ namespace HPS.Present.Traffic
         DataTable ServicesDataTable = new DataTable();
         List<object> driverObject = null;
         List<object> CarObject = null;
-        public IranianCarsForm()
-            : base(null)
+        public IranianCarsForm() : base(null)
         {
             InitializeComponent();
             this.EditAndClose = false;
@@ -75,6 +74,7 @@ namespace HPS.Present.Traffic
 
         private void IranianTruckEntityForm_Load(object sender, EventArgs e)
         {
+            CheckForIllegalCrossThreadCalls = false;
             if (this.State == enmFormState.Add)
             {
                 FillCombo();
@@ -369,7 +369,6 @@ namespace HPS.Present.Traffic
                                 PriceTax_decnumericTextBox.Text = "";
                                 PriceWithTax_decNumericTextBox.Text = StopFeeList[0].Fee_dec.ToString();
                             }
-
                         }
                     }
                 }
@@ -2026,8 +2025,7 @@ namespace HPS.Present.Traffic
                 snapshot();
                 //number = anprService.GetPlateNumberByByte(szBuffer);
                 number = await api.GetNumberPlate(szBuffer);
-
-                NumberPlateReadingButton.Enabled = true;
+                
                 if (!string.IsNullOrEmpty(number) && number.Length>7)
                 {
                     HPS.BLL.TruePlate.ConvertToTrueNumber trueNumberClass = new BLL.TruePlate.ConvertToTrueNumber();
@@ -2053,13 +2051,15 @@ namespace HPS.Present.Traffic
             }
             catch (Exception ex)
             {
-                NumberPlateReadingButton.Enabled = true;
                 Hepsa.Core.Common.MessageBox.ErrorMessage(" خواندن پلاک مقدور نمی باشد");
-               
             }
             finally
             {
                 this._CardReading = false;
+                await System.Threading.Tasks.Task.Run(() => {
+                    System.Threading.Thread.Sleep(1500);
+                    NumberPlateReadingButton.Enabled = true;
+                });
             }
         }
 

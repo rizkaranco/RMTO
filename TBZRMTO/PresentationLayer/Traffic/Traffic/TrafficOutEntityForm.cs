@@ -264,38 +264,42 @@ namespace HPS.Present.TrafficOut
                     _TrafficEntity.CameraPlateNumber_nvc = NumberPlate_nvcTextBoxCamera.Text;
 
                 ////کنترل خوانده شدن پلاک توسط دوربین هنگام خروج برای اینکه صرفا عکس ننداخته باشند
+                #region این بخش به خواسته یزدانی حذف شد، نیاز به پلاک نیست صرفا فقط عکس کافی است
                 HPS.BLL.SettingsBLL.BLLSetting_TFactory SettingPictureFactory = new HPS.BLL.SettingsBLL.BLLSetting_TFactory();
                 HPS.BLL.SettingsBLL.BLLSetting_T SettingPictureEntity = new HPS.BLL.SettingsBLL.BLLSetting_T();
                 HPS.BLL.SettingsBLL.BLLSetting_TKeys SettingPictureKey = new HPS.BLL.SettingsBLL.BLLSetting_TKeys();
 
-                SettingPictureKey.SettingID_int = 1031;
-                SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
-                if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
-                {
-                    if (string.IsNullOrEmpty(NumberPlate_nvcTextBoxCamera.Text))
-                    {
-                        throw new ApplicationException("شماره پلاک توسط دوربین خوانده نشده است");
-                    }
+                //SettingPictureKey.SettingID_int = 1031;
+                //SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
+                //if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
+                //{
+                //    if (string.IsNullOrEmpty(NumberPlate_nvcTextBoxCamera.Text))
+                //    {
+                //        throw new ApplicationException("شماره پلاک توسط دوربین خوانده نشده است");
+                //    }
 
-                }
+                //}
 
-                SettingPictureKey.SettingID_int = 1032;
-                SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
-                if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
-                {
-                    if (NumberPlate_nvcTextBoxCamera.Text != NumberPlate_nvcTextBox.Text)
-                    {
-                        throw new ApplicationException("شماره پلاک خوانده شده توسط دوربین با شماره پلاک اصلی مغایرت دارد");
-                    }
-                }
+                //SettingPictureKey.SettingID_int = 1032;
+                //SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
+                //if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
+                //{
+                //    if (NumberPlate_nvcTextBoxCamera.Text != NumberPlate_nvcTextBox.Text)
+                //    {
+                //        throw new ApplicationException("شماره پلاک خوانده شده توسط دوربین با شماره پلاک اصلی مغایرت دارد");
+                //    }
+                //}
 
-                if (string.IsNullOrEmpty(SerialPlate_nvcTextBoxCamera.Text))
-                {
-                    _TrafficEntity.CameraSerialPlate_int = null;
-                }
-                else
-                    _TrafficEntity.CameraSerialPlate_int = Convert.ToInt32(SerialPlate_nvcTextBoxCamera.Text);
+                //if (string.IsNullOrEmpty(SerialPlate_nvcTextBoxCamera.Text))
+                //{
+                //    _TrafficEntity.CameraSerialPlate_int = null;
+                //}
+                //else
+                //    _TrafficEntity.CameraSerialPlate_int = Convert.ToInt32(SerialPlate_nvcTextBoxCamera.Text);
                 //-------------------------------------
+                #endregion // بخش از آن نیز در خط پایین است که کامنت استار می شود
+
+
                 if (Hepsa.Core.Common.MessageBox.ConfirmMessage(" مبلغ " + _TrafficEntity.Price_dec + " ريا ل باید از راننده دریافت گردد آیا از ثبت اطلاعات اطمینان دارید؟") == true)
                 {
                     TrafficFactory.BeginProc();
@@ -1221,7 +1225,7 @@ namespace HPS.Present.TrafficOut
                 NumberPlateReadingButton.Enabled = false;
                 snapshot();
                 //   number = anprService.GetPlateNumberByByte(szBuffer);
-                number = await api.GetNumberPlate(szBuffer);
+                //*number = await api.GetNumberPlate(szBuffer);
                 NumberPlateReadingButton.Enabled = true;
                 //number = "56ع87615";
                 if (!string.IsNullOrEmpty(number))

@@ -33,6 +33,7 @@ namespace HPS.Reports.Forms
 
         public AllTrafficForm(int TrafficType)
         {
+            
             InitializeComponent();
             this.TrafficType = TrafficType;
 

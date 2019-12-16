@@ -21,6 +21,7 @@ namespace HPS.Present.Login
 
         private void Login_Load(object sender, EventArgs e)
         {
+          
             string s = Hepsa.Core.Common.ApplicationInfo.MacAddress;
 
             if (string.IsNullOrEmpty(Hepsa.Core.Common.ConnectionString.ConnectionString  ))
@@ -79,10 +80,12 @@ namespace HPS.Present.Login
                     }
                     else
                     {
+                    // \\172.24.129.5\exe\
+                    // \\192.168.200.50\exe\
+                    // 
                     if (DBVersion_nvc.CompareTo(APPVersion) > 0)
                     {
                         throw new ApplicationException("نسخه اجرایی شما قدیمی است لطفاً به روز رسانی نمایید");
-
                     }
                     else if (DBVersion_nvc.CompareTo(APPVersion) < 0)
                     {
@@ -93,7 +96,7 @@ namespace HPS.Present.Login
                         VersionFactory.Insert(VersionEntity);
                     }
                 }
-                    if (YearEntity != null)
+                if (YearEntity != null)
                     {
                         HPS.Common.CurrentUser.Year = YearEntity;
                     }
@@ -162,7 +165,6 @@ namespace HPS.Present.Login
             {
                 ShowSetting();
             }
-
         }
         private bool CheckComputerRegistration(HPS.BLL.UserBLL.BLLUser_T user)
         {
@@ -171,7 +173,8 @@ namespace HPS.Present.Login
                 return true;
             }
             HPS.BLL.ComputerBLL.BLLComputer_TFactory ComputerFactory = new HPS.BLL.ComputerBLL.BLLComputer_TFactory();
-            string ComputerCondition = "[Computer_T].[MacAddress_nvc]='" + Hepsa.Core.Common.ApplicationInfo.MacAddress + "' and [Computer_T].[Computer_nvc]='" + user.UserName_nvc + "' and [Computer_T].[active_bit]=1";
+            //TODO: فیلد پاک شده بررسی نمیشد
+            string ComputerCondition = "[Computer_T].[MacAddress_nvc]='" + Hepsa.Core.Common.ApplicationInfo.MacAddress + "' and [Computer_T].[Computer_nvc]='" + user.UserName_nvc + "' and [Computer_T].[active_bit]=1 and Deleted_bit=0";
             List<HPS.BLL.ComputerBLL.BLLComputer_T> ComputerList = ComputerFactory.GetAllByCondition(ComputerCondition);
             if (ComputerList != null && ComputerList.Count > 0)
             {
@@ -217,7 +220,6 @@ namespace HPS.Present.Login
                         OnlineUserEntity.MacAddress_nvc = Hepsa.Core.Common.ApplicationInfo.MacAddress;
                         OnlineUserFactory.Insert(OnlineUserEntity);
                         HPS.Common.CurrentUser.user.OnlineUserID_int = OnlineUserEntity.OnlineUserID_int;
-
 
                         this.DialogResult = DialogResult.OK;
                         this.Close();

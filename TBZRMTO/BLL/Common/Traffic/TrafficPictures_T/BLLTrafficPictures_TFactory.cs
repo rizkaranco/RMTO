@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using HPS.BLL.BusinessFactoryMain;
+using System.IO;
+using System.Windows.Forms;
 
 namespace HPS.BLL.TrafficPicturesBLL
 {
@@ -14,6 +16,7 @@ namespace HPS.BLL.TrafficPicturesBLL
             : base("TrafficPictures_T")
         {
             _dataObject = (HPS.DAL.TrafficPicturesDAL.DALTrafficPictures_T)base.DataAccessLayer;
+            
         }
 
         public void Insert(HPS.BLL.TrafficPicturesBLL.BLLTrafficPictures_T businessObject)
@@ -26,6 +29,10 @@ namespace HPS.BLL.TrafficPicturesBLL
                 }
 
                 _dataObject.Insert(businessObject);
+               // if (businessObject.Picture_vbnry != null)
+               // {
+               //     File.WriteAllBytes($@"{BLLTrafficPictures_T.TrafficPicturePath}{businessObject.TrafficID_bint}.jpg", businessObject.Picture_vbnry);
+               // }
             }
             catch (System.Exception ex)
             {
@@ -42,12 +49,17 @@ namespace HPS.BLL.TrafficPicturesBLL
                 {
                     ExceptList.Add("UniqueTrafficID_bint");
                 }
+
                 if (businessObject.IsValid(Hepsa.Core.Validation.ValidationExceptionType.Except, ExceptList.ToArray()) == false)
                 {
                     throw new Hepsa.Core.Validation.InvalidBusinessObjectException(businessObject.BrokenRulesList().ToString());
                 }
 
                 _dataObject.Update(businessObject, businessObjectKey);
+               // if (businessObject.Picture_vbnry != null)
+               // {
+               //     File.WriteAllBytes($@"{BLLTrafficPictures_T.TrafficPicturePath}{businessObject.TrafficID_bint}.jpg", businessObject.Picture_vbnry);
+               // }
             }
             catch (System.Exception ex)
             {

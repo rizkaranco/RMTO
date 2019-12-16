@@ -772,6 +772,25 @@ namespace HPS.BLL.TrafficBLL
             }
         }
 
+        public void ReportSelectByFieds(object FromDateTime_nvc, object ToDateTime_nvc,
+            object FromTrafficNumber_nvc,object ToTrafficNumber_nvc,object LaderPivotGroupID_nvc,
+            object LaderTypeID_nvc,object TrafficTypeID_nvc,object TrafficInbit_nvc,object TrafficOutbit_nvc,
+            object ServiceID_nvc,object TurnAccepted_nvc,
+            ref System.Data.DataTable dataTable)
+        {
+            try
+            {
+             _dataObject.ReportSelectByFieds(FromDateTime_nvc,ToDateTime_nvc,
+             FromTrafficNumber_nvc,  ToTrafficNumber_nvc,  LaderPivotGroupID_nvc,
+             LaderTypeID_nvc,  TrafficTypeID_nvc,  TrafficInbit_nvc,  TrafficOutbit_nvc,
+             ServiceID_nvc,  TurnAccepted_nvc, ref dataTable);
+            }
+            catch (System.Exception ex)
+            {
+                throw Hepsa.Core.Exception.HandleException.ChangeExceptionLanguage(ex, this);
+            }
+        }
+
         public void SelectDriverMobile_nvc(String Condition, ref DataTable DataTable)
         {
             try

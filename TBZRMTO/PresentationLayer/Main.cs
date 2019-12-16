@@ -1463,6 +1463,11 @@ namespace HPS
         {
 
         }
+
+        private void NewsTitleGrid_FormattingRow(object sender, Janus.Windows.GridEX.RowLoadEventArgs e)
+        {
+
+        }
     }
 }
 

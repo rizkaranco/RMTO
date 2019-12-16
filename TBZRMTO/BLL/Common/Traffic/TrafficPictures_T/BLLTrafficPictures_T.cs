@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using HPS.BLL.BusinessObjectMain;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
 
 namespace HPS.BLL.TrafficPicturesBLL
 {
@@ -44,6 +47,21 @@ namespace HPS.BLL.TrafficPicturesBLL
         }
 
 
+        public static string TrafficPicturePath { get { return @"e:\img\";} }
+        public Image GetTrafficPicture
+        {
+            get
+            {
+                if (Picture_vbnry == null)
+                    return null;
+               // if (File.Exists($@"{TrafficPicturePath}{TrafficID_bint}.jpg"))
+               //     return Image.FromFile($@"{TrafficPicturePath}{TrafficID_bint}.jpg");
+
+                System.IO.MemoryStream pictureMemoryStream = new System.IO.MemoryStream();
+                pictureMemoryStream.Write(Picture_vbnry, 0, Picture_vbnry.Length);
+                return Image.FromStream(pictureMemoryStream);
+            }
+        }
 
         public override void AddValidationRules()
         {

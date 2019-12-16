@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using DT = System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Stimulsoft;
+using System.Web;
+using System.IO;
+using EX= Microsoft.Office.Interop;
+using Microsoft.Office.Interop.Excel;
 
 namespace HPS.Reports.Forms
 {
@@ -32,8 +36,14 @@ namespace HPS.Reports.Forms
             }
         }
 
+        DT.DataTable ExportExcelDt = new DT.DataTable();
         private void ShowButton_Click(object sender, EventArgs e)
         {
+
+            BLL.TrafficBLL.BLLTraffic_TFactory factory = new BLL.TrafficBLL.BLLTraffic_TFactory();
+
+            DT.DataTable dt;
+
             try
             {
                 if (FromDatefaDatePicker.IsNull)
@@ -75,7 +85,6 @@ namespace HPS.Reports.Forms
                     throw new ApplicationException(ToDateValidator.Description);
            
 
-
                 if (_TrafficType == 1)
                 {
                     string Turn = string.Empty;
@@ -99,7 +108,7 @@ namespace HPS.Reports.Forms
                     //rpt.Document.Printer.PrinterName = string.Empty;
                     //viewer1.Document = rpt.Document;
                     //rpt.Run();
-
+                    
                     IranianInTrafficstiReport.Dictionary.Synchronize();
                     IranianInTrafficstiReport.Dictionary.Databases.Clear();
                     IranianInTrafficstiReport.Dictionary.Databases.Add(new Stimulsoft.Report.Dictionary.StiSqlDatabase("Connection", Hepsa.Core.Common.ConnectionString.ConnectionString));
@@ -183,6 +192,81 @@ namespace HPS.Reports.Forms
                     IranianInTrafficstiReport.Render();
                     stiViewerControl1.Report = IranianInTrafficstiReport;
 
+                    dt = new DT.DataTable();
+                    ExportExcelDt = new System.Data.DataTable();
+                    factory.ReportSelectByFieds(
+                        IranianInTrafficstiReport["@FromDateTime_nvc"],
+                        IranianInTrafficstiReport["@ToDateTime_nvc"],
+                        IranianInTrafficstiReport["@FromTrafficNumber_nvc"],
+                        IranianInTrafficstiReport["@ToTrafficNumber_nvc"],
+                        IranianInTrafficstiReport["@LaderPivotGroupID_nvc"],
+                        IranianInTrafficstiReport["@LaderTypeID_nvc"],
+                        IranianInTrafficstiReport["@TrafficTypeID_nvc"],
+                        IranianInTrafficstiReport["@TrafficInbit_nvc"],
+                        IranianInTrafficstiReport["@TrafficOutbit_nvc"],
+                        IranianInTrafficstiReport["@ServiceID_nvc"],
+                         Turn, ref dt);
+
+                    Dictionary<string, string> Columns = new Dictionary<string, string>();
+                    Columns.Add("TrafficNumber_bint", "شماره قبض");
+                    Columns.Add("TurnNumber_bint", "شماره نوبت");
+                    Columns.Add("DriverCardNumber_nvc", "شماره کارت راننده ");
+                    Columns.Add("carCardNumber_nvc", "شماره کارت ناوگان");
+                    Columns.Add("FirstName_nvc", "نام راننده");
+                    Columns.Add("LastName_nvc", "نام خانوادگی راننده");
+                    Columns.Add("NumberPlate_nvc", "شماره پلاک");
+                    Columns.Add("UserName_nvc", "کاربر");
+                    Columns.Add("Date_nvc", "تاریخ ورود");
+                    Columns.Add("Time_nvc", "زمان ورود");
+                    Columns.Add("EditUserName_nvc", "کاربر تایید کننده");
+                    Columns.Add("TurnDate_nvc", "ترایخ نوبت");
+                    Columns.Add("TurnTime_nvc", "زمان نوبت");
+                    Columns.Add("PriceNoTax_dec", "مبلغ");
+                    Columns.Add("PriceTax_dec", "ارزش افزوده");
+                    Columns.Add("Price_dec", "مبلغ دریافتی");
+                    Columns.Add("WithLade_bit", "با بار");
+                    Columns.Add("ServiceID_intServiceType_nvc", "مراجعه به");
+
+                    foreach (var col in Columns)
+                    {
+                        ExportExcelDt.Columns.Add(col.Value,col.Key.EndsWith("_bit") ? typeof(bool) : typeof(string));
+                    }
+
+                    DataRow dr;
+                    
+                    for (int i = 0; i <= dt.Rows.Count-1;i++)
+                    {
+                        dr = ExportExcelDt.NewRow();
+                        for (int j=0;j<Columns.Count;j++)
+                          dr[j] = dt.Rows[i][Columns.Keys.ElementAt(j)];
+
+                        ExportExcelDt.Rows.Add(dr);
+                    }
+                    
+                    
+                   
+                    //gridControl1.DataSource = dt;
+                    //gridView1.Columns.Clear();
+                    ////gridView1.PopulateColumns();
+
+                    //GridColumn column;
+                    //int x = 0;
+                    //foreach (DataColumn i in dt.Columns)
+                    //{
+                    //    x++;
+                    //    if (x == 6)
+                    //        break;
+                    //    column = new GridColumn() { FieldName = i.ColumnName,Width = 200,MinWidth = 200,MaxWidth = 200};
+                    //    Columns.Add();
+                    //}
+                    //gridView1.PopulateColumns(Columns);
+                    //gridView1.RefreshData();
+                    //foreach (GridColumn clm in gridView1.Columns)
+                    //{
+                    //    clm.Width  = clm.MinWidth = clm.MaxWidth = 200;
+                    //}
+
+
                 }
                 if (_TrafficType == 2)
                 {
@@ -191,7 +275,7 @@ namespace HPS.Reports.Forms
                     //viewer1.Document = rpt.Document;
                     //rpt.Run();
                     HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
-                    DataTable TrafficDataTable = new DataTable();
+                    DT.DataTable TrafficDataTable = new DT.DataTable();
                     string Condition = string.Empty;
                     string FromTime = FromTimeTextBox.Text;
                     string ToTime = ToTimeTextBox.Text;
@@ -217,6 +301,8 @@ namespace HPS.Reports.Forms
                         Condition = "(T.In_bit='True') AND (T.TrafficTypeID_int='2') AND (T.Date_nvc + ' ' + T.Time_nvc>='" + FromDate + ' ' + FromTime + "' ) AND (T.Date_nvc + ' ' + T.Time_nvc<='" + ToDate + ' ' + ToTime + "') AND (T.TrafficNumber_bint>='" + FromTrafficNumber + "') AND (T.TrafficNumber_bint<='" + ToTrafficNumber + "')";
                     }
 
+                    dt = new DT.DataTable();
+                    ExportExcelDt = new System.Data.DataTable();
                     ForeignInTrafficReportStiReport.Dictionary.Synchronize();
                     ForeignInTrafficReportStiReport.Dictionary.Databases.Clear();
                     ForeignInTrafficReportStiReport.Dictionary.Databases.Add(new Stimulsoft.Report.Dictionary.StiSqlDatabase("Connection", Hepsa.Core.Common.ConnectionString.ConnectionString));
@@ -234,6 +320,43 @@ namespace HPS.Reports.Forms
                     ForeignInTrafficReportStiReport["ToTime_vc"] = ToTimeTextBox.Text;
                     ForeignInTrafficReportStiReport.Render();
                     stiViewerControl1.Report = ForeignInTrafficReportStiReport;
+                    factory.GetAllByConditionAllTraffic(Condition, ref dt);
+
+                    Dictionary<string, string> Columns = new Dictionary<string, string>();
+                    Columns.Add("TrafficNumber_bint", "شماره قبض");
+                    //Columns.Add("TurnNumber_bint", "شماره نوبت");
+                    //Columns.Add("DriverCardNumber_nvc", "شماره کارت راننده ");
+                    //Columns.Add("carCardNumber_nvc", "شماره کارت ناوگان");
+                    Columns.Add("FirstName_nvc", "نام راننده");
+                    Columns.Add("LastName_nvc", "نام خانوادگی راننده");
+                    Columns.Add("NumberPlate_nvc", "شماره پلاک");
+                    Columns.Add("UserName_nvc", "کاربر");
+                    Columns.Add("Date_nvc", "تاریخ ورود");
+                    Columns.Add("Time_nvc", "زمان ورود");
+                    Columns.Add("EditUserName_nvc", "کاربر تایید کننده");
+                    //Columns.Add("TurnDate_nvc", "تاریخ نوبت");
+                    //Columns.Add("TurnTime_nvc", "زمان نوبت");
+                    Columns.Add("PriceNoTax_dec", "مبلغ");
+                    Columns.Add("PriceTax_dec", "ارزش افزوده");
+                    Columns.Add("Price_dec", "مبلغ دریافتی");
+                    Columns.Add("WithLade_bit", "با بار");
+                    Columns.Add("ServiceID_intServiceType_nvc", "مراجعه به");
+
+                    foreach (var col in Columns)
+                    {
+                        ExportExcelDt.Columns.Add(col.Value, col.Key.EndsWith("_bit") ? typeof(bool) : typeof(string));
+                    }
+
+                    DataRow dr;
+
+                    for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                    {
+                        dr = ExportExcelDt.NewRow();
+                        for (int j = 0; j < Columns.Count; j++)
+                            dr[j] = dt.Rows[i][Columns.Keys.ElementAt(j)];
+
+                        ExportExcelDt.Rows.Add(dr);
+                    }
                 }
                 if (_TrafficType == 0)
                 {
@@ -283,8 +406,63 @@ namespace HPS.Reports.Forms
                     OtherInTrafficStiReport["ToTime_vc"] = ToTimeTextBox.Text;
                     OtherInTrafficStiReport.Render();
                     stiViewerControl1.Report = OtherInTrafficStiReport;
-                }
 
+
+
+
+                    dt = new DT.DataTable();
+                    ExportExcelDt = new System.Data.DataTable();
+                    factory.ReportSelectByFieds(
+                        OtherInTrafficStiReport["@FromDateTime_nvc"],
+                        OtherInTrafficStiReport["@ToDateTime_nvc"],
+                        OtherInTrafficStiReport["@FromTrafficNumber_nvc"],
+                        OtherInTrafficStiReport["@ToTrafficNumber_nvc"],
+                        OtherInTrafficStiReport["@LaderPivotGroupID_nvc"],
+                        OtherInTrafficStiReport["@LaderTypeID_nvc"],
+                        OtherInTrafficStiReport["@TrafficTypeID_nvc"],
+                        OtherInTrafficStiReport["@TrafficInbit_nvc"],
+                        OtherInTrafficStiReport["@TrafficOutbit_nvc"],
+                        OtherInTrafficStiReport["@ServiceID_nvc"],
+                         "", ref dt);
+
+
+                    Dictionary<string, string> Columns = new Dictionary<string, string>();
+                    Columns.Add("TrafficNumber_bint", "شماره قبض");
+                    //Columns.Add("TurnNumber_bint", "شماره نوبت");
+                    //Columns.Add("DriverCardNumber_nvc", "شماره کارت راننده ");
+                    //Columns.Add("carCardNumber_nvc", "شماره کارت ناوگان");
+                    Columns.Add("FirstName_nvc", "نام راننده");
+                    Columns.Add("LastName_nvc", "نام خانوادگی راننده");
+                    Columns.Add("NumberPlate_nvc", "شماره پلاک");
+                    Columns.Add("UserName_nvc", "کاربر");
+                    Columns.Add("Date_nvc", "تاریخ ورود");
+                    Columns.Add("Time_nvc", "زمان ورود");
+                    // Columns.Add("EditUserName_nvc", "کاربر تایید کننده");
+                    //Columns.Add("TurnDate_nvc", "تاریخ نوبت");
+                    //Columns.Add("TurnTime_nvc", "زمان نوبت");
+                    Columns.Add("PriceNoTax_dec", "مبلغ");
+                    Columns.Add("PriceTax_dec", "ارزش افزوده");
+                    Columns.Add("Price_dec", "مبلغ دریافتی");
+                   // Columns.Add("WithLade_bit", "با بار");
+                    Columns.Add("ServiceID_intServiceType_nvc", "مراجعه به");
+
+                    foreach (var col in Columns)
+                    {
+                        ExportExcelDt.Columns.Add(col.Value, col.Key.EndsWith("_bit") ? typeof(bool) : typeof(string));
+                    }
+
+                    DataRow dr;
+
+                    for (int i = 0; i <= dt.Rows.Count - 1; i++)
+                    {
+                        dr = ExportExcelDt.NewRow();
+                        for (int j = 0; j < Columns.Count; j++)
+                            dr[j] = dt.Rows[i][Columns.Keys.ElementAt(j)];
+
+                        ExportExcelDt.Rows.Add(dr);
+                    }
+
+                }
 
 
             }
@@ -294,7 +472,61 @@ namespace HPS.Reports.Forms
             }
             
         }
-      
+
+
+        void CreateExcel(DT.DataTable dtTable, string PathFileName)
+        {
+            try
+            {
+                
+                var excel = new EX.Excel.Application { Visible = false };
+                var misValue = System.Reflection.Missing.Value;
+                var wb = excel.Workbooks.Add(misValue);
+                //var wb = excel.Workbooks.Open(PathFileName);
+               
+                EX.Excel.Worksheet sh = wb.Sheets.Add();
+                sh.Name = "گزارش";
+                string Headers = "ABCDEFGHIJKLMNOPQRSTUVWXZ";
+                int index = 0;
+                
+                foreach (DataColumn column in dtTable.Columns)
+                {
+                    if (index >= Headers.Length)
+                        break;
+                    sh.Cells[1, Headers[index].ToString()].Value2 = column.ColumnName;
+                    index++;
+                }
+
+                /* Insert Rows */
+                object x;
+                for (int i = 0; i < dtTable.Rows.Count; i++)
+                {
+                    for (int j = 0; j < index; j++)
+                    {
+                        x = dtTable.Rows[i][j];
+                        if (x.GetType() == typeof(bool))
+                        {
+                            if ((bool)x)
+                                sh.Cells[i + 2, Headers[j].ToString()].Value2 = "بله";
+                            else
+                                sh.Cells[i + 2, Headers[j].ToString()].Value2 = "خیر";
+                        }
+                        else
+                            sh.Cells[i + 2, Headers[j].ToString()].Value2 = dtTable.Rows[i][j];
+
+                    }
+                }
+
+                wb.SaveAs(PathFileName, EX.Excel.XlFileFormat.xlWorkbookNormal, misValue, misValue, misValue, misValue, EX.Excel.XlSaveAsAccessMode.xlExclusive, misValue, misValue, misValue, misValue, misValue);
+                wb.Close(true);
+                excel.Quit();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         private void InTrafficReportForm_Load(object sender, EventArgs e)
         {
             try
@@ -312,7 +544,7 @@ namespace HPS.Reports.Forms
             try
             {
                 HPS.BLL.LaderPivotGroupBLL.BLLLaderPivotGroup_TFactory LaderPivotGroupID_intFactory = new HPS.BLL.LaderPivotGroupBLL.BLLLaderPivotGroup_TFactory();
-                DataTable LaderPivotGroupID_intDataTable = new DataTable();
+                DT.DataTable LaderPivotGroupID_intDataTable = new DT.DataTable();
                 LaderPivotGroupID_intFactory.GetAll(ref LaderPivotGroupID_intDataTable);
                 this.LaderPivotGroupID_intComboBox.DisplayMember = HPS.BLL.LaderPivotGroupBLL.BLLLaderPivotGroup_T.LaderPivotGroup_TField.LaderPivotGroup_nvc.ToString();
                 this.LaderPivotGroupID_intComboBox.ValueMember = HPS.BLL.LaderPivotGroupBLL.BLLLaderPivotGroup_T.LaderPivotGroup_TField.LaderPivotGroupID_int.ToString();
@@ -320,7 +552,7 @@ namespace HPS.Reports.Forms
                 this.LaderPivotGroupID_intComboBox.SelectedIndex = -1;
 
                 HPS.BLL.LaderTypeBLL.BLLLaderType_TFactory LaderTypeID_intFactory = new HPS.BLL.LaderTypeBLL.BLLLaderType_TFactory();
-                DataTable LaderTypeID_intDataTable = new DataTable();
+                DT.DataTable LaderTypeID_intDataTable = new DT.DataTable();
                 string laderCondition = "[LaderType_T].[Active_bit]='true'";
                 LaderTypeID_intFactory.GetAllByCondition(laderCondition, ref LaderTypeID_intDataTable);
                 this.LaderTypeID_intComboBox.DisplayMember = HPS.BLL.LaderTypeBLL.BLLLaderType_T.LaderType_TField.LaderType_nvc.ToString();
@@ -329,7 +561,7 @@ namespace HPS.Reports.Forms
                 this.LaderTypeID_intComboBox.SelectedIndex = -1;
 
                 HPS.BLL.ServicesBLL.BLLServices_TFactory ServicesFactory = new HPS.BLL.ServicesBLL.BLLServices_TFactory();
-                DataTable ServicesDataTable = new DataTable();
+                DT.DataTable ServicesDataTable = new DT.DataTable();
                 string condition = "[Services_T].[Activie_bit]='true'";
                 ServicesFactory.GetAllByCondition(condition, ref ServicesDataTable);
                 ServicescomboBox.DataSource = ServicesDataTable;
@@ -340,7 +572,7 @@ namespace HPS.Reports.Forms
 
                 HPS.BLL.TrafficTypeBLL.BLLTrafficType_TFactory TrafficTypeFactory = new HPS.BLL.TrafficTypeBLL.BLLTrafficType_TFactory();
                 string TrafficTypeCondition = "[TrafficType_T].[TrafficTypeID_int]!=1 And [TrafficType_T].[TrafficTypeID_int]!=2";
-                DataTable TrafficTypeDataTable = new DataTable();
+                DT.DataTable TrafficTypeDataTable = new DT.DataTable();
                 TrafficTypeFactory.GetAllByCondition(TrafficTypeCondition, ref TrafficTypeDataTable);
                 TrafficTypeID_intComboBox.DataSource = TrafficTypeDataTable;
                 TrafficTypeID_intComboBox.DisplayMember = HPS.BLL.TrafficTypeBLL.BLLTrafficType_T.TrafficType_TField.TrafficType_nvc.ToString();
@@ -429,6 +661,17 @@ namespace HPS.Reports.Forms
         {
             HPS.BLL.TrafficBLL.BLLTraffic_TFactory Factory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
             this.ToTimeTextBox.Text = Factory.ServerTime.ToString();
+        }
+
+        private void ExportExcelButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.Filter = "*.xlx | Excel File";
+
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                CreateExcel(ExportExcelDt,save.FileName);
+            }
         }
     }
 }

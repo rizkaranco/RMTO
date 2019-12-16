@@ -1,6 +1,3 @@
-Janus.Windows.UI.Dock.UIPanelManager, Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
-Janus.Windows.GridEX.EditControls.MultiColumnCombo, Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
-Janus.Windows.GridEX.GridEX, Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
-Janus.Windows.EditControls.UICheckBox, Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
-Janus.Windows.GridEX.EditControls.CheckedComboBox, Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
 Janus.Windows.EditControls.UIButton, Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+Janus.Windows.GridEX.GridEX, Janus.Windows.GridEX.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null
+Janus.Windows.UI.Dock.UIPanelManager, Janus.Windows.UI.v3, Version=3.5.0.0, Culture=neutral, PublicKeyToken=null

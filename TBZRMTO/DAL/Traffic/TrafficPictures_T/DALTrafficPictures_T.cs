@@ -4,7 +4,7 @@ using System.Data.SqlTypes;
 using System.Data.SqlClient;
 using System.Collections.Generic;
 using HPS.DAL.DataLayerMain;
-
+using System.IO;
 
 namespace HPS.DAL.TrafficPicturesDAL
 {
@@ -42,8 +42,6 @@ namespace HPS.DAL.TrafficPicturesDAL
                 Picture_vbnry.Value = businessObject.Picture_vbnry;
                 this.Command.Parameters.Add(Picture_vbnry);
 
-
-
                 if (ControlConnection)
                 {
                     this.BeginTransaction();
@@ -56,6 +54,9 @@ namespace HPS.DAL.TrafficPicturesDAL
                 {
                     this.Commit();
                 }
+
+
+            
             }
             catch (System.Exception ex)
             {

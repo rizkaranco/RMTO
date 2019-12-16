@@ -244,6 +244,9 @@ namespace HPS.Present.Traffic
             HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
             try
             {
+                if (Hepsa.Core.Common.MessageBox.ConfirmMessage("آیا مایل به ثبت ورود هستید ؟") == false)
+                    return;
+
                 if (string.IsNullOrEmpty(FirstName_nvcTextBox.Text) || string.IsNullOrEmpty(LastName_nvcTextBox.Text) || string.IsNullOrEmpty(Mobile_vcTextBox.Text) || string.IsNullOrEmpty(NumberPlate_nvcTextBox.Text) || PlateCityID_intComboBox.SelectedValue==null || PlateCityID_intComboBox.SelectedIndex==0 || string.IsNullOrEmpty(System_nvcCombobox.Text))
                 {
                     throw new ApplicationException("لطفا تمامی مقادیر لازم را وارد نمایید");
@@ -922,10 +925,12 @@ namespace HPS.Present.Traffic
 
             //show picture
             BLL.TrafficPicturesBLL.BLLTrafficPictures_TFactory TrafficPicturesFactory = new BLL.TrafficPicturesBLL.BLLTrafficPictures_TFactory();
-            List<BLL.TrafficPicturesBLL.BLLTrafficPictures_T> TrafficPicturesEntity = new List<BLL.TrafficPicturesBLL.BLLTrafficPictures_T>();
-            TrafficPicturesEntity = TrafficPicturesFactory.GetAllBy(BLL.TrafficPicturesBLL.BLLTrafficPictures_T.TrafficPictures_TField.TrafficID_bint, TrafficEntity.TrafficID_bint);
+            BLL.TrafficPicturesBLL.BLLTrafficPictures_T TrafficPicturesEntity = new BLL.TrafficPicturesBLL.BLLTrafficPictures_T();
+            BLL.TrafficPicturesBLL.BLLTrafficPictures_TKeys _key = new BLL.TrafficPicturesBLL.BLLTrafficPictures_TKeys();
+            _key.TrafficID_bint = TrafficEntity.TrafficID_bint;
+            TrafficPicturesEntity = TrafficPicturesFactory.GetBy(_key);
 
-            if (TrafficPicturesEntity.Count > 0)
+            if (TrafficPicturesEntity != null)
             {
                 NumberPlateReadingButton.Visible = false;
                 NumberPlateReadingEditStateButton.Visible = true;
@@ -933,9 +938,9 @@ namespace HPS.Present.Traffic
                 axVLCPlugin21.Visible = false;
                 axVLCPlugin22.Visible = false;
                 CameraGroupBox.Visible = false;
-                PictureDataUserdEdit = TrafficPicturesEntity[0].Picture_vbnry;
+                PictureDataUserdEdit = TrafficPicturesEntity.Picture_vbnry;
                 System.IO.MemoryStream pictureMemoryStream = new System.IO.MemoryStream();
-                pictureMemoryStream.Write(TrafficPicturesEntity[0].Picture_vbnry, 0, TrafficPicturesEntity[0].Picture_vbnry.Length);
+                pictureMemoryStream.Write(TrafficPicturesEntity.Picture_vbnry, 0, TrafficPicturesEntity.Picture_vbnry.Length);
                 pictureBox.Image = System.Drawing.Image.FromStream(pictureMemoryStream);
 
                 pictureBox.Height = 220;

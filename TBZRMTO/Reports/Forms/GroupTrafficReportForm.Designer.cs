@@ -75,7 +75,7 @@
             // Design Time Panel Info:
             // 
             this.uiPanelManager1.BeginPanelInfo();
-            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("0e0bbecf-fc46-4dc9-825b-282c32768ca5"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(200, 687), true);
+            this.uiPanelManager1.AddDockPanelInfo(new System.Guid("0e0bbecf-fc46-4dc9-825b-282c32768ca5"), Janus.Windows.UI.Dock.PanelDockStyle.Left, new System.Drawing.Size(267, 687), true);
             this.uiPanelManager1.AddFloatingPanelInfo(new System.Guid("0e0bbecf-fc46-4dc9-825b-282c32768ca5"), new System.Drawing.Point(-1, -1), new System.Drawing.Size(-1, -1), false);
             this.uiPanelManager1.EndPanelInfo();
             // 
@@ -83,9 +83,9 @@
             // 
             this.uiPanel0.InnerContainer = this.uiPanel0Container;
             this.uiPanel0.Location = new System.Drawing.Point(3, 3);
-            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiPanel0.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0.Name = "uiPanel0";
-            this.uiPanel0.Size = new System.Drawing.Size(200, 687);
+            this.uiPanel0.Size = new System.Drawing.Size(267, 687);
             this.uiPanel0.TabIndex = 4;
             // 
             // uiPanel0Container
@@ -108,16 +108,16 @@
             this.uiPanel0Container.Controls.Add(this.ToDatefaDatePicker);
             this.uiPanel0Container.Controls.Add(this.TimeGroupBox);
             this.uiPanel0Container.Location = new System.Drawing.Point(1, 23);
-            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.uiPanel0Container.Margin = new System.Windows.Forms.Padding(4);
             this.uiPanel0Container.Name = "uiPanel0Container";
-            this.uiPanel0Container.Size = new System.Drawing.Size(194, 663);
+            this.uiPanel0Container.Size = new System.Drawing.Size(261, 663);
             this.uiPanel0Container.TabIndex = 0;
             // 
             // DefaulCheckBox
             // 
             this.DefaulCheckBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.DefaulCheckBox.Location = new System.Drawing.Point(188, 110);
-            this.DefaulCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DefaulCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.DefaulCheckBox.Name = "DefaulCheckBox";
             this.DefaulCheckBox.Size = new System.Drawing.Size(28, 28);
             this.DefaulCheckBox.TabIndex = 2;
@@ -130,7 +130,7 @@
             this.ServicescheckedComboBox.DesignTimeLayout = ServicescheckedComboBox_DesignTimeLayout;
             this.ServicescheckedComboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ServicescheckedComboBox.Location = new System.Drawing.Point(29, 464);
-            this.ServicescheckedComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ServicescheckedComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.ServicescheckedComboBox.Name = "ServicescheckedComboBox";
             this.ServicescheckedComboBox.SaveSettings = false;
             this.ServicescheckedComboBox.Size = new System.Drawing.Size(199, 26);
@@ -144,7 +144,7 @@
             this.LaderTypecheckedComboBox.DesignTimeLayout = LaderTypecheckedComboBox_DesignTimeLayout;
             this.LaderTypecheckedComboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LaderTypecheckedComboBox.Location = new System.Drawing.Point(29, 521);
-            this.LaderTypecheckedComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LaderTypecheckedComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.LaderTypecheckedComboBox.Name = "LaderTypecheckedComboBox";
             this.LaderTypecheckedComboBox.SaveSettings = false;
             this.LaderTypecheckedComboBox.Size = new System.Drawing.Size(199, 26);
@@ -303,9 +303,9 @@
             this.TimeGroupBox.Controls.Add(this.label4);
             this.TimeGroupBox.Enabled = false;
             this.TimeGroupBox.Location = new System.Drawing.Point(45, 117);
-            this.TimeGroupBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.TimeGroupBox.Name = "TimeGroupBox";
-            this.TimeGroupBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TimeGroupBox.Padding = new System.Windows.Forms.Padding(4);
             this.TimeGroupBox.Size = new System.Drawing.Size(165, 135);
             this.TimeGroupBox.TabIndex = 104;
             this.TimeGroupBox.TabStop = false;
@@ -314,7 +314,7 @@
             // 
             this.FromTimeTextBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FromTimeTextBox.Location = new System.Drawing.Point(4, 25);
-            this.FromTimeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FromTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.FromTimeTextBox.Mask = "00:00:00";
             this.FromTimeTextBox.Name = "FromTimeTextBox";
             this.FromTimeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -347,7 +347,7 @@
             // 
             this.ToTimeTextBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ToTimeTextBox.Location = new System.Drawing.Point(4, 65);
-            this.ToTimeTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ToTimeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.ToTimeTextBox.Mask = "00:00:00";
             this.ToTimeTextBox.Name = "ToTimeTextBox";
             this.ToTimeTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -391,8 +391,8 @@
             // 
             this.stiViewerControl1.AllowDrop = true;
             this.stiViewerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stiViewerControl1.Location = new System.Drawing.Point(203, 3);
-            this.stiViewerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.stiViewerControl1.Location = new System.Drawing.Point(270, 3);
+            this.stiViewerControl1.Margin = new System.Windows.Forms.Padding(4);
             this.stiViewerControl1.Name = "stiViewerControl1";
             this.stiViewerControl1.PageViewMode = Stimulsoft.Report.Viewer.StiPageViewMode.Continuous;
             this.stiViewerControl1.Report = null;
@@ -412,7 +412,7 @@
             this.stiViewerControl1.ShowSendEMail = false;
             this.stiViewerControl1.ShowSendEMailDocumentFile = false;
             this.stiViewerControl1.ShowZoom = true;
-            this.stiViewerControl1.Size = new System.Drawing.Size(1071, 687);
+            this.stiViewerControl1.Size = new System.Drawing.Size(1004, 687);
             this.stiViewerControl1.TabIndex = 6;
             // 
             // GroupTrafficReportForm
@@ -422,7 +422,7 @@
             this.ClientSize = new System.Drawing.Size(1277, 693);
             this.Controls.Add(this.stiViewerControl1);
             this.Controls.Add(this.uiPanel0);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "GroupTrafficReportForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;

@@ -11,6 +11,9 @@ using System.Net;
 using System.Text.RegularExpressions;
 using HPS.Present.Car;
 using System.Threading.Tasks;
+using HPS.BLL;
+using HPS.BLL.TrafficPicturesBLL;
+
 namespace HPS.Present.Traffic
 {
     public partial class IranianCarsForm : Hepsa.Core.PL.BaseEntityForm2
@@ -35,6 +38,8 @@ namespace HPS.Present.Traffic
             InitializeComponent();
             this.EditAndClose = false;
         }
+
+
 
         HPS.BLL.TrafficBLL.BLLTraffic_TKeys TrafficKey = new HPS.BLL.TrafficBLL.BLLTraffic_TKeys();
         public IranianCarsForm(Hepsa.Core.PL.BaseEntityParentForm.enmState State, DataTable DataTable, HPS.BLL.TrafficBLL.BLLTraffic_TKeys Key)
@@ -379,7 +384,7 @@ namespace HPS.Present.Traffic
             }
 
         }
-   
+
         private void LoadDriverAndCarOnlineInformation(string DriverCardNumber, string CarCardNumber)
         {
             if (ServicesID_intComboBox.SelectedValue == null)
@@ -457,7 +462,7 @@ namespace HPS.Present.Traffic
                 {
                     if (!string.IsNullOrEmpty(DriverCardNumber))
                     {
-                        if (ServicesID_intComboBox.SelectedValue !=null && (Int32)ServicesID_intComboBox.SelectedValue == 2)
+                        if (ServicesID_intComboBox.SelectedValue != null && (Int32)ServicesID_intComboBox.SelectedValue == 2)
                         {
 
                             driverObject = null;
@@ -497,7 +502,7 @@ namespace HPS.Present.Traffic
                                 }
                             }
 
-                            else 
+                            else
                             {
                                 ////Information Not exist
                                 Hepsa.Core.Common.MessageBox.ErrorMessage(string.Format("کارت هوشمند راننده به شماره <{0}>وارد شده در سیستم استعلام کارت هوشمند موجود نمی باشد. ", DriverCardNumber));
@@ -525,7 +530,7 @@ namespace HPS.Present.Traffic
             {
                 //Hepsa.Core.Common.MessageBox.ErrorMessage("ارتباط با سیستم استعلام کارت هوشمند برقرار نیست");
                 Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
-               FillDriverFields();
+                FillDriverFields();
             }
 
         }
@@ -689,7 +694,7 @@ namespace HPS.Present.Traffic
                     CarEntity.Country_nvc = "ایران";
                     CarEntity.CountryCode_nvc = "115";
                     CarFactory.Insert(CarEntity);
-                   
+
                 }
                 else if (dt.Count > 0)
                 {
@@ -714,7 +719,7 @@ namespace HPS.Present.Traffic
             HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
             string TrafficCondition = string.Empty;
             TrafficList = new List<BLL.TrafficBLL.BLLTraffic_T>();
-             TrafficList = TrafficFactory.GetAllByCondition(TrafficCondition);
+            TrafficList = TrafficFactory.GetAllByCondition(TrafficCondition);
 
             string TurnNumberCondition = string.Empty;
             if (PlateCityCode_nvcTextBox.Text != "" || NumberPlate_nvcTextBox.Text != "")
@@ -796,7 +801,7 @@ namespace HPS.Present.Traffic
                 {
                     tCondition = "([Traffic_T].TrafficTypeID_int=1 AND [Traffic_T].[NumberPlate_nvc]=N'" + NumberPlate_nvcTextBox.Text + "') AND ([Traffic_T].[In_bit]='true') AND ([Traffic_T].[SerialPlate_nvc]='" + SerialPlate_nvcTextBox.Text + "') ORDER BY TrafficID_bint ";
                 }
-               
+
                 TrafficList = new List<BLL.TrafficBLL.BLLTraffic_T>();
                 if (!string.IsNullOrEmpty(tCondition))
                 {
@@ -867,6 +872,9 @@ namespace HPS.Present.Traffic
         {
             try
             {
+                if (Hepsa.Core.Common.MessageBox.ConfirmMessage("آیا مایل به ثبت ورود هستید ؟") == false)
+                    return;
+
                 DublicateTurn(DriverCardNumber_bintNumericTextBox.Text);
 
                 if (this.LaderTypeID_intComboBox.SelectedValue == null)
@@ -882,6 +890,8 @@ namespace HPS.Present.Traffic
                 HPS.BLL.TrafficBLL.BLLTraffic_T TrafficEntity = new HPS.BLL.TrafficBLL.BLLTraffic_T();
 
                 ErrorString.Clear();
+
+
                 if ((Int32)ServicesID_intComboBox.SelectedValue == 2)
                 {
                     if (String.IsNullOrEmpty(FirstName_nvcTextBox.Text))
@@ -918,7 +928,7 @@ namespace HPS.Present.Traffic
                     {
                         ErrorString.AppendLine("شماره کارت هوشمند ناوگان خالی است");
                     }
-                   
+
                     if (System_nvcCombobox.SelectedValue == null)
                     {
                         ErrorString.AppendLine("نوع وسیله ناوگان خالی است");
@@ -944,7 +954,7 @@ namespace HPS.Present.Traffic
                         ErrorString.AppendLine("کد شهر ناوگان خالی است");
                     }
 
-                  
+
 
                     HPS.BLL.SettingsBLL.BLLSetting_TFactory SettingsFactory = new HPS.BLL.SettingsBLL.BLLSetting_TFactory();
                     HPS.BLL.SettingsBLL.BLLSetting_TKeys SettingKey = new HPS.BLL.SettingsBLL.BLLSetting_TKeys();
@@ -1074,6 +1084,8 @@ namespace HPS.Present.Traffic
                 TrafficEntity.CarCardNumber_nvc = CarCardNumber_nvcTextBox.Text;
                 TrafficEntity.CarCardDate_nvc = (string)Hepsa.Core.Common.PersentationController.GetEntityValue(CarCardDate_nvcTextBox.Text, TypeCode.String);
                 TrafficEntity.CarCardRead_bit = false;
+
+
                 TrafficEntity.CarID_int = null;
                 TrafficEntity.Capacity_flt = null;
                 int convertableyearType = 0;
@@ -1085,16 +1097,16 @@ namespace HPS.Present.Traffic
                 TrafficEntity.YearType_nvc = this.YearType_nvcTextBox.Text;
                 TrafficEntity.PlateCityID_int = (Int32?)Hepsa.Core.Common.PersentationController.GetEntityValue(this.PlateCityID_intComboBox.SelectedValue, TypeCode.Int32);
 
-               //Driver Informations
-                    TrafficEntity.DriverCardDate_nvc = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(DriverCardDate_nvcTextBox.Text, TypeCode.String));
-                    TrafficEntity.DriverCardNumber_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverCardNumber_bintNumericTextBox.Text, TypeCode.String).ToString();
-                    TrafficEntity.DriverType_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverType_nvc.Text, TypeCode.String).ToString();
-                    TrafficEntity.FirstName_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(FirstName_nvcTextBox.Text, TypeCode.String).ToString();
-                    TrafficEntity.LastName_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(LastName_nvcTextBox.Text, TypeCode.String).ToString();
-                    TrafficEntity.licenceNumber_int = (Int64?)Hepsa.Core.Common.PersentationController.GetEntityValue(licenceNumber_intNumericTextBox.NumericText, TypeCode.Int64);
-                    TrafficEntity.NationalCode_int = (Nullable<Int64>)Hepsa.Core.Common.PersentationController.GetEntityValue(NationalCode_intNumericTextBox.NumericText, TypeCode.Int64);
-                    TrafficEntity.DriverCardRead_bit = false;
-                    TrafficEntity.DriverMobileNumber_nvc = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(Mobile_nvcnumericTextBox.Text, TypeCode.String));
+                //Driver Informations
+                TrafficEntity.DriverCardDate_nvc = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(DriverCardDate_nvcTextBox.Text, TypeCode.String));
+                TrafficEntity.DriverCardNumber_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverCardNumber_bintNumericTextBox.Text, TypeCode.String).ToString();
+                TrafficEntity.DriverType_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverType_nvc.Text, TypeCode.String).ToString();
+                TrafficEntity.FirstName_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(FirstName_nvcTextBox.Text, TypeCode.String).ToString();
+                TrafficEntity.LastName_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(LastName_nvcTextBox.Text, TypeCode.String).ToString();
+                TrafficEntity.licenceNumber_int = (Int64?)Hepsa.Core.Common.PersentationController.GetEntityValue(licenceNumber_intNumericTextBox.NumericText, TypeCode.Int64);
+                TrafficEntity.NationalCode_int = (Nullable<Int64>)Hepsa.Core.Common.PersentationController.GetEntityValue(NationalCode_intNumericTextBox.NumericText, TypeCode.Int64);
+                TrafficEntity.DriverCardRead_bit = false;
+                TrafficEntity.DriverMobileNumber_nvc = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(Mobile_nvcnumericTextBox.Text, TypeCode.String));
 
 
                 //تخلف
@@ -1183,7 +1195,7 @@ namespace HPS.Present.Traffic
                         throw new ApplicationException(string.Format("ناوگان به شماره قبض {0} خارج نشده است", TrafficStatusDataTable.Rows[0]["TrafficNumber_bint"]));
                     }
                 }
-               
+
 
                 TrafficEntity.CameraPlateNumber_nvc = NumberPlate_nvcTextBoxCamera.Text;
 
@@ -1198,10 +1210,22 @@ namespace HPS.Present.Traffic
                 {
                     throw new ApplicationException("مبلغ خالی است");
                 }
+                if (TrafficEntity.ServiceID_int == 2)
+                {
+
+                    CheckTravelTimePassed(TrafficEntity.CarCardNumber_nvc);
+                    if (!IsTravelTimePassedVariable)
+                    {
+                        return;
+                    }
+                }
                 if (Hepsa.Core.Common.MessageBox.ConfirmMessage(" " + TrafficEntity.Price_dec + "ر يا ل باید از راننده گرفته شود.  آیا از ثبت اطلاعات اطمینان دارید؟  ") == true)
                 {
                     TrafficFactory.BeginProc();
                     TrafficFactory.Insert(TrafficEntity);
+
+                    // بروز رسانی اطلاعات راننده
+                    UpdateDriverSpecification(DriverCardNumber_bintNumericTextBox.Text);
                     //SettingID_int = 1012 => خواندن پلاک در هنگام ورود
                     SettingKey.SettingID_int = 1012;
                     SettingEntity = SettingFactory.GetBy(SettingKey);
@@ -1227,7 +1251,7 @@ namespace HPS.Present.Traffic
                     szBuffer.ToList().Clear();
                     NumberPlateReadingButton.Enabled = true;
                     var trafficToPrint = TrafficFactory.GetBy(new BLL.TrafficBLL.BLLTraffic_TKeys() { TrafficID_bint = TrafficEntity.TrafficID_bint });
-                    if (trafficToPrint!=null)
+                    if (trafficToPrint != null)
                     {
                         if (TrafficEntity.ServiceID_int == 2)
                         {
@@ -1498,7 +1522,14 @@ namespace HPS.Present.Traffic
                 if (TrafficEntityUpdate.IsValid(Hepsa.Core.Validation.ValidationExceptionType.Validate, "DuplicateTurnNumberInUpdateRule") == false)
                 {
                     Hepsa.Core.Validation.InvalidBusinessObjectException exception = new Hepsa.Core.Validation.InvalidBusinessObjectException(TrafficEntityUpdate.BrokenRulesList().ToString());
-                    throw new ApplicationException(exception.Message);
+                    if (HPS.Common.CurrentUser.user.UserGroupID_int != 1)
+                    {
+                        throw new ApplicationException(exception.Message);
+                    }
+                    else
+                    {
+                        MessageBox.Show(exception.Message, "اخطار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
 
                 if ((NumberPlate_nvcTextBox.Text != NumberPlate_nvcTextBoxCamera.Text || SerialPlate_nvcTextBox.Text != SerialPlate_nvcTextBoxCamera.Text) && (new HPS.BLL.SettingsBLL.BLLSetting_TFactory()).GetBy(new BLL.SettingsBLL.BLLSetting_TKeys() { SettingID_int = 1027 }).Value_nvc == "1")
@@ -1602,7 +1633,7 @@ namespace HPS.Present.Traffic
                 Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
             }
         }
-      
+
         private void FillCombo()
         {
             HPS.BLL.ServicesBLL.BLLServices_TFactory ServicesFactory = new HPS.BLL.ServicesBLL.BLLServices_TFactory();
@@ -1709,7 +1740,7 @@ namespace HPS.Present.Traffic
 
                 //if (DriverCardNumber_bintNumericTextBox.Text != "" && DriverList.Count == 0)
                 //{
-                 tCondition = "([Traffic_T].[DriverCardNumber_nvc]='" + DriverCardNumber_bintNumericTextBox.Text + "') AND ([Traffic_T].[In_bit]='true') order by trafficID_bint desc";
+                tCondition = "([Traffic_T].[DriverCardNumber_nvc]='" + DriverCardNumber_bintNumericTextBox.Text + "') AND ([Traffic_T].[In_bit]='true') order by trafficID_bint desc";
                 TrafficList.Clear();
                 TrafficList = TrafficFactory.GetAllByCondition(tCondition);
                 if (TrafficList != null && TrafficList.Count > 0)
@@ -2015,7 +2046,7 @@ namespace HPS.Present.Traffic
         {
             try
             {
-                if (ServicesID_intComboBox.SelectedValue==null)
+                if (ServicesID_intComboBox.SelectedValue == null)
                 {
                     Hepsa.Core.Common.MessageBox.ErrorMessage("مراجعه به انتخاب نشده است");
                     return;
@@ -2025,8 +2056,8 @@ namespace HPS.Present.Traffic
                 snapshot();
                 //number = anprService.GetPlateNumberByByte(szBuffer);
                 number = await api.GetNumberPlate(szBuffer);
-                
-                if (!string.IsNullOrEmpty(number) && number.Length>7)
+
+                if (!string.IsNullOrEmpty(number) && number.Length > 7)
                 {
                     HPS.BLL.TruePlate.ConvertToTrueNumber trueNumberClass = new BLL.TruePlate.ConvertToTrueNumber();
                     string plateNumber_nvc = string.Empty;
@@ -2121,7 +2152,7 @@ namespace HPS.Present.Traffic
             SerialPlate_nvcTextBox.Text = string.Empty;
             ProductionYear_intNumericTextBox.Text = string.Empty;
             PlateCityCode_nvcTextBox.Text = string.Empty;
-           
+
             ProductionYear_intNumericTextBox.Text = string.Empty;
             YearType_nvcTextBox.Text = string.Empty;
             CarCardNumber_nvcTextBox.Text = string.Empty;
@@ -2130,14 +2161,14 @@ namespace HPS.Present.Traffic
             LaderTypeID_intComboBox.SelectedIndex = -1;
             System_nvcCombobox.SelectedIndex = -1;
             PlateCityID_intComboBox.SelectedValue = 311;
-            PlateCityID_intComboBox_SelectedValueChanged(null,null);
+            PlateCityID_intComboBox_SelectedValueChanged(null, null);
 
 
         }
 
         private void NumberPlate_nvcTextBox_KeyDown(object sender, KeyEventArgs e)
         {
-        }           
+        }
 
         private void LadeChooseButton_Click(object sender, EventArgs e)
         {
@@ -2210,7 +2241,7 @@ namespace HPS.Present.Traffic
 
                     this._CurrentTrafficNumber = (long?)TrafficNavigationDataTable.Rows[0]["TrafficNumber_bint"];
                     TrafficList = new List<BLL.TrafficBLL.BLLTraffic_T>();
-                     TrafficList = TrafficFactory.GetAllBy(HPS.BLL.TrafficBLL.BLLTraffic_T.Traffic_TField.TrafficNumber_bint, this._CurrentTrafficNumber);
+                    TrafficList = TrafficFactory.GetAllBy(HPS.BLL.TrafficBLL.BLLTraffic_T.Traffic_TField.TrafficNumber_bint, this._CurrentTrafficNumber);
                     if (TrafficList != null && TrafficList.Count > 0)
                     {
                         this.TrafficKey.TrafficID_bint = TrafficList[0].TrafficID_bint;
@@ -2694,10 +2725,12 @@ namespace HPS.Present.Traffic
             PriceTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.PriceTax_dec, TypeCode.String));
             if (string.IsNullOrEmpty(TrafficEntity.PriceTax_dec.ToString()))
             {
-                PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec, TypeCode.String)); }
+                PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec, TypeCode.String));
+            }
             else
             {
-                PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec - TrafficEntity.PriceTax_dec, TypeCode.String)); }
+                PriceWithoutTax_decnumericTextBox.Text = Convert.ToString(Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficEntity.Price_dec - TrafficEntity.PriceTax_dec, TypeCode.String));
+            }
 
             if (!(TrafficEntity.LadeReturn_bit == null))
             {
@@ -2718,10 +2751,12 @@ namespace HPS.Present.Traffic
             //{
             NumberPlateReadingButton.Enabled = true;
             BLL.TrafficPicturesBLL.BLLTrafficPictures_TFactory TrafficPicturesFactory = new BLL.TrafficPicturesBLL.BLLTrafficPictures_TFactory();
-            List<BLL.TrafficPicturesBLL.BLLTrafficPictures_T> TrafficPicturesEntity = new List<BLL.TrafficPicturesBLL.BLLTrafficPictures_T>();
-            TrafficPicturesEntity = TrafficPicturesFactory.GetAllBy(BLL.TrafficPicturesBLL.BLLTrafficPictures_T.TrafficPictures_TField.TrafficID_bint, TrafficEntity.TrafficID_bint);
+            BLL.TrafficPicturesBLL.BLLTrafficPictures_T TrafficPicturesEntity = new BLL.TrafficPicturesBLL.BLLTrafficPictures_T();
+            BLLTrafficPictures_TKeys _key = new BLLTrafficPictures_TKeys();
+            _key.TrafficID_bint = TrafficEntity.TrafficID_bint;
+            TrafficPicturesEntity = TrafficPicturesFactory.GetBy(_key);
 
-            if (TrafficPicturesEntity.Count > 0)
+            if (TrafficPicturesEntity != null)
             {
                 NumberPlateReadingButton.Visible = false;
                 NumberPlateReadingEditStateButton.Visible = true;
@@ -2729,18 +2764,15 @@ namespace HPS.Present.Traffic
                 axVLCPlugin21.Visible = false;
                 axVLCPlugin22.Visible = false;
                 CameraGroupBox.Visible = false;
-                PictureDataUserdEdit = TrafficPicturesEntity[0].Picture_vbnry;
-                System.IO.MemoryStream pictureMemoryStream = new System.IO.MemoryStream();
-                pictureMemoryStream.Write(TrafficPicturesEntity[0].Picture_vbnry, 0, TrafficPicturesEntity[0].Picture_vbnry.Length);
-                pictureBox.Image = System.Drawing.Image.FromStream(pictureMemoryStream);
-
+                PictureDataUserdEdit = TrafficPicturesEntity.Picture_vbnry;
+                pictureBox.Image = TrafficPicturesEntity.GetTrafficPicture;
                 pictureBox.Height = 220;
                 pictureBox.Width = 252;
             }
             //}
             PublicDriverNumber = DriverCardNumber_bintNumericTextBox.Text;
         }
-       
+
 
         private void SearchButton_Click(object sender, EventArgs e)
         {
@@ -2767,7 +2799,7 @@ namespace HPS.Present.Traffic
             }
         }
 
-      
+
         protected void FillTrafficByNumberPlateAndSerialPlate()
         {
             BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
@@ -2778,7 +2810,7 @@ namespace HPS.Present.Traffic
             {
                 if (!string.IsNullOrEmpty(SerialPlate_nvcTextBox.Text))
                 {
-                     TrafficList = new List<HPS.BLL.TrafficBLL.BLLTraffic_T>();
+                    TrafficList = new List<HPS.BLL.TrafficBLL.BLLTraffic_T>();
                     string trafficCondition = string.Empty;
                     trafficCondition = "[Traffic_T].[NumberPlate_nvc]='" + NumberPlate_nvcTextBox.Text + "' AND [Traffic_T].[SerialPlate_nvc]='" + SerialPlate_nvcTextBox.Text + "'";
                     TrafficList = TrafficFactory.GetAllByCondition(trafficCondition);
@@ -2964,7 +2996,7 @@ namespace HPS.Present.Traffic
             catch (Exception ex)
             {
                 LaderTypeID_intComboBox.Text = "";
-                
+
             }
         }
 
@@ -3092,7 +3124,7 @@ namespace HPS.Present.Traffic
             catch (Exception ex)
             {
                 Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
-                
+
             }
 
         }
@@ -3103,13 +3135,127 @@ namespace HPS.Present.Traffic
             {
                 if (!stopReadProcess)
                 {
-                CarCardNumber_nvcTextBox.Text = string.Empty;
+                    CarCardNumber_nvcTextBox.Text = string.Empty;
                 }
                 FillCar();
             }
             catch (Exception ex)
             {
                 Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
+            }
+        }
+
+
+        /// <summary>
+        /// آیا مدت زمان تعیین شده برای مقصد رد شده است که از اول به آن نوبیت دهیم ؟
+        /// </summary>
+        private bool IsTravelTimePassedVariable = true;
+
+        /// <summary>
+        ///  بررسی مدت زمان تعیین شده برای مقصد
+        ///  **Set 'IsTravelTimePassedVariable' value**
+        /// </summary>
+        /// <param name="CarCardNumber"></param>
+        private void CheckTravelTimePassed(string CarCardNumber)
+        {
+            // Found Last Traffic 
+            // if traffic.servicetype == 2  : نوبت
+            // check travel Time
+
+            HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
+            HPS.BLL.TrafficBLL.BLLTraffic_T TrafficEntity = TrafficFactory.GetAllByCondition(string.Format(" [Traffic_T].[CarCardNumber_nvc] = '{0}' and [Traffic_T].[ServiceID_int]=2 and in_bit=1", CarCardNumber)).OrderByDescending(a => a.TrafficID_bint).FirstOrDefault();
+            HPS.BLL.TrafficBLL.BLLTraffic_T OutTrafficEntity = TrafficFactory.GetAllByCondition(string.Format(" [Traffic_T].[CarCardNumber_nvc] = '{0}' and [Traffic_T].[ServiceID_int]=2 and Out_bit=1", CarCardNumber)).OrderByDescending(a => a.TrafficID_bint).FirstOrDefault();
+            if (TrafficEntity == null)
+            {
+                return;
+            }
+            //محاسبه مدت مجاز سفر
+            DateTime NowDate = DateTime.Parse((new Hepsa.Core.Common.MyDateTime(TrafficFactory.ServerJalaliDate)).MyDate.ToString("yyyy/MM/dd") + " " + TrafficFactory.ServerTime);
+            DataTable TrafficDataTable = new DataTable();
+            string Condition = string.Format("Traffic_T.TrafficID_bint='{0}'", TrafficEntity.TrafficID_bint);
+            TrafficFactory.GetAllByConditionWithLadBill(Condition, ref TrafficDataTable);
+            if (TrafficDataTable != null && TrafficDataTable.Rows.Count > 0)
+            {
+                Int32 _CityTravelHour = 0;
+                if (!string.IsNullOrEmpty(TrafficDataTable.Rows[0]["TravelTime_int"].ToString()))
+                {
+                    _CityTravelHour = Convert.ToInt32(TrafficDataTable.Rows[0]["TravelTime_int"].ToString());
+                }
+                ///////////////
+                // string _OutDate = TrafficDataTable.Rows[0]["Date_nvc"].ToString();
+                // string _OutTime = TrafficDataTable.Rows[0]["Time_nvc"].ToString();
+
+                string _OutDate = OutTrafficEntity.Date_nvc;
+                string _OutTime = OutTrafficEntity.Time_nvc;
+                DateTime OutDate = DateTime.Parse((new Hepsa.Core.Common.MyDateTime(_OutDate)).MyDate.ToString("yyyy/MM/dd") + " " + _OutTime);
+
+                if (TrafficDataTable.Rows[0]["Out_bit"].ToString() == "False")
+                {
+                    TimeSpan date = NowDate - OutDate;
+                    double remaindedHour = _CityTravelHour - date.TotalHours;
+                    if (OutDate.AddHours(_CityTravelHour).CompareTo(NowDate) > 0)//date.TotalHours > _CityTravelHour)
+                    {
+                        // برای گروه کاربری مدیر فقط خطا را نمایش دهد و برای سایر نمایش و ادامه را لغو کند
+                        //if (HPS.Common.CurrentUser.user.UserGroupID_int != 1 && HPS.Common.CurrentUser.user.UserGroupID_int != 13)
+                        //{
+                        //   IsTravelTimePassedVariable = false;
+                        // }
+                        // MessageBox.Show(string.Format("مدت سفراین ناوگان به مجوز< {0} >تمام نشده و مدت < {1} > مانده است ", TrafficDataTable.Rows[0]["LadBillCreditID_int"], TimeSpan.FromHours(remaindedHour)),"اخطار",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                        MessageBox.Show(string.Format("مدت سفراین ناوگان به مجوز< {0} >تمام نشده است", TrafficDataTable.Rows[0]["LadBillCreditID_int"]), "اخطار", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        // throw new ApplicationException(string.Format("مدت سفراین ناوگان به مجوز< {0} >تمام نشده و مدت < {1} > مانده است ", TrafficDataTable.Rows[0]["LadBillCreditID_int"], TimeSpan.FromDays(remaindedHour)));
+                    }
+
+                }
+            }
+
+
+
+        }
+
+        private void UpdateDriverSpecification(string DriverCardNumber)
+        {
+            try
+            {
+
+
+                HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory DriverSpecificationFactory = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
+                List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.DriverCardNumber_nvc, DriverCardNumber);
+                if (DriverSpecificationList != null && DriverSpecificationList.Count > 0)
+                {
+                    HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TKeys _key = new BLL.DriverSpecificationBLL.BLLDriverSpecification_TKeys();
+                    _key.DriverSpecificationID_int = DriverSpecificationList.FirstOrDefault().DriverSpecificationID_int;
+                    HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T CurrentDriverInfo = DriverSpecificationList.FirstOrDefault();
+                    long NationalCode_intNumeric;
+                    long.TryParse(NationalCode_intNumericTextBox.Text,out NationalCode_intNumeric);
+                    CurrentDriverInfo.NationalCode_int = NationalCode_intNumeric;
+                    CurrentDriverInfo.licenceNumber_nvc = licenceNumber_intNumericTextBox.Text;
+                    DriverSpecificationFactory.BeginProc();
+                    DriverSpecificationFactory.Update(CurrentDriverInfo, _key);
+                    DriverSpecificationFactory.CommitProc();
+
+                }
+                else
+                {
+                    HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
+                    List<HPS.BLL.DriverBLL.BLLDriver_T> DriverList = DriverFactory.GetAllBy(HPS.BLL.DriverBLL.BLLDriver_T.Driver_TField.DriverCardNumber_nvc, DriverCardNumber);
+                    if (DriverList != null && DriverList.Count > 0)
+                    {
+                        HPS.BLL.DriverBLL.BLLDriver_T CurrentDriver = DriverList.FirstOrDefault();
+                        HPS.BLL.DriverBLL.BLLDriver_TKeys _key = new HPS.BLL.DriverBLL.BLLDriver_TKeys();
+                        _key.DriverID_bint = CurrentDriver.DriverID_bint;
+                        CurrentDriver.NationalCode_int = Convert.ToInt32(NationalCode_intNumericTextBox.Text);
+                        CurrentDriver.licenceNumber_nvc = licenceNumber_intNumericTextBox.Text;
+                        DriverFactory.BeginProc();
+                        DriverFactory.Update(CurrentDriver, _key);
+                        DriverFactory.CommitProc();
+                    }
+
+
+                }
+            }
+            catch (Exception c)
+            {
+                MessageBox.Show(c.Message);
             }
         }
     }

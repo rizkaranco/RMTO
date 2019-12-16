@@ -1273,6 +1273,10 @@ namespace HPS.Present.TurnManagement
                                 ErrorMessage_nvc = " شماره کارت راننده یا شماره کارت ماشین در سیستم استعلام کارت هوشمند موجود نمی باشد ";
                                 ChechActiveCare = false;
                             }
+                            else if (ex.Message == "Index was outside the bounds of the array.")
+                            {
+                                ErrorMessage_nvc = "شماره كارت راننده يا شماره كارت كاميون در سيستم استعلام موجود نمي باشد";
+                            }
                             else
                                 Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
                             CardCheckingLogEntity.AcceptTurn_bit = true;

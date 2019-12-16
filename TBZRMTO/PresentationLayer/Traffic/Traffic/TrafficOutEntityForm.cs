@@ -63,6 +63,301 @@ namespace HPS.Present.TrafficOut
             }
         }
         DataRow[] drin = null;
+        //protected override void Insert()
+        //{
+        //    try
+        //    {
+        //        if (this._TrafficEntity == null)
+        //        {
+        //            throw new HPS.Exceptions.TrafficNotFound();
+        //        }
+
+        //        TrafficStatusDataTable = new DataTable();
+        //        TrafficFactory.GetLastStatus(_TrafficEntity.NumberPlate_nvc, _TrafficEntity.SerialPlate_nvc, _TrafficEntity.CarCardNumber_nvc, TrafficStatusDataTable);
+
+        //        #region OUT Conditions
+        //        if ((Int32)_TrafficEntity.ServiceID_int == 2)
+        //        {
+        //            if (TrafficStatusDataTable != null && TrafficStatusDataTable.Rows.Count > 0)
+        //            {
+        //                Int64 LastTrafficID_bint = 0;
+        //                if (Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TrafficID_bint"], TypeCode.Int64) != null)
+        //                {
+        //                    LastTrafficID_bint = (Int64)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TrafficID_bint"], TypeCode.Int64);
+        //                }
+        //                bool? HasTurn_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["HasTurn_bit"], TypeCode.Boolean);
+        //                bool? TurnReturn_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TurnReturn_bit"], TypeCode.Boolean);
+        //                bool? TurnCanceled_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TurnCanceled_bit"], TypeCode.Boolean);
+        //                bool? HasLadBillCredit_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["HasLadBillCredit_bit"], TypeCode.Boolean);
+        //                bool? LadBillCreditCancel_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["LadBillCreditCancel_bit"], TypeCode.Boolean);
+        //                bool? LadBillCreditTurn_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["LadBillCreditTurn_bit"], TypeCode.Boolean);
+        //                bool? TurnAccepted_bit = (bool?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["TurnAccepted_bit"], TypeCode.Boolean);
+        //                Int64? AcceptedTurnNumber_bint = (Int64?)Hepsa.Core.Common.PersentationController.GetEntityValue(TrafficStatusDataTable.Rows[0]["AcceptedTurnNumber_bint"], TypeCode.Int64);
+
+        //                if (HasTurn_bit.HasValue == false || HasTurn_bit == true)
+        //                {
+        //                    //خروج
+
+        //                    if (TurnAccepted_bit.HasValue && TurnAccepted_bit == true)
+        //                    {
+        //                        if (TurnCanceled_bit.HasValue && TurnCanceled_bit == true)
+        //                        {
+        //                            //خروج
+        //                            this._TrafficEntity.TemporaryOut_bit = false;
+        //                            this._TrafficEntity.Out_bit = true;
+        //                        }
+        //                        else
+        //                        {
+        //                            if (HasLadBillCredit_bit.HasValue && HasLadBillCredit_bit == true)
+        //                            {
+        //                                if (LadBillCreditCancel_bit.HasValue && LadBillCreditCancel_bit == true)
+        //                                {
+        //                                    if (LadBillCreditTurn_bit.HasValue && LadBillCreditTurn_bit == true)
+        //                                    {
+        //                                        //خروج موقت
+
+        //                                        BLL.LaderTypeBLL.BLLLaderType_TFactory LaderTypeFactory = new BLL.LaderTypeBLL.BLLLaderType_TFactory();
+        //                                        BLL.LaderTypeBLL.BLLLaderType_TKeys LaderTypeKey = new BLL.LaderTypeBLL.BLLLaderType_TKeys();
+        //                                        BLL.LaderTypeBLL.BLLLaderType_T LaderTypeEntity = new BLL.LaderTypeBLL.BLLLaderType_T();
+        //                                        LaderTypeKey.LaderTypeID_int = _TrafficEntity.LaderTypeID_int;
+        //                                        LaderTypeEntity = LaderTypeFactory.GetBy(LaderTypeKey);
+        //                                        if (LaderTypeEntity.TurnCancel_bit)
+        //                                        {
+        //                                            CancelTurn_bit = true;
+        //                                            this._TrafficEntity.TemporaryOut_bit = false;
+        //                                            this._TrafficEntity.Out_bit = true;
+        //                                        }
+        //                                        else
+        //                                        {
+        //                                            this._TrafficEntity.TemporaryOut_bit = true;
+        //                                            this._TrafficEntity.Out_bit = false;
+
+        //                                        }
+        //                                    }
+        //                                    else
+        //                                    {
+        //                                        //خروج
+        //                                        this._TrafficEntity.TemporaryOut_bit = false;
+        //                                        this._TrafficEntity.Out_bit = true;
+        //                                    }
+        //                                }
+        //                                else
+        //                                {
+        //                                    //خروج
+        //                                    this._TrafficEntity.TemporaryOut_bit = false;
+        //                                    this._TrafficEntity.Out_bit = true;
+        //                                }
+        //                            }
+        //                            else
+        //                            //hp>
+        //                            {
+        //                                BLL.LaderTypeBLL.BLLLaderType_TFactory LaderTypeFactory = new BLL.LaderTypeBLL.BLLLaderType_TFactory();
+        //                                BLL.LaderTypeBLL.BLLLaderType_TKeys LaderTypeKey = new BLL.LaderTypeBLL.BLLLaderType_TKeys();
+        //                                BLL.LaderTypeBLL.BLLLaderType_T LaderTypeEntity = new BLL.LaderTypeBLL.BLLLaderType_T();
+        //                                LaderTypeKey.LaderTypeID_int = _TrafficEntity.LaderTypeID_int;
+        //                                LaderTypeEntity = LaderTypeFactory.GetBy(LaderTypeKey);
+        //                                if (LaderTypeEntity.TurnCancel_bit)
+        //                                {
+        //                                    CancelTurn_bit = true;
+        //                                    this._TrafficEntity.TemporaryOut_bit = false;
+        //                                    this._TrafficEntity.Out_bit = true;
+        //                                }
+        //                                else
+        //                                {
+        //                                    this._TrafficEntity.TemporaryOut_bit = true;
+        //                                    this._TrafficEntity.Out_bit = false;
+        //                                }
+        //                            }
+        //                        }
+        //                    }
+        //                    else
+        //                    {
+        //                        //خروج
+        //                        this._TrafficEntity.TemporaryOut_bit = false;
+        //                        this._TrafficEntity.Out_bit = true;
+        //                    }
+        //                }
+        //            }
+        //            else
+        //            {
+        //                //خروج
+        //                this._TrafficEntity.TemporaryOut_bit = false;
+        //                this._TrafficEntity.Out_bit = true;
+        //            }
+        //        }
+        //        else
+        //        {
+        //            // خروج غیر از ثبت نوبت
+        //            this._TrafficEntity.TemporaryOut_bit = false;
+        //            this._TrafficEntity.Out_bit = true;
+        //        }
+        //        #endregion
+        //        long TrafficID = _TrafficEntity.TrafficID_bint;
+
+        //        this._TrafficEntity.TrafficID_bint = 0;
+        //        this._TrafficEntity.Date_nvc = this.Date_nvcTextBox.Text;
+        //        this._TrafficEntity.Time_nvc = this.Time_nvcTextBox.Text;
+        //        this._TrafficEntity.UserName_nvc = HPS.Common.CurrentUser.user.UserName_nvc;
+        //        this._TrafficEntity.In_bit = false;
+        //        this._TrafficEntity.Price_dec = (decimal?)Hepsa.Core.Common.PersentationController.GetEntityValue(this.Remainder_decNumericTextBox.NumericText, TypeCode.Decimal);
+        //        this._TrafficEntity.PriceTax_dec = (decimal?)Hepsa.Core.Common.PersentationController.GetEntityValue(pricTax, TypeCode.Decimal);
+        //        #region Infraction
+        //        HPS.BLL.InfractionBLL.BLLInfraction_TFactory InfractionFactory = new HPS.BLL.InfractionBLL.BLLInfraction_TFactory();
+        //        Int32? CarID = null;
+        //        Int64? DriverID = null;
+        //        string FirstName = string.Empty;
+        //        string LastName = string.Empty;
+        //        Int64? NationaCode = null;
+        //        string NumberPlate = string.Empty;
+        //        string SerialPlate = string.Empty;
+        //        string PlateCityCode = string.Empty;
+
+        //        string InfractionCondition = string.Empty;
+
+        //        if (TrafficGridView.CurrentRow != null)
+        //        {
+        //            FirstName = Convert.ToString(TrafficGridView.CurrentRow.Cells["FirstName_nvc"].Value);
+        //            LastName = Convert.ToString(TrafficGridView.CurrentRow.Cells["LastName_nvc"].Value);
+        //            NationaCode = (Int64?)Hepsa.Core.Common.PersentationController.GetEntityValue(_TrafficEntity.NationalCode_int, TypeCode.Int64);
+        //            NumberPlate = Convert.ToString(TrafficGridView.CurrentRow.Cells["NumberPlate_nvc"].Value);
+        //            SerialPlate = Convert.ToString(TrafficGridView.CurrentRow.Cells["SerialPlate_nvc"].Value);
+        //            PlateCityCode = Convert.ToString(TrafficGridView.CurrentRow.Cells["PlateCityCode_nvc"].Value);
+        //            InfractionCondition = string.Format("([Infraction_T].[SolverUserName_nvc] IS NULL) AND ([Infraction_T].[SolveDate_nvc] IS NULL) AND ([Infraction_T].[SolveTime_nvc] IS NULL) AND Infraction_T.NumberPlate_nvc='{0}' AND Infraction_T.SerialPlate_nvc='{1}' AND Infraction_T.PlateCityCode_nvc='{2}'", _TrafficEntity.NumberPlate_nvc, _TrafficEntity.SerialPlate_nvc, PlateCityCode);
+        //            List<HPS.BLL.InfractionBLL.BLLInfraction_T> InfractionList = InfractionFactory.GetAllByCondition(InfractionCondition);
+        //            if (InfractionList != null && InfractionList.Count > 0 && InfractionList[0].Exit_bit)
+        //            {
+        //                throw new ApplicationException("ناوگان متخلف است" + "(" + InfractionList[0].CommentControl_nvc + ")");
+        //                //Hepsa.Core.Common.MessageBox.InformationMessage("ناوگان متخلف است");
+        //            }
+        //            InfractionCondition = string.Format("([Infraction_T].[SolverUserName_nvc] IS NULL) AND ([Infraction_T].[SolveDate_nvc] IS NULL) AND ([Infraction_T].[SolveTime_nvc] IS NULL) AND Infraction_T.DriverFirstName_nvc='{0}' AND Infraction_T.DriverLastName_nvc='{1}' AND Infraction_T.DriverNationalCode_bint='{2}'", _TrafficEntity.FirstName_nvc, _TrafficEntity.LastName_nvc, _TrafficEntity.NationalCode_int);
+        //            InfractionList = InfractionFactory.GetAllByCondition(InfractionCondition);
+        //            if (InfractionList != null && InfractionList.Count > 0)
+        //            {
+        //                Hepsa.Core.Common.MessageBox.InformationMessage("جهت ادامه کار به مسئول کامپیوتر مراجعه کنید");
+        //            }
+        //            //}
+        //        }
+        //        #endregion
+
+        //        string conditionTemporaryout = string.Empty;
+
+        //        //conditionTemporaryout = string.Format("T.TrafficTypeID_int=1 AND T.TrafficNumber_bint={0} ", _TrafficEntity.TrafficNumber_bint);
+        //        //DataTable TempDataTable = new DataTable();
+        //        //TrafficFactory.GetConditionLastTraffic(conditionTemporaryout, ref TempDataTable);
+        //        //if (TempDataTable != null && TempDataTable.Rows.Count > 0)
+        //        //{
+        //        //    if ((bool)Hepsa.Core.Common.PersentationController.GetEntityValue(TempDataTable.Rows[0]["TemporaryOut_bit"], TypeCode.Boolean) == true)
+        //        //    {
+        //        //        throw new ApplicationException("آخرین تردد این ناوگان خروج موقت بوده است");
+        //        //    }
+        //        //}
+        //        if (_TrafficEntity.IsValid(Hepsa.Core.Validation.ValidationExceptionType.Validate, "DriverInfractionRule") == false)
+        //        {
+        //            throw new Hepsa.Core.Validation.InvalidBusinessObjectException(_TrafficEntity.BrokenRulesList().ToString());
+        //        }
+        //        //-------------------------------------1394/10/01 برای خروج
+        //        if (string.IsNullOrEmpty(NumberPlate_nvcTextBoxCamera.Text))
+        //        {
+        //            _TrafficEntity.CameraPlateNumber_nvc = null;
+        //        }
+        //        else
+        //            _TrafficEntity.CameraPlateNumber_nvc = NumberPlate_nvcTextBoxCamera.Text;
+
+        //        ////کنترل خوانده شدن پلاک توسط دوربین هنگام خروج برای اینکه صرفا عکس ننداخته باشند
+        //        #region این بخش به خواسته یزدانی حذف شد، نیاز به پلاک نیست صرفا فقط عکس کافی است
+        //        HPS.BLL.SettingsBLL.BLLSetting_TFactory SettingPictureFactory = new HPS.BLL.SettingsBLL.BLLSetting_TFactory();
+        //        HPS.BLL.SettingsBLL.BLLSetting_T SettingPictureEntity = new HPS.BLL.SettingsBLL.BLLSetting_T();
+        //        HPS.BLL.SettingsBLL.BLLSetting_TKeys SettingPictureKey = new HPS.BLL.SettingsBLL.BLLSetting_TKeys();
+
+        //        //SettingPictureKey.SettingID_int = 1031;
+        //        //SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
+        //        //if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
+        //        //{
+        //        //    if (string.IsNullOrEmpty(NumberPlate_nvcTextBoxCamera.Text))
+        //        //    {
+        //        //        throw new ApplicationException("شماره پلاک توسط دوربین خوانده نشده است");
+        //        //    }
+
+        //        //}
+
+        //        //SettingPictureKey.SettingID_int = 1032;
+        //        //SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
+        //        //if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
+        //        //{
+        //        //    if (NumberPlate_nvcTextBoxCamera.Text != NumberPlate_nvcTextBox.Text)
+        //        //    {
+        //        //        throw new ApplicationException("شماره پلاک خوانده شده توسط دوربین با شماره پلاک اصلی مغایرت دارد");
+        //        //    }
+        //        //}
+
+        //        //if (string.IsNullOrEmpty(SerialPlate_nvcTextBoxCamera.Text))
+        //        //{
+        //        //    _TrafficEntity.CameraSerialPlate_int = null;
+        //        //}
+        //        //else
+        //        //    _TrafficEntity.CameraSerialPlate_int = Convert.ToInt32(SerialPlate_nvcTextBoxCamera.Text);
+        //        //-------------------------------------
+        //        #endregion // بخش از آن نیز در خط پایین است که کامنت استار می شود
+
+
+        //        if (Hepsa.Core.Common.MessageBox.ConfirmMessage(" مبلغ " + _TrafficEntity.Price_dec + " ريا ل باید از راننده دریافت گردد آیا از ثبت اطلاعات اطمینان دارید؟") == true)
+        //        {
+        //            TrafficFactory.BeginProc();
+        //            TrafficFactory.Insert(this._TrafficEntity);
+        //            SettingPictureKey.SettingID_int = 1013;
+        //            SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
+
+        //            //////Insert TrafficPicture
+        //            if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1")
+        //            {
+        //                if (szBuffer != null && szBuffer[0] != 0)
+        //                {
+        //                    BLL.TrafficPicturesBLL.BLLTrafficPictures_TFactory TrafficPicturesFactory = new BLL.TrafficPicturesBLL.BLLTrafficPictures_TFactory();
+        //                    BLL.TrafficPicturesBLL.BLLTrafficPictures_T TrafficPicturesEntity = new BLL.TrafficPicturesBLL.BLLTrafficPictures_T();
+        //                    TrafficPicturesEntity.TrafficID_bint = _TrafficEntity.TrafficID_bint;
+        //                    TrafficPicturesEntity.Picture_vbnry = szBuffer;
+        //                    TrafficPicturesFactory.Insert(TrafficPicturesEntity);
+        //                }
+        //                else
+        //                {
+        //                    throw new ApplicationException("عملیات گرفتن عکس رخ نداده است");
+        //                }
+        //            }
+
+
+        //            if (CancelTurn_bit)
+        //            {
+        //                BLL.TurnManagementBLL.BLLTurnManagement_TFactory TurnManagementFactory = new BLL.TurnManagementBLL.BLLTurnManagement_TFactory();
+        //                BLL.TurnManagementBLL.BLLTurnManagement_T TurnManagmentEntity = new BLL.TurnManagementBLL.BLLTurnManagement_T();
+        //                TurnManagmentEntity.TrafficID_bint = TrafficID;
+        //                TurnManagmentEntity.Date_nvc = Date_nvcTextBox.Text;
+        //                TurnManagmentEntity.Time_nvc = Time_nvcTextBox.Text;
+        //                TurnManagmentEntity.UserName_nvc = HPS.Common.CurrentUser.user.UserName_nvc;
+        //                TurnManagmentEntity.Return_bit = false;
+        //                TurnManagmentEntity.TurnCancelCommantID_int = 48;
+        //                TurnManagmentEntity.TurnCancelCommment_nvc = "ابطال هنگام خروج";
+        //                TurnManagementFactory.Insert(TurnManagmentEntity);
+        //            }
+        //            this.TrafficNumberTextBox.AutoCompleteCustomSource.Remove(TrafficNumberTextBox.Text);
+        //            TrafficFactory.CommitProc();
+        //            CancelTurn_bit = false;
+        //        }
+
+        //        TrafficNumberTextBox.Text = string.Empty;
+        //        TrafficNumber_bintNumericTextBox.Text = string.Empty;
+        //        NumberPlate_nvcTextBoxCamera.Text = string.Empty;
+        //        SerialPlate_nvcTextBoxCamera.Text = string.Empty;
+        //        TrafficNumberTextBox.Focus();
+        //        TrafficGridView.SetDataBinding(null, "");
+        //        this.ClearForm();
+        //        szBuffer = null;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        TrafficFactory.RollBackProc();
+        //        throw ex;
+        //    }
+        //}
         protected override void Insert()
         {
             try
@@ -264,42 +559,38 @@ namespace HPS.Present.TrafficOut
                     _TrafficEntity.CameraPlateNumber_nvc = NumberPlate_nvcTextBoxCamera.Text;
 
                 ////کنترل خوانده شدن پلاک توسط دوربین هنگام خروج برای اینکه صرفا عکس ننداخته باشند
-                #region این بخش به خواسته یزدانی حذف شد، نیاز به پلاک نیست صرفا فقط عکس کافی است
                 HPS.BLL.SettingsBLL.BLLSetting_TFactory SettingPictureFactory = new HPS.BLL.SettingsBLL.BLLSetting_TFactory();
                 HPS.BLL.SettingsBLL.BLLSetting_T SettingPictureEntity = new HPS.BLL.SettingsBLL.BLLSetting_T();
                 HPS.BLL.SettingsBLL.BLLSetting_TKeys SettingPictureKey = new HPS.BLL.SettingsBLL.BLLSetting_TKeys();
 
-                //SettingPictureKey.SettingID_int = 1031;
-                //SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
-                //if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
-                //{
-                //    if (string.IsNullOrEmpty(NumberPlate_nvcTextBoxCamera.Text))
-                //    {
-                //        throw new ApplicationException("شماره پلاک توسط دوربین خوانده نشده است");
-                //    }
+                SettingPictureKey.SettingID_int = 1031;
+                SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
+                if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
+                {
+                    if (string.IsNullOrEmpty(NumberPlate_nvcTextBoxCamera.Text))
+                    {
+                        throw new ApplicationException("شماره پلاک توسط دوربین خوانده نشده است");
+                    }
 
-                //}
+                }
 
-                //SettingPictureKey.SettingID_int = 1032;
-                //SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
-                //if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
-                //{
-                //    if (NumberPlate_nvcTextBoxCamera.Text != NumberPlate_nvcTextBox.Text)
-                //    {
-                //        throw new ApplicationException("شماره پلاک خوانده شده توسط دوربین با شماره پلاک اصلی مغایرت دارد");
-                //    }
-                //}
+                SettingPictureKey.SettingID_int = 1032;
+                SettingPictureEntity = SettingPictureFactory.GetBy(SettingPictureKey);
+                if (SettingPictureEntity != null && SettingPictureEntity.Value_nvc == "1" && _TrafficEntity.TrafficTypeID_int != 2)
+                {
+                    if (NumberPlate_nvcTextBoxCamera.Text != NumberPlate_nvcTextBox.Text)
+                    {
+                        throw new ApplicationException("شماره پلاک خوانده شده توسط دوربین با شماره پلاک اصلی مغایرت دارد");
+                    }
+                }
 
-                //if (string.IsNullOrEmpty(SerialPlate_nvcTextBoxCamera.Text))
-                //{
-                //    _TrafficEntity.CameraSerialPlate_int = null;
-                //}
-                //else
-                //    _TrafficEntity.CameraSerialPlate_int = Convert.ToInt32(SerialPlate_nvcTextBoxCamera.Text);
+                if (string.IsNullOrEmpty(SerialPlate_nvcTextBoxCamera.Text))
+                {
+                    _TrafficEntity.CameraSerialPlate_int = null;
+                }
+                else
+                    _TrafficEntity.CameraSerialPlate_int = Convert.ToInt32(SerialPlate_nvcTextBoxCamera.Text);
                 //-------------------------------------
-                #endregion // بخش از آن نیز در خط پایین است که کامنت استار می شود
-
-
                 if (Hepsa.Core.Common.MessageBox.ConfirmMessage(" مبلغ " + _TrafficEntity.Price_dec + " ريا ل باید از راننده دریافت گردد آیا از ثبت اطلاعات اطمینان دارید؟") == true)
                 {
                     TrafficFactory.BeginProc();
@@ -555,6 +846,9 @@ namespace HPS.Present.TrafficOut
                 HPS.BLL.SettingsBLL.BLLSetting_TKeys SettingKey = new HPS.BLL.SettingsBLL.BLLSetting_TKeys();
                 SettingKey.SettingID_int = 1001;
                 HPS.BLL.SettingsBLL.BLLSetting_T TurnHourSettingEntity = settingsFactory.GetBy(SettingKey);
+
+                //TODO : این بخش در بعضی رانندگان قیمت را کمتر نشان میدهد
+                // 98/08/25 =>   قبض   1529743
                 if (TrafficInDatatable.Rows.Count > 0)
                 {
                     DateTime TrafficDate = DateTime.Parse((new Hepsa.Core.Common.MyDateTime(TrafficInDatatable.Rows[0]["Date_nvc"].ToString())).MyDate.ToString("yyyy/MM/dd") + " " + TrafficInDatatable.Rows[0]["Time_nvc"].ToString());
@@ -613,7 +907,7 @@ namespace HPS.Present.TrafficOut
                             else
                                 Price += 0;
                         }
-                        else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && (int)TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] == 57)
+                        else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"].ToString() == "57")
                         {
                             if (days >= 0)
                             {
@@ -744,7 +1038,7 @@ namespace HPS.Present.TrafficOut
                                         Price += Math.Floor((Convert.ToDecimal((days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["ExtraHourFee_dec"])));
                                     }
                                 }
-                                else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && (int)TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] == 57)
+                                else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"].ToString() == "57")
                                 {
                                     Price += Math.Floor((Convert.ToDecimal((days)) * Convert.ToDecimal(newStopFeeTable.Rows[0]["ExtraHourFee_dec"])));
                                 }
@@ -870,7 +1164,7 @@ namespace HPS.Present.TrafficOut
                                     Price += 0;
                             }
                         }
-                        else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && (int)TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] == 57)
+                        else if (TurnManagementTable.Rows.Count > 0 && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"] != null && TurnManagementTable.Rows[0]["TurnCancelCommantID_int"].ToString() == "57")
                         {
                             ExtraHour = ts.TotalHours;
                             HPS.BLL.SettingsBLL.BLLSetting_T SettingEntity = new HPS.BLL.SettingsBLL.BLLSetting_T();
@@ -1225,7 +1519,7 @@ namespace HPS.Present.TrafficOut
                 NumberPlateReadingButton.Enabled = false;
                 snapshot();
                 //   number = anprService.GetPlateNumberByByte(szBuffer);
-                //*number = await api.GetNumberPlate(szBuffer);
+                number = await api.GetNumberPlate(szBuffer);
                 NumberPlateReadingButton.Enabled = true;
                 //number = "56ع87615";
                 if (!string.IsNullOrEmpty(number))

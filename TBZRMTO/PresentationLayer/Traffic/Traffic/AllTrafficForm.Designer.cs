@@ -47,31 +47,6 @@ namespace HPS.Reports.Forms
             this.PrintTrafficButton = new System.Windows.Forms.ToolStripButton();
             this.ClosetoolStripButton = new System.Windows.Forms.ToolStripButton();
             this.TrafficGridView = new System.Windows.Forms.DataGridView();
-            this.Trafficnumberlabel = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.NumberPlate_nvcTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.BooleanComboBox = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.FalseradioButton = new System.Windows.Forms.RadioButton();
-            this.TrueradioButton = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lastNameTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ToDatefaDatePicker = new FarsiLibrary.Win.Controls.FADatePicker();
-            this.FromDatefaDatePicker = new FarsiLibrary.Win.Controls.FADatePicker();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.ShowButton = new System.Windows.Forms.Button();
-            this.carCardNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
-            this.SerialPlate_nvcTextBox = new HamrahanSystem.TextBox.NumericTextBox();
-            this.driverCardNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
-            this.AcceptedTurnNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
-            this.TrafficNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
-            this.AllTrafficstiReport = new Stimulsoft.Report.StiReport();
             this.colTrafficID_bint = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDate_nvc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTime_nvc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,6 +84,31 @@ namespace HPS.Reports.Forms
             this.colEditDate_vc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colEditTime_vc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Trafficnumberlabel = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.NumberPlate_nvcTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.BooleanComboBox = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.FalseradioButton = new System.Windows.Forms.RadioButton();
+            this.TrueradioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ToDatefaDatePicker = new FarsiLibrary.Win.Controls.FADatePicker();
+            this.FromDatefaDatePicker = new FarsiLibrary.Win.Controls.FADatePicker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.ShowButton = new System.Windows.Forms.Button();
+            this.carCardNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
+            this.SerialPlate_nvcTextBox = new HamrahanSystem.TextBox.NumericTextBox();
+            this.driverCardNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
+            this.AcceptedTurnNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
+            this.TrafficNumberTextBox = new HamrahanSystem.TextBox.NumericTextBox();
+            this.AllTrafficstiReport = new Stimulsoft.Report.StiReport();
             this.AllTrafficToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TrafficGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -135,7 +135,7 @@ namespace HPS.Reports.Forms
             this.AllTrafficToolStrip.Location = new System.Drawing.Point(0, 0);
             this.AllTrafficToolStrip.Name = "AllTrafficToolStrip";
             this.AllTrafficToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.AllTrafficToolStrip.Size = new System.Drawing.Size(1010, 35);
+            this.AllTrafficToolStrip.Size = new System.Drawing.Size(1111, 35);
             this.AllTrafficToolStrip.TabIndex = 9;
             // 
             // PrintButton
@@ -314,374 +314,17 @@ namespace HPS.Reports.Forms
             this.colEditTime_vc,
             this.Duration});
             this.TrafficGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TrafficGridView.Location = new System.Drawing.Point(0, 137);
-            this.TrafficGridView.Margin = new System.Windows.Forms.Padding(5);
+            this.TrafficGridView.Location = new System.Drawing.Point(0, 155);
+            this.TrafficGridView.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.TrafficGridView.MultiSelect = false;
             this.TrafficGridView.Name = "TrafficGridView";
             this.TrafficGridView.ReadOnly = true;
             this.TrafficGridView.RowHeadersVisible = false;
             this.TrafficGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.TrafficGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.TrafficGridView.Size = new System.Drawing.Size(1010, 386);
+            this.TrafficGridView.Size = new System.Drawing.Size(1111, 459);
             this.TrafficGridView.TabIndex = 13;
             this.TrafficGridView.Sorted += new System.EventHandler(this.TrafficGridView_Sorted);
-            // 
-            // Trafficnumberlabel
-            // 
-            this.Trafficnumberlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Trafficnumberlabel.AutoSize = true;
-            this.Trafficnumberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Trafficnumberlabel.Location = new System.Drawing.Point(736, 26);
-            this.Trafficnumberlabel.Name = "Trafficnumberlabel";
-            this.Trafficnumberlabel.Size = new System.Drawing.Size(70, 17);
-            this.Trafficnumberlabel.TabIndex = 48;
-            this.Trafficnumberlabel.Text = "شماره قبض";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label15.Location = new System.Drawing.Point(564, 26);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 17);
-            this.label15.TabIndex = 49;
-            this.label15.Text = "شماره پلاك";
-            // 
-            // NumberPlate_nvcTextBox
-            // 
-            this.NumberPlate_nvcTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.NumberPlate_nvcTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.NumberPlate_nvcTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.NumberPlate_nvcTextBox.Location = new System.Drawing.Point(470, 22);
-            this.NumberPlate_nvcTextBox.MaxLength = 6;
-            this.NumberPlate_nvcTextBox.Name = "NumberPlate_nvcTextBox";
-            this.NumberPlate_nvcTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.NumberPlate_nvcTextBox.Size = new System.Drawing.Size(93, 23);
-            this.NumberPlate_nvcTextBox.TabIndex = 4;
-            this.NumberPlate_nvcTextBox.Tag = "شماره پلاك";
-            this.NumberPlate_nvcTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label9.Location = new System.Drawing.Point(736, 61);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(104, 17);
-            this.label9.TabIndex = 50;
-            this.label9.Text = "ش نوبت تأیید شده";
-            // 
-            // BooleanComboBox
-            // 
-            this.BooleanComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BooleanComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.BooleanComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.BooleanComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.BooleanComboBox.FormattingEnabled = true;
-            this.BooleanComboBox.Location = new System.Drawing.Point(442, 58);
-            this.BooleanComboBox.Margin = new System.Windows.Forms.Padding(5);
-            this.BooleanComboBox.Name = "BooleanComboBox";
-            this.BooleanComboBox.Size = new System.Drawing.Size(121, 24);
-            this.BooleanComboBox.TabIndex = 6;
-            this.BooleanComboBox.TabStop = false;
-            this.BooleanComboBox.SelectedValueChanged += new System.EventHandler(this.BooleanComboBox_SelectedValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(564, 61);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 17);
-            this.label3.TabIndex = 55;
-            this.label3.Text = "مقادیر ";
-            // 
-            // FalseradioButton
-            // 
-            this.FalseradioButton.AutoSize = true;
-            this.FalseradioButton.Location = new System.Drawing.Point(7, 14);
-            this.FalseradioButton.Name = "FalseradioButton";
-            this.FalseradioButton.Size = new System.Drawing.Size(54, 21);
-            this.FalseradioButton.TabIndex = 1;
-            this.FalseradioButton.Text = "ندارد";
-            this.FalseradioButton.UseVisualStyleBackColor = true;
-            this.FalseradioButton.CheckedChanged += new System.EventHandler(this.FalseradioButton_CheckedChanged);
-            // 
-            // TrueradioButton
-            // 
-            this.TrueradioButton.Location = new System.Drawing.Point(90, 14);
-            this.TrueradioButton.Name = "TrueradioButton";
-            this.TrueradioButton.Size = new System.Drawing.Size(58, 23);
-            this.TrueradioButton.TabIndex = 0;
-            this.TrueradioButton.Text = "دارد";
-            this.TrueradioButton.UseVisualStyleBackColor = true;
-            this.TrueradioButton.CheckedChanged += new System.EventHandler(this.TrueradioButton_CheckedChanged);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.TrueradioButton);
-            this.groupBox1.Controls.Add(this.FalseradioButton);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.Location = new System.Drawing.Point(256, 42);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(178, 43);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(365, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 17);
-            this.label4.TabIndex = 56;
-            this.label4.Text = "نام خانوادگی";
-            // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lastNameTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lastNameTextBox.Location = new System.Drawing.Point(256, 22);
-            this.lastNameTextBox.MaxLength = 40;
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lastNameTextBox.Size = new System.Drawing.Size(108, 23);
-            this.lastNameTextBox.TabIndex = 8;
-            this.lastNameTextBox.Tag = "شماره پلاك";
-            this.lastNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(177, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 17);
-            this.label5.TabIndex = 58;
-            this.label5.Text = "کارت راننده";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.Location = new System.Drawing.Point(178, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 17);
-            this.label6.TabIndex = 59;
-            this.label6.Text = "کارت ناوگان";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label2.Location = new System.Drawing.Point(954, 61);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 17);
-            this.label2.TabIndex = 62;
-            this.label2.Text = "تا تاریخ";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(954, 26);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 17);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "از تاریخ";
-            // 
-            // ToDatefaDatePicker
-            // 
-            this.ToDatefaDatePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ToDatefaDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.ToDatefaDatePicker.Location = new System.Drawing.Point(846, 61);
-            this.ToDatefaDatePicker.Name = "ToDatefaDatePicker";
-            this.ToDatefaDatePicker.Size = new System.Drawing.Size(108, 20);
-            this.ToDatefaDatePicker.TabIndex = 1;
-            this.ToDatefaDatePicker.Theme = FarsiLibrary.Win.Enums.ThemeTypes.Office2007;
-            this.ToDatefaDatePicker.SelectedDateTimeChanged += new System.EventHandler(this.ToDatefaDatePicker_SelectedDateTimeChanged);
-            this.ToDatefaDatePicker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToDatefaDatePicker_KeyDown);
-            // 
-            // FromDatefaDatePicker
-            // 
-            this.FromDatefaDatePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FromDatefaDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.FromDatefaDatePicker.IsDefault = true;
-            this.FromDatefaDatePicker.Location = new System.Drawing.Point(846, 26);
-            this.FromDatefaDatePicker.Name = "FromDatefaDatePicker";
-            this.FromDatefaDatePicker.Size = new System.Drawing.Size(108, 20);
-            this.FromDatefaDatePicker.TabIndex = 0;
-            this.FromDatefaDatePicker.Theme = FarsiLibrary.Win.Enums.ThemeTypes.Office2007;
-            this.FromDatefaDatePicker.SelectedDateTimeChanged += new System.EventHandler(this.FromDatefaDatePicker_SelectedDateTimeChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.ShowButton);
-            this.groupBox2.Controls.Add(this.lastNameTextBox);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.carCardNumberTextBox);
-            this.groupBox2.Controls.Add(this.SerialPlate_nvcTextBox);
-            this.groupBox2.Controls.Add(this.driverCardNumberTextBox);
-            this.groupBox2.Controls.Add(this.AcceptedTurnNumberTextBox);
-            this.groupBox2.Controls.Add(this.FromDatefaDatePicker);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.TrafficNumberTextBox);
-            this.groupBox2.Controls.Add(this.ToDatefaDatePicker);
-            this.groupBox2.Controls.Add(this.Trafficnumberlabel);
-            this.groupBox2.Controls.Add(this.BooleanComboBox);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.NumberPlate_nvcTextBox);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupBox2.Location = new System.Drawing.Point(0, 35);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox2.Size = new System.Drawing.Size(1010, 102);
-            this.groupBox2.TabIndex = 64;
-            this.groupBox2.TabStop = false;
-            // 
-            // ShowButton
-            // 
-            this.ShowButton.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold);
-            this.ShowButton.Location = new System.Drawing.Point(2, 55);
-            this.ShowButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ShowButton.Name = "ShowButton";
-            this.ShowButton.Size = new System.Drawing.Size(71, 32);
-            this.ShowButton.TabIndex = 65;
-            this.ShowButton.Text = "نمایش";
-            this.ShowButton.UseVisualStyleBackColor = true;
-            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
-            // 
-            // carCardNumberTextBox
-            // 
-            this.carCardNumberTextBox.AllowNegative = true;
-            this.carCardNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.carCardNumberTextBox.DigitsInGroup = 0;
-            this.carCardNumberTextBox.Flags = 0;
-            this.carCardNumberTextBox.Location = new System.Drawing.Point(75, 56);
-            this.carCardNumberTextBox.MaxDecimalPlaces = 0;
-            this.carCardNumberTextBox.MaxWholeDigits = 7;
-            this.carCardNumberTextBox.Name = "carCardNumberTextBox";
-            this.carCardNumberTextBox.Prefix = "";
-            this.carCardNumberTextBox.RangeMax = 0;
-            this.carCardNumberTextBox.RangeMin = 0;
-            this.carCardNumberTextBox.Size = new System.Drawing.Size(103, 30);
-            this.carCardNumberTextBox.TabIndex = 10;
-            // 
-            // SerialPlate_nvcTextBox
-            // 
-            this.SerialPlate_nvcTextBox.AllowNegative = true;
-            this.SerialPlate_nvcTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.SerialPlate_nvcTextBox.DigitsInGroup = 0;
-            this.SerialPlate_nvcTextBox.Flags = 0;
-            this.SerialPlate_nvcTextBox.Location = new System.Drawing.Point(442, 22);
-            this.SerialPlate_nvcTextBox.MaxDecimalPlaces = 4;
-            this.SerialPlate_nvcTextBox.MaxWholeDigits = 2;
-            this.SerialPlate_nvcTextBox.Multiline = true;
-            this.SerialPlate_nvcTextBox.Name = "SerialPlate_nvcTextBox";
-            this.SerialPlate_nvcTextBox.Prefix = "";
-            this.SerialPlate_nvcTextBox.RangeMax = 0;
-            this.SerialPlate_nvcTextBox.RangeMin = 0;
-            this.SerialPlate_nvcTextBox.Size = new System.Drawing.Size(27, 23);
-            this.SerialPlate_nvcTextBox.TabIndex = 5;
-            this.SerialPlate_nvcTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SerialPlate_nvcTextBox_KeyDown);
-            // 
-            // driverCardNumberTextBox
-            // 
-            this.driverCardNumberTextBox.AllowNegative = true;
-            this.driverCardNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.driverCardNumberTextBox.DigitsInGroup = 0;
-            this.driverCardNumberTextBox.Flags = 0;
-            this.driverCardNumberTextBox.Location = new System.Drawing.Point(75, 20);
-            this.driverCardNumberTextBox.MaxDecimalPlaces = 0;
-            this.driverCardNumberTextBox.MaxWholeDigits = 7;
-            this.driverCardNumberTextBox.Name = "driverCardNumberTextBox";
-            this.driverCardNumberTextBox.Prefix = "";
-            this.driverCardNumberTextBox.RangeMax = 0;
-            this.driverCardNumberTextBox.RangeMin = 0;
-            this.driverCardNumberTextBox.Size = new System.Drawing.Size(103, 30);
-            this.driverCardNumberTextBox.TabIndex = 9;
-            // 
-            // AcceptedTurnNumberTextBox
-            // 
-            this.AcceptedTurnNumberTextBox.AllowNegative = true;
-            this.AcceptedTurnNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.AcceptedTurnNumberTextBox.DigitsInGroup = 0;
-            this.AcceptedTurnNumberTextBox.Flags = 0;
-            this.AcceptedTurnNumberTextBox.Location = new System.Drawing.Point(628, 56);
-            this.AcceptedTurnNumberTextBox.MaxDecimalPlaces = 4;
-            this.AcceptedTurnNumberTextBox.MaxWholeDigits = 9;
-            this.AcceptedTurnNumberTextBox.Name = "AcceptedTurnNumberTextBox";
-            this.AcceptedTurnNumberTextBox.Prefix = "";
-            this.AcceptedTurnNumberTextBox.RangeMax = 0;
-            this.AcceptedTurnNumberTextBox.RangeMin = 0;
-            this.AcceptedTurnNumberTextBox.Size = new System.Drawing.Size(106, 30);
-            this.AcceptedTurnNumberTextBox.TabIndex = 3;
-            this.AcceptedTurnNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AcceptedTurnNumberTextBox_KeyDown);
-            // 
-            // TrafficNumberTextBox
-            // 
-            this.TrafficNumberTextBox.AllowNegative = true;
-            this.TrafficNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TrafficNumberTextBox.DigitsInGroup = 0;
-            this.TrafficNumberTextBox.Flags = 0;
-            this.TrafficNumberTextBox.Location = new System.Drawing.Point(628, 20);
-            this.TrafficNumberTextBox.MaxDecimalPlaces = 4;
-            this.TrafficNumberTextBox.MaxWholeDigits = 9;
-            this.TrafficNumberTextBox.Name = "TrafficNumberTextBox";
-            this.TrafficNumberTextBox.Prefix = "";
-            this.TrafficNumberTextBox.RangeMax = 0;
-            this.TrafficNumberTextBox.RangeMin = 0;
-            this.TrafficNumberTextBox.Size = new System.Drawing.Size(106, 30);
-            this.TrafficNumberTextBox.TabIndex = 2;
-            this.TrafficNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TrafficNumberTextBox_KeyDown);
-            // 
-            // AllTrafficstiReport
-            // 
-            this.AllTrafficstiReport.CookieContainer = null;
-            this.AllTrafficstiReport.EngineVersion = Stimulsoft.Report.Engine.StiEngineVersion.EngineV2;
-            this.AllTrafficstiReport.ReferencedAssemblies = new string[] {
-        "System.Dll",
-        "System.Drawing.Dll",
-        "System.Windows.Forms.Dll",
-        "System.Data.Dll",
-        "System.Xml.Dll",
-        "Stimulsoft.Controls.Dll",
-        "Stimulsoft.Base.Dll",
-        "Stimulsoft.Report.Dll"};
-            this.AllTrafficstiReport.ReportAlias = "Report";
-            this.AllTrafficstiReport.ReportGuid = "cdc32ffab751467b91a39af7ec169055";
-            this.AllTrafficstiReport.ReportImage = null;
-            this.AllTrafficstiReport.ReportName = "Report";
-            this.AllTrafficstiReport.ReportSource = resources.GetString("AllTrafficstiReport.ReportSource");
-            this.AllTrafficstiReport.ReportUnit = Stimulsoft.Report.StiReportUnitType.Inches;
-            this.AllTrafficstiReport.ScriptLanguage = Stimulsoft.Report.StiReportLanguageType.CSharp;
-            this.AllTrafficstiReport.UseProgressInThread = false;
             // 
             // colTrafficID_bint
             // 
@@ -981,16 +624,386 @@ namespace HPS.Reports.Forms
             this.Duration.ReadOnly = true;
             this.Duration.Visible = false;
             // 
+            // Trafficnumberlabel
+            // 
+            this.Trafficnumberlabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Trafficnumberlabel.AutoSize = true;
+            this.Trafficnumberlabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Trafficnumberlabel.Location = new System.Drawing.Point(810, 31);
+            this.Trafficnumberlabel.Name = "Trafficnumberlabel";
+            this.Trafficnumberlabel.Size = new System.Drawing.Size(84, 20);
+            this.Trafficnumberlabel.TabIndex = 48;
+            this.Trafficnumberlabel.Text = "شماره قبض";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label15.Location = new System.Drawing.Point(620, 31);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(80, 20);
+            this.label15.TabIndex = 49;
+            this.label15.Text = "شماره پلاك";
+            // 
+            // NumberPlate_nvcTextBox
+            // 
+            this.NumberPlate_nvcTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.NumberPlate_nvcTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.NumberPlate_nvcTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.NumberPlate_nvcTextBox.Location = new System.Drawing.Point(517, 26);
+            this.NumberPlate_nvcTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NumberPlate_nvcTextBox.MaxLength = 6;
+            this.NumberPlate_nvcTextBox.Name = "NumberPlate_nvcTextBox";
+            this.NumberPlate_nvcTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.NumberPlate_nvcTextBox.Size = new System.Drawing.Size(102, 26);
+            this.NumberPlate_nvcTextBox.TabIndex = 4;
+            this.NumberPlate_nvcTextBox.Tag = "شماره پلاك";
+            this.NumberPlate_nvcTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label9.Location = new System.Drawing.Point(810, 72);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(123, 20);
+            this.label9.TabIndex = 50;
+            this.label9.Text = "ش نوبت تأیید شده";
+            // 
+            // BooleanComboBox
+            // 
+            this.BooleanComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BooleanComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.BooleanComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.BooleanComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BooleanComboBox.FormattingEnabled = true;
+            this.BooleanComboBox.Location = new System.Drawing.Point(486, 68);
+            this.BooleanComboBox.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.BooleanComboBox.Name = "BooleanComboBox";
+            this.BooleanComboBox.Size = new System.Drawing.Size(133, 28);
+            this.BooleanComboBox.TabIndex = 6;
+            this.BooleanComboBox.TabStop = false;
+            this.BooleanComboBox.SelectedValueChanged += new System.EventHandler(this.BooleanComboBox_SelectedValueChanged);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label3.Location = new System.Drawing.Point(620, 72);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "مقادیر ";
+            // 
+            // FalseradioButton
+            // 
+            this.FalseradioButton.AutoSize = true;
+            this.FalseradioButton.Location = new System.Drawing.Point(8, 16);
+            this.FalseradioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.FalseradioButton.Name = "FalseradioButton";
+            this.FalseradioButton.Size = new System.Drawing.Size(63, 24);
+            this.FalseradioButton.TabIndex = 1;
+            this.FalseradioButton.Text = "ندارد";
+            this.FalseradioButton.UseVisualStyleBackColor = true;
+            this.FalseradioButton.CheckedChanged += new System.EventHandler(this.FalseradioButton_CheckedChanged);
+            // 
+            // TrueradioButton
+            // 
+            this.TrueradioButton.Location = new System.Drawing.Point(99, 16);
+            this.TrueradioButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TrueradioButton.Name = "TrueradioButton";
+            this.TrueradioButton.Size = new System.Drawing.Size(64, 27);
+            this.TrueradioButton.TabIndex = 0;
+            this.TrueradioButton.Text = "دارد";
+            this.TrueradioButton.UseVisualStyleBackColor = true;
+            this.TrueradioButton.CheckedChanged += new System.EventHandler(this.TrueradioButton_CheckedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.TrueradioButton);
+            this.groupBox1.Controls.Add(this.FalseradioButton);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.groupBox1.Location = new System.Drawing.Point(282, 49);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(196, 50);
+            this.groupBox1.TabIndex = 7;
+            this.groupBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label4.Location = new System.Drawing.Point(402, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 20);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "نام خانوادگی";
+            // 
+            // lastNameTextBox
+            // 
+            this.lastNameTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lastNameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.lastNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lastNameTextBox.Location = new System.Drawing.Point(282, 26);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lastNameTextBox.MaxLength = 40;
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lastNameTextBox.Size = new System.Drawing.Size(118, 26);
+            this.lastNameTextBox.TabIndex = 8;
+            this.lastNameTextBox.Tag = "شماره پلاك";
+            this.lastNameTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.Location = new System.Drawing.Point(195, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(87, 20);
+            this.label5.TabIndex = 58;
+            this.label5.Text = "کارت راننده";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label6.Location = new System.Drawing.Point(196, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 20);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "کارت ناوگان";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.Location = new System.Drawing.Point(1049, 72);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.TabIndex = 62;
+            this.label2.Text = "تا تاریخ";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(1049, 31);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 20);
+            this.label1.TabIndex = 63;
+            this.label1.Text = "از تاریخ";
+            // 
+            // ToDatefaDatePicker
+            // 
+            this.ToDatefaDatePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ToDatefaDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.ToDatefaDatePicker.Location = new System.Drawing.Point(931, 72);
+            this.ToDatefaDatePicker.Name = "ToDatefaDatePicker";
+            this.ToDatefaDatePicker.Size = new System.Drawing.Size(119, 23);
+            this.ToDatefaDatePicker.TabIndex = 1;
+            this.ToDatefaDatePicker.Theme = FarsiLibrary.Win.Enums.ThemeTypes.Office2007;
+            this.ToDatefaDatePicker.SelectedDateTimeChanged += new System.EventHandler(this.ToDatefaDatePicker_SelectedDateTimeChanged);
+            this.ToDatefaDatePicker.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ToDatefaDatePicker_KeyDown);
+            // 
+            // FromDatefaDatePicker
+            // 
+            this.FromDatefaDatePicker.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FromDatefaDatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.FromDatefaDatePicker.IsDefault = true;
+            this.FromDatefaDatePicker.Location = new System.Drawing.Point(931, 31);
+            this.FromDatefaDatePicker.Name = "FromDatefaDatePicker";
+            this.FromDatefaDatePicker.Size = new System.Drawing.Size(119, 23);
+            this.FromDatefaDatePicker.TabIndex = 0;
+            this.FromDatefaDatePicker.Theme = FarsiLibrary.Win.Enums.ThemeTypes.Office2007;
+            this.FromDatefaDatePicker.SelectedDateTimeChanged += new System.EventHandler(this.FromDatefaDatePicker_SelectedDateTimeChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.ShowButton);
+            this.groupBox2.Controls.Add(this.lastNameTextBox);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.carCardNumberTextBox);
+            this.groupBox2.Controls.Add(this.SerialPlate_nvcTextBox);
+            this.groupBox2.Controls.Add(this.driverCardNumberTextBox);
+            this.groupBox2.Controls.Add(this.AcceptedTurnNumberTextBox);
+            this.groupBox2.Controls.Add(this.FromDatefaDatePicker);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.TrafficNumberTextBox);
+            this.groupBox2.Controls.Add(this.ToDatefaDatePicker);
+            this.groupBox2.Controls.Add(this.Trafficnumberlabel);
+            this.groupBox2.Controls.Add(this.BooleanComboBox);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.NumberPlate_nvcTextBox);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupBox2.Location = new System.Drawing.Point(0, 35);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox2.Size = new System.Drawing.Size(1111, 120);
+            this.groupBox2.TabIndex = 64;
+            this.groupBox2.TabStop = false;
+            // 
+            // ShowButton
+            // 
+            this.ShowButton.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold);
+            this.ShowButton.Location = new System.Drawing.Point(2, 65);
+            this.ShowButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.ShowButton.Name = "ShowButton";
+            this.ShowButton.Size = new System.Drawing.Size(78, 38);
+            this.ShowButton.TabIndex = 65;
+            this.ShowButton.Text = "نمایش";
+            this.ShowButton.UseVisualStyleBackColor = true;
+            this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
+            // 
+            // carCardNumberTextBox
+            // 
+            this.carCardNumberTextBox.AllowNegative = true;
+            this.carCardNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.carCardNumberTextBox.DigitsInGroup = 0;
+            this.carCardNumberTextBox.Flags = 0;
+            this.carCardNumberTextBox.Location = new System.Drawing.Point(83, 66);
+            this.carCardNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.carCardNumberTextBox.MaxDecimalPlaces = 0;
+            this.carCardNumberTextBox.MaxWholeDigits = 7;
+            this.carCardNumberTextBox.Name = "carCardNumberTextBox";
+            this.carCardNumberTextBox.Prefix = "";
+            this.carCardNumberTextBox.RangeMax = 0D;
+            this.carCardNumberTextBox.RangeMin = 0D;
+            this.carCardNumberTextBox.Size = new System.Drawing.Size(113, 35);
+            this.carCardNumberTextBox.TabIndex = 10;
+            // 
+            // SerialPlate_nvcTextBox
+            // 
+            this.SerialPlate_nvcTextBox.AllowNegative = true;
+            this.SerialPlate_nvcTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SerialPlate_nvcTextBox.DigitsInGroup = 0;
+            this.SerialPlate_nvcTextBox.Flags = 0;
+            this.SerialPlate_nvcTextBox.Location = new System.Drawing.Point(486, 26);
+            this.SerialPlate_nvcTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SerialPlate_nvcTextBox.MaxDecimalPlaces = 4;
+            this.SerialPlate_nvcTextBox.MaxWholeDigits = 2;
+            this.SerialPlate_nvcTextBox.Multiline = true;
+            this.SerialPlate_nvcTextBox.Name = "SerialPlate_nvcTextBox";
+            this.SerialPlate_nvcTextBox.Prefix = "";
+            this.SerialPlate_nvcTextBox.RangeMax = 0D;
+            this.SerialPlate_nvcTextBox.RangeMin = 0D;
+            this.SerialPlate_nvcTextBox.Size = new System.Drawing.Size(29, 26);
+            this.SerialPlate_nvcTextBox.TabIndex = 5;
+            this.SerialPlate_nvcTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SerialPlate_nvcTextBox_KeyDown);
+            // 
+            // driverCardNumberTextBox
+            // 
+            this.driverCardNumberTextBox.AllowNegative = true;
+            this.driverCardNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.driverCardNumberTextBox.DigitsInGroup = 0;
+            this.driverCardNumberTextBox.Flags = 0;
+            this.driverCardNumberTextBox.Location = new System.Drawing.Point(83, 23);
+            this.driverCardNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.driverCardNumberTextBox.MaxDecimalPlaces = 0;
+            this.driverCardNumberTextBox.MaxWholeDigits = 7;
+            this.driverCardNumberTextBox.Name = "driverCardNumberTextBox";
+            this.driverCardNumberTextBox.Prefix = "";
+            this.driverCardNumberTextBox.RangeMax = 0D;
+            this.driverCardNumberTextBox.RangeMin = 0D;
+            this.driverCardNumberTextBox.Size = new System.Drawing.Size(113, 35);
+            this.driverCardNumberTextBox.TabIndex = 9;
+            // 
+            // AcceptedTurnNumberTextBox
+            // 
+            this.AcceptedTurnNumberTextBox.AllowNegative = true;
+            this.AcceptedTurnNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.AcceptedTurnNumberTextBox.DigitsInGroup = 0;
+            this.AcceptedTurnNumberTextBox.Flags = 0;
+            this.AcceptedTurnNumberTextBox.Location = new System.Drawing.Point(691, 66);
+            this.AcceptedTurnNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.AcceptedTurnNumberTextBox.MaxDecimalPlaces = 4;
+            this.AcceptedTurnNumberTextBox.MaxWholeDigits = 9;
+            this.AcceptedTurnNumberTextBox.Name = "AcceptedTurnNumberTextBox";
+            this.AcceptedTurnNumberTextBox.Prefix = "";
+            this.AcceptedTurnNumberTextBox.RangeMax = 0D;
+            this.AcceptedTurnNumberTextBox.RangeMin = 0D;
+            this.AcceptedTurnNumberTextBox.Size = new System.Drawing.Size(116, 35);
+            this.AcceptedTurnNumberTextBox.TabIndex = 3;
+            this.AcceptedTurnNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AcceptedTurnNumberTextBox_KeyDown);
+            // 
+            // TrafficNumberTextBox
+            // 
+            this.TrafficNumberTextBox.AllowNegative = true;
+            this.TrafficNumberTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TrafficNumberTextBox.DigitsInGroup = 0;
+            this.TrafficNumberTextBox.Flags = 0;
+            this.TrafficNumberTextBox.Location = new System.Drawing.Point(691, 23);
+            this.TrafficNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TrafficNumberTextBox.MaxDecimalPlaces = 4;
+            this.TrafficNumberTextBox.MaxWholeDigits = 9;
+            this.TrafficNumberTextBox.Name = "TrafficNumberTextBox";
+            this.TrafficNumberTextBox.Prefix = "";
+            this.TrafficNumberTextBox.RangeMax = 0D;
+            this.TrafficNumberTextBox.RangeMin = 0D;
+            this.TrafficNumberTextBox.Size = new System.Drawing.Size(116, 35);
+            this.TrafficNumberTextBox.TabIndex = 2;
+            this.TrafficNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TrafficNumberTextBox_KeyDown);
+            // 
+            // AllTrafficstiReport
+            // 
+            this.AllTrafficstiReport.CookieContainer = null;
+            this.AllTrafficstiReport.EngineVersion = Stimulsoft.Report.Engine.StiEngineVersion.EngineV2;
+            this.AllTrafficstiReport.ReferencedAssemblies = new string[] {
+        "System.Dll",
+        "System.Drawing.Dll",
+        "System.Windows.Forms.Dll",
+        "System.Data.Dll",
+        "System.Xml.Dll",
+        "Stimulsoft.Controls.Dll",
+        "Stimulsoft.Base.Dll",
+        "Stimulsoft.Report.Dll"};
+            this.AllTrafficstiReport.ReportAlias = "Report";
+            this.AllTrafficstiReport.ReportGuid = "cdc32ffab751467b91a39af7ec169055";
+            this.AllTrafficstiReport.ReportImage = null;
+            this.AllTrafficstiReport.ReportName = "Report";
+            this.AllTrafficstiReport.ReportSource = resources.GetString("AllTrafficstiReport.ReportSource");
+            this.AllTrafficstiReport.ReportUnit = Stimulsoft.Report.StiReportUnitType.Inches;
+            this.AllTrafficstiReport.ScriptLanguage = Stimulsoft.Report.StiReportLanguageType.CSharp;
+            this.AllTrafficstiReport.UseProgressInThread = false;
+            // 
             // AllTrafficForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 523);
+            this.ClientSize = new System.Drawing.Size(1111, 614);
             this.Controls.Add(this.TrafficGridView);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.AllTrafficToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(17);
+            this.Margin = new System.Windows.Forms.Padding(19, 20, 19, 20);
             this.Name = "AllTrafficForm";
             this.Text = "تمام ترددها";
             this.Load += new System.EventHandler(this.AllTrafficForm_Load);

@@ -42,9 +42,7 @@ namespace HPS.Reports.Forms
                     throw new ApplicationException("نوع تردد را انتخاب کنید");
                 }
                 else
-                {
-                  
-
+                { 
                         string FromDate = FromDatefaDatePicker.Text;
                         int ServicesID = Convert.ToInt32(ServicesComboBox.SelectedValue);
                         string ToDate = ToDatefaDatePicker.Text;
@@ -113,12 +111,14 @@ namespace HPS.Reports.Forms
                         {
                             Condition = string.Empty;
                             Condition = "(T1.TrafficTypeID_int='2') AND (T1.Date_nvc>='" + FromDatefaDatePicker.Text + "') AND (T1.Date_nvc<='" + ToDatefaDatePicker.Text + "')";
-                            ForeignInNotOutstiReport.Dictionary.Synchronize();
-                            ForeignInNotOutstiReport.Dictionary.Databases.Clear();
-                            ForeignInNotOutstiReport.Dictionary.Databases.Add(new Stimulsoft.Report.Dictionary.StiSqlDatabase("Connection", Hepsa.Core.Common.ConnectionString.ConnectionString));
+                            TrafficFactory.GetAllByConditionAllInTrafficNotTemporaryOut(Condition, ref TrafficDataTable);
+                            ForeignInNotOutstiReport.RegData(TrafficDataTable);
+                            //ForeignInNotOutstiReport.Dictionary.Synchronize();
+                            //ForeignInNotOutstiReport.Dictionary.Databases.Clear();
+                            //ForeignInNotOutstiReport.Dictionary.Databases.Add(new Stimulsoft.Report.Dictionary.StiSqlDatabase("Connection", Hepsa.Core.Common.ConnectionString.ConnectionString));
                             ForeignInNotOutstiReport.Compile();
                             ForeignInNotOutstiReport["organ"] = new HPS.BLL.SettingsBLL.BLLSetting_TFactory().GetBy(new BLL.SettingsBLL.BLLSetting_TKeys() { SettingID_int = 1029 }).Value_nvc.ToString();
-                            ForeignInNotOutstiReport["@Condition"] = Condition;
+                            //ForeignInNotOutstiReport["@Condition"] = Condition;
                             ForeignInNotOutstiReport["fromdate_vc"] = FromDatefaDatePicker.Text;
                             ForeignInNotOutstiReport["todate_vc"] = ToDatefaDatePicker.Text;
                             ForeignInNotOutstiReport["date_vc"] = TrafficFactory.ServerJalaliDate + "   " + TrafficFactory.ServerTime; ;

@@ -6181,6 +6181,54 @@ namespace HPS.DAL.TrafficDAL
             }
         }
 
+
+ public void ReportSelectByFieds(object FromDateTime_nvc, object ToDateTime_nvc,
+            object FromTrafficNumber_nvc, object ToTrafficNumber_nvc, object LaderPivotGroupID_nvc,
+            object LaderTypeID_nvc, object TrafficTypeID_nvc, object TrafficInbit_nvc, object TrafficOutbit_nvc,
+            object ServiceID_nvc, object TurnAccepted_nvc, ref System.Data.DataTable dataTable)
+        {
+            bool ControlConnection = !(this.ConnectionState == System.Data.ConnectionState.Open);
+            SqlDataAdapter sqlDataAdapter = new System.Data.SqlClient.SqlDataAdapter(this.Command);
+            this.Command.CommandText = "[sp_Traffic_T_ReportSelectByFieds]";
+            this.Command.CommandType = CommandType.StoredProcedure;
+            try
+            {
+                this.Command.Parameters.Clear();
+
+                this.Command.Parameters.Add(new SqlParameter("@FromDateTime_nvc", FromDateTime_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@ToDateTime_nvc", ToDateTime_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@FromTrafficNumber_nvc", FromTrafficNumber_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@ToTrafficNumber_nvc", ToTrafficNumber_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@LaderPivotGroupID_nvc", LaderPivotGroupID_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@LaderTypeID_nvc", LaderTypeID_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@TrafficTypeID_nvc", TrafficTypeID_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@TrafficInbit_nvc", TrafficInbit_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@TrafficOutbit_nvc", TrafficOutbit_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@ServiceID_nvc", ServiceID_nvc));
+                this.Command.Parameters.Add(new SqlParameter("@TurnAccepted_nvc", TurnAccepted_nvc));
+
+                if (ControlConnection)
+                {
+                    this.BeginTransaction();
+                }
+
+                sqlDataAdapter.Fill(dataTable);
+
+                if (ControlConnection)
+                {
+                    this.Commit();
+                }
+            }
+
+            catch (System.Exception ex)
+            {
+                if (ControlConnection)
+                {
+                    this.RollBack();
+                }
+                throw ex;
+            }
+        }
         public void SelectDriverMobile_nvc(String Condition, ref DataTable DataTable)
         {
             bool ControlConnection = !(this.ConnectionState == System.Data.ConnectionState.Open);

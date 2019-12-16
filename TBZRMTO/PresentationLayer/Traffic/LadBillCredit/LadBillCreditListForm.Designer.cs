@@ -508,8 +508,8 @@ namespace HPS.Present.LadBillCredit
             this.SerialPlateTextBox.MaxWholeDigits = 2;
             this.SerialPlateTextBox.Name = "SerialPlateTextBox";
             this.SerialPlateTextBox.Prefix = "";
-            this.SerialPlateTextBox.RangeMax = 0;
-            this.SerialPlateTextBox.RangeMin = 0;
+            this.SerialPlateTextBox.RangeMax = 0D;
+            this.SerialPlateTextBox.RangeMin = 0D;
             this.SerialPlateTextBox.Size = new System.Drawing.Size(44, 30);
             this.SerialPlateTextBox.TabIndex = 12;
             this.SerialPlateTextBox.Visible = false;
@@ -525,10 +525,11 @@ namespace HPS.Present.LadBillCredit
             this.TrafficNumberTextBox.MaxWholeDigits = 150;
             this.TrafficNumberTextBox.Name = "TrafficNumberTextBox";
             this.TrafficNumberTextBox.Prefix = "";
-            this.TrafficNumberTextBox.RangeMax = 0;
-            this.TrafficNumberTextBox.RangeMin = 0;
+            this.TrafficNumberTextBox.RangeMax = 0D;
+            this.TrafficNumberTextBox.RangeMin = 0D;
             this.TrafficNumberTextBox.Size = new System.Drawing.Size(124, 30);
             this.TrafficNumberTextBox.TabIndex = 9;
+            this.TrafficNumberTextBox.TextChanged += new System.EventHandler(this.TrafficNumberTextBox_TextChanged);
             this.TrafficNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TrafficNumberTextBox_KeyDown);
             // 
             // TurnNumberTextBox
@@ -541,8 +542,8 @@ namespace HPS.Present.LadBillCredit
             this.TurnNumberTextBox.MaxWholeDigits = 150;
             this.TurnNumberTextBox.Name = "TurnNumberTextBox";
             this.TurnNumberTextBox.Prefix = "";
-            this.TurnNumberTextBox.RangeMax = 0;
-            this.TurnNumberTextBox.RangeMin = 0;
+            this.TurnNumberTextBox.RangeMax = 0D;
+            this.TurnNumberTextBox.RangeMin = 0D;
             this.TurnNumberTextBox.Size = new System.Drawing.Size(124, 30);
             this.TurnNumberTextBox.TabIndex = 10;
             this.TurnNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TurnNumberTextBox_KeyDown);

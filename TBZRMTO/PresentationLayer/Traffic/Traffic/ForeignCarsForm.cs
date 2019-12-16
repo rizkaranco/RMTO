@@ -330,6 +330,8 @@ namespace HPS.Present.Traffic
             HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
             try
             {
+                if (Hepsa.Core.Common.MessageBox.ConfirmMessage("آیا مایل به ثبت ورود هستید ؟") == false)
+                    return;
 
                 TrafficEntityInsert.Date_nvc = TrafficFactory.ServerJalaliDate;
                 TrafficEntityInsert.Time_nvc = TrafficFactory.ServerTime;

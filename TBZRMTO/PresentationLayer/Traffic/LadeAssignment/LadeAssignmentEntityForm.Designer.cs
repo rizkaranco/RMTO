@@ -464,7 +464,6 @@ namespace HPS.Present.LadeAssignment
             this.NewButton.TabIndex = 25;
             this.NewButton.Text = "جدید";
             this.NewButton.UseVisualStyleBackColor = true;
-            this.NewButton.Visible = false;
             this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
             this.NewButton.MouseHover += new System.EventHandler(this.NewButton_MouseHover);
             // 
@@ -477,7 +476,6 @@ namespace HPS.Present.LadeAssignment
             this.Nextbutton.TabIndex = 22;
             this.Nextbutton.Text = "بعدی";
             this.Nextbutton.UseVisualStyleBackColor = true;
-            this.Nextbutton.Visible = false;
             this.Nextbutton.Click += new System.EventHandler(this.Nextbutton_Click);
             this.Nextbutton.MouseHover += new System.EventHandler(this.Nextbutton_MouseHover);
             // 
@@ -490,7 +488,6 @@ namespace HPS.Present.LadeAssignment
             this.Previousbutton.TabIndex = 23;
             this.Previousbutton.Text = "قبلی";
             this.Previousbutton.UseVisualStyleBackColor = true;
-            this.Previousbutton.Visible = false;
             this.Previousbutton.Click += new System.EventHandler(this.Previousbutton_Click);
             this.Previousbutton.MouseHover += new System.EventHandler(this.Previousbutton_MouseHover);
             // 

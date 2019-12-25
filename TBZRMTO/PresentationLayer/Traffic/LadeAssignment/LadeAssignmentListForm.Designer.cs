@@ -522,7 +522,7 @@ namespace HPS.Present.LadeAssignment
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.LadeAssignmentCommentGridView.Location = new System.Drawing.Point(-457, 0);
+            this.LadeAssignmentCommentGridView.Location = new System.Drawing.Point(-454, 0);
             this.LadeAssignmentCommentGridView.Margin = new System.Windows.Forms.Padding(5);
             this.LadeAssignmentCommentGridView.MultiSelect = false;
             this.LadeAssignmentCommentGridView.Name = "LadeAssignmentCommentGridView";

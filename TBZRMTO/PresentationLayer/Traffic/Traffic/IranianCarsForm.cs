@@ -3216,8 +3216,6 @@ namespace HPS.Present.Traffic
         {
             try
             {
-
-
                 HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory DriverSpecificationFactory = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
                 List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.DriverCardNumber_nvc, DriverCardNumber);
                 if (DriverSpecificationList != null && DriverSpecificationList.Count > 0)

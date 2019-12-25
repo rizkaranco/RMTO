@@ -340,8 +340,8 @@ namespace HPS.Present.LadeAssignment
             this.MinWeight_decNumericTextBox.MaxWholeDigits = 155;
             this.MinWeight_decNumericTextBox.Name = "MinWeight_decNumericTextBox";
             this.MinWeight_decNumericTextBox.Prefix = "";
-            this.MinWeight_decNumericTextBox.RangeMax = 0;
-            this.MinWeight_decNumericTextBox.RangeMin = 0;
+            this.MinWeight_decNumericTextBox.RangeMax = 0D;
+            this.MinWeight_decNumericTextBox.RangeMin = 0D;
             this.MinWeight_decNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.MinWeight_decNumericTextBox.Size = new System.Drawing.Size(278, 30);
             this.MinWeight_decNumericTextBox.TabIndex = 10;
@@ -359,8 +359,8 @@ namespace HPS.Present.LadeAssignment
             this.MaxWeight_decNumericTextBox.MaxWholeDigits = 155;
             this.MaxWeight_decNumericTextBox.Name = "MaxWeight_decNumericTextBox";
             this.MaxWeight_decNumericTextBox.Prefix = "";
-            this.MaxWeight_decNumericTextBox.RangeMax = 0;
-            this.MaxWeight_decNumericTextBox.RangeMin = 0;
+            this.MaxWeight_decNumericTextBox.RangeMax = 0D;
+            this.MaxWeight_decNumericTextBox.RangeMin = 0D;
             this.MaxWeight_decNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.MaxWeight_decNumericTextBox.Size = new System.Drawing.Size(278, 30);
             this.MaxWeight_decNumericTextBox.TabIndex = 11;
@@ -377,8 +377,8 @@ namespace HPS.Present.LadeAssignment
             this.PortageFee_decNumericTextBox.MaxWholeDigits = 155;
             this.PortageFee_decNumericTextBox.Name = "PortageFee_decNumericTextBox";
             this.PortageFee_decNumericTextBox.Prefix = "";
-            this.PortageFee_decNumericTextBox.RangeMax = 0;
-            this.PortageFee_decNumericTextBox.RangeMin = 0;
+            this.PortageFee_decNumericTextBox.RangeMax = 0D;
+            this.PortageFee_decNumericTextBox.RangeMin = 0D;
             this.PortageFee_decNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.PortageFee_decNumericTextBox.Size = new System.Drawing.Size(276, 30);
             this.PortageFee_decNumericTextBox.TabIndex = 12;
@@ -464,6 +464,7 @@ namespace HPS.Present.LadeAssignment
             this.NewButton.TabIndex = 25;
             this.NewButton.Text = "جدید";
             this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Visible = false;
             this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
             this.NewButton.MouseHover += new System.EventHandler(this.NewButton_MouseHover);
             // 
@@ -476,6 +477,7 @@ namespace HPS.Present.LadeAssignment
             this.Nextbutton.TabIndex = 22;
             this.Nextbutton.Text = "بعدی";
             this.Nextbutton.UseVisualStyleBackColor = true;
+            this.Nextbutton.Visible = false;
             this.Nextbutton.Click += new System.EventHandler(this.Nextbutton_Click);
             this.Nextbutton.MouseHover += new System.EventHandler(this.Nextbutton_MouseHover);
             // 
@@ -488,6 +490,7 @@ namespace HPS.Present.LadeAssignment
             this.Previousbutton.TabIndex = 23;
             this.Previousbutton.Text = "قبلی";
             this.Previousbutton.UseVisualStyleBackColor = true;
+            this.Previousbutton.Visible = false;
             this.Previousbutton.Click += new System.EventHandler(this.Previousbutton_Click);
             this.Previousbutton.MouseHover += new System.EventHandler(this.Previousbutton_MouseHover);
             // 
@@ -542,8 +545,8 @@ namespace HPS.Present.LadeAssignment
             this.CarCount_intNumericTextBox.MaxWholeDigits = 3;
             this.CarCount_intNumericTextBox.Name = "CarCount_intNumericTextBox";
             this.CarCount_intNumericTextBox.Prefix = "";
-            this.CarCount_intNumericTextBox.RangeMax = 0;
-            this.CarCount_intNumericTextBox.RangeMin = 0;
+            this.CarCount_intNumericTextBox.RangeMax = 0D;
+            this.CarCount_intNumericTextBox.RangeMin = 0D;
             this.CarCount_intNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.CarCount_intNumericTextBox.Size = new System.Drawing.Size(276, 30);
             this.CarCount_intNumericTextBox.TabIndex = 14;

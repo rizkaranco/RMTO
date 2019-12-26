@@ -29,7 +29,7 @@ namespace HPS.Present.LadeAssignment
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LadeAssignmentListForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.LadeAssignmentToolStrip = new System.Windows.Forms.ToolStrip();
             this.NewButton = new System.Windows.Forms.ToolStripButton();
             this.EditButton = new System.Windows.Forms.ToolStripButton();
@@ -369,9 +369,9 @@ namespace HPS.Present.LadeAssignment
             // colPortageFee_dec
             // 
             this.colPortageFee_dec.DataPropertyName = "PortageFee_dec";
-            dataGridViewCellStyle1.Format = "N0";
-            dataGridViewCellStyle1.NullValue = null;
-            this.colPortageFee_dec.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Format = "N0";
+            dataGridViewCellStyle2.NullValue = null;
+            this.colPortageFee_dec.DefaultCellStyle = dataGridViewCellStyle2;
             this.colPortageFee_dec.HeaderText = "نرخ حمل(ريال)";
             this.colPortageFee_dec.Name = "colPortageFee_dec";
             this.colPortageFee_dec.ReadOnly = true;

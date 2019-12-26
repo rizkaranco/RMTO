@@ -90,11 +90,13 @@ namespace HPS.Present.LadeAssignment
             // 
             this.SaveAndNextButton.Location = new System.Drawing.Point(846, 25);
             this.SaveAndNextButton.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.SaveAndNextButton.Click += new System.EventHandler(this.SaveAndNextButton_Click);
             // 
             // SaveAndCloseButton
             // 
             this.SaveAndCloseButton.Location = new System.Drawing.Point(846, 63);
             this.SaveAndCloseButton.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
+            this.SaveAndCloseButton.Click += new System.EventHandler(this.SaveAndCloseButton_Click);
             // 
             // DeleteRecordButton
             // 

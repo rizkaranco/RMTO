@@ -31,8 +31,13 @@ namespace HPS.Reports.Forms
         {
             try
             {
+                bool isCanceldedLadBill = (bool)LadBillWithTrafficGridView.CurrentRow.Cells["colCanceled_bit"].Value;
                 //if (WithProductionYear == true && !FromDatefaDatePicker.IsNull && !ToDatefaDatePicker.IsNull)
                 //{
+                if (isCanceldedLadBill)
+                {
+                    throw new ApplicationException("این مجوز باطل شده و امکان چاپ ندارد");
+                }
                 HPS.BLL.LadBillCreditBLL.BLLLadBillCredit_TFactory LadBillFactory = new HPS.BLL.LadBillCreditBLL.BLLLadBillCredit_TFactory();
                 string condition = string.Empty;
 

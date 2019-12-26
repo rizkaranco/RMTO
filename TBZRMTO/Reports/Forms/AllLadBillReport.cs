@@ -34,7 +34,7 @@ namespace HPS.Reports.Forms
                 bool isCanceldedLadBill = (bool)LadBillWithTrafficGridView.CurrentRow.Cells["colCanceled_bit"].Value;
                 //if (WithProductionYear == true && !FromDatefaDatePicker.IsNull && !ToDatefaDatePicker.IsNull)
                 //{
-                if (isCanceldedLadBill)
+                if (isCanceldedLadBill && HPS.Common.CurrentUser.user.UserGroupID_int != 1)
                 {
                     throw new ApplicationException("این مجوز باطل شده و امکان چاپ ندارد");
                 }

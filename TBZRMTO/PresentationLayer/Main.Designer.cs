@@ -257,7 +257,7 @@
             this.CompaniesMenuItem});
             this.TasksMenuItem.Image = global::HPS.Properties.Resources.Tasks;
             this.TasksMenuItem.Name = "TasksMenuItem";
-            this.TasksMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.TasksMenuItem.Size = new System.Drawing.Size(75, 24);
             this.TasksMenuItem.Text = "عملیات";
             this.TasksMenuItem.Click += new System.EventHandler(this.TasksMenuItem_Click);
             // 
@@ -269,28 +269,28 @@
             this.OtherMenuItem});
             this.InTrafficMenuItem.Image = global::HPS.Properties.Resources.parking;
             this.InTrafficMenuItem.Name = "InTrafficMenuItem";
-            this.InTrafficMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.InTrafficMenuItem.Size = new System.Drawing.Size(229, 26);
             this.InTrafficMenuItem.Text = "ورود";
             this.InTrafficMenuItem.Click += new System.EventHandler(this.InTrafficMenuItem_Click);
             // 
             // IranianTruckMenuItem
             // 
             this.IranianTruckMenuItem.Name = "IranianTruckMenuItem";
-            this.IranianTruckMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.IranianTruckMenuItem.Size = new System.Drawing.Size(143, 22);
             this.IranianTruckMenuItem.Text = "کامیون ایرانی";
             this.IranianTruckMenuItem.Click += new System.EventHandler(this.IranianTruckMenuItem_Click);
             // 
             // InForeignTruckMenuItem
             // 
             this.InForeignTruckMenuItem.Name = "InForeignTruckMenuItem";
-            this.InForeignTruckMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.InForeignTruckMenuItem.Size = new System.Drawing.Size(143, 22);
             this.InForeignTruckMenuItem.Text = "کامیون خارجی";
             this.InForeignTruckMenuItem.Click += new System.EventHandler(this.InForeignTruckMenuItem_Click);
             // 
             // OtherMenuItem
             // 
             this.OtherMenuItem.Name = "OtherMenuItem";
-            this.OtherMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.OtherMenuItem.Size = new System.Drawing.Size(143, 22);
             this.OtherMenuItem.Text = "سواری و غیره";
             this.OtherMenuItem.Click += new System.EventHandler(this.OtherMenuItem_Click);
             // 
@@ -298,20 +298,20 @@
             // 
             this.OutTrafficMenuItem.Image = global::HPS.Properties.Resources.parking;
             this.OutTrafficMenuItem.Name = "OutTrafficMenuItem";
-            this.OutTrafficMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.OutTrafficMenuItem.Size = new System.Drawing.Size(229, 26);
             this.OutTrafficMenuItem.Text = "خروج";
             this.OutTrafficMenuItem.Click += new System.EventHandler(this.OutTrafficMenuItem_Click);
             // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(275, 6);
+            this.toolStripSeparator13.Size = new System.Drawing.Size(226, 6);
             // 
             // InfractionMenuItem
             // 
             this.InfractionMenuItem.Image = global::HPS.Properties.Resources.Infraction;
             this.InfractionMenuItem.Name = "InfractionMenuItem";
-            this.InfractionMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.InfractionMenuItem.Size = new System.Drawing.Size(229, 26);
             this.InfractionMenuItem.Text = "ثبت تخلف";
             this.InfractionMenuItem.Click += new System.EventHandler(this.InfractionMenuItem_Click);
             // 
@@ -325,40 +325,40 @@
             this.TurnManagementMenuItem.Name = "TurnManagementMenuItem";
             this.TurnManagementMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TurnManagementMenuItem.RightToLeftAutoMirrorImage = true;
-            this.TurnManagementMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.TurnManagementMenuItem.Size = new System.Drawing.Size(229, 26);
             this.TurnManagementMenuItem.Text = "مدیریت نوبت";
             // 
             // TuenAcceptMenuItem
             // 
             this.TuenAcceptMenuItem.Name = "TuenAcceptMenuItem";
-            this.TuenAcceptMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.TuenAcceptMenuItem.Size = new System.Drawing.Size(130, 22);
             this.TuenAcceptMenuItem.Text = "تأیید نوبت";
             this.TuenAcceptMenuItem.Click += new System.EventHandler(this.TuenAcceptMenuItem_Click);
             // 
             // TurnCancelMenuItem
             // 
             this.TurnCancelMenuItem.Name = "TurnCancelMenuItem";
-            this.TurnCancelMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.TurnCancelMenuItem.Size = new System.Drawing.Size(130, 22);
             this.TurnCancelMenuItem.Text = "ابطال نوبت";
             this.TurnCancelMenuItem.Click += new System.EventHandler(this.TurnCancelMenuItem_Click);
             // 
             // TurnReturnMenuItem
             // 
             this.TurnReturnMenuItem.Name = "TurnReturnMenuItem";
-            this.TurnReturnMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.TurnReturnMenuItem.Size = new System.Drawing.Size(130, 22);
             this.TurnReturnMenuItem.Text = "احیای نوبت";
             this.TurnReturnMenuItem.Click += new System.EventHandler(this.TurnReturnMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(275, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(226, 6);
             // 
             // IranianCarReportMenuItem
             // 
             this.IranianCarReportMenuItem.Image = global::HPS.Properties.Resources.iranianTraffic;
             this.IranianCarReportMenuItem.Name = "IranianCarReportMenuItem";
-            this.IranianCarReportMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.IranianCarReportMenuItem.Size = new System.Drawing.Size(229, 26);
             this.IranianCarReportMenuItem.Text = "ترددهای کامیون ایرانی";
             this.IranianCarReportMenuItem.Click += new System.EventHandler(this.IranianCarReportMenuItem_Click);
             // 
@@ -366,7 +366,7 @@
             // 
             this.ForeignCarReportMenuItem.Image = global::HPS.Properties.Resources.truckTraffic1;
             this.ForeignCarReportMenuItem.Name = "ForeignCarReportMenuItem";
-            this.ForeignCarReportMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.ForeignCarReportMenuItem.Size = new System.Drawing.Size(229, 26);
             this.ForeignCarReportMenuItem.Text = "ترددهای کامیون خارجی";
             this.ForeignCarReportMenuItem.Click += new System.EventHandler(this.ForeignCarReportMenuItem_Click);
             // 
@@ -374,20 +374,20 @@
             // 
             this.OtherReportripMenuItem.Image = global::HPS.Properties.Resources.otherTraffic;
             this.OtherReportripMenuItem.Name = "OtherReportripMenuItem";
-            this.OtherReportripMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.OtherReportripMenuItem.Size = new System.Drawing.Size(229, 26);
             this.OtherReportripMenuItem.Text = "ترددهای سواری";
             this.OtherReportripMenuItem.Click += new System.EventHandler(this.OtherReportripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(275, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(226, 6);
             // 
             // LadBillMenuItem
             // 
             this.LadBillMenuItem.Image = global::HPS.Properties.Resources.ladeBillCredit;
             this.LadBillMenuItem.Name = "LadBillMenuItem";
-            this.LadBillMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.LadBillMenuItem.Size = new System.Drawing.Size(229, 26);
             this.LadBillMenuItem.Text = "مجوز بارگیری";
             this.LadBillMenuItem.Click += new System.EventHandler(this.LadBillMenuItem_Click);
             // 
@@ -395,7 +395,7 @@
             // 
             this.LadBillCancelMenuItem.Image = global::HPS.Properties.Resources.ladeBillCrediCancelt;
             this.LadBillCancelMenuItem.Name = "LadBillCancelMenuItem";
-            this.LadBillCancelMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.LadBillCancelMenuItem.Size = new System.Drawing.Size(229, 26);
             this.LadBillCancelMenuItem.Text = "ابطال مجوز بارگیری";
             this.LadBillCancelMenuItem.Click += new System.EventHandler(this.LadBillCancelMenuItem_Click);
             // 
@@ -403,7 +403,7 @@
             // 
             this.AcceptMenuItem.Image = global::HPS.Properties.Resources.ladeassignment;
             this.AcceptMenuItem.Name = "AcceptMenuItem";
-            this.AcceptMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.AcceptMenuItem.Size = new System.Drawing.Size(229, 26);
             this.AcceptMenuItem.Text = "تأیید اطلاع رسانی بار";
             this.AcceptMenuItem.Click += new System.EventHandler(this.AcceptMenuItem_Click);
             // 
@@ -411,14 +411,14 @@
             // 
             this.LadeMnuItem.Image = global::HPS.Properties.Resources.ShowLadeAssignment;
             this.LadeMnuItem.Name = "LadeMnuItem";
-            this.LadeMnuItem.Size = new System.Drawing.Size(278, 26);
+            this.LadeMnuItem.Size = new System.Drawing.Size(229, 26);
             this.LadeMnuItem.Text = "نمايش اطلاع سراني بار در سالن";
             this.LadeMnuItem.Click += new System.EventHandler(this.LadeMnuItem_Click);
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(275, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(226, 6);
             // 
             // CompaniesMenuItem
             // 
@@ -432,46 +432,46 @@
             this.CompaniesMenuItem.Image = global::HPS.Properties.Resources.Company;
             this.CompaniesMenuItem.Name = "CompaniesMenuItem";
             this.CompaniesMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CompaniesMenuItem.Size = new System.Drawing.Size(278, 26);
+            this.CompaniesMenuItem.Size = new System.Drawing.Size(229, 26);
             this.CompaniesMenuItem.Text = "شرکت ها";
             // 
             // LadeAssignmentInformingListFormMenuItem
             // 
             this.LadeAssignmentInformingListFormMenuItem.Name = "LadeAssignmentInformingListFormMenuItem";
-            this.LadeAssignmentInformingListFormMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.LadeAssignmentInformingListFormMenuItem.Size = new System.Drawing.Size(251, 22);
             this.LadeAssignmentInformingListFormMenuItem.Text = "لیست اطلاع رسانی بار شرکت ها";
             this.LadeAssignmentInformingListFormMenuItem.Click += new System.EventHandler(this.LadeAssignmentInformingListFormMenuItem_Click);
             // 
             // LadeAssignmentInforming
             // 
             this.LadeAssignmentInforming.Name = "LadeAssignmentInforming";
-            this.LadeAssignmentInforming.Size = new System.Drawing.Size(312, 26);
+            this.LadeAssignmentInforming.Size = new System.Drawing.Size(251, 22);
             this.LadeAssignmentInforming.Text = "اطلاع رسانی بار شرکت ها";
             this.LadeAssignmentInforming.Click += new System.EventHandler(this.LadeAssignmentInforming_Click);
             // 
             // LadeAssignmentMenuItem
             // 
             this.LadeAssignmentMenuItem.Name = "LadeAssignmentMenuItem";
-            this.LadeAssignmentMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.LadeAssignmentMenuItem.Size = new System.Drawing.Size(251, 22);
             this.LadeAssignmentMenuItem.Text = "اطلاع رسانی بار";
             this.LadeAssignmentMenuItem.Click += new System.EventHandler(this.LadeAssignmentMenuItem_Click);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(309, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(248, 6);
             // 
             // UsedLadeBillMenuItem
             // 
             this.UsedLadeBillMenuItem.Name = "UsedLadeBillMenuItem";
-            this.UsedLadeBillMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.UsedLadeBillMenuItem.Size = new System.Drawing.Size(251, 22);
             this.UsedLadeBillMenuItem.Text = "بارنامه های تحویلی به راننده ";
             this.UsedLadeBillMenuItem.Click += new System.EventHandler(this.UsedLadeBillMenuItem_Click);
             // 
             // LadeCancelRequestMenuItem
             // 
             this.LadeCancelRequestMenuItem.Name = "LadeCancelRequestMenuItem";
-            this.LadeCancelRequestMenuItem.Size = new System.Drawing.Size(312, 26);
+            this.LadeCancelRequestMenuItem.Size = new System.Drawing.Size(251, 22);
             this.LadeCancelRequestMenuItem.Text = "درخواست انصراف از اطلاع رسانی بار";
             this.LadeCancelRequestMenuItem.Click += new System.EventHandler(this.LadeCancelRequestMenuItem_Click);
             // 
@@ -509,7 +509,7 @@
             this.TrafficNotInTraffic_TMenuItem});
             this.ReportMenuItem.Image = global::HPS.Properties.Resources.Report;
             this.ReportMenuItem.Name = "ReportMenuItem";
-            this.ReportMenuItem.Size = new System.Drawing.Size(94, 24);
+            this.ReportMenuItem.Size = new System.Drawing.Size(80, 24);
             this.ReportMenuItem.Text = "گزارشات";
             // 
             // InMenuItem
@@ -519,27 +519,27 @@
             this.ForeignInTrafficMenuItem,
             this.OtherInStripMenuItem});
             this.InMenuItem.Name = "InMenuItem";
-            this.InMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.InMenuItem.Size = new System.Drawing.Size(331, 22);
             this.InMenuItem.Text = "ورودی";
             // 
             // IranianInTrafficReportMenuItem
             // 
             this.IranianInTrafficReportMenuItem.Name = "IranianInTrafficReportMenuItem";
-            this.IranianInTrafficReportMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.IranianInTrafficReportMenuItem.Size = new System.Drawing.Size(143, 22);
             this.IranianInTrafficReportMenuItem.Text = "کامیون ایرانی ";
             this.IranianInTrafficReportMenuItem.Click += new System.EventHandler(this.IranianInTrafficReportMenuItem_Click);
             // 
             // ForeignInTrafficMenuItem
             // 
             this.ForeignInTrafficMenuItem.Name = "ForeignInTrafficMenuItem";
-            this.ForeignInTrafficMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.ForeignInTrafficMenuItem.Size = new System.Drawing.Size(143, 22);
             this.ForeignInTrafficMenuItem.Text = "کامیون خارجی";
             this.ForeignInTrafficMenuItem.Click += new System.EventHandler(this.ForeignInTrafficMenuItem_Click);
             // 
             // OtherInStripMenuItem
             // 
             this.OtherInStripMenuItem.Name = "OtherInStripMenuItem";
-            this.OtherInStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.OtherInStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.OtherInStripMenuItem.Text = "سواری و غیره";
             this.OtherInStripMenuItem.Click += new System.EventHandler(this.OtherInStripMenuItem_Click);
             // 
@@ -550,125 +550,125 @@
             this.ForeignOutTrafficMenuItem,
             this.OtherOutTrafficMenuItem});
             this.OutMenuItem.Name = "OutMenuItem";
-            this.OutMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.OutMenuItem.Size = new System.Drawing.Size(331, 22);
             this.OutMenuItem.Text = "خروجی";
             // 
             // IranianOutTrafficReportMenuItem
             // 
             this.IranianOutTrafficReportMenuItem.Name = "IranianOutTrafficReportMenuItem";
-            this.IranianOutTrafficReportMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.IranianOutTrafficReportMenuItem.Size = new System.Drawing.Size(143, 22);
             this.IranianOutTrafficReportMenuItem.Text = "کامیون ایرانی";
             this.IranianOutTrafficReportMenuItem.Click += new System.EventHandler(this.IranianOutTrafficReportMenuItem_Click);
             // 
             // ForeignOutTrafficMenuItem
             // 
             this.ForeignOutTrafficMenuItem.Name = "ForeignOutTrafficMenuItem";
-            this.ForeignOutTrafficMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.ForeignOutTrafficMenuItem.Size = new System.Drawing.Size(143, 22);
             this.ForeignOutTrafficMenuItem.Text = "کامیون خارجی";
             this.ForeignOutTrafficMenuItem.Click += new System.EventHandler(this.ForeignOutTrafficMenuItem_Click);
             // 
             // OtherOutTrafficMenuItem
             // 
             this.OtherOutTrafficMenuItem.Name = "OtherOutTrafficMenuItem";
-            this.OtherOutTrafficMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.OtherOutTrafficMenuItem.Size = new System.Drawing.Size(143, 22);
             this.OtherOutTrafficMenuItem.Text = "سواری و غیره";
             this.OtherOutTrafficMenuItem.Click += new System.EventHandler(this.OtherOutTrafficMenuItem_Click);
             // 
             // GroupTrafficMenuItem
             // 
             this.GroupTrafficMenuItem.Name = "GroupTrafficMenuItem";
-            this.GroupTrafficMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.GroupTrafficMenuItem.Size = new System.Drawing.Size(331, 22);
             this.GroupTrafficMenuItem.Text = " ورودی و خروجی";
             this.GroupTrafficMenuItem.Click += new System.EventHandler(this.GroupTrafficMenuItem_Click);
             // 
             // InNotOutMenuItem
             // 
             this.InNotOutMenuItem.Name = "InNotOutMenuItem";
-            this.InNotOutMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.InNotOutMenuItem.Size = new System.Drawing.Size(331, 22);
             this.InNotOutMenuItem.Text = "ورودی خارج نشده";
             this.InNotOutMenuItem.Click += new System.EventHandler(this.InNotOutMenuItem_Click);
             // 
             // UsersPriceStripMenuItem
             // 
             this.UsersPriceStripMenuItem.Name = "UsersPriceStripMenuItem";
-            this.UsersPriceStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.UsersPriceStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.UsersPriceStripMenuItem.Text = "کارکرد کاربران";
             this.UsersPriceStripMenuItem.Click += new System.EventHandler(this.UsersPriceStripMenuItem_Click);
             // 
             // AllInTrafficStripMenuItem
             // 
             this.AllInTrafficStripMenuItem.Name = "AllInTrafficStripMenuItem";
-            this.AllInTrafficStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.AllInTrafficStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.AllInTrafficStripMenuItem.Text = "تعداد کل ورودی ها و مبالغ";
             this.AllInTrafficStripMenuItem.Click += new System.EventHandler(this.AllInTrafficStripMenuItem_Click);
             // 
             // AllOutTrafficStripMenuItem
             // 
             this.AllOutTrafficStripMenuItem.Name = "AllOutTrafficStripMenuItem";
-            this.AllOutTrafficStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.AllOutTrafficStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.AllOutTrafficStripMenuItem.Text = "تعداد کل خروجی ها و مبالغ";
             this.AllOutTrafficStripMenuItem.Click += new System.EventHandler(this.AllOutTrafficStripMenuItem_Click);
             // 
             // AgeAvgMenuItem
             // 
             this.AgeAvgMenuItem.Name = "AgeAvgMenuItem";
-            this.AgeAvgMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.AgeAvgMenuItem.Size = new System.Drawing.Size(331, 22);
             this.AgeAvgMenuItem.Text = "میانگین سال ساخت  کامیون ها";
             this.AgeAvgMenuItem.Click += new System.EventHandler(this.AgeAvgMenuItem_Click);
             // 
             // AllInReportToolStripMenuItem
             // 
             this.AllInReportToolStripMenuItem.Name = "AllInReportToolStripMenuItem";
-            this.AllInReportToolStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.AllInReportToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.AllInReportToolStripMenuItem.Text = "تعداد کل ورودی ها و وضعیت نوبت ها";
             this.AllInReportToolStripMenuItem.Click += new System.EventHandler(this.AllInReportToolStripMenuItem_Click);
             // 
             // AllInServiceTypeToolStripMenuItem
             // 
             this.AllInServiceTypeToolStripMenuItem.Name = "AllInServiceTypeToolStripMenuItem";
-            this.AllInServiceTypeToolStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.AllInServiceTypeToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.AllInServiceTypeToolStripMenuItem.Text = "تعداد کل ورودی ها بر حسب نوع مراجعه";
             this.AllInServiceTypeToolStripMenuItem.Click += new System.EventHandler(this.AllInServiceTypeToolStripMenuItem_Click);
             // 
             // LaderTypeTurnStripMenuItem
             // 
             this.LaderTypeTurnStripMenuItem.Name = "LaderTypeTurnStripMenuItem";
-            this.LaderTypeTurnStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.LaderTypeTurnStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.LaderTypeTurnStripMenuItem.Text = "انواع و تعداد بارگیر ورودی و نوبت آن ها";
             this.LaderTypeTurnStripMenuItem.Click += new System.EventHandler(this.LaderTypeTurnStripMenuItem_Click);
             // 
             // AllOutServiceTypeStripMenuItem
             // 
             this.AllOutServiceTypeStripMenuItem.Name = "AllOutServiceTypeStripMenuItem";
-            this.AllOutServiceTypeStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.AllOutServiceTypeStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.AllOutServiceTypeStripMenuItem.Text = "تعداد کل خروجی ها بر حسب نوع مراجعه";
             this.AllOutServiceTypeStripMenuItem.Click += new System.EventHandler(this.AllOutServiceTypeStripMenuItem_Click);
             // 
             // InServiceTypeWithPivotToolStripMenuItem
             // 
             this.InServiceTypeWithPivotToolStripMenuItem.Name = "InServiceTypeWithPivotToolStripMenuItem";
-            this.InServiceTypeWithPivotToolStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.InServiceTypeWithPivotToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.InServiceTypeWithPivotToolStripMenuItem.Text = "تعداد کل ورودی ها بر حسب نوع مراجعه و محور بارگیر";
             this.InServiceTypeWithPivotToolStripMenuItem.Click += new System.EventHandler(this.InServiceTypeWithPivotToolStripMenuItem_Click);
             // 
             // CountInTrafficToolStripMenuItem
             // 
             this.CountInTrafficToolStripMenuItem.Name = "CountInTrafficToolStripMenuItem";
-            this.CountInTrafficToolStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.CountInTrafficToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.CountInTrafficToolStripMenuItem.Text = "تعداد کل ورودی ها به تفکیک نوع تردد ";
             this.CountInTrafficToolStripMenuItem.Click += new System.EventHandler(this.CountInTrafficToolStripMenuItem_Click);
             // 
             // TypeandLastInToolStripMenuItem
             // 
             this.TypeandLastInToolStripMenuItem.Name = "TypeandLastInToolStripMenuItem";
-            this.TypeandLastInToolStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.TypeandLastInToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.TypeandLastInToolStripMenuItem.Text = "نوع مراجعه و آخرین مراجعه به پایانه بار";
             this.TypeandLastInToolStripMenuItem.Click += new System.EventHandler(this.TypeandLastInToolStripMenuItem_Click);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(413, 6);
+            this.toolStripSeparator12.Size = new System.Drawing.Size(328, 6);
             // 
             // LaddBillStripMenuItem
             // 
@@ -681,62 +681,62 @@
             this.CarLadBillMenuItem,
             this.CarLadBillAndCancelAndTurnMenuItem});
             this.LaddBillStripMenuItem.Name = "LaddBillStripMenuItem";
-            this.LaddBillStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.LaddBillStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.LaddBillStripMenuItem.Text = "مجوز(حواله)";
             // 
             // AllLadBillMenuItem
             // 
             this.AllLadBillMenuItem.Name = "AllLadBillMenuItem";
-            this.AllLadBillMenuItem.Size = new System.Drawing.Size(507, 26);
+            this.AllLadBillMenuItem.Size = new System.Drawing.Size(402, 22);
             this.AllLadBillMenuItem.Text = "لیست مجوز(حواله) های صادر شده";
             this.AllLadBillMenuItem.Click += new System.EventHandler(this.AllLadBillMenuItem_Click);
             // 
             // LadBillCreditReportStripMenuItem
             // 
             this.LadBillCreditReportStripMenuItem.Name = "LadBillCreditReportStripMenuItem";
-            this.LadBillCreditReportStripMenuItem.Size = new System.Drawing.Size(507, 26);
+            this.LadBillCreditReportStripMenuItem.Size = new System.Drawing.Size(402, 22);
             this.LadBillCreditReportStripMenuItem.Text = "گزارش مجوز(حواله) های صادر شده";
             this.LadBillCreditReportStripMenuItem.Click += new System.EventHandler(this.LadBillCreditReportStripMenuItem_Click);
             // 
             // CompanyRemaiderLadeMenuItem
             // 
             this.CompanyRemaiderLadeMenuItem.Name = "CompanyRemaiderLadeMenuItem";
-            this.CompanyRemaiderLadeMenuItem.Size = new System.Drawing.Size(507, 26);
+            this.CompanyRemaiderLadeMenuItem.Size = new System.Drawing.Size(402, 22);
             this.CompanyRemaiderLadeMenuItem.Text = "بارهای جامانده شرکت های حمل و نقل";
             this.CompanyRemaiderLadeMenuItem.Click += new System.EventHandler(this.CompanyRemaiderLadeMenuItem_Click);
             // 
             // LaderTypeCountStripMenuItem
             // 
             this.LaderTypeCountStripMenuItem.Name = "LaderTypeCountStripMenuItem";
-            this.LaderTypeCountStripMenuItem.Size = new System.Drawing.Size(507, 26);
+            this.LaderTypeCountStripMenuItem.Size = new System.Drawing.Size(402, 22);
             this.LaderTypeCountStripMenuItem.Text = "تعداد مجوز(حواله) های صادر شده و جا مانده بر اساس انواع بارگیر";
             this.LaderTypeCountStripMenuItem.Click += new System.EventHandler(this.LaderTypeCountStripMenuItem_Click);
             // 
             // CompanyRemaiderPortPlaceMenuItem
             // 
             this.CompanyRemaiderPortPlaceMenuItem.Name = "CompanyRemaiderPortPlaceMenuItem";
-            this.CompanyRemaiderPortPlaceMenuItem.Size = new System.Drawing.Size(507, 26);
+            this.CompanyRemaiderPortPlaceMenuItem.Size = new System.Drawing.Size(402, 22);
             this.CompanyRemaiderPortPlaceMenuItem.Text = "گزارش مجوز (حواله)های صادر شده و جا مانده بر اساس محل بارگیری";
             this.CompanyRemaiderPortPlaceMenuItem.Click += new System.EventHandler(this.CompanyRemaiderPortPlaceMenuItem_Click);
             // 
             // CarLadBillMenuItem
             // 
             this.CarLadBillMenuItem.Name = "CarLadBillMenuItem";
-            this.CarLadBillMenuItem.Size = new System.Drawing.Size(507, 26);
+            this.CarLadBillMenuItem.Size = new System.Drawing.Size(402, 22);
             this.CarLadBillMenuItem.Text = "گزارش مجوزهای صادر شده برای کامیون";
             this.CarLadBillMenuItem.Click += new System.EventHandler(this.CarLadBillMenuItem_Click);
             // 
             // CarLadBillAndCancelAndTurnMenuItem
             // 
             this.CarLadBillAndCancelAndTurnMenuItem.Name = "CarLadBillAndCancelAndTurnMenuItem";
-            this.CarLadBillAndCancelAndTurnMenuItem.Size = new System.Drawing.Size(507, 26);
+            this.CarLadBillAndCancelAndTurnMenuItem.Size = new System.Drawing.Size(402, 22);
             this.CarLadBillAndCancelAndTurnMenuItem.Text = "گزارش مجوز/نوبتهای ابطالی برای کامیون";
             this.CarLadBillAndCancelAndTurnMenuItem.Click += new System.EventHandler(this.CarLadBillAndCancelAndTurnMenuItem_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(413, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(328, 6);
             // 
             // TurnStripMenuItem
             // 
@@ -751,41 +751,41 @@
             this.LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem,
             this.AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem});
             this.TurnStripMenuItem.Name = "TurnStripMenuItem";
-            this.TurnStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.TurnStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.TurnStripMenuItem.Text = "امور نوبت";
             // 
             // TurnAcceptedReportMenuItem
             // 
             this.TurnAcceptedReportMenuItem.Name = "TurnAcceptedReportMenuItem";
-            this.TurnAcceptedReportMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.TurnAcceptedReportMenuItem.Size = new System.Drawing.Size(353, 22);
             this.TurnAcceptedReportMenuItem.Text = "لیست نوبت های تأیید شده";
             this.TurnAcceptedReportMenuItem.Click += new System.EventHandler(this.TurnAcceptedReportMenuItem_Click);
             // 
             // TurnAcceptedAreaButton
             // 
             this.TurnAcceptedAreaButton.Name = "TurnAcceptedAreaButton";
-            this.TurnAcceptedAreaButton.Size = new System.Drawing.Size(445, 26);
+            this.TurnAcceptedAreaButton.Size = new System.Drawing.Size(353, 22);
             this.TurnAcceptedAreaButton.Text = "لیست نوبت های تآیید شده شهری";
             this.TurnAcceptedAreaButton.Click += new System.EventHandler(this.TurnAcceptedAreaButton_Click);
             // 
             // CanceledTurnsMenuItem
             // 
             this.CanceledTurnsMenuItem.Name = "CanceledTurnsMenuItem";
-            this.CanceledTurnsMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.CanceledTurnsMenuItem.Size = new System.Drawing.Size(353, 22);
             this.CanceledTurnsMenuItem.Text = "لیست نوبت های باطل شده";
             this.CanceledTurnsMenuItem.Click += new System.EventHandler(this.CanceledTurnsMenuItem_Click);
             // 
             // ActiveTurnsStripMenuItem
             // 
             this.ActiveTurnsStripMenuItem.Name = "ActiveTurnsStripMenuItem";
-            this.ActiveTurnsStripMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.ActiveTurnsStripMenuItem.Size = new System.Drawing.Size(353, 22);
             this.ActiveTurnsStripMenuItem.Text = "لیست نوبت های فعال";
             this.ActiveTurnsStripMenuItem.Click += new System.EventHandler(this.ActiveTurnsStripMenuItem_Click);
             // 
             // ReturnedTurnsStripMenuItem
             // 
             this.ReturnedTurnsStripMenuItem.Name = "ReturnedTurnsStripMenuItem";
-            this.ReturnedTurnsStripMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.ReturnedTurnsStripMenuItem.Size = new System.Drawing.Size(353, 22);
             this.ReturnedTurnsStripMenuItem.Text = "لیست نوبت های احیا شده";
             this.ReturnedTurnsStripMenuItem.Visible = false;
             this.ReturnedTurnsStripMenuItem.Click += new System.EventHandler(this.ReturnedTurnsStripMenuItem_Click);
@@ -793,14 +793,14 @@
             // DuplicateTurnsMenuItem
             // 
             this.DuplicateTurnsMenuItem.Name = "DuplicateTurnsMenuItem";
-            this.DuplicateTurnsMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.DuplicateTurnsMenuItem.Size = new System.Drawing.Size(353, 22);
             this.DuplicateTurnsMenuItem.Text = "ناوگانی که بیش از یک نوبت فعال دارند";
             this.DuplicateTurnsMenuItem.Click += new System.EventHandler(this.DuplicateTurnsMenuItem_Click);
             // 
             // AcceptedWithoutLadBillCreditReportStripMenuItem
             // 
             this.AcceptedWithoutLadBillCreditReportStripMenuItem.Name = "AcceptedWithoutLadBillCreditReportStripMenuItem";
-            this.AcceptedWithoutLadBillCreditReportStripMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.AcceptedWithoutLadBillCreditReportStripMenuItem.Size = new System.Drawing.Size(353, 22);
             this.AcceptedWithoutLadBillCreditReportStripMenuItem.Text = "لیست نوبت های تأیید شده مجوز نگرفته";
             this.AcceptedWithoutLadBillCreditReportStripMenuItem.Visible = false;
             this.AcceptedWithoutLadBillCreditReportStripMenuItem.Click += new System.EventHandler(this.AcceptedWithoutLadBillCreditReportStripMenuItem_Click);
@@ -808,68 +808,68 @@
             // LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem
             // 
             this.LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem.Name = "LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem";
-            this.LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem.Size = new System.Drawing.Size(353, 22);
             this.LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem.Text = "آخرین شماره نوبت و تعداد مانده هر بارگیر";
             this.LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem.Click += new System.EventHandler(this.LastTurnNumberAndRemaindCountByLaderTypeToolStripMenuItem_Click);
             // 
             // AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem
             // 
             this.AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem.Name = "AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem";
-            this.AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem.Size = new System.Drawing.Size(445, 26);
+            this.AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem.Size = new System.Drawing.Size(353, 22);
             this.AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem.Text = "تعداد نوبت تأیید شده  مجوز نگرفته به تفکیک بارگیر و تاریخ";
             this.AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem.Click += new System.EventHandler(this.AcceptedTurnWithoutLadBillCreditDevidedByLaderTypeAndDateMenuItem_Click);
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(413, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(328, 6);
             // 
             // CarPriceMenuItem
             // 
             this.CarPriceMenuItem.Name = "CarPriceMenuItem";
-            this.CarPriceMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.CarPriceMenuItem.Size = new System.Drawing.Size(331, 22);
             this.CarPriceMenuItem.Text = "كاركرد كاميون ";
             this.CarPriceMenuItem.Click += new System.EventHandler(this.CarPriceMenuItem_Click);
             // 
             // CompanyLadeAssignmentReportMenuItem
             // 
             this.CompanyLadeAssignmentReportMenuItem.Name = "CompanyLadeAssignmentReportMenuItem";
-            this.CompanyLadeAssignmentReportMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.CompanyLadeAssignmentReportMenuItem.Size = new System.Drawing.Size(331, 22);
             this.CompanyLadeAssignmentReportMenuItem.Text = "اطلاع رسانی بار توسط شرکت";
             this.CompanyLadeAssignmentReportMenuItem.Click += new System.EventHandler(this.CompanyLadeAssignmentReportMenuItem_Click);
             // 
             // LadeUserDateilStripMenuItem
             // 
             this.LadeUserDateilStripMenuItem.Name = "LadeUserDateilStripMenuItem";
-            this.LadeUserDateilStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.LadeUserDateilStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.LadeUserDateilStripMenuItem.Text = "عملکرد کاربران ثبت بار و مجوز";
             this.LadeUserDateilStripMenuItem.Click += new System.EventHandler(this.LadeUserDateilStripMenuItem_Click);
             // 
             // LadeReportToolStripMenuItem
             // 
             this.LadeReportToolStripMenuItem.Name = "LadeReportToolStripMenuItem";
-            this.LadeReportToolStripMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.LadeReportToolStripMenuItem.Size = new System.Drawing.Size(331, 22);
             this.LadeReportToolStripMenuItem.Text = "گزارش کلی از بارهای حمل شده";
             this.LadeReportToolStripMenuItem.Click += new System.EventHandler(this.LadeReportToolStripMenuItem_Click);
             // 
             // CompanyLadeAssignmentDetailStipMenuItem
             // 
             this.CompanyLadeAssignmentDetailStipMenuItem.Name = "CompanyLadeAssignmentDetailStipMenuItem";
-            this.CompanyLadeAssignmentDetailStipMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.CompanyLadeAssignmentDetailStipMenuItem.Size = new System.Drawing.Size(331, 22);
             this.CompanyLadeAssignmentDetailStipMenuItem.Text = "انجمن صنفی شرکت ها و مؤسسات حمل و نقل";
             this.CompanyLadeAssignmentDetailStipMenuItem.Click += new System.EventHandler(this.CompanyLadeAssignmentDetailStipMenuItem_Click);
             // 
             // AllInfoByDateReportMenuItem
             // 
             this.AllInfoByDateReportMenuItem.Name = "AllInfoByDateReportMenuItem";
-            this.AllInfoByDateReportMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.AllInfoByDateReportMenuItem.Size = new System.Drawing.Size(331, 22);
             this.AllInfoByDateReportMenuItem.Text = "عملیات پایانه در یک نگاه";
             this.AllInfoByDateReportMenuItem.Click += new System.EventHandler(this.AllInfoByDateReportMenuItem_Click);
             // 
             // CameraPicturesMenuItem
             // 
             this.CameraPicturesMenuItem.Name = "CameraPicturesMenuItem";
-            this.CameraPicturesMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.CameraPicturesMenuItem.Size = new System.Drawing.Size(331, 22);
             this.CameraPicturesMenuItem.Text = "تصاویر ترددها";
             this.CameraPicturesMenuItem.Click += new System.EventHandler(this.CameraPicturesMenuItem_Click);
             // 
@@ -877,14 +877,14 @@
             // 
             this.InOutTrafficMenuItem.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.InOutTrafficMenuItem.Name = "InOutTrafficMenuItem";
-            this.InOutTrafficMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.InOutTrafficMenuItem.Size = new System.Drawing.Size(331, 22);
             this.InOutTrafficMenuItem.Text = "نمایش تردد ورود خروج";
             this.InOutTrafficMenuItem.Click += new System.EventHandler(this.InOutTrafficMenuItem_Click);
             // 
             // TrafficNotInTraffic_TMenuItem
             // 
             this.TrafficNotInTraffic_TMenuItem.Name = "TrafficNotInTraffic_TMenuItem";
-            this.TrafficNotInTraffic_TMenuItem.Size = new System.Drawing.Size(416, 26);
+            this.TrafficNotInTraffic_TMenuItem.Size = new System.Drawing.Size(331, 22);
             this.TrafficNotInTraffic_TMenuItem.Text = "ترددهای پلاک خوان که در تردد نیستند";
             this.TrafficNotInTraffic_TMenuItem.Click += new System.EventHandler(this.TrafficNotInTraffic_TMenuItem_Click);
             // 
@@ -913,13 +913,13 @@
             this.BasicInformationMenuItem.Name = "BasicInformationMenuItem";
             this.BasicInformationMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.BasicInformationMenuItem.RightToLeftAutoMirrorImage = true;
-            this.BasicInformationMenuItem.Size = new System.Drawing.Size(120, 24);
+            this.BasicInformationMenuItem.Size = new System.Drawing.Size(100, 24);
             this.BasicInformationMenuItem.Text = "اطلاعات پایه";
             // 
             // NewsMenuItem
             // 
             this.NewsMenuItem.Name = "NewsMenuItem";
-            this.NewsMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.NewsMenuItem.Size = new System.Drawing.Size(234, 26);
             this.NewsMenuItem.Text = "اخبار";
             this.NewsMenuItem.Click += new System.EventHandler(this.NewsMenuItem_Click);
             // 
@@ -927,21 +927,21 @@
             // 
             this.BillMenuItem.Image = global::HPS.Properties.Resources.Bill;
             this.BillMenuItem.Name = "BillMenuItem";
-            this.BillMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.BillMenuItem.Size = new System.Drawing.Size(234, 26);
             this.BillMenuItem.Text = "قبض";
             this.BillMenuItem.Click += new System.EventHandler(this.BillMenuItem_Click);
             // 
             // BillMessageMenuItem
             // 
             this.BillMessageMenuItem.Name = "BillMessageMenuItem";
-            this.BillMessageMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.BillMessageMenuItem.Size = new System.Drawing.Size(234, 26);
             this.BillMessageMenuItem.Text = "پیام";
             this.BillMessageMenuItem.Click += new System.EventHandler(this.BillMessageMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(280, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(231, 6);
             this.toolStripSeparator2.Visible = false;
             // 
             // MessageMenuItem
@@ -950,7 +950,7 @@
             this.UserMessageMenuItem,
             this.GroupMessageMenuItem});
             this.MessageMenuItem.Name = "MessageMenuItem";
-            this.MessageMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.MessageMenuItem.Size = new System.Drawing.Size(234, 26);
             this.MessageMenuItem.Text = "پیام ";
             this.MessageMenuItem.Visible = false;
             this.MessageMenuItem.Click += new System.EventHandler(this.MessageMenuItem_Click);
@@ -958,27 +958,27 @@
             // UserMessageMenuItem
             // 
             this.UserMessageMenuItem.Name = "UserMessageMenuItem";
-            this.UserMessageMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.UserMessageMenuItem.Size = new System.Drawing.Size(141, 22);
             this.UserMessageMenuItem.Text = "ارسال به کاربر";
             this.UserMessageMenuItem.Click += new System.EventHandler(this.UserMessageMenuItem_Click);
             // 
             // GroupMessageMenuItem
             // 
             this.GroupMessageMenuItem.Name = "GroupMessageMenuItem";
-            this.GroupMessageMenuItem.Size = new System.Drawing.Size(170, 26);
+            this.GroupMessageMenuItem.Size = new System.Drawing.Size(141, 22);
             this.GroupMessageMenuItem.Text = "ارسال گروهی";
             this.GroupMessageMenuItem.Click += new System.EventHandler(this.GroupMessageMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(280, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(231, 6);
             // 
             // ServicesMenuItem
             // 
             this.ServicesMenuItem.Image = global::HPS.Properties.Resources.Services;
             this.ServicesMenuItem.Name = "ServicesMenuItem";
-            this.ServicesMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.ServicesMenuItem.Size = new System.Drawing.Size(234, 26);
             this.ServicesMenuItem.Text = "خدمات";
             this.ServicesMenuItem.Click += new System.EventHandler(this.ServicesMenuItem_Click);
             // 
@@ -991,13 +991,13 @@
             this.InfractionSurveyUserMenuItem});
             this.InfractionsMenuItem.Image = global::HPS.Properties.Resources.Infractions;
             this.InfractionsMenuItem.Name = "InfractionsMenuItem";
-            this.InfractionsMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.InfractionsMenuItem.Size = new System.Drawing.Size(234, 26);
             this.InfractionsMenuItem.Text = "تخلفات";
             // 
             // InfractionGroupMenuItem
             // 
             this.InfractionGroupMenuItem.Name = "InfractionGroupMenuItem";
-            this.InfractionGroupMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.InfractionGroupMenuItem.Size = new System.Drawing.Size(181, 26);
             this.InfractionGroupMenuItem.Text = "گروه تخلف";
             this.InfractionGroupMenuItem.Click += new System.EventHandler(this.InfractionGroupMenuItem_Click);
             // 
@@ -1005,7 +1005,7 @@
             // 
             this.InfractionTypeMenuItem.Image = global::HPS.Properties.Resources.Infraction;
             this.InfractionTypeMenuItem.Name = "InfractionTypeMenuItem";
-            this.InfractionTypeMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.InfractionTypeMenuItem.Size = new System.Drawing.Size(181, 26);
             this.InfractionTypeMenuItem.Text = "انواع تخلف";
             this.InfractionTypeMenuItem.Click += new System.EventHandler(this.InfractionTypeMenuItem_Click);
             // 
@@ -1013,7 +1013,7 @@
             // 
             this.InfractionSurveyGroupMenuItem.Image = global::HPS.Properties.Resources.SurveyInfractionGroup;
             this.InfractionSurveyGroupMenuItem.Name = "InfractionSurveyGroupMenuItem";
-            this.InfractionSurveyGroupMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.InfractionSurveyGroupMenuItem.Size = new System.Drawing.Size(181, 26);
             this.InfractionSurveyGroupMenuItem.Text = "گروه بررسی تخلفات";
             this.InfractionSurveyGroupMenuItem.Click += new System.EventHandler(this.InfractionSurveyGroupMenuItem_Click);
             // 
@@ -1021,14 +1021,14 @@
             // 
             this.InfractionSurveyUserMenuItem.Image = global::HPS.Properties.Resources.SurveyInfractionUser1;
             this.InfractionSurveyUserMenuItem.Name = "InfractionSurveyUserMenuItem";
-            this.InfractionSurveyUserMenuItem.Size = new System.Drawing.Size(215, 26);
+            this.InfractionSurveyUserMenuItem.Size = new System.Drawing.Size(181, 26);
             this.InfractionSurveyUserMenuItem.Text = "کاربران بررسی تخلفات";
             this.InfractionSurveyUserMenuItem.Click += new System.EventHandler(this.InfractionSurveyUserMenuItem_Click);
             // 
             // TrafficTypeMenuItem
             // 
             this.TrafficTypeMenuItem.Name = "TrafficTypeMenuItem";
-            this.TrafficTypeMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.TrafficTypeMenuItem.Size = new System.Drawing.Size(234, 26);
             this.TrafficTypeMenuItem.Text = "نوع تردد";
             this.TrafficTypeMenuItem.Click += new System.EventHandler(this.TrafficTypeMenuItem_Click);
             // 
@@ -1036,7 +1036,7 @@
             // 
             this.ComputerMenuItem.Image = global::HPS.Properties.Resources.Computer;
             this.ComputerMenuItem.Name = "ComputerMenuItem";
-            this.ComputerMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.ComputerMenuItem.Size = new System.Drawing.Size(234, 26);
             this.ComputerMenuItem.Text = "رایانه ها";
             this.ComputerMenuItem.Click += new System.EventHandler(this.ComputerMenuItem_Click);
             // 
@@ -1049,14 +1049,14 @@
             this.LadeCancelCommnetMenuItem});
             this.CommentMenuItem.Image = global::HPS.Properties.Resources.Comment;
             this.CommentMenuItem.Name = "CommentMenuItem";
-            this.CommentMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.CommentMenuItem.Size = new System.Drawing.Size(234, 26);
             this.CommentMenuItem.Text = "توضیحات";
             // 
             // RevokeCommentMenuItem
             // 
             this.RevokeCommentMenuItem.Image = global::HPS.Properties.Resources.TurnCancelComment;
             this.RevokeCommentMenuItem.Name = "RevokeCommentMenuItem";
-            this.RevokeCommentMenuItem.Size = new System.Drawing.Size(448, 26);
+            this.RevokeCommentMenuItem.Size = new System.Drawing.Size(360, 26);
             this.RevokeCommentMenuItem.Text = "توضیحات ابطال مجوز";
             this.RevokeCommentMenuItem.Click += new System.EventHandler(this.RevokeCommentMenuItem_Click);
             // 
@@ -1064,7 +1064,7 @@
             // 
             this.TurnCancelCommentMenuItem.Image = global::HPS.Properties.Resources.TurnCancelComment;
             this.TurnCancelCommentMenuItem.Name = "TurnCancelCommentMenuItem";
-            this.TurnCancelCommentMenuItem.Size = new System.Drawing.Size(448, 26);
+            this.TurnCancelCommentMenuItem.Size = new System.Drawing.Size(360, 26);
             this.TurnCancelCommentMenuItem.Text = "توضیحات انصراف از نوبت";
             this.TurnCancelCommentMenuItem.Click += new System.EventHandler(this.TurnCancelCommentMenuItem_Click);
             // 
@@ -1072,7 +1072,7 @@
             // 
             this.LadeCommentMenuItem.Image = global::HPS.Properties.Resources.LadeComment;
             this.LadeCommentMenuItem.Name = "LadeCommentMenuItem";
-            this.LadeCommentMenuItem.Size = new System.Drawing.Size(448, 26);
+            this.LadeCommentMenuItem.Size = new System.Drawing.Size(360, 26);
             this.LadeCommentMenuItem.Text = "توضیحات اطلاع رسانی بار شرکت";
             this.LadeCommentMenuItem.Click += new System.EventHandler(this.LadeCommentMenuItem_Click);
             // 
@@ -1080,14 +1080,14 @@
             // 
             this.LadeCancelCommnetMenuItem.Image = global::HPS.Properties.Resources.TurnCancelComment;
             this.LadeCancelCommnetMenuItem.Name = "LadeCancelCommnetMenuItem";
-            this.LadeCancelCommnetMenuItem.Size = new System.Drawing.Size(448, 26);
+            this.LadeCancelCommnetMenuItem.Size = new System.Drawing.Size(360, 26);
             this.LadeCancelCommnetMenuItem.Text = "توضیحات انصراف از اطلاع رسانی بار یا کاهش تعداد ناوگان";
             this.LadeCancelCommnetMenuItem.Click += new System.EventHandler(this.LadeCancelCommnetMenuItem_Click);
             // 
             // DestinationAddressStripMenuItem
             // 
             this.DestinationAddressStripMenuItem.Name = "DestinationAddressStripMenuItem";
-            this.DestinationAddressStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.DestinationAddressStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.DestinationAddressStripMenuItem.Text = "آدرس مقصد";
             this.DestinationAddressStripMenuItem.Click += new System.EventHandler(this.DestinationAddressStripMenuItem_Click);
             // 
@@ -1095,21 +1095,21 @@
             // 
             this.StopFeeMenuItem.Image = global::HPS.Properties.Resources.PriceNorm;
             this.StopFeeMenuItem.Name = "StopFeeMenuItem";
-            this.StopFeeMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.StopFeeMenuItem.Size = new System.Drawing.Size(234, 26);
             this.StopFeeMenuItem.Text = "حق پارکینگ";
             this.StopFeeMenuItem.Click += new System.EventHandler(this.StopFeeMenuItem_Click);
             // 
             // CarSystemStripMenuItem
             // 
             this.CarSystemStripMenuItem.Name = "CarSystemStripMenuItem";
-            this.CarSystemStripMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.CarSystemStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.CarSystemStripMenuItem.Text = "نوع وسیله سواری";
             this.CarSystemStripMenuItem.Click += new System.EventHandler(this.CarSystemStripMenuItem_Click);
             // 
             // ClassMenuItem
             // 
             this.ClassMenuItem.Name = "ClassMenuItem";
-            this.ClassMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.ClassMenuItem.Size = new System.Drawing.Size(234, 26);
             this.ClassMenuItem.Text = "کلاس های آموزشی";
             this.ClassMenuItem.Click += new System.EventHandler(this.ClassMenuItem_Click);
             // 
@@ -1121,20 +1121,20 @@
             this.AnnouncementTimeMenuItem});
             this.LaderMenuItem.Image = global::HPS.Properties.Resources.Lader;
             this.LaderMenuItem.Name = "LaderMenuItem";
-            this.LaderMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.LaderMenuItem.Size = new System.Drawing.Size(234, 26);
             this.LaderMenuItem.Text = "بارگیری و اطلاع رسانی بار";
             // 
             // PortPlaceMenuItem
             // 
             this.PortPlaceMenuItem.Name = "PortPlaceMenuItem";
-            this.PortPlaceMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.PortPlaceMenuItem.Size = new System.Drawing.Size(201, 26);
             this.PortPlaceMenuItem.Text = "محل بارگیری";
             this.PortPlaceMenuItem.Click += new System.EventHandler(this.PortPlaceMenuItem_Click);
             // 
             // SaloonMenuItem
             // 
             this.SaloonMenuItem.Name = "SaloonMenuItem";
-            this.SaloonMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.SaloonMenuItem.Size = new System.Drawing.Size(201, 26);
             this.SaloonMenuItem.Text = "سالن اطلاع رسانی بار";
             this.SaloonMenuItem.Click += new System.EventHandler(this.SaloonMenuItem_Click);
             // 
@@ -1142,21 +1142,21 @@
             // 
             this.AnnouncementTimeMenuItem.Image = global::HPS.Properties.Resources.AnnouncementTime;
             this.AnnouncementTimeMenuItem.Name = "AnnouncementTimeMenuItem";
-            this.AnnouncementTimeMenuItem.Size = new System.Drawing.Size(242, 26);
+            this.AnnouncementTimeMenuItem.Size = new System.Drawing.Size(201, 26);
             this.AnnouncementTimeMenuItem.Text = "زمان های اطلاع رسانی بار";
             this.AnnouncementTimeMenuItem.Click += new System.EventHandler(this.AnnouncementTimeMenuItem_Click);
             // 
             // ChooseSaloonMenuItem
             // 
             this.ChooseSaloonMenuItem.Name = "ChooseSaloonMenuItem";
-            this.ChooseSaloonMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.ChooseSaloonMenuItem.Size = new System.Drawing.Size(234, 26);
             this.ChooseSaloonMenuItem.Text = "انتخاب سالن بارگیری";
             this.ChooseSaloonMenuItem.Click += new System.EventHandler(this.ChooseSaloonMenuItem_Click);
             // 
             // VerifiedOtherAarsMenuItem
             // 
             this.VerifiedOtherAarsMenuItem.Name = "VerifiedOtherAarsMenuItem";
-            this.VerifiedOtherAarsMenuItem.Size = new System.Drawing.Size(283, 26);
+            this.VerifiedOtherAarsMenuItem.Size = new System.Drawing.Size(234, 26);
             this.VerifiedOtherAarsMenuItem.Text = "سواری های معاف از حق پارکینگ";
             this.VerifiedOtherAarsMenuItem.Click += new System.EventHandler(this.VerifiedOtherAarsMenuItem_Click);
             // 
@@ -1184,126 +1184,126 @@
             this.CompnyGroupToolStripMenuItem});
             this.MainInformationMenuItem.Image = global::HPS.Properties.Resources.AllInformation;
             this.MainInformationMenuItem.Name = "MainInformationMenuItem";
-            this.MainInformationMenuItem.Size = new System.Drawing.Size(124, 24);
+            this.MainInformationMenuItem.Size = new System.Drawing.Size(103, 24);
             this.MainInformationMenuItem.Text = "اطلاعات کلی";
             // 
             // GoodMenuItem
             // 
             this.GoodMenuItem.Name = "GoodMenuItem";
-            this.GoodMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.GoodMenuItem.Size = new System.Drawing.Size(232, 22);
             this.GoodMenuItem.Text = "کالاها";
             this.GoodMenuItem.Click += new System.EventHandler(this.GoodMenuItem_Click);
             // 
             // PriceNormripMenuItem
             // 
             this.PriceNormripMenuItem.Name = "PriceNormripMenuItem";
-            this.PriceNormripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.PriceNormripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.PriceNormripMenuItem.Text = "نرخ عرف";
             this.PriceNormripMenuItem.Click += new System.EventHandler(this.PriceNormMenuItem_Click);
             // 
             // LaderTypeMenuItem
             // 
             this.LaderTypeMenuItem.Name = "LaderTypeMenuItem";
-            this.LaderTypeMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.LaderTypeMenuItem.Size = new System.Drawing.Size(232, 22);
             this.LaderTypeMenuItem.Text = "انواع بارگیر";
             this.LaderTypeMenuItem.Click += new System.EventHandler(this.LaderTypeMenuItem_Click);
             // 
             // BoxingMenuItem
             // 
             this.BoxingMenuItem.Name = "BoxingMenuItem";
-            this.BoxingMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.BoxingMenuItem.Size = new System.Drawing.Size(232, 22);
             this.BoxingMenuItem.Text = "بسته بندی";
             this.BoxingMenuItem.Click += new System.EventHandler(this.BoxingMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(229, 6);
             // 
             // DriverMenuItem
             // 
             this.DriverMenuItem.Name = "DriverMenuItem";
-            this.DriverMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.DriverMenuItem.Size = new System.Drawing.Size(232, 22);
             this.DriverMenuItem.Text = "اطلاعات راننده";
             this.DriverMenuItem.Click += new System.EventHandler(this.DriverMenuItem_Click);
             // 
             // CarMenuItem
             // 
             this.CarMenuItem.Name = "CarMenuItem";
-            this.CarMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.CarMenuItem.Size = new System.Drawing.Size(232, 22);
             this.CarMenuItem.Text = "اطلاعات خودرو";
             this.CarMenuItem.Click += new System.EventHandler(this.CarMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(229, 6);
             // 
             // BoundryMenuItem
             // 
             this.BoundryMenuItem.Name = "BoundryMenuItem";
-            this.BoundryMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.BoundryMenuItem.Size = new System.Drawing.Size(232, 22);
             this.BoundryMenuItem.Text = "مرزها";
             this.BoundryMenuItem.Click += new System.EventHandler(this.BoundryMenuItem_Click);
             // 
             // ColorMenuItem
             // 
             this.ColorMenuItem.Name = "ColorMenuItem";
-            this.ColorMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.ColorMenuItem.Size = new System.Drawing.Size(232, 22);
             this.ColorMenuItem.Text = "رنگ ها";
             this.ColorMenuItem.Click += new System.EventHandler(this.ColorMenuItem_Click);
             // 
             // CityMenuItem
             // 
             this.CityMenuItem.Name = "CityMenuItem";
-            this.CityMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.CityMenuItem.Size = new System.Drawing.Size(232, 22);
             this.CityMenuItem.Text = "شهرها";
             this.CityMenuItem.Click += new System.EventHandler(this.CityMenuItem_Click);
             // 
             // CountryMenuItem
             // 
             this.CountryMenuItem.Name = "CountryMenuItem";
-            this.CountryMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.CountryMenuItem.Size = new System.Drawing.Size(232, 22);
             this.CountryMenuItem.Text = "کشور ها";
             this.CountryMenuItem.Click += new System.EventHandler(this.CountryMenuItem_Click);
             // 
             // ProvinceMenuItem
             // 
             this.ProvinceMenuItem.Name = "ProvinceMenuItem";
-            this.ProvinceMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.ProvinceMenuItem.Size = new System.Drawing.Size(232, 22);
             this.ProvinceMenuItem.Text = "استان ها";
             this.ProvinceMenuItem.Click += new System.EventHandler(this.ProvinceMenuItem_Click);
             // 
             // PlateCityMenuItem
             // 
             this.PlateCityMenuItem.Name = "PlateCityMenuItem";
-            this.PlateCityMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.PlateCityMenuItem.Size = new System.Drawing.Size(232, 22);
             this.PlateCityMenuItem.Text = "شهرهای شماره گذاری";
             this.PlateCityMenuItem.Click += new System.EventHandler(this.PlateCityMenuItem_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(285, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(229, 6);
             // 
             // CompanyLadBillMenuItem
             // 
             this.CompanyLadBillMenuItem.Name = "CompanyLadBillMenuItem";
-            this.CompanyLadBillMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.CompanyLadBillMenuItem.Size = new System.Drawing.Size(232, 22);
             this.CompanyLadBillMenuItem.Text = "بارنامه های تحویلی به شرکت ها";
             this.CompanyLadBillMenuItem.Click += new System.EventHandler(this.CompanyLadBillMenuItem_Click);
             // 
             // CompanyMenuItem
             // 
             this.CompanyMenuItem.Name = "CompanyMenuItem";
-            this.CompanyMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.CompanyMenuItem.Size = new System.Drawing.Size(232, 22);
             this.CompanyMenuItem.Text = "شرکت ها و مؤسسات حمل و نقل";
             this.CompanyMenuItem.Click += new System.EventHandler(this.CompanyMenuItem_Click);
             // 
             // CompanyMobileMenuItem
             // 
             this.CompanyMobileMenuItem.Name = "CompanyMobileMenuItem";
-            this.CompanyMobileMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.CompanyMobileMenuItem.Size = new System.Drawing.Size(232, 22);
             this.CompanyMobileMenuItem.Text = "شماره موبایل های شرکت";
             this.CompanyMobileMenuItem.Visible = false;
             this.CompanyMobileMenuItem.Click += new System.EventHandler(this.CompanyMobileMenuItem_Click);
@@ -1311,7 +1311,7 @@
             // CompnyGroupToolStripMenuItem
             // 
             this.CompnyGroupToolStripMenuItem.Name = "CompnyGroupToolStripMenuItem";
-            this.CompnyGroupToolStripMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.CompnyGroupToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
             this.CompnyGroupToolStripMenuItem.Text = "گروه شرکت ها";
             this.CompnyGroupToolStripMenuItem.Click += new System.EventHandler(this.CompnyGroupToolStripMenuItem_Click);
             // 
@@ -1328,7 +1328,7 @@
             this.importToDataBaseToolStripMenuItem});
             this.ManagementMenuItem.Image = global::HPS.Properties.Resources.Manager;
             this.ManagementMenuItem.Name = "ManagementMenuItem";
-            this.ManagementMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.ManagementMenuItem.Size = new System.Drawing.Size(77, 24);
             this.ManagementMenuItem.Text = "مدیریت";
             // 
             // UsersStripMenuItem
@@ -1340,14 +1340,14 @@
             this.UsersStripMenuItem.Name = "UsersStripMenuItem";
             this.UsersStripMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.UsersStripMenuItem.RightToLeftAutoMirrorImage = true;
-            this.UsersStripMenuItem.Size = new System.Drawing.Size(379, 26);
+            this.UsersStripMenuItem.Size = new System.Drawing.Size(307, 26);
             this.UsersStripMenuItem.Text = "کاربران";
             // 
             // UserMenuItem
             // 
             this.UserMenuItem.Image = global::HPS.Properties.Resources.SurveyInfractionUser;
             this.UserMenuItem.Name = "UserMenuItem";
-            this.UserMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.UserMenuItem.Size = new System.Drawing.Size(126, 26);
             this.UserMenuItem.Text = "کاربر";
             this.UserMenuItem.Click += new System.EventHandler(this.UserMenuItem_Click);
             // 
@@ -1355,35 +1355,35 @@
             // 
             this.RoleMenuItem.Image = global::HPS.Properties.Resources.SurveyInfractionGroup;
             this.RoleMenuItem.Name = "RoleMenuItem";
-            this.RoleMenuItem.Size = new System.Drawing.Size(146, 26);
+            this.RoleMenuItem.Size = new System.Drawing.Size(126, 26);
             this.RoleMenuItem.Text = "گروه کاربر";
             this.RoleMenuItem.Click += new System.EventHandler(this.RoleMenuItem_Click);
             // 
             // SettingMenuItem
             // 
             this.SettingMenuItem.Name = "SettingMenuItem";
-            this.SettingMenuItem.Size = new System.Drawing.Size(379, 26);
+            this.SettingMenuItem.Size = new System.Drawing.Size(307, 26);
             this.SettingMenuItem.Text = "تنظیمات";
             this.SettingMenuItem.Click += new System.EventHandler(this.SettingMenuItem_Click);
             // 
             // ExportDataToolStripMenuItem
             // 
             this.ExportDataToolStripMenuItem.Name = "ExportDataToolStripMenuItem";
-            this.ExportDataToolStripMenuItem.Size = new System.Drawing.Size(379, 26);
+            this.ExportDataToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
             this.ExportDataToolStripMenuItem.Text = "انتقال داده از Access";
             this.ExportDataToolStripMenuItem.Click += new System.EventHandler(this.ExportDataToolStripMenuItem_Click);
             // 
             // BackUpStripMenuItem
             // 
             this.BackUpStripMenuItem.Name = "BackUpStripMenuItem";
-            this.BackUpStripMenuItem.Size = new System.Drawing.Size(379, 26);
+            this.BackUpStripMenuItem.Size = new System.Drawing.Size(307, 26);
             this.BackUpStripMenuItem.Text = "ایجاد پشتیبان و بازیابی";
             this.BackUpStripMenuItem.Click += new System.EventHandler(this.BackUpStripMenuItem_Click);
             // 
             // CancelTimeExpiredTurnsMenuItem
             // 
             this.CancelTimeExpiredTurnsMenuItem.Name = "CancelTimeExpiredTurnsMenuItem";
-            this.CancelTimeExpiredTurnsMenuItem.Size = new System.Drawing.Size(379, 26);
+            this.CancelTimeExpiredTurnsMenuItem.Size = new System.Drawing.Size(307, 26);
             this.CancelTimeExpiredTurnsMenuItem.Text = "ابطال دستی نوبت های تاریخ گذشته";
             this.CancelTimeExpiredTurnsMenuItem.Click += new System.EventHandler(this.CancelTimeExpiredTurnsMenuItem_Click);
             // 
@@ -1397,62 +1397,62 @@
             this.UsedLadBillMenuItem,
             this.ITSInfoMenuItem});
             this.ReportStripMenuItem.Name = "ReportStripMenuItem";
-            this.ReportStripMenuItem.Size = new System.Drawing.Size(379, 26);
+            this.ReportStripMenuItem.Size = new System.Drawing.Size(307, 26);
             this.ReportStripMenuItem.Text = "گزارشات";
             // 
             // LogStripMenuItem
             // 
             this.LogStripMenuItem.Name = "LogStripMenuItem";
-            this.LogStripMenuItem.Size = new System.Drawing.Size(454, 26);
+            this.LogStripMenuItem.Size = new System.Drawing.Size(362, 22);
             this.LogStripMenuItem.Text = "نمایش Log";
             this.LogStripMenuItem.Click += new System.EventHandler(this.LogStripMenuItem_Click);
             // 
             // SMSLogMenuItem
             // 
             this.SMSLogMenuItem.Name = "SMSLogMenuItem";
-            this.SMSLogMenuItem.Size = new System.Drawing.Size(454, 26);
+            this.SMSLogMenuItem.Size = new System.Drawing.Size(362, 22);
             this.SMSLogMenuItem.Text = "تاریخچه پیام کوتاه";
             this.SMSLogMenuItem.Click += new System.EventHandler(this.SMSLogMenuItem_Click);
             // 
             // ServicesStatusStripMenuItem
             // 
             this.ServicesStatusStripMenuItem.Name = "ServicesStatusStripMenuItem";
-            this.ServicesStatusStripMenuItem.Size = new System.Drawing.Size(454, 26);
+            this.ServicesStatusStripMenuItem.Size = new System.Drawing.Size(362, 22);
             this.ServicesStatusStripMenuItem.Text = "لیست وضعیت سرویس ها";
             this.ServicesStatusStripMenuItem.Click += new System.EventHandler(this.ServicesStatusStripMenuItem_Click);
             // 
             // OnlineSmartCardControllingStripMenuItem
             // 
             this.OnlineSmartCardControllingStripMenuItem.Name = "OnlineSmartCardControllingStripMenuItem";
-            this.OnlineSmartCardControllingStripMenuItem.Size = new System.Drawing.Size(454, 26);
+            this.OnlineSmartCardControllingStripMenuItem.Size = new System.Drawing.Size(362, 22);
             this.OnlineSmartCardControllingStripMenuItem.Text = "لیست زمان های ارسال و دریافت هنگام کنترل کارت هوشمند";
             this.OnlineSmartCardControllingStripMenuItem.Click += new System.EventHandler(this.OnlineSmartCardControllingStripMenuItem_Click);
             // 
             // UsedLadBillMenuItem
             // 
             this.UsedLadBillMenuItem.Name = "UsedLadBillMenuItem";
-            this.UsedLadBillMenuItem.Size = new System.Drawing.Size(454, 26);
+            this.UsedLadBillMenuItem.Size = new System.Drawing.Size(362, 22);
             this.UsedLadBillMenuItem.Text = "مغایرت های درخواستی";
             this.UsedLadBillMenuItem.Click += new System.EventHandler(this.UsedLadBillMenuItem_Click);
             // 
             // ITSInfoMenuItem
             // 
             this.ITSInfoMenuItem.Name = "ITSInfoMenuItem";
-            this.ITSInfoMenuItem.Size = new System.Drawing.Size(454, 26);
+            this.ITSInfoMenuItem.Size = new System.Drawing.Size(362, 22);
             this.ITSInfoMenuItem.Text = "اطلاعات ارتباط با ITS";
             this.ITSInfoMenuItem.Click += new System.EventHandler(this.ITSInfoMenuItem_Click);
             // 
             // FromDateForCheckActiveTurn
             // 
             this.FromDateForCheckActiveTurn.Name = "FromDateForCheckActiveTurn";
-            this.FromDateForCheckActiveTurn.Size = new System.Drawing.Size(379, 26);
+            this.FromDateForCheckActiveTurn.Size = new System.Drawing.Size(307, 26);
             this.FromDateForCheckActiveTurn.Text = "تاریخ شروع چک کردن داشتن نوبت فعال در ورود";
             this.FromDateForCheckActiveTurn.Click += new System.EventHandler(this.FromDateForCheckActiveTurn_Click);
             // 
             // importToDataBaseToolStripMenuItem
             // 
             this.importToDataBaseToolStripMenuItem.Name = "importToDataBaseToolStripMenuItem";
-            this.importToDataBaseToolStripMenuItem.Size = new System.Drawing.Size(379, 26);
+            this.importToDataBaseToolStripMenuItem.Size = new System.Drawing.Size(307, 26);
             this.importToDataBaseToolStripMenuItem.Text = "Import اطلاعات بارنامه های صادره به دیتابیس";
             this.importToDataBaseToolStripMenuItem.Click += new System.EventHandler(this.importToDataBaseToolStripMenuItem_Click);
             // 
@@ -1460,14 +1460,14 @@
             // 
             this.AboutMenuItem.Image = global::HPS.Properties.Resources.about;
             this.AboutMenuItem.Name = "AboutMenuItem";
-            this.AboutMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.AboutMenuItem.Size = new System.Drawing.Size(67, 24);
             this.AboutMenuItem.Text = "درباره";
             this.AboutMenuItem.Click += new System.EventHandler(this.AboutMenuItem_Click);
             // 
             // ChoosePrinterStripMenuItem
             // 
             this.ChoosePrinterStripMenuItem.Name = "ChoosePrinterStripMenuItem";
-            this.ChoosePrinterStripMenuItem.Size = new System.Drawing.Size(98, 24);
+            this.ChoosePrinterStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.ChoosePrinterStripMenuItem.Text = "انتخاب چاپگر";
             this.ChoosePrinterStripMenuItem.Visible = false;
             this.ChoosePrinterStripMenuItem.Click += new System.EventHandler(this.ChoosePrinterStripMenuItem_Click);
@@ -1481,27 +1481,27 @@
             this.SendMessageMenuItem.Enabled = false;
             this.SendMessageMenuItem.Image = global::HPS.Properties.Resources.mail2_send;
             this.SendMessageMenuItem.Name = "SendMessageMenuItem";
-            this.SendMessageMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.SendMessageMenuItem.Size = new System.Drawing.Size(120, 24);
             this.SendMessageMenuItem.Text = "ارسال اس ام اس";
             // 
             // SendtextToDriversMenuItem
             // 
             this.SendtextToDriversMenuItem.Name = "SendtextToDriversMenuItem";
-            this.SendtextToDriversMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.SendtextToDriversMenuItem.Size = new System.Drawing.Size(233, 22);
             this.SendtextToDriversMenuItem.Text = "ارسال متن به رانندگان";
             this.SendtextToDriversMenuItem.Click += new System.EventHandler(this.SendtextToDriversMenuItem_Click);
             // 
             // SendNewsToDriversMenuItem
             // 
             this.SendNewsToDriversMenuItem.Name = "SendNewsToDriversMenuItem";
-            this.SendNewsToDriversMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.SendNewsToDriversMenuItem.Size = new System.Drawing.Size(233, 22);
             this.SendNewsToDriversMenuItem.Text = "ارسال اخبار به رانندگان";
             this.SendNewsToDriversMenuItem.Click += new System.EventHandler(this.SendNewsToDriversMenuItem_Click);
             // 
             // SMSPasswordChangeMenuItem
             // 
             this.SMSPasswordChangeMenuItem.Name = "SMSPasswordChangeMenuItem";
-            this.SMSPasswordChangeMenuItem.Size = new System.Drawing.Size(288, 26);
+            this.SMSPasswordChangeMenuItem.Size = new System.Drawing.Size(233, 22);
             this.SMSPasswordChangeMenuItem.Text = "تغییر رمز عبور سیستم اس ام اس";
             this.SMSPasswordChangeMenuItem.Click += new System.EventHandler(this.SMSPasswordChangeMenuItem_Click);
             // 
@@ -1580,7 +1580,7 @@
             this.Date.Name = "Date";
             this.Date.Padding = new System.Windows.Forms.Padding(3);
             this.Date.RightToLeftAutoMirrorImage = true;
-            this.Date.Size = new System.Drawing.Size(75, 50);
+            this.Date.Size = new System.Drawing.Size(63, 50);
             this.Date.Text = " تاریخ ";
             this.Date.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.Date.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay;
@@ -1617,7 +1617,7 @@
             this.UserName.Margin = new System.Windows.Forms.Padding(5);
             this.UserName.Name = "UserName";
             this.UserName.Padding = new System.Windows.Forms.Padding(3);
-            this.UserName.Size = new System.Drawing.Size(65, 50);
+            this.UserName.Size = new System.Drawing.Size(54, 50);
             this.UserName.Text = "کاربر";
             this.UserName.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             // 
@@ -1626,7 +1626,7 @@
             this.toolStripStatusLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.toolStripStatusLabel2.ForeColor = System.Drawing.Color.Maroon;
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(58, 55);
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(46, 55);
             this.toolStripStatusLabel2.Text = "نسخه:";
             // 
             // VersionLabel
@@ -1635,7 +1635,7 @@
             this.VersionLabel.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.VersionLabel.ForeColor = System.Drawing.Color.Maroon;
             this.VersionLabel.Name = "VersionLabel";
-            this.VersionLabel.Size = new System.Drawing.Size(105, 55);
+            this.VersionLabel.Size = new System.Drawing.Size(83, 55);
             this.VersionLabel.Text = "versionLabel";
             // 
             // InCameraStatusLabel
@@ -1661,7 +1661,7 @@
             this.SMStoolStripStatusLabel.Image = global::HPS.Properties.Resources.about;
             this.SMStoolStripStatusLabel.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.SMStoolStripStatusLabel.Name = "SMStoolStripStatusLabel";
-            this.SMStoolStripStatusLabel.Size = new System.Drawing.Size(101, 55);
+            this.SMStoolStripStatusLabel.Size = new System.Drawing.Size(90, 55);
             this.SMStoolStripStatusLabel.Text = "اس ام اس";
             // 
             // OutCameraStatusLabel
@@ -1756,7 +1756,7 @@
             this.label2.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label2.Location = new System.Drawing.Point(246, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 24);
+            this.label2.Size = new System.Drawing.Size(70, 19);
             this.label2.TabIndex = 0;
             this.label2.Text = "متن خبر";
             // 
@@ -1772,7 +1772,7 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(949, 554);
             this.Controls.Add(this.ContentPane);

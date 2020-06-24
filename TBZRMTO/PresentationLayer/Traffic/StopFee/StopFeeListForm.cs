@@ -41,7 +41,6 @@ namespace HPS.Present.StopFee
                 Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
                 this.Close();
           }
-
        }
          private void LoadStopFee()
         {

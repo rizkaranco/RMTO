@@ -1478,7 +1478,6 @@
             this.SendtextToDriversMenuItem,
             this.SendNewsToDriversMenuItem,
             this.SMSPasswordChangeMenuItem});
-            this.SendMessageMenuItem.Enabled = false;
             this.SendMessageMenuItem.Image = global::HPS.Properties.Resources.mail2_send;
             this.SendMessageMenuItem.Name = "SendMessageMenuItem";
             this.SendMessageMenuItem.Size = new System.Drawing.Size(120, 24);

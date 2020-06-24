@@ -1,0 +1,3 @@
+--select count(*) from TrafficPictures_T where TrafficID_bint  >   3008436
+
+--update TrafficPictures_T set IsExtracted = null where TrafficID_bint  >   3008436

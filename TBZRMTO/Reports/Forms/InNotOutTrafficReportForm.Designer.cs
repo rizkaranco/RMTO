@@ -68,7 +68,7 @@
             this.LaderPivotGroupID_intComboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.LaderPivotGroupID_intComboBox.FormattingEnabled = true;
             this.LaderPivotGroupID_intComboBox.Location = new System.Drawing.Point(4, 74);
-            this.LaderPivotGroupID_intComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.LaderPivotGroupID_intComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.LaderPivotGroupID_intComboBox.Name = "LaderPivotGroupID_intComboBox";
             this.LaderPivotGroupID_intComboBox.Size = new System.Drawing.Size(115, 22);
             this.LaderPivotGroupID_intComboBox.TabIndex = 1;
@@ -92,7 +92,7 @@
             this.AllIranianCarRadioButton.Checked = true;
             this.AllIranianCarRadioButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.AllIranianCarRadioButton.Location = new System.Drawing.Point(23, 19);
-            this.AllIranianCarRadioButton.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.AllIranianCarRadioButton.Margin = new System.Windows.Forms.Padding(5);
             this.AllIranianCarRadioButton.Name = "AllIranianCarRadioButton";
             this.AllIranianCarRadioButton.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.AllIranianCarRadioButton.Size = new System.Drawing.Size(96, 18);
@@ -153,7 +153,7 @@
             this.LaderTypeID_intComboBox.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.LaderTypeID_intComboBox.FormattingEnabled = true;
             this.LaderTypeID_intComboBox.Location = new System.Drawing.Point(10, 238);
-            this.LaderTypeID_intComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.LaderTypeID_intComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.LaderTypeID_intComboBox.Name = "LaderTypeID_intComboBox";
             this.LaderTypeID_intComboBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.LaderTypeID_intComboBox.Size = new System.Drawing.Size(115, 22);
@@ -175,7 +175,7 @@
             // 
             this.ShowByLaderTypeButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ShowByLaderTypeButton.Location = new System.Drawing.Point(14, 433);
-            this.ShowByLaderTypeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowByLaderTypeButton.Margin = new System.Windows.Forms.Padding(2);
             this.ShowByLaderTypeButton.Name = "ShowByLaderTypeButton";
             this.ShowByLaderTypeButton.Size = new System.Drawing.Size(108, 54);
             this.ShowByLaderTypeButton.TabIndex = 46;
@@ -188,7 +188,7 @@
             this.ServicesComboBox.Font = new System.Drawing.Font("Tahoma", 9F);
             this.ServicesComboBox.FormattingEnabled = true;
             this.ServicesComboBox.Location = new System.Drawing.Point(10, 192);
-            this.ServicesComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ServicesComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.ServicesComboBox.Name = "ServicesComboBox";
             this.ServicesComboBox.Size = new System.Drawing.Size(115, 22);
             this.ServicesComboBox.TabIndex = 45;
@@ -204,7 +204,7 @@
             "سواری",
             "متفرقه"});
             this.TrafficTypeComboBox.Location = new System.Drawing.Point(10, 130);
-            this.TrafficTypeComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TrafficTypeComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.TrafficTypeComboBox.Name = "TrafficTypeComboBox";
             this.TrafficTypeComboBox.Size = new System.Drawing.Size(115, 22);
             this.TrafficTypeComboBox.TabIndex = 43;
@@ -245,7 +245,7 @@
             // 
             this.AllCountButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.AllCountButton.Location = new System.Drawing.Point(14, 400);
-            this.AllCountButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AllCountButton.Margin = new System.Windows.Forms.Padding(2);
             this.AllCountButton.Name = "AllCountButton";
             this.AllCountButton.Size = new System.Drawing.Size(108, 29);
             this.AllCountButton.TabIndex = 40;
@@ -257,7 +257,7 @@
             // 
             this.ShowButton.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ShowButton.Location = new System.Drawing.Point(14, 367);
-            this.ShowButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowButton.Margin = new System.Windows.Forms.Padding(2);
             this.ShowButton.Name = "ShowButton";
             this.ShowButton.Size = new System.Drawing.Size(108, 29);
             this.ShowButton.TabIndex = 39;

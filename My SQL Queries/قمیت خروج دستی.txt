@@ -1,0 +1,2 @@
+update Traffic_T set Price_dec = 50000,PriceTax_dec=4500 where Out_bit=1 and TrafficID_bint=2944292
+-- Tax : 9%(Price_dec)

@@ -30,6 +30,17 @@ namespace HPS.Present.LadeAssignment
             InitializeComponent();
             LadeAssignmentKey = Key;
             _CanNotChangeCount = CanNotChangeCount;
+
+            // غیر فعال سازی نوع بارگیر و ایکن جستجو در حالت ویرایش برای همه بجز مدیر
+            // غیر فعال سازی نوع بارگیر و ایکن جستجو در حالت ویرایش برای همه بجز مدیر
+            if (HPS.Common.CurrentUser.user.UserGroupID_int != 1)
+            {
+                LaderTypeID_intComboBox.Enabled = false;
+                LaderTypeID_intNewButton.Visible = false;
+               // CompanyID_intComboBox.Enabled = false;
+               // CompanyID_intNewButton.Visible = false;
+                CarCount_intNumericTextBox.Enabled = false;
+            }
         }
         private bool TimeBetween(TimeSpan start, TimeSpan end)
         {
@@ -131,7 +142,7 @@ namespace HPS.Present.LadeAssignment
                 LadeAssignmentEntity.AnnouncementTimeID_int = 1;
                 LadeAssignmentEntity.CityID_int = (Int32?)Hepsa.Core.Common.PersentationController.GetEntityValue(CityID_intComboBox.SelectedValue, TypeCode.Int32);
                 LadeAssignmentEntity.CityCode_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(CityCode_nvcTextBox.Text, TypeCode.String).ToString();
-                LadeAssignmentEntity.Address_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DestinationAddressID_intComboBox.Text, TypeCode.String).ToString();
+                LadeAssignmentEntity.Address_nvc = DestinationAddressID_intComboBox.Text;
                 LadeAssignmentEntity.GoodID_int = (Int32?)Hepsa.Core.Common.PersentationController.GetEntityValue(GoodID_intComboBox.SelectedValue, TypeCode.Int32);
                 LadeAssignmentEntity.BoxingID_int = (Int32?)Hepsa.Core.Common.PersentationController.GetEntityValue(BoxingID_intComboBox.SelectedValue, TypeCode.Int32);
                 LadeAssignmentEntity.MinWeight_dec = (Nullable<Decimal>)Hepsa.Core.Common.PersentationController.GetEntityValue(MinWeight_decNumericTextBox.NumericText, TypeCode.Decimal);

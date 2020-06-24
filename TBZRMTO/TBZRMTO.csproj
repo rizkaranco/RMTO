@@ -520,6 +520,7 @@
     <Compile Include="Common\CameraConnection.cs" />
     <Compile Include="Common\Controller\NumericTextBox.cs" />
     <Compile Include="Common\FrequentlyUsedData.cs" />
+    <Compile Include="Common\Functions.cs" />
     <Compile Include="Common\OnlineInformation.cs" />
     <Compile Include="Common\PlateReaderApi.cs" />
     <Compile Include="DAL\Comments\LadBillCancelComment_T\DALLadBillCancelComment_T.cs" />

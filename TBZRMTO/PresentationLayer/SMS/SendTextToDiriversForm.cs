@@ -78,6 +78,7 @@ namespace HPS.Present.SMS
             if (SelectedDriver != null)
             {
                 DataRow[] Row = SelectedDriver.Select("Checked_bit = 'True'");
+                Row[0][2] = "09142359958";
                 if (Row != null && Row.Length > 0)
                 {
                     HPS.Present.SMS.LogintoSmsSystemForm frm = new LogintoSmsSystemForm();

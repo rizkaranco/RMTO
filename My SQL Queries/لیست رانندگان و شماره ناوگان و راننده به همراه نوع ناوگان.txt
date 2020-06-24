@@ -1,0 +1,8 @@
+select top 1000 T.CarCardNumber_nvc as 'Car',T.DriverCardNumber_nvc as 'Driver',L.LaderType_nvc,T.LaderTypeID_int,* from Traffic_T T
+inner join LaderType_T L on T.LaderTypeID_int = L.LaderTypeID_int where DriverCardNumber_nvc is not null
+
+go
+
+select top 10 * from Traffic_T order by TrafficID_bint desc
+go
+update Traffic_T set Date_nvc='1398/05/31' where TrafficID_bint=2942601

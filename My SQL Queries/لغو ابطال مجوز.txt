@@ -1,0 +1,33 @@
+﻿-- پیدا کردن شماره بر اساس قبض
+select * from Traffic_T where TrafficNumber_bint=1538473 
+--TrafficID_bint  : 3074562
+
+
+-- پیداکردن رکورد مجوز باگیری
+select  * from LadBillCredit_T where TrafficID_bint=3081044
+
+
+go
+
+-- حذف فیلد های کنسل کننده
+update LadBillCredit_T set Canceled_bit=0
+,CanceledDate_nvc=NULL,
+CanceledTime_nvc=NULL,
+CanceledComment_nvc=NULL,
+CanceledUserName_nvc=NULL,
+Turn_bit=NULL
+where LadBillCreditID_int=316164
+
+go
+
+
+-- حذف علت های کنسل شده برای این مجوز در صورت وجود
+select * from LadBillCreditCancelComment_T where LadBillCreditID_int=316164
+delete from LadBillCreditCancelComment_T where LadBillCreditID_int=316164
+
+
+-- حذف رکورد اعلان کنسل شدن برای شرکت ها در صورت وجود
+select * from  LadeCancelAssignment_T where LadeAssignmentID_bint =385952
+
+
+delete from  LadeCancelAssignment_T where LadeAssignmentID_bint =385952

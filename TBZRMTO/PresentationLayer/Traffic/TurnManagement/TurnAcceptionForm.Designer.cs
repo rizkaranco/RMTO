@@ -247,8 +247,8 @@ namespace HPS.Present.TurnManagement
             this.CarCardNumber_nvcTextBox.MaxWholeDigits = 7;
             this.CarCardNumber_nvcTextBox.Name = "CarCardNumber_nvcTextBox";
             this.CarCardNumber_nvcTextBox.Prefix = "";
-            this.CarCardNumber_nvcTextBox.RangeMax = 0;
-            this.CarCardNumber_nvcTextBox.RangeMin = 0;
+            this.CarCardNumber_nvcTextBox.RangeMax = 0D;
+            this.CarCardNumber_nvcTextBox.RangeMin = 0D;
             this.CarCardNumber_nvcTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.CarCardNumber_nvcTextBox.Size = new System.Drawing.Size(130, 30);
             this.CarCardNumber_nvcTextBox.TabIndex = 1;
@@ -336,8 +336,8 @@ namespace HPS.Present.TurnManagement
             this.ProductionYear_intNumericTextBox.MaxWholeDigits = 155;
             this.ProductionYear_intNumericTextBox.Name = "ProductionYear_intNumericTextBox";
             this.ProductionYear_intNumericTextBox.Prefix = "";
-            this.ProductionYear_intNumericTextBox.RangeMax = 0;
-            this.ProductionYear_intNumericTextBox.RangeMin = 0;
+            this.ProductionYear_intNumericTextBox.RangeMax = 0D;
+            this.ProductionYear_intNumericTextBox.RangeMin = 0D;
             this.ProductionYear_intNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ProductionYear_intNumericTextBox.Size = new System.Drawing.Size(47, 30);
             this.ProductionYear_intNumericTextBox.TabIndex = 8;
@@ -448,7 +448,7 @@ namespace HPS.Present.TurnManagement
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(139, 112);
+            this.label4.Location = new System.Drawing.Point(351, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 23);
             this.label4.TabIndex = 11;
@@ -492,7 +492,7 @@ namespace HPS.Present.TurnManagement
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(352, 26);
+            this.label3.Location = new System.Drawing.Point(350, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 23);
             this.label3.TabIndex = 3;
@@ -547,14 +547,14 @@ namespace HPS.Present.TurnManagement
             this.Mobile_nvcnumericTextBox.DigitsInGroup = 0;
             this.Mobile_nvcnumericTextBox.Flags = 65536;
             this.Mobile_nvcnumericTextBox.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Mobile_nvcnumericTextBox.Location = new System.Drawing.Point(218, 104);
+            this.Mobile_nvcnumericTextBox.Location = new System.Drawing.Point(4, 109);
             this.Mobile_nvcnumericTextBox.MaxDecimalPlaces = 0;
             this.Mobile_nvcnumericTextBox.MaxLength = 11;
             this.Mobile_nvcnumericTextBox.MaxWholeDigits = 155;
             this.Mobile_nvcnumericTextBox.Name = "Mobile_nvcnumericTextBox";
             this.Mobile_nvcnumericTextBox.Prefix = "";
-            this.Mobile_nvcnumericTextBox.RangeMax = 0;
-            this.Mobile_nvcnumericTextBox.RangeMin = 0;
+            this.Mobile_nvcnumericTextBox.RangeMax = 0D;
+            this.Mobile_nvcnumericTextBox.RangeMin = 0D;
             this.Mobile_nvcnumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Mobile_nvcnumericTextBox.Size = new System.Drawing.Size(130, 30);
             this.Mobile_nvcnumericTextBox.TabIndex = 4;
@@ -564,7 +564,7 @@ namespace HPS.Present.TurnManagement
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label18.Location = new System.Drawing.Point(351, 106);
+            this.label18.Location = new System.Drawing.Point(137, 111);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(76, 23);
             this.label18.TabIndex = 14;
@@ -578,18 +578,17 @@ namespace HPS.Present.TurnManagement
             this.DriverCardNumber_bintNumericTextBox.DigitsInGroup = 0;
             this.DriverCardNumber_bintNumericTextBox.Flags = 65536;
             this.DriverCardNumber_bintNumericTextBox.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.DriverCardNumber_bintNumericTextBox.Location = new System.Drawing.Point(218, 22);
+            this.DriverCardNumber_bintNumericTextBox.Location = new System.Drawing.Point(216, 104);
             this.DriverCardNumber_bintNumericTextBox.MaxDecimalPlaces = 0;
             this.DriverCardNumber_bintNumericTextBox.MaxLength = 7;
             this.DriverCardNumber_bintNumericTextBox.MaxWholeDigits = 7;
             this.DriverCardNumber_bintNumericTextBox.Name = "DriverCardNumber_bintNumericTextBox";
             this.DriverCardNumber_bintNumericTextBox.Prefix = "";
-            this.DriverCardNumber_bintNumericTextBox.RangeMax = 0;
-            this.DriverCardNumber_bintNumericTextBox.RangeMin = 0;
+            this.DriverCardNumber_bintNumericTextBox.RangeMax = 0D;
+            this.DriverCardNumber_bintNumericTextBox.RangeMin = 0D;
             this.DriverCardNumber_bintNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DriverCardNumber_bintNumericTextBox.Size = new System.Drawing.Size(130, 30);
             this.DriverCardNumber_bintNumericTextBox.TabIndex = 0;
-            this.DriverCardNumber_bintNumericTextBox.Leave += new System.EventHandler(this.DriverCardNumber_bintNumericTextBox_Leave);
             // 
             // LastName_nvcTextBox
             // 
@@ -628,16 +627,17 @@ namespace HPS.Present.TurnManagement
             this.NationalCode_intNumericTextBox.Enabled = false;
             this.NationalCode_intNumericTextBox.Flags = 65536;
             this.NationalCode_intNumericTextBox.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.NationalCode_intNumericTextBox.Location = new System.Drawing.Point(6, 108);
+            this.NationalCode_intNumericTextBox.Location = new System.Drawing.Point(218, 20);
             this.NationalCode_intNumericTextBox.MaxDecimalPlaces = 0;
             this.NationalCode_intNumericTextBox.MaxWholeDigits = 155;
             this.NationalCode_intNumericTextBox.Name = "NationalCode_intNumericTextBox";
             this.NationalCode_intNumericTextBox.Prefix = "";
-            this.NationalCode_intNumericTextBox.RangeMax = 0;
-            this.NationalCode_intNumericTextBox.RangeMin = 0;
+            this.NationalCode_intNumericTextBox.RangeMax = 0D;
+            this.NationalCode_intNumericTextBox.RangeMin = 0D;
             this.NationalCode_intNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.NationalCode_intNumericTextBox.Size = new System.Drawing.Size(130, 30);
             this.NationalCode_intNumericTextBox.TabIndex = 5;
+            this.NationalCode_intNumericTextBox.Leave += new System.EventHandler(this.NationalCode_intNumericTextBox_Leave);
             // 
             // ClassID_intLabel
             // 
@@ -689,8 +689,8 @@ namespace HPS.Present.TurnManagement
             this.licenceNumber_intNumericTextBox.MaxWholeDigits = 158;
             this.licenceNumber_intNumericTextBox.Name = "licenceNumber_intNumericTextBox";
             this.licenceNumber_intNumericTextBox.Prefix = "";
-            this.licenceNumber_intNumericTextBox.RangeMax = 0;
-            this.licenceNumber_intNumericTextBox.RangeMin = 0;
+            this.licenceNumber_intNumericTextBox.RangeMax = 0D;
+            this.licenceNumber_intNumericTextBox.RangeMin = 0D;
             this.licenceNumber_intNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.licenceNumber_intNumericTextBox.Size = new System.Drawing.Size(130, 30);
             this.licenceNumber_intNumericTextBox.TabIndex = 1;
@@ -860,8 +860,8 @@ namespace HPS.Present.TurnManagement
             this.numericTextBox2.MaxWholeDigits = 155;
             this.numericTextBox2.Name = "numericTextBox2";
             this.numericTextBox2.Prefix = "";
-            this.numericTextBox2.RangeMax = 0;
-            this.numericTextBox2.RangeMin = 0;
+            this.numericTextBox2.RangeMax = 0D;
+            this.numericTextBox2.RangeMin = 0D;
             this.numericTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.numericTextBox2.Size = new System.Drawing.Size(186, 30);
             this.numericTextBox2.TabIndex = 2;
@@ -880,8 +880,8 @@ namespace HPS.Present.TurnManagement
             this.Price_decNumericTextBox.MaxWholeDigits = 155;
             this.Price_decNumericTextBox.Name = "Price_decNumericTextBox";
             this.Price_decNumericTextBox.Prefix = "";
-            this.Price_decNumericTextBox.RangeMax = 0;
-            this.Price_decNumericTextBox.RangeMin = 0;
+            this.Price_decNumericTextBox.RangeMax = 0D;
+            this.Price_decNumericTextBox.RangeMin = 0D;
             this.Price_decNumericTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Price_decNumericTextBox.Size = new System.Drawing.Size(130, 30);
             this.Price_decNumericTextBox.TabIndex = 7;

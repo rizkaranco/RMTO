@@ -10,11 +10,11 @@ namespace HPS.Present.Traffic
 {
     public partial class LastDriverTraffic : Form
     {
-        string DriverNumber = string.Empty;
-        public LastDriverTraffic(string DriverCardNumber)
+        string NationCode = string.Empty;
+        public LastDriverTraffic(string NationCode)
         {
             InitializeComponent();
-            this.DriverNumber = DriverCardNumber;
+            this.NationCode = NationCode;
         }
 
         private void LastDriverTraffic_Load(object sender, EventArgs e)
@@ -27,7 +27,7 @@ namespace HPS.Present.Traffic
             try
             {
                 HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
-                string TrafficCondition = "[Traffic_T].[DriverCardNumber_nvc]= '" + DriverNumber + "'";
+                string TrafficCondition = "[Traffic_T].[NationalCode_int]= '" + NationCode + "'";
                 List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllByCondition(TrafficCondition);
                 if (TrafficList != null && TrafficList.Count > 0 && TrafficList[TrafficList.Count - 1].In_bit == true)
                 {

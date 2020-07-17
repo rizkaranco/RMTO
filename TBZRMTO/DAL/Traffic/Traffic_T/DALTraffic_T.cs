@@ -7114,7 +7114,7 @@ namespace HPS.DAL.TrafficDAL
                 throw ex;
             }
         }
-        public void SelectDuplicateTurnByDrivers(DataTable dataTable,String DriverCardNumber)
+        public void SelectDuplicateTurnByDrivers(DataTable dataTable,String NationCode)
         {
 
             bool ControlConnection = !(this.ConnectionState == System.Data.ConnectionState.Open);
@@ -7127,17 +7127,17 @@ namespace HPS.DAL.TrafficDAL
                 this.Command.Parameters.Clear();
 
                 SqlParameter CardNumber = new SqlParameter();
-                CardNumber.ParameterName = "@DriverCardNumber";
+                CardNumber.ParameterName = "@NationCode";
                 CardNumber.Direction = ParameterDirection.Input;
                 CardNumber.SqlDbType = SqlDbType.NVarChar;
                 CardNumber.IsNullable = true;
-                if (string.IsNullOrEmpty(DriverCardNumber))
+                if (string.IsNullOrEmpty(NationCode))
                 {
                     CardNumber.Value = DBNull.Value;
                 }
                 else
                 {
-                    CardNumber.Value = DriverCardNumber;
+                    CardNumber.Value = NationCode;
                 }
 
                 this.Command.Parameters.Add(CardNumber);

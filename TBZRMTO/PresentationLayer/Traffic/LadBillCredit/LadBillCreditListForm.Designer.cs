@@ -34,11 +34,11 @@ namespace HPS.Present.LadBillCredit
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LadBillCreditListForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             Janus.Windows.GridEX.GridEXLayout AcceptedTurnGridView_DesignTimeLayout = new Janus.Windows.GridEX.GridEXLayout();
             this.LadeAssignmentToolStrip = new System.Windows.Forms.ToolStrip();
             this.LadBillCredittoolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -108,10 +108,10 @@ namespace HPS.Present.LadBillCredit
             this.LadeCanelRequesttoolStripButton,
             this.LadeAssignmentEdittoolStripButton,
             this.PrinterChooseStripButton});
-            this.LadeAssignmentToolStrip.Location = new System.Drawing.Point(5, 28);
+            this.LadeAssignmentToolStrip.Location = new System.Drawing.Point(6, 34);
             this.LadeAssignmentToolStrip.Name = "LadeAssignmentToolStrip";
             this.LadeAssignmentToolStrip.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.LadeAssignmentToolStrip.Size = new System.Drawing.Size(1010, 31);
+            this.LadeAssignmentToolStrip.Size = new System.Drawing.Size(1110, 36);
             this.LadeAssignmentToolStrip.TabIndex = 0;
             this.LadeAssignmentToolStrip.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LadeAssignmenToolStrip_KeyDown);
             // 
@@ -121,7 +121,7 @@ namespace HPS.Present.LadBillCredit
             this.LadBillCredittoolStripButton.Image = global::HPS.Properties.Resources.LadBill;
             this.LadBillCredittoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LadBillCredittoolStripButton.Name = "LadBillCredittoolStripButton";
-            this.LadBillCredittoolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.LadBillCredittoolStripButton.Size = new System.Drawing.Size(29, 33);
             this.LadBillCredittoolStripButton.Text = "تأیید مجوز بارگیری";
             this.LadBillCredittoolStripButton.ToolTipText = "تأیید مجوز بارگیری(F12)";
             this.LadBillCredittoolStripButton.Click += new System.EventHandler(this.LadBillCredittoolStripButton_Click);
@@ -132,7 +132,7 @@ namespace HPS.Present.LadBillCredit
             this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
             this.RefreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(28, 28);
+            this.RefreshButton.Size = new System.Drawing.Size(29, 33);
             this.RefreshButton.Text = "بازیابی مجدد اطلاعات";
             this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
@@ -142,7 +142,7 @@ namespace HPS.Present.LadBillCredit
             this.AllLatoolStripButton.Image = global::HPS.Properties.Resources.AllRecords;
             this.AllLatoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AllLatoolStripButton.Name = "AllLatoolStripButton";
-            this.AllLatoolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.AllLatoolStripButton.Size = new System.Drawing.Size(29, 33);
             this.AllLatoolStripButton.Text = "نمایش تمام اطلاع رسانی بار تأیید شده";
             this.AllLatoolStripButton.Click += new System.EventHandler(this.AllLatoolStripButton_Click);
             // 
@@ -152,7 +152,7 @@ namespace HPS.Present.LadBillCredit
             this.LadeCanelRequesttoolStripButton.Image = global::HPS.Properties.Resources.ladeCancelRequest;
             this.LadeCanelRequesttoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LadeCanelRequesttoolStripButton.Name = "LadeCanelRequesttoolStripButton";
-            this.LadeCanelRequesttoolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.LadeCanelRequesttoolStripButton.Size = new System.Drawing.Size(29, 33);
             this.LadeCanelRequesttoolStripButton.Text = "ثبت درخواست انصراف از اطلاع رسانی بار";
             this.LadeCanelRequesttoolStripButton.Click += new System.EventHandler(this.LadeCanelRequesttoolStripButton_Click);
             // 
@@ -163,7 +163,7 @@ namespace HPS.Present.LadBillCredit
             this.LadeAssignmentEdittoolStripButton.Image = global::HPS.Properties.Resources.Edit;
             this.LadeAssignmentEdittoolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.LadeAssignmentEdittoolStripButton.Name = "LadeAssignmentEdittoolStripButton";
-            this.LadeAssignmentEdittoolStripButton.Size = new System.Drawing.Size(28, 28);
+            this.LadeAssignmentEdittoolStripButton.Size = new System.Drawing.Size(29, 33);
             this.LadeAssignmentEdittoolStripButton.Text = "تغییر اطلاع رسانی بار";
             this.LadeAssignmentEdittoolStripButton.Click += new System.EventHandler(this.LadeAssignmentEdittoolStripButton_Click);
             // 
@@ -174,7 +174,7 @@ namespace HPS.Present.LadBillCredit
             this.PrinterChooseStripButton.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.PrinterChooseStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.PrinterChooseStripButton.Name = "PrinterChooseStripButton";
-            this.PrinterChooseStripButton.Size = new System.Drawing.Size(107, 28);
+            this.PrinterChooseStripButton.Size = new System.Drawing.Size(127, 33);
             this.PrinterChooseStripButton.Text = "انتخاب چاپگر";
             this.PrinterChooseStripButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.PrinterChooseStripButton.Click += new System.EventHandler(this.PrinterChooseStripButton_Click);
@@ -186,10 +186,10 @@ namespace HPS.Present.LadBillCredit
             this.groupBox1.Controls.Add(this.LadeAssignmentToolStrip);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox1.Size = new System.Drawing.Size(1020, 491);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox1.Size = new System.Drawing.Size(1122, 576);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "اطلاع رسانی بار تأیید شده";
@@ -197,7 +197,7 @@ namespace HPS.Present.LadBillCredit
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(5, 59);
+            this.splitContainer1.Location = new System.Drawing.Point(6, 70);
             this.splitContainer1.Margin = new System.Windows.Forms.Padding(0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -210,8 +210,8 @@ namespace HPS.Present.LadBillCredit
             // 
             this.splitContainer1.Panel2.Controls.Add(this.LaderTypeGridView);
             this.splitContainer1.Panel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.splitContainer1.Size = new System.Drawing.Size(1010, 427);
-            this.splitContainer1.SplitterDistance = 883;
+            this.splitContainer1.Size = new System.Drawing.Size(1110, 500);
+            this.splitContainer1.SplitterDistance = 970;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -220,8 +220,8 @@ namespace HPS.Present.LadBillCredit
             this.LadeAssignmentGridView.AllowUserToAddRows = false;
             this.LadeAssignmentGridView.AllowUserToDeleteRows = false;
             this.LadeAssignmentGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            this.LadeAssignmentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.LadeAssignmentGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.LadeAssignmentGridView.BackgroundColor = System.Drawing.Color.White;
             this.LadeAssignmentGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LadeAssignmentGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -246,18 +246,19 @@ namespace HPS.Present.LadBillCredit
             this.colUserName_nvc});
             this.LadeAssignmentGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LadeAssignmentGridView.Location = new System.Drawing.Point(0, 0);
-            this.LadeAssignmentGridView.Margin = new System.Windows.Forms.Padding(5);
+            this.LadeAssignmentGridView.Margin = new System.Windows.Forms.Padding(6);
             this.LadeAssignmentGridView.MultiSelect = false;
             this.LadeAssignmentGridView.Name = "LadeAssignmentGridView";
             this.LadeAssignmentGridView.ReadOnly = true;
             this.LadeAssignmentGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.LadeAssignmentGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.LadeAssignmentGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.LadeAssignmentGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.LadeAssignmentGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.LadeAssignmentGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.LadeAssignmentGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.LadeAssignmentGridView.Size = new System.Drawing.Size(883, 427);
+            this.LadeAssignmentGridView.Size = new System.Drawing.Size(970, 500);
             this.LadeAssignmentGridView.TabIndex = 0;
             this.ShortcuttoolTip.SetToolTip(this.LadeAssignmentGridView, " برای جابه جایی بین دو جدول ازCTRL+Dاستفاده نمایید  ");
             this.LadeAssignmentGridView.SelectionChanged += new System.EventHandler(this.LadeAssignmentGridView_SelectionChanged);
@@ -266,6 +267,7 @@ namespace HPS.Present.LadBillCredit
             // Choose_bit
             // 
             this.Choose_bit.HeaderText = "انتخاب";
+            this.Choose_bit.MinimumWidth = 6;
             this.Choose_bit.Name = "Choose_bit";
             this.Choose_bit.ReadOnly = true;
             this.Choose_bit.Visible = false;
@@ -275,13 +277,16 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colDate_nvc.DataPropertyName = "Date_nvc";
             this.colDate_nvc.HeaderText = "تاریخ ثبت";
+            this.colDate_nvc.MinimumWidth = 6;
             this.colDate_nvc.Name = "colDate_nvc";
             this.colDate_nvc.ReadOnly = true;
+            this.colDate_nvc.Width = 125;
             // 
             // colTime_nvc
             // 
             this.colTime_nvc.DataPropertyName = "Time_nvc";
             this.colTime_nvc.HeaderText = "ساعت";
+            this.colTime_nvc.MinimumWidth = 6;
             this.colTime_nvc.Name = "colTime_nvc";
             this.colTime_nvc.ReadOnly = true;
             this.colTime_nvc.Width = 80;
@@ -290,27 +295,34 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colCompanyID_int.DataPropertyName = "CompanyID_intCompany_nvc";
             this.colCompanyID_int.HeaderText = "شرکت";
+            this.colCompanyID_int.MinimumWidth = 6;
             this.colCompanyID_int.Name = "colCompanyID_int";
             this.colCompanyID_int.ReadOnly = true;
+            this.colCompanyID_int.Width = 125;
             // 
             // colCityID_int
             // 
             this.colCityID_int.DataPropertyName = "CityID_intCity_nvc";
             this.colCityID_int.HeaderText = "شهر مقصد";
+            this.colCityID_int.MinimumWidth = 6;
             this.colCityID_int.Name = "colCityID_int";
             this.colCityID_int.ReadOnly = true;
+            this.colCityID_int.Width = 125;
             // 
             // colAddress_nvc
             // 
             this.colAddress_nvc.DataPropertyName = "Address_nvc";
             this.colAddress_nvc.HeaderText = "آدرس مقصد";
+            this.colAddress_nvc.MinimumWidth = 6;
             this.colAddress_nvc.Name = "colAddress_nvc";
             this.colAddress_nvc.ReadOnly = true;
+            this.colAddress_nvc.Width = 125;
             // 
             // colCarCount_int
             // 
             this.colCarCount_int.DataPropertyName = "CarCount_int";
             this.colCarCount_int.HeaderText = "تعداد";
+            this.colCarCount_int.MinimumWidth = 6;
             this.colCarCount_int.Name = "colCarCount_int";
             this.colCarCount_int.ReadOnly = true;
             this.colCarCount_int.Width = 50;
@@ -319,6 +331,7 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colPortPlaceID_int.DataPropertyName = "PortPlaceID_intPortPlaces_nvc";
             this.colPortPlaceID_int.HeaderText = "محل بارگیری";
+            this.colPortPlaceID_int.MinimumWidth = 6;
             this.colPortPlaceID_int.Name = "colPortPlaceID_int";
             this.colPortPlaceID_int.ReadOnly = true;
             this.colPortPlaceID_int.Width = 110;
@@ -327,6 +340,7 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colGoodID_int.DataPropertyName = "GoodID_intGood_nvc";
             this.colGoodID_int.HeaderText = "کالا";
+            this.colGoodID_int.MinimumWidth = 6;
             this.colGoodID_int.Name = "colGoodID_int";
             this.colGoodID_int.ReadOnly = true;
             this.colGoodID_int.Width = 90;
@@ -334,10 +348,11 @@ namespace HPS.Present.LadBillCredit
             // colPortageFee_dec
             // 
             this.colPortageFee_dec.DataPropertyName = "PortageFee_dec";
-            dataGridViewCellStyle2.Format = "N0";
-            dataGridViewCellStyle2.NullValue = null;
-            this.colPortageFee_dec.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Format = "N0";
+            dataGridViewCellStyle7.NullValue = null;
+            this.colPortageFee_dec.DefaultCellStyle = dataGridViewCellStyle7;
             this.colPortageFee_dec.HeaderText = "نرخ حمل";
+            this.colPortageFee_dec.MinimumWidth = 6;
             this.colPortageFee_dec.Name = "colPortageFee_dec";
             this.colPortageFee_dec.ReadOnly = true;
             this.colPortageFee_dec.Width = 90;
@@ -346,6 +361,7 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colComment_nvc.DataPropertyName = "Comment_nvc";
             this.colComment_nvc.HeaderText = "توضیحات";
+            this.colComment_nvc.MinimumWidth = 6;
             this.colComment_nvc.Name = "colComment_nvc";
             this.colComment_nvc.ReadOnly = true;
             this.colComment_nvc.Width = 130;
@@ -354,6 +370,7 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colLadeAssignmentID_bint.DataPropertyName = "LadeAssignmentID_bint";
             this.colLadeAssignmentID_bint.HeaderText = "شماره بار";
+            this.colLadeAssignmentID_bint.MinimumWidth = 6;
             this.colLadeAssignmentID_bint.Name = "colLadeAssignmentID_bint";
             this.colLadeAssignmentID_bint.ReadOnly = true;
             this.colLadeAssignmentID_bint.Width = 90;
@@ -362,13 +379,16 @@ namespace HPS.Present.LadBillCredit
             // 
             this.LadBill.DataPropertyName = "LadBill";
             this.LadBill.HeaderText = "تعداد مجوز";
+            this.LadBill.MinimumWidth = 6;
             this.LadBill.Name = "LadBill";
             this.LadBill.ReadOnly = true;
+            this.LadBill.Width = 125;
             // 
             // CanceledCar
             // 
             this.CanceledCar.DataPropertyName = "CanceledCar";
             this.CanceledCar.HeaderText = "ت.بارگیر حذف شده";
+            this.CanceledCar.MinimumWidth = 6;
             this.CanceledCar.Name = "CanceledCar";
             this.CanceledCar.ReadOnly = true;
             this.CanceledCar.Visible = false;
@@ -378,6 +398,7 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colBoxingID_int.DataPropertyName = "BoxingID_intBoxingType_nvc";
             this.colBoxingID_int.HeaderText = "نوع بسته بندی";
+            this.colBoxingID_int.MinimumWidth = 6;
             this.colBoxingID_int.Name = "colBoxingID_int";
             this.colBoxingID_int.ReadOnly = true;
             this.colBoxingID_int.Width = 150;
@@ -386,20 +407,25 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colMinWeight_dec.DataPropertyName = "MinWeight_dec";
             this.colMinWeight_dec.HeaderText = "از وزن";
+            this.colMinWeight_dec.MinimumWidth = 6;
             this.colMinWeight_dec.Name = "colMinWeight_dec";
             this.colMinWeight_dec.ReadOnly = true;
+            this.colMinWeight_dec.Width = 125;
             // 
             // colMaxWeight_dec
             // 
             this.colMaxWeight_dec.DataPropertyName = "MaxWeight_dec";
             this.colMaxWeight_dec.HeaderText = "تا وزن";
+            this.colMaxWeight_dec.MinimumWidth = 6;
             this.colMaxWeight_dec.Name = "colMaxWeight_dec";
             this.colMaxWeight_dec.ReadOnly = true;
+            this.colMaxWeight_dec.Width = 125;
             // 
             // colAnnouncementTimeID_int
             // 
             this.colAnnouncementTimeID_int.DataPropertyName = "AnnouncementTimeID_intAnnouncementTime_nvc";
             this.colAnnouncementTimeID_int.HeaderText = "زمان اطلاع رسانی";
+            this.colAnnouncementTimeID_int.MinimumWidth = 6;
             this.colAnnouncementTimeID_int.Name = "colAnnouncementTimeID_int";
             this.colAnnouncementTimeID_int.ReadOnly = true;
             this.colAnnouncementTimeID_int.Width = 130;
@@ -408,6 +434,7 @@ namespace HPS.Present.LadBillCredit
             // 
             this.colUserName_nvc.DataPropertyName = "LadeUser";
             this.colUserName_nvc.HeaderText = "کاربر ثبت کننده";
+            this.colUserName_nvc.MinimumWidth = 6;
             this.colUserName_nvc.Name = "colUserName_nvc";
             this.colUserName_nvc.ReadOnly = true;
             this.colUserName_nvc.Width = 120;
@@ -417,8 +444,8 @@ namespace HPS.Present.LadBillCredit
             this.LaderTypeGridView.AllowUserToAddRows = false;
             this.LaderTypeGridView.AllowUserToDeleteRows = false;
             this.LaderTypeGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
-            this.LaderTypeGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(248)))), ((int)(((byte)(255)))));
+            this.LaderTypeGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.LaderTypeGridView.BackgroundColor = System.Drawing.Color.White;
             this.LaderTypeGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.LaderTypeGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -428,17 +455,18 @@ namespace HPS.Present.LadBillCredit
             this.dataGridViewTextBoxColumn8});
             this.LaderTypeGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LaderTypeGridView.Location = new System.Drawing.Point(0, 0);
-            this.LaderTypeGridView.Margin = new System.Windows.Forms.Padding(5);
+            this.LaderTypeGridView.Margin = new System.Windows.Forms.Padding(6);
             this.LaderTypeGridView.MultiSelect = false;
             this.LaderTypeGridView.Name = "LaderTypeGridView";
             this.LaderTypeGridView.ReadOnly = true;
             this.LaderTypeGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.LaderTypeGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.LaderTypeGridView.RowHeadersWidth = 51;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.LaderTypeGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.LaderTypeGridView.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             this.LaderTypeGridView.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.LaderTypeGridView.Size = new System.Drawing.Size(126, 427);
+            this.LaderTypeGridView.Size = new System.Drawing.Size(139, 500);
             this.LaderTypeGridView.TabIndex = 0;
             this.LaderTypeGridView.TabStop = false;
             // 
@@ -446,14 +474,17 @@ namespace HPS.Present.LadBillCredit
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "MultiLaderTypeID_int";
             this.dataGridViewTextBoxColumn5.HeaderText = "شناسه انتخاب چند بارگیر";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Visible = false;
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // LaderType_nvc
             // 
             this.LaderType_nvc.DataPropertyName = "LaderTypeID_intLaderType_nvc";
             this.LaderType_nvc.HeaderText = "نوع بارگیر";
+            this.LaderType_nvc.MinimumWidth = 6;
             this.LaderType_nvc.Name = "LaderType_nvc";
             this.LaderType_nvc.ReadOnly = true;
             this.LaderType_nvc.Width = 200;
@@ -462,6 +493,7 @@ namespace HPS.Present.LadBillCredit
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "LaderTypeID_int";
             this.dataGridViewTextBoxColumn7.HeaderText = "نوع بارگیر";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Visible = false;
@@ -471,9 +503,11 @@ namespace HPS.Present.LadBillCredit
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "LadeAssignmentID_bint";
             this.dataGridViewTextBoxColumn8.HeaderText = "اطلاع رسانی بار";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Visible = false;
+            this.dataGridViewTextBoxColumn8.Width = 125;
             // 
             // groupBox2
             // 
@@ -489,11 +523,11 @@ namespace HPS.Present.LadBillCredit
             this.groupBox2.Controls.Add(this.AcceptedTurnGridView);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox2.Location = new System.Drawing.Point(0, 491);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.groupBox2.Location = new System.Drawing.Point(0, 576);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox2.Size = new System.Drawing.Size(1020, 227);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
+            this.groupBox2.Size = new System.Drawing.Size(1122, 267);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "نوبت های تأیید شده";
@@ -503,14 +537,15 @@ namespace HPS.Present.LadBillCredit
             this.SerialPlateTextBox.AllowNegative = true;
             this.SerialPlateTextBox.DigitsInGroup = 0;
             this.SerialPlateTextBox.Flags = 0;
-            this.SerialPlateTextBox.Location = new System.Drawing.Point(253, 22);
+            this.SerialPlateTextBox.Location = new System.Drawing.Point(278, 26);
+            this.SerialPlateTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SerialPlateTextBox.MaxDecimalPlaces = 4;
             this.SerialPlateTextBox.MaxWholeDigits = 2;
             this.SerialPlateTextBox.Name = "SerialPlateTextBox";
             this.SerialPlateTextBox.Prefix = "";
             this.SerialPlateTextBox.RangeMax = 0D;
             this.SerialPlateTextBox.RangeMin = 0D;
-            this.SerialPlateTextBox.Size = new System.Drawing.Size(44, 30);
+            this.SerialPlateTextBox.Size = new System.Drawing.Size(48, 35);
             this.SerialPlateTextBox.TabIndex = 12;
             this.SerialPlateTextBox.Visible = false;
             this.SerialPlateTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.SerialPlateTextBox_KeyDown);
@@ -520,16 +555,16 @@ namespace HPS.Present.LadBillCredit
             this.TrafficNumberTextBox.AllowNegative = true;
             this.TrafficNumberTextBox.DigitsInGroup = 0;
             this.TrafficNumberTextBox.Flags = 0;
-            this.TrafficNumberTextBox.Location = new System.Drawing.Point(812, 22);
+            this.TrafficNumberTextBox.Location = new System.Drawing.Point(893, 26);
+            this.TrafficNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TrafficNumberTextBox.MaxDecimalPlaces = 4;
             this.TrafficNumberTextBox.MaxWholeDigits = 150;
             this.TrafficNumberTextBox.Name = "TrafficNumberTextBox";
             this.TrafficNumberTextBox.Prefix = "";
             this.TrafficNumberTextBox.RangeMax = 0D;
             this.TrafficNumberTextBox.RangeMin = 0D;
-            this.TrafficNumberTextBox.Size = new System.Drawing.Size(124, 30);
+            this.TrafficNumberTextBox.Size = new System.Drawing.Size(136, 35);
             this.TrafficNumberTextBox.TabIndex = 9;
-            this.TrafficNumberTextBox.TextChanged += new System.EventHandler(this.TrafficNumberTextBox_TextChanged);
             this.TrafficNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TrafficNumberTextBox_KeyDown);
             // 
             // TurnNumberTextBox
@@ -537,23 +572,24 @@ namespace HPS.Present.LadBillCredit
             this.TurnNumberTextBox.AllowNegative = true;
             this.TurnNumberTextBox.DigitsInGroup = 0;
             this.TurnNumberTextBox.Flags = 0;
-            this.TurnNumberTextBox.Location = new System.Drawing.Point(534, 22);
+            this.TurnNumberTextBox.Location = new System.Drawing.Point(587, 26);
+            this.TurnNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TurnNumberTextBox.MaxDecimalPlaces = 4;
             this.TurnNumberTextBox.MaxWholeDigits = 150;
             this.TurnNumberTextBox.Name = "TurnNumberTextBox";
             this.TurnNumberTextBox.Prefix = "";
             this.TurnNumberTextBox.RangeMax = 0D;
             this.TurnNumberTextBox.RangeMin = 0D;
-            this.TurnNumberTextBox.Size = new System.Drawing.Size(124, 30);
+            this.TurnNumberTextBox.Size = new System.Drawing.Size(136, 35);
             this.TurnNumberTextBox.TabIndex = 10;
             this.TurnNumberTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TurnNumberTextBox_KeyDown);
             // 
             // NumberPlateTextBox
             // 
-            this.NumberPlateTextBox.Location = new System.Drawing.Point(299, 22);
-            this.NumberPlateTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.NumberPlateTextBox.Location = new System.Drawing.Point(329, 26);
+            this.NumberPlateTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.NumberPlateTextBox.Name = "NumberPlateTextBox";
-            this.NumberPlateTextBox.Size = new System.Drawing.Size(133, 30);
+            this.NumberPlateTextBox.Size = new System.Drawing.Size(146, 35);
             this.NumberPlateTextBox.TabIndex = 11;
             this.NumberPlateTextBox.Visible = false;
             this.NumberPlateTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NumberPlateTextBox_KeyDown);
@@ -561,10 +597,10 @@ namespace HPS.Present.LadBillCredit
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(124, 27);
-            this.label12.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label12.Location = new System.Drawing.Point(136, 32);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 23);
+            this.label12.Size = new System.Drawing.Size(117, 29);
             this.label12.TabIndex = 16;
             this.label12.Text = "تاریخ تأیید نوبت";
             this.label12.Visible = false;
@@ -572,10 +608,10 @@ namespace HPS.Present.LadBillCredit
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(439, 26);
-            this.label11.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label11.Location = new System.Drawing.Point(483, 31);
+            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 23);
+            this.label11.Size = new System.Drawing.Size(88, 29);
             this.label11.TabIndex = 15;
             this.label11.Text = "شماره پلاک";
             this.label11.Visible = false;
@@ -583,21 +619,21 @@ namespace HPS.Present.LadBillCredit
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(943, 26);
-            this.label10.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label10.Location = new System.Drawing.Point(1037, 31);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 23);
+            this.label10.Size = new System.Drawing.Size(89, 29);
             this.label10.TabIndex = 5;
             this.label10.Text = "شماره قبض";
             // 
             // TurnDateTextBox
             // 
-            this.TurnDateTextBox.Location = new System.Drawing.Point(24, 23);
-            this.TurnDateTextBox.Margin = new System.Windows.Forms.Padding(5);
+            this.TurnDateTextBox.Location = new System.Drawing.Point(26, 27);
+            this.TurnDateTextBox.Margin = new System.Windows.Forms.Padding(6);
             this.TurnDateTextBox.Mask = "0000/00/00";
             this.TurnDateTextBox.Name = "TurnDateTextBox";
             this.TurnDateTextBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TurnDateTextBox.Size = new System.Drawing.Size(93, 30);
+            this.TurnDateTextBox.Size = new System.Drawing.Size(102, 35);
             this.TurnDateTextBox.TabIndex = 13;
             this.TurnDateTextBox.Visible = false;
             this.TurnDateTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TurnDateTextBox_KeyDown);
@@ -616,32 +652,32 @@ namespace HPS.Present.LadBillCredit
             this.AcceptedTurnGridView.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.AcceptedTurnGridView.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold);
             this.AcceptedTurnGridView.GroupByBoxVisible = false;
-            this.AcceptedTurnGridView.Location = new System.Drawing.Point(5, 71);
-            this.AcceptedTurnGridView.Margin = new System.Windows.Forms.Padding(5);
+            this.AcceptedTurnGridView.Location = new System.Drawing.Point(6, 84);
+            this.AcceptedTurnGridView.Margin = new System.Windows.Forms.Padding(6);
             this.AcceptedTurnGridView.Name = "AcceptedTurnGridView";
-            this.AcceptedTurnGridView.Size = new System.Drawing.Size(1010, 151);
+            this.AcceptedTurnGridView.Size = new System.Drawing.Size(1110, 177);
             this.AcceptedTurnGridView.TabIndex = 13;
             this.AcceptedTurnGridView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AcceptedTurnGridView_KeyDown);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(661, 26);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Location = new System.Drawing.Point(727, 31);
+            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(122, 23);
+            this.label9.Size = new System.Drawing.Size(154, 29);
             this.label9.TabIndex = 5;
             this.label9.Text = "شماره نوبت تأیید شده";
             // 
             // LadBillCreditListForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1020, 718);
+            this.ClientSize = new System.Drawing.Size(1122, 843);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(17, 16, 17, 16);
+            this.Margin = new System.Windows.Forms.Padding(19);
             this.Name = "LadBillCreditListForm";
             this.Text = "اختصاص مجوز بارگیری";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

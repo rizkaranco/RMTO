@@ -327,7 +327,8 @@
         "Stimulsoft.Base.Dll",
         "Stimulsoft.Report.Dll"};
             this.AllInfoByDatestiReport.ReportAlias = "Report";
-            this.AllInfoByDatestiReport.ReportGuid = "558cbdfe3e9c433e9688caad008b5094";
+            this.AllInfoByDatestiReport.ReportGuid = "5158b8838ae440d2a9e7de27202a3bb9";
+            this.AllInfoByDatestiReport.ReportImage = null;
             this.AllInfoByDatestiReport.ReportName = "Report";
             this.AllInfoByDatestiReport.ReportSource = resources.GetString("AllInfoByDatestiReport.ReportSource");
             this.AllInfoByDatestiReport.ReportUnit = Stimulsoft.Report.StiReportUnitType.Centimeters;
@@ -349,6 +350,7 @@
         "Stimulsoft.Report.Dll"};
             this.AllInInfoByDateChartReportstiReport.ReportAlias = "Report";
             this.AllInInfoByDateChartReportstiReport.ReportGuid = "f2eabceb4c5442409826b08f0e3e5754";
+            this.AllInInfoByDateChartReportstiReport.ReportImage = null;
             this.AllInInfoByDateChartReportstiReport.ReportName = "Report";
             this.AllInInfoByDateChartReportstiReport.ReportSource = resources.GetString("AllInInfoByDateChartReportstiReport.ReportSource");
             this.AllInInfoByDateChartReportstiReport.ReportUnit = Stimulsoft.Report.StiReportUnitType.Inches;

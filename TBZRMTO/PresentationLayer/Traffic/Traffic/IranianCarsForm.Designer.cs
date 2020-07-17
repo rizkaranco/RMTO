@@ -595,7 +595,7 @@ namespace HPS.Present.Traffic
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.Location = new System.Drawing.Point(552, 84);
+            this.label5.Location = new System.Drawing.Point(549, 115);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 23);
             this.label5.TabIndex = 7;
@@ -605,7 +605,7 @@ namespace HPS.Present.Traffic
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.Location = new System.Drawing.Point(552, 117);
+            this.label4.Location = new System.Drawing.Point(548, 49);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 23);
             this.label4.TabIndex = 11;
@@ -645,7 +645,7 @@ namespace HPS.Present.Traffic
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label3.Location = new System.Drawing.Point(552, 50);
+            this.label3.Location = new System.Drawing.Point(548, 81);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 23);
             this.label3.TabIndex = 3;
@@ -756,7 +756,7 @@ namespace HPS.Present.Traffic
             // DriverCardDate_nvcTextBox
             // 
             this.DriverCardDate_nvcTextBox.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold);
-            this.DriverCardDate_nvcTextBox.Location = new System.Drawing.Point(347, 80);
+            this.DriverCardDate_nvcTextBox.Location = new System.Drawing.Point(344, 111);
             this.DriverCardDate_nvcTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.DriverCardDate_nvcTextBox.Mask = "0000/00/00";
             this.DriverCardDate_nvcTextBox.Name = "DriverCardDate_nvcTextBox";
@@ -862,7 +862,7 @@ namespace HPS.Present.Traffic
             this.NationalCode_intNumericTextBox.DigitsInGroup = 0;
             this.NationalCode_intNumericTextBox.Flags = 0;
             this.NationalCode_intNumericTextBox.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.NationalCode_intNumericTextBox.Location = new System.Drawing.Point(348, 113);
+            this.NationalCode_intNumericTextBox.Location = new System.Drawing.Point(344, 45);
             this.NationalCode_intNumericTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.NationalCode_intNumericTextBox.MaxDecimalPlaces = 0;
             this.NationalCode_intNumericTextBox.MaxWholeDigits = 15;
@@ -874,6 +874,7 @@ namespace HPS.Present.Traffic
             this.NationalCode_intNumericTextBox.Size = new System.Drawing.Size(202, 30);
             this.NationalCode_intNumericTextBox.TabIndex = 3;
             this.NationalCode_intNumericTextBox.Tag = "كد ملي";
+            this.NationalCode_intNumericTextBox.Leave += new System.EventHandler(this.NationalCode_intNumericTextBox_Leave);
             // 
             // DriverCardNumber_bintNumericTextBox
             // 
@@ -881,7 +882,7 @@ namespace HPS.Present.Traffic
             this.DriverCardNumber_bintNumericTextBox.DigitsInGroup = 0;
             this.DriverCardNumber_bintNumericTextBox.Flags = 0;
             this.DriverCardNumber_bintNumericTextBox.Font = new System.Drawing.Font("B Mitra", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.DriverCardNumber_bintNumericTextBox.Location = new System.Drawing.Point(348, 47);
+            this.DriverCardNumber_bintNumericTextBox.Location = new System.Drawing.Point(344, 78);
             this.DriverCardNumber_bintNumericTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.DriverCardNumber_bintNumericTextBox.MaxDecimalPlaces = 0;
             this.DriverCardNumber_bintNumericTextBox.MaxWholeDigits = 15;
@@ -1423,7 +1424,7 @@ namespace HPS.Present.Traffic
             this.axVLCPlugin21.Location = new System.Drawing.Point(5, 52);
             this.axVLCPlugin21.Name = "axVLCPlugin21";
             this.axVLCPlugin21.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axVLCPlugin21.OcxState")));
-            this.axVLCPlugin21.Size = new System.Drawing.Size(252, 225);
+            this.axVLCPlugin21.Size = new System.Drawing.Size(244, 216);
             this.axVLCPlugin21.TabIndex = 96;
             // 
             // CameraGroupBox
@@ -1468,7 +1469,7 @@ namespace HPS.Present.Traffic
             this.axVLCPlugin22.Location = new System.Drawing.Point(5, 52);
             this.axVLCPlugin22.Name = "axVLCPlugin22";
             this.axVLCPlugin22.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axVLCPlugin22.OcxState")));
-            this.axVLCPlugin22.Size = new System.Drawing.Size(252, 224);
+            this.axVLCPlugin22.Size = new System.Drawing.Size(244, 216);
             this.axVLCPlugin22.TabIndex = 98;
             // 
             // IranianCarsForm

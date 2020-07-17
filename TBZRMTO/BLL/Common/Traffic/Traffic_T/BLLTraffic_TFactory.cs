@@ -923,11 +923,11 @@ namespace HPS.BLL.TrafficBLL
                 Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
             }
         }
-        public void SelectDuplicateTurnByDrivers(DataTable dataTable, string DriverCardNumber)
+        public void SelectDuplicateTurnByDrivers(DataTable dataTable, string NationCode)
         {
             try
             {
-                _dataObject.SelectDuplicateTurnByDrivers(dataTable,DriverCardNumber);
+                _dataObject.SelectDuplicateTurnByDrivers(dataTable, NationCode);
             }
             catch (System.Exception ex)
             {

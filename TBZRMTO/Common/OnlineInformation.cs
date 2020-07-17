@@ -21,9 +21,7 @@ namespace HPS.Common
                     return true;
                 }
             }
-
             return false;
-
         }
         public Func<string, double, string, string, string, string, string, string, string, string, string, string, string, string> RMTO_WEB_SERVICES
         {
@@ -32,7 +30,6 @@ namespace HPS.Common
                 if (HasInternet())
                 {
                     return new OnlineReference.PKG_RMTO_WSService().RMTO_WEB_SERVICES;
-
                 }
                 else
                 {
@@ -134,14 +131,19 @@ namespace HPS.Common
             return returnList.ToArray();
         }
 
-        public List<object> GetDriverInformation(string driverCardNumber)
+        public List<object> GetDriverInformation(string NationCode)
         {
             var returnList = new List<object>();
 
             //authentication();
             try
             {
-                string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 41, "3098791", "", "", "", "", "", "", "", "", "", driverCardNumber);
+                //TODO: test for getting data with Nationcode
+                //NationCode = "6239593397";
+                //string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 3, "3098791", "", "", "", "", "", "", "", "", "", testNationCod);
+
+
+                string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 3, "3098791", "", "", "", "", "", "", "", "", "", NationCode);
                 string[] driverinfosplited = driverinfo.Split(';');
                 if (driverinfosplited[0] == "-1")
                 {
@@ -185,11 +187,11 @@ namespace HPS.Common
                 return returnList;
             }
         }
-        public object[] GetInformation(string driverCardNumber, string carCardNumber)
+        public object[] GetInformation(string NationCode, string carCardNumber)
         {
             var returnList = new List<object>();
             //authentication();
-            string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 41, "3098791", "", "", "", "", "", "", "", "", "", driverCardNumber);
+            string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 3, "3098791", "", "", "", "", "", "", "", "", "", NationCode);
             string[] driverinfosplited = driverinfo.Split(';');
             var driverList = new List<object>();
             //0-name

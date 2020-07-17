@@ -141,9 +141,11 @@ namespace HPS.Reports.Forms
                 List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllBy(HPS.BLL.TrafficBLL.BLLTraffic_T.Traffic_TField.TrafficNumber_bint, this.TrafficGridView.CurrentRow.Cells["colTrafficNumber_bint"].Value);
                 if (TrafficList.Count > 0 && TrafficList != null)
                 {
+
                     foreach (HPS.BLL.TrafficBLL.BLLTraffic_T item in TrafficList)
                     {
-                        if (item.Out_bit == true)
+                        //TODO: برای مدیر سیستم چاپ مجدد فعال است
+                        if (item.Out_bit == true && HPS.Common.CurrentUser.user.UserGroupID_int != 1)
                         {
 
                             Hepsa.Core.Common.MessageBox.InformationMessage("این خودرو خارج شده است");
@@ -152,7 +154,8 @@ namespace HPS.Reports.Forms
                         }
                     }
 
-                    if (TrafficList.Count == 2)
+                    //TODO: برای مدیر سیستم چاپ مجدد فعال است
+                    if (TrafficList.Count == 2 && HPS.Common.CurrentUser.user.UserGroupID_int != 1)
                     {
                         return;
                     }

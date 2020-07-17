@@ -264,7 +264,7 @@ namespace HPS.Present.TurnManagement
 
             var DriverSpecificationFactory = new BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
             var DriverSpecificationTable = new DataTable();
-            DriverSpecificationFactory.GetAllByCondition(string.Format(" DriverSpecification_T.DriverCardNumber_nvc='{0}' ", DriverCardNumber_bintNumericTextBox.Text), ref DriverSpecificationTable);
+            DriverSpecificationFactory.GetAllByCondition(string.Format(" DriverSpecification_T.NationalCode_int='{0}' ", NationalCode_intNumericTextBox.Text), ref DriverSpecificationTable);
             if (DriverSpecificationTable == null || DriverSpecificationTable.Rows.Count == 0)
             {
                 DateEroorList.Add("کنترل مدارک راننده ثبت نشده است" + "\n");
@@ -432,7 +432,7 @@ namespace HPS.Present.TurnManagement
 
         }
 
-        private void DriverCardNumber_bintNumericTextBox_Leave(object sender, EventArgs e)
+        private void NationalCode_intNumericTextBox_Leave(object sender, EventArgs e)
         {
             string DriverCondition = string.Empty;
             HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
@@ -454,6 +454,29 @@ namespace HPS.Present.TurnManagement
             }
             //}
         }
+
+        //private void DriverCardNumber_bintNumericTextBox_Leave(object sender, EventArgs e)
+        //{
+        //    string DriverCondition = string.Empty;
+        //    HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
+        //    DriverList = new List<HPS.BLL.DriverBLL.BLLDriver_T>();
+        //    //if (this._CardReading)
+        //    //    return;
+        //    //if (WithoutCardcheckBox.Checked == false)
+        //    //{
+        //    string TurnNumberCondition = string.Empty;
+        //    try
+        //    {
+        //        CheckOnlineCardNumber();
+        //        LoadWithDriverCardNumber();
+        //        LoadWithCarCardNumber();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
+        //    }
+        //    //}
+        //}
 
         private void DriverCardReadingButton_Click(object sender, EventArgs e)
         {
@@ -534,69 +557,69 @@ namespace HPS.Present.TurnManagement
             Mobile_nvcnumericTextBox.Text = string.Empty;
         }
 
-        private void FillDriver()
-        {
-            try
-            {
-                string DriverCondition = string.Empty;
-                HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
-                DriverList = new List<HPS.BLL.DriverBLL.BLLDriver_T>();
-                DriverCondition = "([Driver_T].[DriverCardNumber_nvc]='" + DriverCardNumber_bintNumericTextBox.Text + "') ";
-                DriverList = DriverFactory.GetAllByCondition(DriverCondition);
+        //private void FillDriver()
+        //{
+        //    try
+        //    {
+        //        string DriverCondition = string.Empty;
+        //        HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
+        //        DriverList = new List<HPS.BLL.DriverBLL.BLLDriver_T>();
+        //        DriverCondition = "([Driver_T].[NationalCode_int]='" + NationalCode_intNumericTextBox.Text + "') ";
+        //        DriverList = DriverFactory.GetAllByCondition(DriverCondition);
 
-                if (DriverList.Count == 1)
-                {
-                    DriverFields();
-                }
-                else
-                {
+        //        if (DriverList.Count == 1)
+        //        {
+        //            DriverFields();
+        //        }
+        //        else
+        //        {
 
-                    HPS.Present.SearchForm.DriverSearch frm = new HPS.Present.SearchForm.DriverSearch();
-                    DriverList.Clear();
-                    if (frm.ShowDialog() != DialogResult.Cancel)
-                    {
+        //            HPS.Present.SearchForm.DriverSearch frm = new HPS.Present.SearchForm.DriverSearch();
+        //            DriverList.Clear();
+        //            if (frm.ShowDialog() != DialogResult.Cancel)
+        //            {
 
-                        DriverList.Add(frm.SelectedDriver);
-                        DriverFields();
-                    }
-                    else
-                    {
-                        ClearForm();
-                    }
-                }
+        //                DriverList.Add(frm.SelectedDriver);
+        //                DriverFields();
+        //            }
+        //            else
+        //            {
+        //                ClearForm();
+        //            }
+        //        }
 
-                if (DriverCardNumber_bintNumericTextBox.Text != "" && DriverList.Count == 0)
-                {
-                    HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
-                    string tCondition = "([Traffic_T].[DriverCardNumber_bint]='" + DriverCardNumber_bintNumericTextBox.Text + "') AND ([Traffic_T].[In_bit]='true')";
-                    List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllByCondition(tCondition);
-                    if (TrafficList != null && TrafficList.Count > 0)
-                    {
-                        DriverCardNumber_bintNumericTextBox.Text = TrafficList[TrafficList.Count - 1].DriverCardNumber_nvc;
-                        DriverCardDate_nvcTextBox.Text = TrafficList[TrafficList.Count - 1].DriverCardDate_nvc;
-                        NationalCode_intNumericTextBox.Text = Convert.ToString(TrafficList[TrafficList.Count - 1].NationalCode_int);
-                        //licenceNumber_intNumericTextBox.Text = Convert.ToString(TrafficList[TrafficList.Count - 1].licenceNumber_int);
-                        DriverType_nvc.Text = TrafficList[TrafficList.Count - 1].DriverType_nvc;
-                        FirstName_nvcTextBox.Text = TrafficList[TrafficList.Count - 1].FirstName_nvc;
-                        LastName_nvcTextBox.Text = TrafficList[TrafficList.Count - 1].LastName_nvc;
+        //        if (NationalCode_intNumericTextBox.Text != "" && DriverList.Count == 0)
+        //        {
+        //            HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
+        //            string tCondition = "([Traffic_T].[NationalCode_int]='" + NationalCode_intNumericTextBox.Text + "') AND ([Traffic_T].[In_bit]='true')";
+        //            List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllByCondition(tCondition);
+        //            if (TrafficList != null && TrafficList.Count > 0)
+        //            {
+        //                DriverCardNumber_bintNumericTextBox.Text = TrafficList[TrafficList.Count - 1].DriverCardNumber_nvc;
+        //                DriverCardDate_nvcTextBox.Text = TrafficList[TrafficList.Count - 1].DriverCardDate_nvc;
+        //                NationalCode_intNumericTextBox.Text = Convert.ToString(TrafficList[TrafficList.Count - 1].NationalCode_int);
+        //                //licenceNumber_intNumericTextBox.Text = Convert.ToString(TrafficList[TrafficList.Count - 1].licenceNumber_int);
+        //                DriverType_nvc.Text = TrafficList[TrafficList.Count - 1].DriverType_nvc;
+        //                FirstName_nvcTextBox.Text = TrafficList[TrafficList.Count - 1].FirstName_nvc;
+        //                LastName_nvcTextBox.Text = TrafficList[TrafficList.Count - 1].LastName_nvc;
 
-                    }
-                    else
-                    {
-                        Hepsa.Core.Common.MessageBox.ErrorMessage(string.Format(HPS.Exceptions.ExceptionCs.RecordNotFound, "راننده با مشخصات"));
-                        DriverCardNumber_bintNumericTextBox.Focus();
-                    }
-                }
+        //            }
+        //            else
+        //            {
+        //                Hepsa.Core.Common.MessageBox.ErrorMessage(string.Format(HPS.Exceptions.ExceptionCs.RecordNotFound, "راننده با مشخصات"));
+        //                NationalCode_intNumericTextBox.Focus();
+        //            }
+        //        }
 
 
 
-            }
-            catch (Exception ex)
-            {
-                Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
-            }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
+        //    }
 
-        }
+        //}
 
         private void DriverFields()
         {
@@ -645,7 +668,7 @@ namespace HPS.Present.TurnManagement
             }
             if (WithoutCardcheckBox.Checked == true)
             {
-                DriverCardNumber_bintNumericTextBox.Enabled = false;
+                NationalCode_intNumericTextBox.Enabled = false;
                 DriverCardDate_nvcTextBox.Enabled = false;
                 NationalCode_intNumericTextBox.Focus();
                 NationalCode_intNumericTextBox.Enabled = true;
@@ -659,14 +682,14 @@ namespace HPS.Present.TurnManagement
             }
             else if (WithoutCardcheckBox.Checked == false)
             {
-                DriverCardNumber_bintNumericTextBox.Enabled = true;
+                NationalCode_intNumericTextBox.Enabled = true;
                 DriverCardDate_nvcTextBox.Enabled = false;
                 NationalCode_intNumericTextBox.Enabled = false;
                 licenceNumber_intNumericTextBox.Enabled = false;
                 DriverType_nvc.Enabled = false;
                 FirstName_nvcTextBox.Enabled = false;
                 LastName_nvcTextBox.Enabled = false;
-                DriverCardNumber_bintNumericTextBox.Focus();
+                NationalCode_intNumericTextBox.Focus();
                 ClearDriver();
             }
         }
@@ -891,7 +914,7 @@ namespace HPS.Present.TurnManagement
             string DriverCondition = string.Empty;
             HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
             DriverList = new List<HPS.BLL.DriverBLL.BLLDriver_T>();
-            DriverCondition = "[Driver_T].[DriverCardNumber_nvc]= '" + DriverCardNumber_bintNumericTextBox.Text + "'";
+            DriverCondition = "[Driver_T].[NationalCode_int]= '" + NationalCode_intNumericTextBox.Text + "'";
             DriverList = DriverFactory.GetAllByCondition(DriverCondition);
 
 
@@ -901,7 +924,7 @@ namespace HPS.Present.TurnManagement
             }
             DriverOffline_bit = true;
             CarOffline_bit = true;
-            if (string.IsNullOrEmpty(DriverCardNumber_bintNumericTextBox.Text) || string.IsNullOrEmpty(DriverCardDate_nvcTextBox.Text) || string.IsNullOrEmpty(Mobile_nvcnumericTextBox.Text) || string.IsNullOrEmpty(FirstName_nvcTextBox.Text) || string.IsNullOrEmpty(LastName_nvcTextBox.Text) || string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
+            if (string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text) || string.IsNullOrEmpty(DriverCardDate_nvcTextBox.Text) || string.IsNullOrEmpty(Mobile_nvcnumericTextBox.Text) || string.IsNullOrEmpty(FirstName_nvcTextBox.Text) || string.IsNullOrEmpty(LastName_nvcTextBox.Text) || string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
             {
 
                 if (DriverList != null && DriverList.Count > 0)
@@ -1141,10 +1164,10 @@ namespace HPS.Present.TurnManagement
 
         private void LoadWithDriverCardNumber()
         {
-            if (!string.IsNullOrEmpty(DriverCardNumber_bintNumericTextBox.Text))
+            if (!string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
             {
                 HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory DriverSpecificationFactory = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
-                List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.DriverCardNumber_nvc, DriverCardNumber_bintNumericTextBox.Text);
+                List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.NationalCode_int, NationalCode_intNumericTextBox.Text);
                 if (DriverSpecificationList != null && DriverSpecificationList.Count > 0)
                 {
                     _DriverSpecificationID = DriverSpecificationList[0].DriverSpecificationID_int;
@@ -1159,7 +1182,7 @@ namespace HPS.Present.TurnManagement
                 }
             }
             else
-                throw new ApplicationException("شماره کارت راننده وارد نشده است");
+                throw new ApplicationException("کدملی راننده وارد نشده است");
         }
 
         private void LoadWithCarCardNumber()
@@ -1216,7 +1239,7 @@ namespace HPS.Present.TurnManagement
             string TurnNumberCondition = string.Empty;
             try
             {
-                if (!string.IsNullOrEmpty(DriverCardNumber_bintNumericTextBox.Text))
+                if (!string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
                 {
 
                     DriverOffline_bit = false;
@@ -1318,7 +1341,7 @@ namespace HPS.Present.TurnManagement
                 //var webService = new CheckOnlineRefrence.OnlineInformationChecking();
                 var webService = new HPS.Common.OnlineInformation();
                 //var webService = new WebReference3.OnlineInformationChecking();
-                var RecivedObject = webService.GetInformation(DriverCardNumber_bintNumericTextBox.Text, CarCardNumber_nvcTextBox.Text);
+                var RecivedObject = webService.GetInformation(NationalCode_intNumericTextBox.Text, CarCardNumber_nvcTextBox.Text);
                 if (RecivedObject != null)
                 {
                     driverObject = (List<object>)RecivedObject[0];
@@ -1329,7 +1352,7 @@ namespace HPS.Present.TurnManagement
                 {
                     if (driverObject[8].ToString() == "0")
                     {
-                        ErroeMessage = string.Format("کارت هوشمند راننده به شماره <{0}>وارد شده در سیستم استعلام کارت هوشمند غیر فعال می باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", DriverCardNumber_bintNumericTextBox.Text);
+                        ErroeMessage = string.Format("کدملی راننده به شماره <{0}>وارد شده در سیستم استعلام کدملی غیر فعال می باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", NationalCode_intNumericTextBox.Text);
                         Hepsa.Core.Common.MessageBox.ErrorMessage(ErroeMessage);
                         ChechActiveDriver = false;
                         return;
@@ -1366,7 +1389,7 @@ namespace HPS.Present.TurnManagement
                 else
                 {
                     ////Information Not exist
-                    ErroeMessage = string.Format("کارت هوشمند راننده به شماره <{0}>وارد شده در سیستم استعلام کارت هوشمند موجود نمی باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", DriverCardNumber_bintNumericTextBox.Text);
+                    ErroeMessage = string.Format("کدملی راننده به شماره <{0}>وارد شده در سیستم استعلام کدملی موجود نمی باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", NationalCode_intNumericTextBox.Text);
                     Hepsa.Core.Common.MessageBox.ErrorMessage(ErroeMessage);
                     ChechActiveCare = false;
                     return;
@@ -1447,7 +1470,7 @@ namespace HPS.Present.TurnManagement
             List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = null;
             HPS.BLL.SettingsBLL.BLLSetting_T SettingEntity = new HPS.BLL.SettingsBLL.BLLSetting_T();
 
-            if (string.IsNullOrEmpty(DriverCardNumber_bintNumericTextBox.Text))
+            if (string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
             {
                 throw new ApplicationException("شماره کارت هوشمند راننده وارد نشده است");
 
@@ -1476,7 +1499,7 @@ namespace HPS.Present.TurnManagement
                 return;
             }
 
-            string driverSpecificationCondition = string.Format("DriverSpecification_T.DriverCardNumber_nvc='{0}' OR DriverSpecification_T.NationalCode_int={1} ", !string.IsNullOrEmpty(DriverCardNumber_bintNumericTextBox.NumericText) ? DriverCardNumber_bintNumericTextBox.NumericText : "", NationalCode_intNumericTextBox.NumericText);
+            string driverSpecificationCondition = string.Format("DriverSpecification_T.NationalCode_int={0} ", NationalCode_intNumericTextBox.Text);
             var driverSpecificationFactory = new BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
             var driverSpecificationTable = new DataTable();
             driverSpecificationFactory.GetAllByCondition(driverSpecificationCondition, ref driverSpecificationTable);
@@ -2178,6 +2201,8 @@ namespace HPS.Present.TurnManagement
                 throw new ApplicationException("مدت زمان مجاز تأیید نوبت گذشته است لطفا به مسئول مربوطه مراجعه شود");
             }
         }
+
+  
     }
 }
 

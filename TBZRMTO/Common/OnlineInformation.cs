@@ -131,11 +131,23 @@ namespace HPS.Common
             return returnList.ToArray();
         }
 
+        private string FormatNationCode(string input)
+        {
+            string FormatednationCode = "";
+            for (int i = 0; i < 10 - input.Length; i++)
+            {
+                FormatednationCode += "0";
+            }
+            return FormatednationCode + input;
+        }
+
         public List<object> GetDriverInformation(string NationCode)
         {
             var returnList = new List<object>();
+            NationCode = FormatNationCode(NationCode);
 
             //authentication();
+
             try
             {
                 //TODO: test for getting data with Nationcode

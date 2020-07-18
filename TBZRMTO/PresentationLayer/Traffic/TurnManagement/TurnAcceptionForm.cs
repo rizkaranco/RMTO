@@ -1352,7 +1352,7 @@ namespace HPS.Present.TurnManagement
                 {
                     if (driverObject[8].ToString() == "0")
                     {
-                        ErroeMessage = string.Format("کدملی راننده به شماره <{0}>وارد شده در سیستم استعلام کدملی غیر فعال می باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", NationalCode_intNumericTextBox.Text);
+                        ErroeMessage = string.Format("کدملی راننده به شماره <{0}>وارد شده در سیستم استعلام کدملی غیر فعال می باشد. ", NationalCode_intNumericTextBox.Text);
                         Hepsa.Core.Common.MessageBox.ErrorMessage(ErroeMessage);
                         ChechActiveDriver = false;
                         return;
@@ -1389,7 +1389,7 @@ namespace HPS.Present.TurnManagement
                 else
                 {
                     ////Information Not exist
-                    ErroeMessage = string.Format("کدملی راننده به شماره <{0}>وارد شده در سیستم استعلام کدملی موجود نمی باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", NationalCode_intNumericTextBox.Text);
+                    ErroeMessage = string.Format("کدملی راننده به شماره <{0}>وارد شده در سیستم استعلام کدملی موجود نمی باشد. ", NationalCode_intNumericTextBox.Text);
                     Hepsa.Core.Common.MessageBox.ErrorMessage(ErroeMessage);
                     ChechActiveCare = false;
                     return;
@@ -1402,7 +1402,7 @@ namespace HPS.Present.TurnManagement
 
                     if (carObject[0].ToString() == "0")
                     {
-                        ErroeMessage = string.Format("کارت هوشمند ناوگان به شماره <{0}> وارد شده در سیستم استعلام کارت هوشمند غیر فعال می باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", CarCardNumber_nvcTextBox.Text);
+                        ErroeMessage = string.Format("کارت هوشمند ناوگان به شماره <{0}> وارد شده در سیستم استعلام کارت هوشمند غیر فعال می باشد. ", CarCardNumber_nvcTextBox.Text);
                         Hepsa.Core.Common.MessageBox.ErrorMessage(ErroeMessage);
                         ChechActiveDriver = false;
                         return;
@@ -1419,7 +1419,7 @@ namespace HPS.Present.TurnManagement
                 else
                 {
                     /////Information not Exist
-                    ErroeMessage = string.Format("کارت هوشمند ناوگان به شماره <{0}> وارد شده در سیستم استعلام کارت هوشمند موجود نمی باشد. جهت رفع مشکل به مسئول مربوطه مراجعه نمایید ", CarCardNumber_nvcTextBox.Text);
+                    ErroeMessage = string.Format("کارت هوشمند ناوگان به شماره <{0}> وارد شده در سیستم استعلام کارت هوشمند موجود نمی باشد. ", CarCardNumber_nvcTextBox.Text);
                     Hepsa.Core.Common.MessageBox.ErrorMessage(ErroeMessage);
                     return;
                 }
@@ -2198,7 +2198,7 @@ namespace HPS.Present.TurnManagement
             }
             else
             {
-                throw new ApplicationException("مدت زمان مجاز تأیید نوبت گذشته است لطفا به مسئول مربوطه مراجعه شود");
+                throw new ApplicationException("مدت زمان مجاز تأیید نوبت گذشته است ");
             }
         }
 

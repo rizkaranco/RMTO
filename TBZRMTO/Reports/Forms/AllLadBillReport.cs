@@ -146,6 +146,12 @@ namespace HPS.Reports.Forms
         {
             try
             {
+                bool isCanceldedLadBill = (bool)LadBillWithTrafficGridView.CurrentRow.Cells["colCanceled_bit"].Value;
+               
+                if (isCanceldedLadBill && HPS.Common.CurrentUser.user.UserGroupID_int != 1)
+                {
+                    throw new ApplicationException("این مجوز باطل شده و امکان چاپ ندارد");
+                }
                 HPS.Reports.Forms.StimulViewer frm = new StimulViewer(1, (Int32)this.LadBillWithTrafficGridView.CurrentRow.Cells["LadBillCreditID_int"].Value);
                 frm.ShowDialog();
                 //stiViewerControl1.Document = rpt.Document;

@@ -529,9 +529,9 @@ namespace HPS.Reports.Forms
                     {
                         TrafficCondition = string.Format(" ([TrafficTypeID_int]=1) AND CarCardNumber_nvc='{0}'", carCardNumberTextBox.Text);
                     }
-                    if (!string.IsNullOrEmpty(driverCardNumberTextBox.Text))
+                    if (!string.IsNullOrEmpty(driverNationalCodeTextBox.Text))
                     {
-                        TrafficCondition = string.Format(" ([TrafficTypeID_int]=1) AND DriverCardNumber_nvc='{0}'", driverCardNumberTextBox.Text);
+                        TrafficCondition = string.Format(" ([TrafficTypeID_int]=1) AND NationalCode_int='{0}'", driverNationalCodeTextBox.Text);
                     }
 
                     CarTrafficDatatable = new DataTable();
@@ -647,7 +647,7 @@ namespace HPS.Reports.Forms
                     NumberPlate_nvcTextBox.Text = string.Empty;
                     SerialPlate_nvcTextBox.Text = string.Empty;
                     lastNameTextBox.Text = string.Empty;
-                    driverCardNumberTextBox.Text = string.Empty;
+                    driverNationalCodeTextBox.Text = string.Empty;
                     carCardNumberTextBox.Text = string.Empty;
 
                     Search();
@@ -855,7 +855,7 @@ namespace HPS.Reports.Forms
                     FromDatefaDatePicker.ResetSelectedDateTime();
                     ToDatefaDatePicker.ResetSelectedDateTime();
                     lastNameTextBox.Text = string.Empty;
-                    driverCardNumberTextBox.Text = string.Empty;
+                    driverNationalCodeTextBox.Text = string.Empty;
                     carCardNumberTextBox.Text = string.Empty;
                     Search();
                 }
@@ -872,7 +872,7 @@ namespace HPS.Reports.Forms
                     FromDatefaDatePicker.ResetSelectedDateTime();
                     ToDatefaDatePicker.ResetSelectedDateTime();
                     lastNameTextBox.Text = string.Empty;
-                    driverCardNumberTextBox.Text = string.Empty;
+                    driverNationalCodeTextBox.Text = string.Empty;
                     carCardNumberTextBox.Text = string.Empty;
 
                     Search();
@@ -884,7 +884,7 @@ namespace HPS.Reports.Forms
                     FromDatefaDatePicker.ResetSelectedDateTime();
                     ToDatefaDatePicker.ResetSelectedDateTime();
                     lastNameTextBox.Text = string.Empty;
-                    driverCardNumberTextBox.Text = string.Empty;
+                    driverNationalCodeTextBox.Text = string.Empty;
                     carCardNumberTextBox.Text = string.Empty;
 
                     Search();
@@ -896,15 +896,15 @@ namespace HPS.Reports.Forms
                     SerialPlate_nvcTextBox.Text = string.Empty;
                     FromDatefaDatePicker.ResetSelectedDateTime();
                     ToDatefaDatePicker.ResetSelectedDateTime();
-                    driverCardNumberTextBox.Text = string.Empty;
+                    driverNationalCodeTextBox.Text = string.Empty;
                     carCardNumberTextBox.Text = string.Empty;
 
                     Search();
                 }
-                else if (!string.IsNullOrEmpty(driverCardNumberTextBox.Text))
+                else if (!string.IsNullOrEmpty(driverNationalCodeTextBox.Text))
                 {
                     Hepsa.Core.Validation.NumericRule<Int64> NumericValidator = new Hepsa.Core.Validation.NumericRule<Int64>("TrafficNumberRule", "شماره کارت ناوگان", 1, null, null, 0);
-                    if (NumericValidator.Validate(driverCardNumberTextBox.Text) == false)
+                    if (NumericValidator.Validate(driverNationalCodeTextBox.Text) == false)
                     {
                         throw new ApplicationException(NumericValidator.Description);
                     }
@@ -931,7 +931,7 @@ namespace HPS.Reports.Forms
                     FromDatefaDatePicker.ResetSelectedDateTime();
                     ToDatefaDatePicker.ResetSelectedDateTime();
                     lastNameTextBox.Text = string.Empty;
-                    driverCardNumberTextBox.Text = string.Empty;
+                    driverNationalCodeTextBox.Text = string.Empty;
 
                     Search();
                 }
@@ -960,7 +960,7 @@ namespace HPS.Reports.Forms
                     NumberPlate_nvcTextBox.Text = string.Empty;
                     SerialPlate_nvcTextBox.Text = string.Empty;
                     lastNameTextBox.Text = string.Empty;
-                    driverCardNumberTextBox.Text = string.Empty;
+                    driverNationalCodeTextBox.Text = string.Empty;
                     carCardNumberTextBox.Text = string.Empty;
 
                     Search();
@@ -1017,9 +1017,9 @@ namespace HPS.Reports.Forms
                 Condition = string.Format("{0} and" + " AcceptedTurnNumber_bint={1}", Condition, AcceptedTurnNumberTextBox.Text);
 
             }
-            if (!(string.IsNullOrEmpty(driverCardNumberTextBox.Text)))
+            if (!(string.IsNullOrEmpty(driverNationalCodeTextBox.Text)))
             {
-                Condition = string.Format("{0} and" + " DriverCardNumber_nvc={1}", Condition, driverCardNumberTextBox.Text);
+                Condition = string.Format("{0} and" + " NationalCode_int={1}", Condition, driverNationalCodeTextBox.Text);
 
             }
             if (!(string.IsNullOrEmpty(carCardNumberTextBox.Text)))
@@ -1189,7 +1189,7 @@ namespace HPS.Reports.Forms
             NumberPlate_nvcTextBox.Text = string.Empty;
             SerialPlate_nvcTextBox.Text = string.Empty;
             lastNameTextBox.Text = string.Empty;
-            driverCardNumberTextBox.Text = string.Empty;
+            driverNationalCodeTextBox.Text = string.Empty;
             carCardNumberTextBox.Text = string.Empty;
         }
 
@@ -1200,7 +1200,7 @@ namespace HPS.Reports.Forms
             NumberPlate_nvcTextBox.Text = string.Empty;
             SerialPlate_nvcTextBox.Text = string.Empty;
             lastNameTextBox.Text = string.Empty;
-            driverCardNumberTextBox.Text = string.Empty;
+            driverNationalCodeTextBox.Text = string.Empty;
             carCardNumberTextBox.Text = string.Empty;
         }
     }

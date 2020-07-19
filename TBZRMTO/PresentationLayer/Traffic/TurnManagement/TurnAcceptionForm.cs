@@ -1154,7 +1154,8 @@ namespace HPS.Present.TurnManagement
 
         private void ShowSpecificationButton_Click(object sender, EventArgs e)
         {
-            LoadWithDriverCardNumber();
+            GetDriverAndTruckInformation();
+            //LoadWithDriverCardNumber();
         }
 
         private void CarInfoShowButton_Click(object sender, EventArgs e)

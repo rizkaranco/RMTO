@@ -202,6 +202,7 @@ namespace HPS.Common
         public object[] GetInformation(string NationCode, string carCardNumber)
         {
             var returnList = new List<object>();
+            NationCode = FormatNationCode(NationCode);
             //authentication();
             string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 3, "3098791", "", "", "", "", "", "", "", "", "", NationCode);
             string[] driverinfosplited = driverinfo.Split(';');

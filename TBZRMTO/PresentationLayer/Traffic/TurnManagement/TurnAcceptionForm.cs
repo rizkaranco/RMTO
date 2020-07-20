@@ -1186,6 +1186,29 @@ namespace HPS.Present.TurnManagement
                 throw new ApplicationException("کدملی راننده وارد نشده است");
         }
 
+        private void LoadLicenceEndDateWithDrivernationCode()
+        {
+            if (!string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
+            {
+                HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory DriverSpecificationFactory = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
+                List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.NationalCode_int, NationalCode_intNumericTextBox.Text);
+                if (DriverSpecificationList != null && DriverSpecificationList.Count > 0)
+                {
+                   // _DriverSpecificationID = DriverSpecificationList[0].DriverSpecificationID_int;
+                   // licenceNumber_intNumericTextBox.Text = DriverSpecificationList[0].licenceNumber_nvc;
+                    LicenceEnd_nvcTextBox.Text = DriverSpecificationList[0].LicenceEnd_nvc;
+                    //CarExaminationEndDate_nvcTextBox.Text = DriverSpecificationList[0].CarExaminationEndDate_nvc;
+                    //InsuranceEndDate_nvcTextBox.Text = DriverSpecificationList[0].InsuranceEndDate_nvc;
+                   // ClassID_intComboBox.SelectedValue = DriverSpecificationList[0].ClassID_int;
+                  //  HealthCardEndDate_nvcTextBox.Text = DriverSpecificationList[0].HealthCardEndDate_nvc;
+                  //  if (string.IsNullOrEmpty(Hepsa.Core.Common.PersentationController.GetMaskedTextBoxValue(DriverCardSharjeEndDate_nvcTextBox)))
+                   //     DriverCardSharjeEndDate_nvcTextBox.Text = DriverSpecificationList[0].DriverCardSharjeEndDate_nvc;
+                }
+            }
+            else
+                throw new ApplicationException("کدملی راننده وارد نشده است");
+        }
+
         private void LoadWithCarCardNumber()
         {
             if (!string.IsNullOrEmpty(CarCardNumber_nvcTextBox.Text))
@@ -1375,6 +1398,9 @@ namespace HPS.Present.TurnManagement
                     DriverCardSharjeEndDate_nvcTextBox.Text = driverObject[6].ToString().Substring(0, 4) + "/" + driverObject[6].ToString().Substring(4, 2) + "/" + driverObject[6].ToString().Substring(6, 2);
                     DriverOffline_bit = false;
 
+                    // موقتا افزوده شده است تا اطلاعات راننده را از سرور گرفته
+                    // ولی تاریه اتمام گواهینامه از دیتابیس گرفته می شود
+                    LoadLicenceEndDateWithDrivernationCode();
                     ////////Fill DrivermobileNumber
                     //string DriverCondition = string.Empty;
                     //HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();

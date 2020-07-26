@@ -72,11 +72,13 @@ namespace HPS.Present.TurnManagement
                 {
                     throw new ApplicationException("امکان نوبت دهی برای " + title_nvc + " وجود ندارد");
                 }
+
                 if ((bool)TrafficGridView.CurrentRow.Cells[colWithLade_bit.Name].Value == true)
                 {
                     throw new ApplicationException("امکان نوبت دهی برای کامیون های با بار وجود ندارد");
                 }
                 Int64? TrafficID = (Int64?)Hepsa.Core.Common.PersentationController.GetEntityValue(this.TrafficGridView.CurrentRow.Cells["colTrafficID_bint"].Value, TypeCode.Int64);
+                
                 if (!TrafficID.HasValue)
                     throw new HPS.Exceptions.TrafficNotFound();
 

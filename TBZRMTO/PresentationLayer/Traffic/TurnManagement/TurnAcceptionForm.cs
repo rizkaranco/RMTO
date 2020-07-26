@@ -1366,6 +1366,12 @@ namespace HPS.Present.TurnManagement
                 var webService = new HPS.Common.OnlineInformation();
                 //var webService = new WebReference3.OnlineInformationChecking();
                 var RecivedObject = webService.GetInformation(NationalCode_intNumericTextBox.Text, CarCardNumber_nvcTextBox.Text);
+                
+                if(RecivedObject[0].ToString() == "-2")
+                {
+                    FillDriverInOfflineMode();
+                    return;
+                }
                 if (RecivedObject != null)
                 {
                     driverObject = (List<object>)RecivedObject[0];

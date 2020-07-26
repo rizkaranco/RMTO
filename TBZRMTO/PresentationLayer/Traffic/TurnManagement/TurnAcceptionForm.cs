@@ -914,7 +914,7 @@ namespace HPS.Present.TurnManagement
             string DriverCondition = string.Empty;
             HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
             DriverList = new List<HPS.BLL.DriverBLL.BLLDriver_T>();
-            DriverCondition = "[Driver_T].[NationalCode_int]= '" + NationalCode_intNumericTextBox.Text + "'";
+            DriverCondition = "[Driver_T].[NationalCode_int]= " + NationalCode_intNumericTextBox.Text + "";
             DriverList = DriverFactory.GetAllByCondition(DriverCondition);
 
 
@@ -924,15 +924,20 @@ namespace HPS.Present.TurnManagement
             }
             DriverOffline_bit = true;
             CarOffline_bit = true;
-            if (string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text) || string.IsNullOrEmpty(DriverCardDate_nvcTextBox.Text) || string.IsNullOrEmpty(Mobile_nvcnumericTextBox.Text) || string.IsNullOrEmpty(FirstName_nvcTextBox.Text) || string.IsNullOrEmpty(LastName_nvcTextBox.Text) || string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
+            if (!string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text) || string.IsNullOrEmpty(DriverCardDate_nvcTextBox.Text) || string.IsNullOrEmpty(Mobile_nvcnumericTextBox.Text) || string.IsNullOrEmpty(FirstName_nvcTextBox.Text) || string.IsNullOrEmpty(LastName_nvcTextBox.Text) || string.IsNullOrEmpty(NationalCode_intNumericTextBox.Text))
             {
 
                 if (DriverList != null && DriverList.Count > 0)
                 {
-                    if (DriverList[0].Active_bit == false)
-                    {
-                        Hepsa.Core.Common.MessageBox.ErrorMessage("اين راننده توسط مديريت غير فعال شده است");
-                    }
+                    //if (DriverList[0].Active_bit == false)
+                    //{
+                    //    Hepsa.Core.Common.MessageBox.ErrorMessage("اين راننده توسط مديريت غير فعال شده است");
+                    //}
+                    LicenceEnd_nvcTextBox.Text = DriverList[0].LiceniceDate_nvc;
+                    licenceNumber_intNumericTextBox.Text = DriverList[0].licenceNumber_nvc;
+                    //HealthCardEndDate_nvcTextBox.Text = DriverList[0].health;
+                    //DriverCardSharjeEndDate_nvcTextBox.Text = DriverList[0];
+
                     FirstName_nvcTextBox.Text = DriverList[0].FirstName_nvc;
                     LastName_nvcTextBox.Text = DriverList[0].LastName_nvc;
                     DriverCardDate_nvcTextBox.Text = DriverList[0].DriverCardDate_nvc;
@@ -1367,11 +1372,7 @@ namespace HPS.Present.TurnManagement
                 //var webService = new WebReference3.OnlineInformationChecking();
                 var RecivedObject = webService.GetInformation(NationalCode_intNumericTextBox.Text, CarCardNumber_nvcTextBox.Text);
                 
-                if(RecivedObject[0].ToString() == "-2")
-                {
-                    FillDriverInOfflineMode();
-                    return;
-                }
+              
                 if (RecivedObject != null)
                 {
                     driverObject = (List<object>)RecivedObject[0];
@@ -1380,6 +1381,11 @@ namespace HPS.Present.TurnManagement
 
                 if (driverObject != null)
                 {
+                    if(driverObject[0].ToString() == "-2")
+                    {
+                        FillDriverInOfflineMode();
+                        return;
+                    }
                     if (driverObject[8].ToString() == "0")
                     {
                         ErroeMessage = string.Format("کدملی راننده به شماره <{0}>وارد شده در سیستم استعلام کدملی غیر فعال می باشد. ", NationalCode_intNumericTextBox.Text);

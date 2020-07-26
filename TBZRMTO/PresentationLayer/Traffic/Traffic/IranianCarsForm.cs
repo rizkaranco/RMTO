@@ -493,7 +493,16 @@ namespace HPS.Present.Traffic
                             // بعد از بازگردانی کد های بالا شرط یک مساوی صفر برداشته شود
                             if (RecivedObject != null)
                             {
+                                if (RecivedObject[0].ToString() == "-2")
+                                {
+                                    FillDriverFields();
+                                    return;
+                                }
+
                                 driverObject = (List<object>)RecivedObject[0];
+                                
+
+                                
                             }
 
                             if (driverObject != null)

@@ -246,26 +246,33 @@ namespace HPS.Common
             string Carinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 4, "3098791", "", "", "", "", "", "", "", "", "", carCardNumber);
             string[] Carinfosplited = Carinfo.Split(';');
             var carList = new List<object>();
-            //0-is_active_code
-            carList.Add(Carinfosplited[8].Substring(Carinfosplited[8].ToString().IndexOf(':') + 1, Carinfosplited[8].ToString().Length - Carinfosplited[8].ToString().IndexOf(':') - 1));
-            //1-PlaqueNumber=NumberPlate_nvc
-            string plq1 = Carinfosplited[5].Substring(Carinfosplited[5].ToString().IndexOf(':') + 1, Carinfosplited[5].ToString().Length - Carinfosplited[5].ToString().IndexOf(':') - 1);
-            string plq2 = Carinfosplited[6].Substring(Carinfosplited[6].ToString().IndexOf(':') + 1, Carinfosplited[6].ToString().Length - Carinfosplited[6].ToString().IndexOf(':') - 1);
-            string plq3 = Carinfosplited[7].Substring(Carinfosplited[7].ToString().IndexOf(':') + 1, Carinfosplited[7].ToString().Length - Carinfosplited[7].ToString().IndexOf(':') - 1);
-            carList.Add(plq3 + plq2 + plq1);
+            if (Carinfosplited.Length < 2)
+            {
+                carList.Add("-2");
 
-            //2-shomare_serial_plaque=SerialPlate_nvc
-            carList.Add(Carinfosplited[3].Substring(Carinfosplited[3].ToString().IndexOf(':') + 1, Carinfosplited[3].ToString().Length - Carinfosplited[3].ToString().IndexOf(':') - 1));
-            //3-sal_sakht=ProductionYear_int
-            carList.Add(Carinfosplited[9].Substring(Carinfosplited[9].ToString().IndexOf(':') + 1, Carinfosplited[9].ToString().Length - Carinfosplited[9].ToString().IndexOf(':') - 1));
-            //4-PlaqueType
-            carList.Add(Carinfosplited[11].Substring(Carinfosplited[11].ToString().IndexOf(':') + 1, Carinfosplited[11].ToString().Length - Carinfosplited[11].ToString().IndexOf(':') - 1));
+            }
+            else
+            {
+                //0-is_active_code
+                carList.Add(Carinfosplited[8].Substring(Carinfosplited[8].ToString().IndexOf(':') + 1, Carinfosplited[8].ToString().Length - Carinfosplited[8].ToString().IndexOf(':') - 1));
+                //1-PlaqueNumber=NumberPlate_nvc
+                string plq1 = Carinfosplited[5].Substring(Carinfosplited[5].ToString().IndexOf(':') + 1, Carinfosplited[5].ToString().Length - Carinfosplited[5].ToString().IndexOf(':') - 1);
+                string plq2 = Carinfosplited[6].Substring(Carinfosplited[6].ToString().IndexOf(':') + 1, Carinfosplited[6].ToString().Length - Carinfosplited[6].ToString().IndexOf(':') - 1);
+                string plq3 = Carinfosplited[7].Substring(Carinfosplited[7].ToString().IndexOf(':') + 1, Carinfosplited[7].ToString().Length - Carinfosplited[7].ToString().IndexOf(':') - 1);
+                carList.Add(plq3 + plq2 + plq1);
 
-            //PlaqueCityCode
-            carList.Add("");
-            //tarikh_sodor
-            //carList.Add( Carinfosplited[16].Substring(Carinfosplited[16].ToString().IndexOf(':') + 1, Carinfosplited[16].ToString().Length - Carinfosplited[16].ToString().IndexOf(':') - 1));
+                //2-shomare_serial_plaque=SerialPlate_nvc
+                carList.Add(Carinfosplited[3].Substring(Carinfosplited[3].ToString().IndexOf(':') + 1, Carinfosplited[3].ToString().Length - Carinfosplited[3].ToString().IndexOf(':') - 1));
+                //3-sal_sakht=ProductionYear_int
+                carList.Add(Carinfosplited[9].Substring(Carinfosplited[9].ToString().IndexOf(':') + 1, Carinfosplited[9].ToString().Length - Carinfosplited[9].ToString().IndexOf(':') - 1));
+                //4-PlaqueType
+                carList.Add(Carinfosplited[11].Substring(Carinfosplited[11].ToString().IndexOf(':') + 1, Carinfosplited[11].ToString().Length - Carinfosplited[11].ToString().IndexOf(':') - 1));
 
+                //PlaqueCityCode
+                carList.Add("");
+                //tarikh_sodor
+                //carList.Add( Carinfosplited[16].Substring(Carinfosplited[16].ToString().IndexOf(':') + 1, Carinfosplited[16].ToString().Length - Carinfosplited[16].ToString().IndexOf(':') - 1));
+            }
             returnList.Add(carList);
             return returnList.ToArray();
 

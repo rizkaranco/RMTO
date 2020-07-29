@@ -887,8 +887,12 @@ namespace HPS.DAL.DriverSpecificationDAL
                 {
                     this.BeginTransaction();
                 }
-
-                this.Command.Parameters.Add(new SqlParameter("@Condition", "[DriverSpecification_T]." + fieldName + " = N" + "'" + Convert.ToString(value) + "'"));
+                if(fieldName.EndsWith("_int"))
+                {
+                    this.Command.Parameters.Add(new SqlParameter("@Condition", "[DriverSpecification_T]." + fieldName + " = "+ Convert.ToString(value)));
+                }
+                else
+                    this.Command.Parameters.Add(new SqlParameter("@Condition", "[DriverSpecification_T]." + fieldName + " = N" + "'" + Convert.ToString(value) + "'"));
 
                 IDataReader dataReader = this.Command.ExecuteReader();
                 List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> Result = new List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T>();

@@ -1038,7 +1038,9 @@ namespace HPS.Present.TurnManagement
                 }
 
                 ExpiredTimeAcceptTurn_bit = false;
+                Controlbutton.PerformClick();
                 AcceptTurnConditionCheck();
+
             }
             catch (Exception ex)
             {
@@ -1159,8 +1161,8 @@ namespace HPS.Present.TurnManagement
 
         private void ShowSpecificationButton_Click(object sender, EventArgs e)
         {
-            GetDriverAndTruckInformation();
-            //LoadWithDriverCardNumber();
+            //GetDriverAndTruckInformation();
+            LoadWithDriverCardNumber();
         }
 
         private void CarInfoShowButton_Click(object sender, EventArgs e)

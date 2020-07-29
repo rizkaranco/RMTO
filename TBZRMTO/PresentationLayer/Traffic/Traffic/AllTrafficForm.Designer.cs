@@ -315,7 +315,7 @@ namespace HPS.Reports.Forms
             this.Duration});
             this.TrafficGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TrafficGridView.Location = new System.Drawing.Point(0, 137);
-            this.TrafficGridView.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.TrafficGridView.Margin = new System.Windows.Forms.Padding(5);
             this.TrafficGridView.MultiSelect = false;
             this.TrafficGridView.Name = "TrafficGridView";
             this.TrafficGridView.ReadOnly = true;
@@ -681,7 +681,7 @@ namespace HPS.Reports.Forms
             this.BooleanComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BooleanComboBox.FormattingEnabled = true;
             this.BooleanComboBox.Location = new System.Drawing.Point(442, 58);
-            this.BooleanComboBox.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.BooleanComboBox.Margin = new System.Windows.Forms.Padding(5);
             this.BooleanComboBox.Name = "BooleanComboBox";
             this.BooleanComboBox.Size = new System.Drawing.Size(121, 24);
             this.BooleanComboBox.TabIndex = 6;
@@ -917,7 +917,7 @@ namespace HPS.Reports.Forms
             this.driverNationalCodeTextBox.Flags = 0;
             this.driverNationalCodeTextBox.Location = new System.Drawing.Point(75, 20);
             this.driverNationalCodeTextBox.MaxDecimalPlaces = 0;
-            this.driverNationalCodeTextBox.MaxWholeDigits = 7;
+            this.driverNationalCodeTextBox.MaxWholeDigits = 10;
             this.driverNationalCodeTextBox.Name = "driverNationalCodeTextBox";
             this.driverNationalCodeTextBox.Prefix = "";
             this.driverNationalCodeTextBox.RangeMax = 0D;
@@ -990,7 +990,7 @@ namespace HPS.Reports.Forms
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.AllTrafficToolStrip);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(17, 17, 17, 17);
+            this.Margin = new System.Windows.Forms.Padding(17);
             this.Name = "AllTrafficForm";
             this.Text = "تمام ترددها";
             this.Load += new System.EventHandler(this.AllTrafficForm_Load);

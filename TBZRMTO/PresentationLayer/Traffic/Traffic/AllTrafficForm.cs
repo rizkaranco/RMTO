@@ -796,9 +796,9 @@ namespace HPS.Reports.Forms
             {
                 if (TrafficGridView.CurrentRow != null)
                 {
-                    if (TrafficGridView.CurrentRow.Cells[colDriverCardNumber_nvc.Name].Value != null && !string.IsNullOrEmpty(TrafficGridView.CurrentRow.Cells[colDriverCardNumber_nvc.Name].Value.ToString()))
+                    if (TrafficGridView.CurrentRow.Cells[colNationalCode_int.Name].Value != null && !string.IsNullOrEmpty(TrafficGridView.CurrentRow.Cells[colNationalCode_int.Name].Value.ToString()))
                     {
-                        HPS.Present.DriverSpecification.DriverSpecificationEntityForm frm = new HPS.Present.DriverSpecification.DriverSpecificationEntityForm(TrafficGridView.CurrentRow.Cells[colDriverCardNumber_nvc.Name].Value.ToString(), true);
+                        HPS.Present.DriverSpecification.DriverSpecificationEntityForm frm = new HPS.Present.DriverSpecification.DriverSpecificationEntityForm(TrafficGridView.CurrentRow.Cells[colNationalCode_int.Name].Value.ToString(), true);
                         frm.ShowDialog();
                     }
                     else if (TrafficGridView.CurrentRow.Cells[colFirstName_nvc.Name].Value != null && TrafficGridView.CurrentRow.Cells[colLastName_nvc.Name].Value != null && TrafficGridView.CurrentRow.Cells[colNationalCode_int.Name].Value != null && !string.IsNullOrEmpty(TrafficGridView.CurrentRow.Cells[colFirstName_nvc.Name].Value.ToString()) && !string.IsNullOrEmpty(TrafficGridView.CurrentRow.Cells[colLastName_nvc.Name].Value.ToString()) && !string.IsNullOrEmpty(TrafficGridView.CurrentRow.Cells[colNationalCode_int.Name].Value.ToString()))

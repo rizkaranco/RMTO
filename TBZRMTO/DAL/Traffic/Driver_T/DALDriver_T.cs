@@ -987,7 +987,11 @@ namespace HPS.DAL.DriverDAL
                 {
                     this.BeginTransaction();
                 }
-
+                if(fieldName.EndsWith("_int"))
+                {
+                    this.Command.Parameters.Add(new SqlParameter("@Condition", "[Driver_T]." + fieldName + " = "+  Convert.ToString(value) ));
+                }
+                else
                 this.Command.Parameters.Add(new SqlParameter("@Condition", "[Driver_T]." + fieldName + " = N" + "'" + Convert.ToString(value) + "'"));
 
                 IDataReader dataReader = this.Command.ExecuteReader();

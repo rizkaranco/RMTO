@@ -207,57 +207,72 @@ namespace HPS.Common
             string driverinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 3, "3098791", "", "", "", "", "", "", "", "", "", NationCode);
             string[] driverinfosplited = driverinfo.Split(';');
             var driverList = new List<object>();
-            //0-name
-            driverList.Add(driverinfosplited[4].Substring(driverinfosplited[4].ToString().IndexOf(':') + 1, driverinfosplited[4].ToString().Length - driverinfosplited[4].ToString().IndexOf(':') - 1));
-            //1-Family
-            driverList.Add(driverinfosplited[5].Substring(driverinfosplited[5].ToString().IndexOf(':') + 1, driverinfosplited[5].ToString().Length - driverinfosplited[5].ToString().IndexOf(':') - 1));
-            //2-Code_melli
-            driverList.Add(Convert.ToInt64(driverinfosplited[3].Substring(driverinfosplited[3].ToString().IndexOf(':') + 1, driverinfosplited[3].ToString().Length - driverinfosplited[3].ToString().IndexOf(':') - 1)));
-            //3-shomaro_bime
-            driverList.Add(driverinfosplited[10].Substring(driverinfosplited[10].ToString().IndexOf(':') + 1, driverinfosplited[10].ToString().Length - driverinfosplited[10].ToString().IndexOf(':') - 1));
-            //4-CertifcateNumber=shomare_gavahinameh
-            driverList.Add(driverinfosplited[9].Substring(driverinfosplited[9].ToString().IndexOf(':') + 1, driverinfosplited[9].ToString().Length - driverinfosplited[9].ToString().IndexOf(':') - 1));
-            //5-CardNumber=Null
-            driverList.Add(driverinfosplited[1].Substring(driverinfosplited[1].ToString().IndexOf(':') + 1, driverinfosplited[1].ToString().Length - driverinfosplited[1].ToString().IndexOf(':') - 1));
-            //6-tarikh_payanetebar=DriverCardDate_nvc
-            driverList.Add(driverinfosplited[12].Substring(driverinfosplited[12].ToString().IndexOf(':') + 1, driverinfosplited[12].ToString().Length - driverinfosplited[12].ToString().IndexOf(':') - 1));
-            //7-salamat_date
-            driverList.Add(driverinfosplited[18].Substring(driverinfosplited[18].ToString().IndexOf(':') + 1, driverinfosplited[18].ToString().Length - driverinfosplited[18].ToString().IndexOf(':') - 1));
-            //8- IsActive
-            driverList.Add(driverinfosplited[11].Substring(driverinfosplited[11].ToString().IndexOf(':') + 1, driverinfosplited[11].ToString().Length - driverinfosplited[11].ToString().IndexOf(':') - 1));
-            //9-tarikh-Sodor
-            driverList.Add(driverinfosplited[2].Substring(driverinfosplited[2].ToString().IndexOf(':') + 1, driverinfosplited[2].ToString().Length - driverinfosplited[2].ToString().IndexOf(':') - 1));
-            //10-sharhe_mahale_sukunat
-            driverList.Add(driverinfosplited[13].Substring(driverinfosplited[13].ToString().IndexOf(':') + 1, driverinfosplited[13].ToString().Length - driverinfosplited[13].ToString().IndexOf(':') - 1));
-            //11-shomare-parvande
-            driverList.Add(driverinfosplited[0].Substring(driverinfosplited[0].ToString().IndexOf(':') + 1, driverinfosplited[0].ToString().Length - driverinfosplited[0].ToString().IndexOf(':') - 1));
+            if (driverinfosplited.Length < 2)
+            {
+                driverList.Add("-2");
+            }
+            else
+            {
 
+
+                //0-name
+                driverList.Add(driverinfosplited[4].Substring(driverinfosplited[4].ToString().IndexOf(':') + 1, driverinfosplited[4].ToString().Length - driverinfosplited[4].ToString().IndexOf(':') - 1));
+                //1-Family
+                driverList.Add(driverinfosplited[5].Substring(driverinfosplited[5].ToString().IndexOf(':') + 1, driverinfosplited[5].ToString().Length - driverinfosplited[5].ToString().IndexOf(':') - 1));
+                //2-Code_melli
+                driverList.Add(Convert.ToInt64(driverinfosplited[3].Substring(driverinfosplited[3].ToString().IndexOf(':') + 1, driverinfosplited[3].ToString().Length - driverinfosplited[3].ToString().IndexOf(':') - 1)));
+                //3-shomaro_bime
+                driverList.Add(driverinfosplited[10].Substring(driverinfosplited[10].ToString().IndexOf(':') + 1, driverinfosplited[10].ToString().Length - driverinfosplited[10].ToString().IndexOf(':') - 1));
+                //4-CertifcateNumber=shomare_gavahinameh
+                driverList.Add(driverinfosplited[9].Substring(driverinfosplited[9].ToString().IndexOf(':') + 1, driverinfosplited[9].ToString().Length - driverinfosplited[9].ToString().IndexOf(':') - 1));
+                //5-CardNumber=Null
+                driverList.Add(driverinfosplited[1].Substring(driverinfosplited[1].ToString().IndexOf(':') + 1, driverinfosplited[1].ToString().Length - driverinfosplited[1].ToString().IndexOf(':') - 1));
+                //6-tarikh_payanetebar=DriverCardDate_nvc
+                driverList.Add(driverinfosplited[12].Substring(driverinfosplited[12].ToString().IndexOf(':') + 1, driverinfosplited[12].ToString().Length - driverinfosplited[12].ToString().IndexOf(':') - 1));
+                //7-salamat_date
+                driverList.Add(driverinfosplited[18].Substring(driverinfosplited[18].ToString().IndexOf(':') + 1, driverinfosplited[18].ToString().Length - driverinfosplited[18].ToString().IndexOf(':') - 1));
+                //8- IsActive
+                driverList.Add(driverinfosplited[11].Substring(driverinfosplited[11].ToString().IndexOf(':') + 1, driverinfosplited[11].ToString().Length - driverinfosplited[11].ToString().IndexOf(':') - 1));
+                //9-tarikh-Sodor
+                driverList.Add(driverinfosplited[2].Substring(driverinfosplited[2].ToString().IndexOf(':') + 1, driverinfosplited[2].ToString().Length - driverinfosplited[2].ToString().IndexOf(':') - 1));
+                //10-sharhe_mahale_sukunat
+                driverList.Add(driverinfosplited[13].Substring(driverinfosplited[13].ToString().IndexOf(':') + 1, driverinfosplited[13].ToString().Length - driverinfosplited[13].ToString().IndexOf(':') - 1));
+                //11-shomare-parvande
+                driverList.Add(driverinfosplited[0].Substring(driverinfosplited[0].ToString().IndexOf(':') + 1, driverinfosplited[0].ToString().Length - driverinfosplited[0].ToString().IndexOf(':') - 1));
+            }
             returnList.Add(driverList);
             localReference = new OnlineService();
             //// Get Car Information
             string Carinfo = localReference.RMTO_WEB_SERVICES("RZK_RMTO", 4, "3098791", "", "", "", "", "", "", "", "", "", carCardNumber);
             string[] Carinfosplited = Carinfo.Split(';');
             var carList = new List<object>();
-            //0-is_active_code
-            carList.Add(Carinfosplited[8].Substring(Carinfosplited[8].ToString().IndexOf(':') + 1, Carinfosplited[8].ToString().Length - Carinfosplited[8].ToString().IndexOf(':') - 1));
-            //1-PlaqueNumber=NumberPlate_nvc
-            string plq1 = Carinfosplited[5].Substring(Carinfosplited[5].ToString().IndexOf(':') + 1, Carinfosplited[5].ToString().Length - Carinfosplited[5].ToString().IndexOf(':') - 1);
-            string plq2 = Carinfosplited[6].Substring(Carinfosplited[6].ToString().IndexOf(':') + 1, Carinfosplited[6].ToString().Length - Carinfosplited[6].ToString().IndexOf(':') - 1);
-            string plq3 = Carinfosplited[7].Substring(Carinfosplited[7].ToString().IndexOf(':') + 1, Carinfosplited[7].ToString().Length - Carinfosplited[7].ToString().IndexOf(':') - 1);
-            carList.Add(plq3 + plq2 + plq1);
+            if (Carinfosplited.Length < 2)
+            {
+                carList.Add("-2");
 
-            //2-shomare_serial_plaque=SerialPlate_nvc
-            carList.Add(Carinfosplited[3].Substring(Carinfosplited[3].ToString().IndexOf(':') + 1, Carinfosplited[3].ToString().Length - Carinfosplited[3].ToString().IndexOf(':') - 1));
-            //3-sal_sakht=ProductionYear_int
-            carList.Add(Carinfosplited[9].Substring(Carinfosplited[9].ToString().IndexOf(':') + 1, Carinfosplited[9].ToString().Length - Carinfosplited[9].ToString().IndexOf(':') - 1));
-            //4-PlaqueType
-            carList.Add(Carinfosplited[11].Substring(Carinfosplited[11].ToString().IndexOf(':') + 1, Carinfosplited[11].ToString().Length - Carinfosplited[11].ToString().IndexOf(':') - 1));
+            }
+            else
+            {
+                //0-is_active_code
+                carList.Add(Carinfosplited[8].Substring(Carinfosplited[8].ToString().IndexOf(':') + 1, Carinfosplited[8].ToString().Length - Carinfosplited[8].ToString().IndexOf(':') - 1));
+                //1-PlaqueNumber=NumberPlate_nvc
+                string plq1 = Carinfosplited[5].Substring(Carinfosplited[5].ToString().IndexOf(':') + 1, Carinfosplited[5].ToString().Length - Carinfosplited[5].ToString().IndexOf(':') - 1);
+                string plq2 = Carinfosplited[6].Substring(Carinfosplited[6].ToString().IndexOf(':') + 1, Carinfosplited[6].ToString().Length - Carinfosplited[6].ToString().IndexOf(':') - 1);
+                string plq3 = Carinfosplited[7].Substring(Carinfosplited[7].ToString().IndexOf(':') + 1, Carinfosplited[7].ToString().Length - Carinfosplited[7].ToString().IndexOf(':') - 1);
+                carList.Add(plq3 + plq2 + plq1);
 
-            //PlaqueCityCode
-            carList.Add("");
-            //tarikh_sodor
-            //carList.Add( Carinfosplited[16].Substring(Carinfosplited[16].ToString().IndexOf(':') + 1, Carinfosplited[16].ToString().Length - Carinfosplited[16].ToString().IndexOf(':') - 1));
+                //2-shomare_serial_plaque=SerialPlate_nvc
+                carList.Add(Carinfosplited[3].Substring(Carinfosplited[3].ToString().IndexOf(':') + 1, Carinfosplited[3].ToString().Length - Carinfosplited[3].ToString().IndexOf(':') - 1));
+                //3-sal_sakht=ProductionYear_int
+                carList.Add(Carinfosplited[9].Substring(Carinfosplited[9].ToString().IndexOf(':') + 1, Carinfosplited[9].ToString().Length - Carinfosplited[9].ToString().IndexOf(':') - 1));
+                //4-PlaqueType
+                carList.Add(Carinfosplited[11].Substring(Carinfosplited[11].ToString().IndexOf(':') + 1, Carinfosplited[11].ToString().Length - Carinfosplited[11].ToString().IndexOf(':') - 1));
 
+                //PlaqueCityCode
+                carList.Add("");
+                //tarikh_sodor
+                //carList.Add( Carinfosplited[16].Substring(Carinfosplited[16].ToString().IndexOf(':') + 1, Carinfosplited[16].ToString().Length - Carinfosplited[16].ToString().IndexOf(':') - 1));
+            }
             returnList.Add(carList);
             return returnList.ToArray();
 

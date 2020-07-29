@@ -2555,7 +2555,11 @@ namespace HPS.DAL.TrafficDAL
                 {
                     this.BeginTransaction();
                 }
-
+                if(fieldName.EndsWith("_int"))
+                {
+                    this.Command.Parameters.Add(new SqlParameter("@Condition", "[Traffic_T]." + fieldName + " = " + value.ToString()));
+                }
+                else
                 this.Command.Parameters.Add(new SqlParameter("@Condition", "[Traffic_T]." + fieldName + " = N" + "'" + value.ToString() + "'"));
 
                 IDataReader dataReader = this.Command.ExecuteReader();

@@ -133,12 +133,14 @@ namespace HPS.Present.Traffic
 
         private void DublicateTurn(string NationCode)
         {
+            if (string.IsNullOrEmpty(NationCode))
+                return;
             if (ServicesID_intComboBox.SelectedIndex == 1)
             {
                 var dt = new DataTable();
                 var DriverTurn = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
                 DriverTurn.SelectDuplicateTurnByDrivers(dt, NationCode);
-                var Count = dt.Select("NationalCode_int='" + NationCode + "'").Count();
+                var Count = dt.Select("NationalCode_int=" + NationCode + "").Count();
                 if (Count > 0)
                 {
                     throw new ApplicationException("برای شماره کارت راننده وارد شده نوبت فعال وجود دارد");

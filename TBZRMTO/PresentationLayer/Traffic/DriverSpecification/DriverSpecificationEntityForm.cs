@@ -20,17 +20,17 @@ namespace HPS.Present.DriverSpecification
         private Int32 _DriverSpecificationID;
         bool _Driver_bit = false;
         HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TKeys Key;
-        public DriverSpecificationEntityForm(string CardNumber_nvc,bool Driver_bit)
+        public DriverSpecificationEntityForm(string NationalCode_int,bool Driver_bit)
             : base(null)
         {
             InitializeComponent();
             _Driver_bit = Driver_bit;
             if (Driver_bit)
             {
-                this._DriverCardNumber = CardNumber_nvc;
+                this._NationalCode = long.Parse(NationalCode_int);
             }
-            else
-                _CarCardNumber = CardNumber_nvc;
+           // else
+            //    _CarCardNumber = CardNumber_nvc.tos;
         }
 
         public DriverSpecificationEntityForm(string FirstName, string LastName, Int64 NationalCode)
@@ -64,7 +64,7 @@ namespace HPS.Present.DriverSpecification
             FillCombo();
             try
             {
-                if (!string.IsNullOrEmpty(_DriverCardNumber))
+                if (!string.IsNullOrEmpty(_NationalCode.ToString()))
                 {
                     LoadWithDriverCardNumber();
                 }
@@ -283,7 +283,7 @@ namespace HPS.Present.DriverSpecification
         private void LoadWithDriverCardNumber()
         {
             HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory DriverSpecificationFactory = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
-            List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.DriverCardNumber_nvc, _DriverCardNumber);
+            List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.NationalCode_int, _NationalCode);
             if (DriverSpecificationList != null && DriverSpecificationList.Count > 0)
             {
                 _DriverSpecificationID = DriverSpecificationList[0].DriverSpecificationID_int;
@@ -304,7 +304,7 @@ namespace HPS.Present.DriverSpecification
             {
                 Editbutton.Visible = false;
                 HPS.BLL.TrafficBLL.BLLTraffic_TFactory TrafficFactory = new HPS.BLL.TrafficBLL.BLLTraffic_TFactory();
-                List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllBy(HPS.BLL.TrafficBLL.BLLTraffic_T.Traffic_TField.DriverCardNumber_nvc, _DriverCardNumber);
+                List<HPS.BLL.TrafficBLL.BLLTraffic_T> TrafficList = TrafficFactory.GetAllBy(HPS.BLL.TrafficBLL.BLLTraffic_T.Traffic_TField.NationalCode_int, _NationalCode);
                 if (TrafficList != null && TrafficList.Count > 0)
                 {
                     DriverCardNumber_nvcTextBox.Text = TrafficList[TrafficList.Count - 1].DriverCardNumber_nvc;
@@ -316,7 +316,7 @@ namespace HPS.Present.DriverSpecification
                 else
                 {
                     HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
-                    List<HPS.BLL.DriverBLL.BLLDriver_T> DriverList = DriverFactory.GetAllBy(HPS.BLL.DriverBLL.BLLDriver_T.Driver_TField.DriverCardNumber_nvc, _DriverCardNumber);
+                    List<HPS.BLL.DriverBLL.BLLDriver_T> DriverList = DriverFactory.GetAllBy(HPS.BLL.DriverBLL.BLLDriver_T.Driver_TField.NationalCode_int, _NationalCode);
                     if (DriverList != null && DriverList.Count > 0)
                     {
                         DriverCardNumber_nvcTextBox.Text = DriverList[0].DriverCardNumber_nvc;

@@ -1331,7 +1331,7 @@ namespace HPS.Present.Traffic
         {
             try
             {
-                DublicateTurnOnEdit(DriverCardNumber_bintNumericTextBox.Text);
+                DublicateTurnOnEdit(NationalCode_intNumericTextBox.Text);
                 HPS.BLL.LadBillCreditBLL.BLLLadBillCredit_TFactory LadBillCreditFactory = new HPS.BLL.LadBillCreditBLL.BLLLadBillCredit_TFactory();
                 List<HPS.BLL.LadBillCreditBLL.BLLLadBillCredit_T> LadBillCreditList = LadBillCreditFactory.GetAllBy(HPS.BLL.LadBillCreditBLL.BLLLadBillCredit_T.LadBillCredit_TField.TrafficID_bint, TrafficKey.TrafficID_bint);
                 if (LadBillCreditList != null && LadBillCreditList.Count > 0)

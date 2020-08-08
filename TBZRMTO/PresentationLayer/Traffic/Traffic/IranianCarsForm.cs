@@ -33,6 +33,8 @@ namespace HPS.Present.Traffic
         DataTable ServicesDataTable = new DataTable();
         List<object> driverObject = null;
         List<object> CarObject = null;
+        string DriverHealthCardEndDate;
+        string DriverLisenceEndDate;
         public IranianCarsForm() : base(null)
         {
             InitializeComponent();
@@ -525,6 +527,8 @@ namespace HPS.Present.Traffic
                                 NationalCode_intNumericTextBox.Text = driverObject[2].ToString();
                                 licenceNumber_intNumericTextBox.Text = driverObject[4].ToString();
                                 DriverCardDate_nvcTextBox.Text = driverObject[9].ToString();
+                                DriverHealthCardEndDate = driverObject[7].ToString();
+                                DriverLisenceEndDate = driverObject[6].ToString();
                                 //برای پر کردن شماره موبایل
                                 tCondition = "([Traffic_T].[NationalCode_int]='" + NationalCode_intNumericTextBox.Text + "') AND ([Traffic_T].[In_bit]='true') ORDER BY TrafficID_bint DESC";
                                 TrafficList.Clear();
@@ -1256,7 +1260,7 @@ namespace HPS.Present.Traffic
                     TrafficFactory.Insert(TrafficEntity);
 
                     // بروز رسانی اطلاعات راننده
-                    UpdateDriverSpecification(NationalCode_intNumericTextBox.Text);
+                    DriverInformationSave();
                     //SettingID_int = 1012 => خواندن پلاک در هنگام ورود
                     SettingKey.SettingID_int = 1012;
                     SettingEntity = SettingFactory.GetBy(SettingKey);
@@ -3241,49 +3245,85 @@ namespace HPS.Present.Traffic
 
         }
 
-        private void UpdateDriverSpecification(string NationCode)
+
+
+
+        protected void DriverInformationSave()
         {
+            HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory DriverSpecificationFactory = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
+            int _DriverSpecificationID = 0;
             try
             {
-                HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory DriverSpecificationFactory = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TFactory();
-                List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.NationalCode_int, NationCode);
+                
+                List<HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T> DriverSpecificationList = DriverSpecificationFactory.GetAllBy(HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T.DriverSpecification_TField.NationalCode_int, NationalCode_intNumericTextBox.Text);
                 if (DriverSpecificationList != null && DriverSpecificationList.Count > 0)
                 {
-                    HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TKeys _key = new BLL.DriverSpecificationBLL.BLLDriverSpecification_TKeys();
-                    _key.DriverSpecificationID_int = DriverSpecificationList.FirstOrDefault().DriverSpecificationID_int;
-                    HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T CurrentDriverInfo = DriverSpecificationList.FirstOrDefault();
-                    long NationalCode_intNumeric;
-                    long.TryParse(NationalCode_intNumericTextBox.Text,out NationalCode_intNumeric);
-                    CurrentDriverInfo.NationalCode_int = NationalCode_intNumeric;
-                    CurrentDriverInfo.licenceNumber_nvc = licenceNumber_intNumericTextBox.Text;
-                    DriverSpecificationFactory.BeginProc();
-                    DriverSpecificationFactory.Update(CurrentDriverInfo, _key);
-                    DriverSpecificationFactory.CommitProc();
+                    _DriverSpecificationID = DriverSpecificationList[0].DriverSpecificationID_int;
+                }
 
+                HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T DriverSpecificationEntity = new HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_T();
+                DriverSpecificationEntity.DriverCardNumber_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverCardNumber_bintNumericTextBox.Text, TypeCode.String).ToString();
+                DriverSpecificationEntity.FirstName_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(FirstName_nvcTextBox.Text, TypeCode.String).ToString();
+                DriverSpecificationEntity.LastName_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(LastName_nvcTextBox.Text, TypeCode.String).ToString();
+                DriverSpecificationEntity.NationalCode_int = (Int64)Hepsa.Core.Common.PersentationController.GetEntityValue(NationalCode_intNumericTextBox.NumericText, TypeCode.Int64);
+                DriverSpecificationEntity.licenceNumber_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(licenceNumber_intNumericTextBox.Text, TypeCode.String).ToString();
+                DriverSpecificationEntity.CarExamination_bit = false;
+                DriverSpecificationEntity.LicenceEnd_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverLisenceEndDate, TypeCode.String).ToString();
+                DriverSpecificationEntity.Insurance_bit = false;
+                DriverSpecificationEntity.InsuranceStartDate_nvc = string.Empty;
+                //DriverSpecificationEntity.ClassID_int = (Int32?)Hepsa.Core.Common.PersentationController.GetEntityValue(ClassID_intComboBox.SelectedValue, TypeCode.Int32);
+                DriverSpecificationEntity.HealthCard_bit = false;
+                DriverSpecificationEntity.HealthCardStartDate_nvc = string.Empty;
+                DriverSpecificationEntity.HealthCardEndDate_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverHealthCardEndDate, TypeCode.String).ToString();
+                DriverSpecificationEntity.DriverCardSharje_bit = false;
+                DriverSpecificationEntity.DriverCardSharjeStartDate_nvc = string.Empty;
+                //DriverSpecificationEntity.DriverCardSharjeEndDate_nvc = Hepsa.Core.Common.PersentationController.GetEntityValue(DriverCardSharjeEndDate_nvcTextBox.Text, TypeCode.String).ToString();
+                DriverSpecificationEntity.StatisticCard_bit = false;
+
+                HPS.BLL.DriverSpecificationBLL.BLLDriverSpecification_TKeys driverSpecificationkey = new BLL.DriverSpecificationBLL.BLLDriverSpecification_TKeys();
+                if (_DriverSpecificationID != 0)
+                {
+                    driverSpecificationkey.DriverSpecificationID_int = _DriverSpecificationID;
+                    DriverSpecificationFactory.BeginProc();
+                    DriverSpecificationFactory.Update(DriverSpecificationEntity, driverSpecificationkey);
+                    DriverSpecificationFactory.CommitProc();
+                    //Hepsa.Core.Common.MessageBox.InformationMessage("اطلاعات ثبت شد");
                 }
                 else
                 {
-                    HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
-                    List<HPS.BLL.DriverBLL.BLLDriver_T> DriverList = DriverFactory.GetAllBy(HPS.BLL.DriverBLL.BLLDriver_T.Driver_TField.NationalCode_int, NationCode);
-                    if (DriverList != null && DriverList.Count > 0)
+                    DriverSpecificationFactory.BeginProc();
+                    DriverSpecificationFactory.Insert(DriverSpecificationEntity);
+                    DriverSpecificationFactory.CommitProc();
+
+                    try
                     {
-                        HPS.BLL.DriverBLL.BLLDriver_T CurrentDriver = DriverList.FirstOrDefault();
-                        HPS.BLL.DriverBLL.BLLDriver_TKeys _key = new HPS.BLL.DriverBLL.BLLDriver_TKeys();
-                        _key.DriverID_bint = CurrentDriver.DriverID_bint;
-                        CurrentDriver.NationalCode_int = Convert.ToInt32(NationalCode_intNumericTextBox.Text);
-                        CurrentDriver.licenceNumber_nvc = licenceNumber_intNumericTextBox.Text;
-                        DriverFactory.BeginProc();
-                        DriverFactory.Update(CurrentDriver, _key);
-                        DriverFactory.CommitProc();
+                        /// also update driver entity
+                        HPS.BLL.DriverBLL.BLLDriver_TFactory DriverFactory = new HPS.BLL.DriverBLL.BLLDriver_TFactory();
+                        List<HPS.BLL.DriverBLL.BLLDriver_T> DriverList = DriverFactory.GetAllBy(HPS.BLL.DriverBLL.BLLDriver_T.Driver_TField.NationalCode_int, NationalCode_intNumericTextBox.Text);
+                        if (DriverList != null && DriverList.Count > 0)
+                        {
+                            HPS.BLL.DriverBLL.BLLDriver_T CurrentDriver = DriverList.FirstOrDefault();
+                            HPS.BLL.DriverBLL.BLLDriver_TKeys _key = new HPS.BLL.DriverBLL.BLLDriver_TKeys();
+                            _key.DriverID_bint = CurrentDriver.DriverID_bint;
+                            CurrentDriver.NationalCode_int = Convert.ToInt32(NationalCode_intNumericTextBox.Text);
+                            CurrentDriver.licenceNumber_nvc = licenceNumber_intNumericTextBox.Text;
+                            DriverFactory.BeginProc();
+                            DriverFactory.Update(CurrentDriver, _key);
+                            DriverFactory.CommitProc();
+                        }
                     }
-
-
+                    catch(Exception c)
+                    { }
+                    //Hepsa.Core.Common.MessageBox.InformationMessage("اطلاعات ثبت شد");
                 }
+
             }
-            catch (Exception c)
+            catch (Exception ex)
             {
-                MessageBox.Show(c.Message);
+                DriverSpecificationFactory.RollBackProc();
+                Hepsa.Core.Common.MessageBox.ErrorMessage(ex.Message);
             }
+
         }
 
 

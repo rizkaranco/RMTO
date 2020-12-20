@@ -1285,20 +1285,34 @@ namespace HPS.Present.Traffic
                     TrafficFactory.CommitProc();
                     szBuffer.ToList().Clear();
                     NumberPlateReadingButton.Enabled = true;
-                    var trafficToPrint = TrafficFactory.GetBy(new BLL.TrafficBLL.BLLTraffic_TKeys() { TrafficID_bint = TrafficEntity.TrafficID_bint });
-                    if (trafficToPrint != null)
+                    //var trafficToPrint = TrafficFactory.GetBy(new BLL.TrafficBLL.BLLTraffic_TKeys() { TrafficID_bint = TrafficEntity.TrafficID_bint });
+                    //if (trafficToPrint != null)
+                    //{
+                    //    if (TrafficEntity.ServiceID_int == 2)
+                    //    {
+                    //        HPS.Reports.Forms.StimulViewer frm = new Reports.Forms.StimulViewer(trafficToPrint, false, false);
+                    //        frm.ShowDialog();
+                    //    }
+                    //    else
+                    //    {
+                    //        HPS.Reports.Forms.StimulViewer frm = new Reports.Forms.StimulViewer(trafficToPrint, true, false);
+                    //        frm.ShowDialog();
+                    //    }
+                    //}
+                    if (TrafficEntity != null)
                     {
                         if (TrafficEntity.ServiceID_int == 2)
                         {
-                            HPS.Reports.Forms.StimulViewer frm = new Reports.Forms.StimulViewer(trafficToPrint, false, false);
+                            HPS.Reports.Forms.StimulViewer frm = new Reports.Forms.StimulViewer(TrafficEntity, false, false);
                             frm.ShowDialog();
                         }
                         else
                         {
-                            HPS.Reports.Forms.StimulViewer frm = new Reports.Forms.StimulViewer(trafficToPrint, true, false);
+                            HPS.Reports.Forms.StimulViewer frm = new Reports.Forms.StimulViewer(TrafficEntity, true, false);
                             frm.ShowDialog();
                         }
                     }
+
 
 
                     if (!string.IsNullOrEmpty(DriverCardNumber_bintNumericTextBox.Text))
